@@ -5,11 +5,16 @@
     <!-- 
     Dimensions documentation 
     
-    {param_name}    - default value (1x)
-    {param_name}ABX - value with scale A.Bx. 
-                      Example: Height15X = Height * 1.5
-                               Height20X = Height * 2.0
-
+    {param_name}        - default value (1x)
+    {param_name}{A}{B}X - value with scale A.Bx. 
+    
+    Example: Height15X = Height * 1.5
+             Height20X = Height * 2.0
+             
+    {param_name}{A}     - value = {A} 
+    
+    Example: Radius4 = 4
+             Radius8 = 8
     -->
     
     <!-- Height -->
@@ -21,6 +26,14 @@
     <system:Double x:Key="Width">70</system:Double>
     <system:Double x:Key="Width15X">70</system:Double>
     <system:Double x:Key="Width20X">140</system:Double>
+    
+    <!-- Corner Radius -->
+    <CornerRadius x:Key="Radius4">4</CornerRadius>
+    <CornerRadius x:Key="Radius8">8</CornerRadius>
+    <CornerRadius x:Key="Radius16">16</CornerRadius>
+    
+    <!-- Thickness -->
+    <Thickness x:Key="Thickness1">1</Thickness>
     
     
 </ResourceDictionary>

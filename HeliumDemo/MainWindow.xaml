@@ -4,13 +4,14 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:HeliumDemo"
-        xmlns:heButton="clr-namespace:HeButton;assembly=HeButton"
+        xmlns:basic="clr-namespace:Basic;assembly=Basic"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <DockPanel>
-        <heButton:HeButton
+        <basic:HeButton
             Width="100"
             Height="50"
-            Content="test content"/>
+            CornerRadius="10">
+        </basic:HeButton>
     </DockPanel>
 </Window>

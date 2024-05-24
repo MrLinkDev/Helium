@@ -8,27 +8,23 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8b4ced28-5d3a-4a47-8b27-449f63f07d28" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.Helium/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.Helium/.idea/indexLayout.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.Helium/.idea/projectSettingsUpdater.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.Helium/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.Helium/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/He/HeButton/AssemblyInfo.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/He/HeButton/HeButton.csproj" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/He/HeButton/HeButton.xaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/He/HeButton/HeButton.xaml.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/He/HeButton/Resources/Brushes.xaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/He/HeButton/Resources/Colors.xaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/He/HeButton/Resources/Dimensions.xaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/He/HeButton/Resources/Styles/HeButtonDefault.xaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Helium.sln" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HeliumDemo/App.xaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HeliumDemo/App.xaml.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HeliumDemo/AssemblyInfo.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HeliumDemo/HeliumDemo.csproj" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HeliumDemo/MainWindow.xaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HeliumDemo/MainWindow.xaml.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/He/Basic/DefaultHeButtonValues.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/He/Basic/HeButton.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/He/Basic/Themes/Controls/HeButton.xaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/He/Basic/Themes/Generic.xaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Helium/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Helium/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/He/HeButton/AssemblyInfo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/He/Basic/AssemblyInfo.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/He/HeButton/HeButton.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/He/Basic/Basic.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/He/HeButton/HeButton.xaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/He/HeButton/HeButton.xaml.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/He/HeButton/Resources/Brushes.xaml" beforeDir="false" afterPath="$PROJECT_DIR$/He/Basic/Resources/Brushes.xaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/He/HeButton/Resources/Colors.xaml" beforeDir="false" afterPath="$PROJECT_DIR$/He/Basic/Resources/Colors.xaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/He/HeButton/Resources/Dimensions.xaml" beforeDir="false" afterPath="$PROJECT_DIR$/He/Basic/Resources/Dimensions.xaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/He/HeButton/Resources/Styles/HeButtonDefault.xaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Helium.sln" beforeDir="false" afterPath="$PROJECT_DIR$/Helium.sln" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HeliumDemo/App.xaml" beforeDir="false" afterPath="$PROJECT_DIR$/HeliumDemo/App.xaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HeliumDemo/HeliumDemo.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/HeliumDemo/HeliumDemo.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HeliumDemo/MainWindow.xaml" beforeDir="false" afterPath="$PROJECT_DIR$/HeliumDemo/MainWindow.xaml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,7 +38,9 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/He/HeButton/HeButton.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/5928219faefc4ea6b1892c726c8c49a9f61910/02/d54412e5/Border.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/8a89681d6cd80331b17bcc156cbd714b4bcafd73f5be83749e75f9f3d66531/brushes.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/b4671ca1344fd16c9c17e5777ecd94f089632ca980ef3cc8fb4dc5d71f6dd32d/PropertyMetadata.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="MetaFilesCheckinStateConfiguration" checkMetaFiles="true" />
   <component name="ProjectColorInfo">{
@@ -64,6 +62,7 @@
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;XamlPreviewOptionsPage&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
   &quot;keyToStringList&quot;: {
@@ -104,7 +103,19 @@
       <updated>1713177453211</updated>
       <workItem from="1713177454369" duration="1709000" />
       <workItem from="1713241860776" duration="1171000" />
+      <workItem from="1713344664790" duration="50000" />
+      <workItem from="1714040963803" duration="2344000" />
+      <workItem from="1715586008474" duration="6645000" />
     </task>
+    <task id="LOCAL-00001" summary="Initial commit">
+      <option name="closed" value="true" />
+      <created>1713344708695</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1713344708695</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -125,5 +136,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
+    <MESSAGE value="Initial commit" />
+    <option name="LAST_COMMIT_MESSAGE" value="Initial commit" />
   </component>
 </project>
