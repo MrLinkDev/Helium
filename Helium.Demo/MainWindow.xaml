@@ -1,0 +1,52 @@
+﻿<Window x:Class="HeliumDemo.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:HeliumDemo"
+        xmlns:buttons="clr-namespace:Helium.Buttons;assembly=Helium.Buttons"
+
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <DockPanel
+        LastChildFill="False">
+        <buttons:HeButtonFlat
+            DockPanel.Dock="Top"
+            Margin="8"
+            Text="Текст">
+        </buttons:HeButtonFlat>
+        
+        <buttons:HeButtonFlat
+            DockPanel.Dock="Top"
+            Margin="8"
+            IsEnabled="False"
+            Text="Disabled">
+        </buttons:HeButtonFlat>
+        
+        <buttons:HeButtonOutline
+            DockPanel.Dock="Top"
+            Margin="8"
+            Text="Текст">
+        </buttons:HeButtonOutline>
+        
+        <buttons:HeButtonOutline
+            DockPanel.Dock="Top"
+            Margin="8"
+            IsEnabled="False"
+            Text="Disabled">
+        </buttons:HeButtonOutline>
+        
+        <buttons:HeButtonBezel
+            DockPanel.Dock="Top"
+            Margin="8"
+            Text="Текст">
+        </buttons:HeButtonBezel>
+        
+        <buttons:HeButtonBezel
+            DockPanel.Dock="Top"
+            Margin="8"
+            IsEnabled="False"
+            Text="Disabled">
+        </buttons:HeButtonBezel>
+    </DockPanel>
+</Window>

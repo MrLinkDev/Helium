@@ -6,10 +6,11 @@
         <Nullable>enable</Nullable>
         <ImplicitUsings>enable</ImplicitUsings>
         <UseWPF>true</UseWPF>
+        <RootNamespace>HeliumDemo</RootNamespace>
     </PropertyGroup>
 
     <ItemGroup>
-      <ProjectReference Include="..\He\Basic\Basic.csproj" />
+      <ProjectReference Include="..\Helium.Buttons\Helium.Buttons.csproj" />
     </ItemGroup>
 
 </Project>

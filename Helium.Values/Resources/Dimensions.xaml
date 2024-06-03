@@ -18,13 +18,14 @@
     -->
     
     <!-- Height -->
-    <system:Double x:Key="Height">28</system:Double>
+    <system:Double x:Key="Height">42</system:Double>
     <system:Double x:Key="Height15X">42</system:Double>
     <system:Double x:Key="Height20X">56</system:Double>
     
     <!-- Width -->
-    <system:Double x:Key="Width">70</system:Double>
-    <system:Double x:Key="Width15X">70</system:Double>
+    <system:Double x:Key="Width">140</system:Double>
+    <system:Double x:Key="Width12X">84</system:Double>
+    <system:Double x:Key="Width15X">105</system:Double>
     <system:Double x:Key="Width20X">140</system:Double>
     
     <!-- Corner Radius -->
@@ -33,7 +34,15 @@
     <CornerRadius x:Key="Radius16">16</CornerRadius>
     
     <!-- Thickness -->
+    <Thickness x:Key="Thickness0">0</Thickness>
     <Thickness x:Key="Thickness1">1</Thickness>
+    
+    <!-- Font size -->
+    <system:Double x:Key="FontSize">14</system:Double>
+    <system:Double x:Key="FontSize15X">21</system:Double>
+    <system:Double x:Key="FontSize20X">28</system:Double>
+    
+    <FontFamily x:Key="FontFamily"></FontFamily>
     
     
 </ResourceDictionary>
