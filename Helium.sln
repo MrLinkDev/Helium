@@ -6,6 +6,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Helium.Buttons", "Helium.Bu
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Helium.Values", "Helium.Values\Helium.Values.csproj", "{CF495872-E417-46DB-8DE5-998BF4D9F851}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Helium.Window", "Helium.Window\Helium.Window.csproj", "{88FD085A-674F-496A-BA5D-8A02AAEBE6BA}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -24,6 +26,10 @@ Global
 		{CF495872-E417-46DB-8DE5-998BF4D9F851}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CF495872-E417-46DB-8DE5-998BF4D9F851}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CF495872-E417-46DB-8DE5-998BF4D9F851}.Release|Any CPU.Build.0 = Release|Any CPU
+		{88FD085A-674F-496A-BA5D-8A02AAEBE6BA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{88FD085A-674F-496A-BA5D-8A02AAEBE6BA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{88FD085A-674F-496A-BA5D-8A02AAEBE6BA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{88FD085A-674F-496A-BA5D-8A02AAEBE6BA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 	EndGlobalSection
