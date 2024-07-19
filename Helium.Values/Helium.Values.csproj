@@ -19,4 +19,15 @@
       </Page>
     </ItemGroup>
 
+    <ItemGroup>
+      <None Remove="Resources\Icons\32px\close_icon.png" />
+      <Resource Include="Resources\Icons\32px\close_icon.png" />
+      <None Remove="Resources\Icons\32px\maximize_icon.png" />
+      <Resource Include="Resources\Icons\32px\maximize_icon.png" />
+      <None Remove="Resources\Icons\32px\minimize_icon.png" />
+      <Resource Include="Resources\Icons\32px\minimize_icon.png" />
+      <None Remove="Resources\Icons\32px\normal_icon.png" />
+      <Resource Include="Resources\Icons\32px\normal_icon.png" />
+    </ItemGroup>
+
 </Project>

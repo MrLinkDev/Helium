@@ -1,9 +1,9 @@
 ﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-                    xmlns:local="clr-namespace:Helium.Buttons">
+                    xmlns:local="clr-namespace:Helium.Button">
     
     <ResourceDictionary.MergedDictionaries>
-        <ResourceDictionary Source="/Helium.Buttons;component/Themes/Buttons/HeButtonBase.xaml"/>
+        <ResourceDictionary Source="/Helium.Button;component/Themes/Styles/HeButtonBase.xaml"/>
     </ResourceDictionary.MergedDictionaries>
     
     <Style TargetType="{x:Type local:HeButtonOutline}" BasedOn="{StaticResource HeButtonBase}">

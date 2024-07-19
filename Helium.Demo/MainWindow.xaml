@@ -1,13 +1,18 @@
-﻿<Window x:Class="HeliumDemo.MainWindow"
+﻿<window:HeWindow x:Class="HeliumDemo.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:HeliumDemo"
-        xmlns:buttons="clr-namespace:Helium.Buttons;assembly=Helium.Buttons"
+        xmlns:buttons="clr-namespace:Helium.Button;assembly=Helium.Button"
+        xmlns:imageButton="clr-namespace:Helium.ImageButton;assembly=Helium.ImageButton"
+        xmlns:window="clr-namespace:Helium.Window;assembly=Helium.Window"
 
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="MainWindow" 
+        Height="450" 
+        Width="800"
+        BodyBackground="#212121">
     <DockPanel
         LastChildFill="False">
         <buttons:HeButtonFlat
@@ -48,5 +53,16 @@
             IsEnabled="False"
             Text="Disabled">
         </buttons:HeButtonBezel>
+        
+        <imageButton:HeImageButtonBase
+            DockPanel.Dock="Top"
+            Margin="8"/>
+        
+        <buttons:HeButtonBezel
+            DockPanel.Dock="Top"
+            Margin="8"
+            Text="Текст">
+        </buttons:HeButtonBezel>
+        
     </DockPanel>
-</Window>
+</window:HeWindow>

@@ -5,19 +5,19 @@
     <Brush x:Key="BlackBrush">#212121</Brush>
     
     <!-- Primary brushes -->
-    <Brush x:Key="PrimaryBrush50">#f2f5fc</Brush>
-    <Brush x:Key="PrimaryBrush100">#e1e9f8</Brush>
-    <Brush x:Key="PrimaryBrush200">#cad9f3</Brush>
-    <Brush x:Key="PrimaryBrush300">#a5c1eb</Brush>
-    <Brush x:Key="PrimaryBrush400">#7aa1e0</Brush>
-    <Brush x:Key="PrimaryBrush500">#5a82d7</Brush>          
-    <Brush x:Key="PrimaryBrush600">#4666ca</Brush>
-    <Brush x:Key="PrimaryBrush700">#3c55b9</Brush>
-    <Brush x:Key="PrimaryBrush800">#32418b</Brush>          <!-- lock -->
-    <Brush x:Key="PrimaryBrush900">#303e78</Brush>
-    <Brush x:Key="PrimaryBrush950">#21284a</Brush>
+    <Brush x:Key="PrimaryBrush50">#f4f6fa</Brush>
+    <Brush x:Key="PrimaryBrush100">#e6eaf3</Brush>
+    <Brush x:Key="PrimaryBrush200">#d2d9eb</Brush>
+    <Brush x:Key="PrimaryBrush300">#b3c1dd</Brush>
+    <Brush x:Key="PrimaryBrush400">#8ea1cc</Brush>
+    <Brush x:Key="PrimaryBrush500">#7385be</Brush>          
+    <Brush x:Key="PrimaryBrush600">#5c6aad</Brush>
+    <Brush x:Key="PrimaryBrush700">#555ea0</Brush>
+    <Brush x:Key="PrimaryBrush800">#4a4f83</Brush>          <!-- lock -->
+    <Brush x:Key="PrimaryBrush900">#3f4469</Brush>
+    <Brush x:Key="PrimaryBrush950">#292b42</Brush>
     
-    <!-- Attention brushes -->
+    <!-- Red Palette -->
     <Brush x:Key="AttentionBrush50">#fcf4f4</Brush>
     <Brush x:Key="AttentionBrush100">#fae6e6</Brush>
     <Brush x:Key="AttentionBrush200">#f7d1d1</Brush>
@@ -29,6 +29,19 @@
     <Brush x:Key="AttentionBrush800">#832a2a</Brush>        <!-- lock -->
     <Brush x:Key="AttentionBrush900">#722a2a</Brush>
     <Brush x:Key="AttentionBrush950">#3d1212</Brush>
+    
+    <!-- Black Palette -->
+    <Brush x:Key="BlackBrush50">#f6f6f6</Brush>
+    <Brush x:Key="BlackBrush100">#e7e7e7</Brush>
+    <Brush x:Key="BlackBrush200">#d1d1d1</Brush>
+    <Brush x:Key="BlackBrush300">#b0b0b0</Brush>
+    <Brush x:Key="BlackBrush400">#888888</Brush>
+    <Brush x:Key="BlackBrush500">#6d6d6d</Brush>
+    <Brush x:Key="BlackBrush600">#5d5d5d</Brush>
+    <Brush x:Key="BlackBrush700">#4f4f4f</Brush>
+    <Brush x:Key="BlackBrush800">#454545</Brush>       
+    <Brush x:Key="BlackBrush900">#3d3d3d</Brush>
+    <Brush x:Key="BlackBrush950">#212121</Brush>            <!-- lock -->
     
     
 </ResourceDictionary>

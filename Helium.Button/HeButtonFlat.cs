@@ -1,7 +1,7 @@
 ﻿using System.Windows;
 using System.Windows.Controls.Primitives;
 
-namespace Helium.Buttons;
+namespace Helium.Button;
 
 public class HeButtonFlat : HeButtonBase {
     

@@ -18,7 +18,8 @@
     -->
     
     <!-- Height -->
-    <system:Double x:Key="Height">42</system:Double>
+    <system:Double x:Key="Height07X">20</system:Double>
+    <system:Double x:Key="Height">28</system:Double>
     <system:Double x:Key="Height15X">42</system:Double>
     <system:Double x:Key="Height20X">56</system:Double>
     
@@ -43,6 +44,21 @@
     <system:Double x:Key="FontSize20X">28</system:Double>
     
     <FontFamily x:Key="FontFamily"></FontFamily>
+    
+    <!-- Window -->
+    <system:Double x:Key="ToolbarHeight">40</system:Double>
+    
+    <GridLength x:Key="ToolbarTitleSectionWidth">300</GridLength>
+    <GridLength x:Key="ToolbarButtonsSectionWidth">200</GridLength>
+    
+    <system:Double x:Key="MinWindowWidth">800</system:Double>
+    <system:Double x:Key="MinWindowHeight">600</system:Double>
+    
+    <system:Double x:Key="WindowWidth">800</system:Double>
+    <system:Double x:Key="WindowHeight">600</system:Double>
+    
+    <system:Double x:Key="ToolbarButtonWidth">40</system:Double>
+    <system:Double x:Key="ToolbarButtonHeight">40</system:Double>
     
     
 </ResourceDictionary>

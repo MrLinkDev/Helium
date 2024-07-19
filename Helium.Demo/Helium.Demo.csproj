@@ -9,8 +9,14 @@
         <RootNamespace>HeliumDemo</RootNamespace>
     </PropertyGroup>
 
+    <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+      <DebugType>none</DebugType>
+    </PropertyGroup>
+
     <ItemGroup>
-      <ProjectReference Include="..\Helium.Buttons\Helium.Buttons.csproj" />
+      <ProjectReference Include="..\Helium.Button\Helium.Button.csproj" />
+      <ProjectReference Include="..\Helium.ImageButton\Helium.ImageButton.csproj" />
+      <ProjectReference Include="..\Helium.Window\Helium.Window.csproj" />
     </ItemGroup>
 
 </Project>

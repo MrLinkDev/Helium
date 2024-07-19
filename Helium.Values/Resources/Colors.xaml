@@ -5,19 +5,19 @@
     <Color x:Key="BlackColor">#212121</Color>
     
     <!-- Primary Colors -->
-    <Color x:Key="PrimaryColor50">#f2f5fc</Color>
-    <Color x:Key="PrimaryColor100">#e1e9f8</Color>
-    <Color x:Key="PrimaryColor200">#cad9f3</Color>
-    <Color x:Key="PrimaryColor300">#a5c1eb</Color>
-    <Color x:Key="PrimaryColor400">#7aa1e0</Color>
-    <Color x:Key="PrimaryColor500">#5a82d7</Color>          
-    <Color x:Key="PrimaryColor600">#4666ca</Color>
-    <Color x:Key="PrimaryColor700">#3c55b9</Color>
-    <Color x:Key="PrimaryColor800">#32418b</Color>          <!-- lock -->
-    <Color x:Key="PrimaryColor900">#303e78</Color>
-    <Color x:Key="PrimaryColor950">#21284a</Color>
+    <Color x:Key="PrimaryColor50">#f4f6fa</Color>
+    <Color x:Key="PrimaryColor100">#e6eaf3</Color>
+    <Color x:Key="PrimaryColor200">#d2d9eb</Color>
+    <Color x:Key="PrimaryColor300">#b3c1dd</Color>
+    <Color x:Key="PrimaryColor400">#8ea1cc</Color>
+    <Color x:Key="PrimaryColor500">#7385be</Color>          
+    <Color x:Key="PrimaryColor600">#5c6aad</Color>          <!-- lock -->
+    <Color x:Key="PrimaryColor700">#555ea0</Color>
+    <Color x:Key="PrimaryColor800">#4a4f83</Color>          
+    <Color x:Key="PrimaryColor900">#3f4469</Color>
+    <Color x:Key="PrimaryColor950">#292b42</Color>
     
-    <!-- Attention Colors -->
+    <!-- Red Palette -->
     <Color x:Key="AttentionColor50">#fcf4f4</Color>
     <Color x:Key="AttentionColor100">#fae6e6</Color>
     <Color x:Key="AttentionColor200">#f7d1d1</Color>
@@ -29,4 +29,17 @@
     <Color x:Key="AttentionColor800">#832a2a</Color>        <!-- lock -->
     <Color x:Key="AttentionColor900">#722a2a</Color>
     <Color x:Key="AttentionColor950">#3d1212</Color>
+    
+    <!-- Black Palette -->
+    <Color x:Key="BlackColor50">#f6f6f6</Color>
+    <Color x:Key="BlackColor100">#e7e7e7</Color>
+    <Color x:Key="BlackColor200">#d1d1d1</Color>
+    <Color x:Key="BlackColor300">#b0b0b0</Color>
+    <Color x:Key="BlackColor400">#888888</Color>
+    <Color x:Key="BlackColor500">#6d6d6d</Color>
+    <Color x:Key="BlackColor600">#5d5d5d</Color>
+    <Color x:Key="BlackColor700">#4f4f4f</Color>
+    <Color x:Key="BlackColor800">#454545</Color>       
+    <Color x:Key="BlackColor900">#3d3d3d</Color>
+    <Color x:Key="BlackColor950">#212121</Color>            <!-- lock -->
 </ResourceDictionary>
