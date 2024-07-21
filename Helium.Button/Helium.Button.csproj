@@ -30,7 +30,7 @@
     </ItemGroup>
 
     <ItemGroup>
-      <ProjectReference Include="..\Helium.Values\Helium.Values.csproj" />
+      <ProjectReference Include="..\Helium.Resources\Helium.Resources.csproj" />
     </ItemGroup>
 
 </Project>

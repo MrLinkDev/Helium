@@ -3,9 +3,9 @@
                     xmlns:local="clr-namespace:Helium.Button">
     
     <ResourceDictionary.MergedDictionaries>
-        <ResourceDictionary Source="/Helium.Values;component/Resources/Brushes.xaml"/>
-        <ResourceDictionary Source="/Helium.Values;component/Resources/Colors.xaml"/>
-        <ResourceDictionary Source="/Helium.Values;component/Resources/Dimensions.xaml"/>
+        <ResourceDictionary Source="/Helium.Resources;component/Resources/Brushes.xaml"/>
+        <ResourceDictionary Source="/Helium.Resources;component/Resources/Colors.xaml"/>
+        <ResourceDictionary Source="/Helium.Resources;component/Resources/Dimensions.xaml"/>
     </ResourceDictionary.MergedDictionaries>
     
     <Style x:Key="HeButtonBase" TargetType="{x:Type local:HeButtonBase}">

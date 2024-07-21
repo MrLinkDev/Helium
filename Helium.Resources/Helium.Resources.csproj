@@ -5,6 +5,7 @@
         <Nullable>enable</Nullable>
         <UseWPF>true</UseWPF>
         <ImplicitUsings>enable</ImplicitUsings>
+        <RootNamespace>Helium.Values</RootNamespace>
     </PropertyGroup>
 
     <ItemGroup>
@@ -16,6 +17,16 @@
       </Page>
       <Page Update="Resources\Dimensions.xaml">
         <Generator>MSBuild:Compile</Generator>
+      </Page>
+      <Page Update="Resources\Icons\Paths\MinimizeIcon.xaml">
+        <Generator>MSBuild:Compile</Generator>
+        <XamlRuntime>Wpf</XamlRuntime>
+        <SubType>Designer</SubType>
+      </Page>
+      <Page Update="Resources\Icons\Paths\MaximizeIcon.xaml">
+        <Generator>MSBuild:Compile</Generator>
+        <XamlRuntime>Wpf</XamlRuntime>
+        <SubType>Designer</SubType>
       </Page>
     </ItemGroup>
 

@@ -8,7 +8,7 @@
     </PropertyGroup>
 
     <ItemGroup>
-      <Page Update="Themes\Styles\HeImageButtonBase.xaml">
+      <Page Update="Themes\Styles\HeImageButton.xaml">
         <Generator>MSBuild:Compile</Generator>
         <XamlRuntime>Wpf</XamlRuntime>
         <SubType>Designer</SubType>
@@ -16,7 +16,7 @@
     </ItemGroup>
 
     <ItemGroup>
-      <ProjectReference Include="..\Helium.Values\Helium.Values.csproj" />
+      <ProjectReference Include="..\Helium.Resources\Helium.Resources.csproj" />
     </ItemGroup>
 
 </Project>

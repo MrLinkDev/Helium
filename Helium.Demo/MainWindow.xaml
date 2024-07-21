@@ -1,18 +1,28 @@
-﻿<window:HeWindow x:Class="HeliumDemo.MainWindow"
+﻿<Window x:Class="HeliumDemo.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:HeliumDemo"
         xmlns:buttons="clr-namespace:Helium.Button;assembly=Helium.Button"
+        xmlns:cardView="clr-namespace:Helium.CardView;assembly=Helium.CardView"
         xmlns:imageButton="clr-namespace:Helium.ImageButton;assembly=Helium.ImageButton"
-        xmlns:window="clr-namespace:Helium.Window;assembly=Helium.Window"
 
         mc:Ignorable="d"
-        Title="MainWindow" 
-        Height="450" 
+        Title="MainWindow"
+        Height="450"
         Width="800"
-        BodyBackground="#212121">
+        Background="#212121"
+        WindowStartupLocation="CenterScreen">
+    
+    <Window.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="/Helium.Resources;component/Resources/Icons.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Window.Resources>
+    
     <DockPanel
         LastChildFill="False">
         <buttons:HeButtonFlat
@@ -20,49 +30,61 @@
             Margin="8"
             Text="Текст">
         </buttons:HeButtonFlat>
-        
+
         <buttons:HeButtonFlat
             DockPanel.Dock="Top"
             Margin="8"
             IsEnabled="False"
             Text="Disabled">
         </buttons:HeButtonFlat>
-        
+
         <buttons:HeButtonOutline
             DockPanel.Dock="Top"
             Margin="8"
             Text="Текст">
         </buttons:HeButtonOutline>
-        
+
         <buttons:HeButtonOutline
             DockPanel.Dock="Top"
             Margin="8"
             IsEnabled="False"
             Text="Disabled">
         </buttons:HeButtonOutline>
-        
+
         <buttons:HeButtonBezel
             DockPanel.Dock="Top"
             Margin="8"
             Text="Текст">
         </buttons:HeButtonBezel>
-        
+
         <buttons:HeButtonBezel
             DockPanel.Dock="Top"
             Margin="8"
             IsEnabled="False"
             Text="Disabled">
         </buttons:HeButtonBezel>
-        
-        <imageButton:HeImageButtonBase
+
+        <imageButton:HeImageButton
             DockPanel.Dock="Top"
-            Margin="8"/>
-        
-        <buttons:HeButtonBezel
+            Width="56"
+            Height="40"
+            Content="{StaticResource CloseIconDefault}">
+        </imageButton:HeImageButton>
+
+        <imageButton:HeImageButton
             DockPanel.Dock="Top"
-            Margin="8"
-            Text="Текст">
-        </buttons:HeButtonBezel>
-        
+            Width="56"
+            Height="40"
+            Content="{StaticResource CloseIconDefault}">
+        </imageButton:HeImageButton>
+
+        <imageButton:HeImageButton
+            DockPanel.Dock="Top"
+            Width="56"
+            Height="40"
+            Content="{StaticResource CloseIconDefault}">
+        </imageButton:HeImageButton>
+
+
     </DockPanel>
-</window:HeWindow>
+</Window>

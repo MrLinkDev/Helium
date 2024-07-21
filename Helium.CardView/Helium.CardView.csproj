@@ -5,11 +5,6 @@
         <Nullable>enable</Nullable>
         <UseWPF>true</UseWPF>
         <ImplicitUsings>enable</ImplicitUsings>
-        <LangVersion>12</LangVersion>
     </PropertyGroup>
-
-    <ItemGroup>
-      <ProjectReference Include="..\Helium.Resources\Helium.Resources.csproj" />
-    </ItemGroup>
 
 </Project>

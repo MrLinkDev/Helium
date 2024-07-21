@@ -15,8 +15,8 @@
 
     <ItemGroup>
       <ProjectReference Include="..\Helium.Button\Helium.Button.csproj" />
+      <ProjectReference Include="..\Helium.CardView\Helium.CardView.csproj" />
       <ProjectReference Include="..\Helium.ImageButton\Helium.ImageButton.csproj" />
-      <ProjectReference Include="..\Helium.Window\Helium.Window.csproj" />
     </ItemGroup>
 
 </Project>

@@ -60,5 +60,4 @@
     <system:Double x:Key="ToolbarButtonWidth">40</system:Double>
     <system:Double x:Key="ToolbarButtonHeight">40</system:Double>
     
-    
 </ResourceDictionary>
