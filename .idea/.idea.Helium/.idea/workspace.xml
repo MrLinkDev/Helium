@@ -8,35 +8,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8b4ced28-5d3a-4a47-8b27-449f63f07d28" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Helium.CardView/AssemblyInfo.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Helium.CardView/HeCardView.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Helium.CardView/Helium.CardView.csproj" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Helium.CardView/Themes/Generic.xaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Helium.Resources/Resources/Icons.xaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Helium.Resources/Resources/Icons/Paths/CloseIcon.xaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Helium.Resources/Resources/Icons/Paths/MaximizeIcon.xaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Helium.Resources/Resources/Icons/Paths/MinimizeIcon.xaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Helium.ImageButton/HeImageButtonBezel.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Helium.ImageButton/Themes/Styles/HeImageButtonBezel.xaml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Helium/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Helium/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Helium.Button/Helium.Button.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Helium.Button/Helium.Button.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Helium.Button/Themes/Styles/HeButtonBase.xaml" beforeDir="false" afterPath="$PROJECT_DIR$/Helium.Button/Themes/Styles/HeButtonBase.xaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Helium.Demo/Helium.Demo.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Helium.Demo/Helium.Demo.csproj" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Helium.Demo/MainWindow.xaml" beforeDir="false" afterPath="$PROJECT_DIR$/Helium.Demo/MainWindow.xaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Helium.Demo/MainWindow.xaml.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Helium.Demo/MainWindow.xaml.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Helium.ImageButton/HeImageButtonBase.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Helium.ImageButton/HeImageButton.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Helium.ImageButton/HeImageButton.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Helium.ImageButton/HeImageButtonBase.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Helium.ImageButton/Helium.ImageButton.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Helium.ImageButton/Helium.ImageButton.csproj" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Helium.ImageButton/Themes/Generic.xaml" beforeDir="false" afterPath="$PROJECT_DIR$/Helium.ImageButton/Themes/Generic.xaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Helium.ImageButton/Themes/Styles/HeImageButtonBase.xaml" beforeDir="false" afterPath="$PROJECT_DIR$/Helium.ImageButton/Themes/Styles/HeImageButton.xaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Helium.Values/Helium.Values.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Helium.Resources/Helium.Resources.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Helium.Values/Resources/Brushes.xaml" beforeDir="false" afterPath="$PROJECT_DIR$/Helium.Resources/Resources/Brushes.xaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Helium.Values/Resources/Colors.xaml" beforeDir="false" afterPath="$PROJECT_DIR$/Helium.Resources/Resources/Colors.xaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Helium.Values/Resources/Dimensions.xaml" beforeDir="false" afterPath="$PROJECT_DIR$/Helium.Resources/Resources/Dimensions.xaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Helium.Values/Resources/Icons/32px/close_icon.png" beforeDir="false" afterPath="$PROJECT_DIR$/Helium.Resources/Resources/Icons/32px/close_icon.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Helium.Values/Resources/Icons/32px/maximize_icon.png" beforeDir="false" afterPath="$PROJECT_DIR$/Helium.Resources/Resources/Icons/32px/maximize_icon.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Helium.Values/Resources/Icons/32px/minimize_icon.png" beforeDir="false" afterPath="$PROJECT_DIR$/Helium.Resources/Resources/Icons/32px/minimize_icon.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Helium.Values/Resources/Icons/32px/normal_icon.png" beforeDir="false" afterPath="$PROJECT_DIR$/Helium.Resources/Resources/Icons/32px/normal_icon.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Helium.Window/Helium.Window.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Helium.Window/Helium.Window.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Helium.Window/Themes/Styles/HeWindow.xaml" beforeDir="false" afterPath="$PROJECT_DIR$/Helium.Window/Themes/Styles/HeWindow.xaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Helium.sln" beforeDir="false" afterPath="$PROJECT_DIR$/Helium.sln" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Helium.ImageButton/Themes/Styles/HeImageButton.xaml" beforeDir="false" afterPath="$PROJECT_DIR$/Helium.ImageButton/Themes/Styles/HeImageButtonBase.xaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Helium.Resources/Resources/Brushes.xaml" beforeDir="false" afterPath="$PROJECT_DIR$/Helium.Resources/Resources/Brushes.xaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Helium.Resources/Resources/Colors.xaml" beforeDir="false" afterPath="$PROJECT_DIR$/Helium.Resources/Resources/Colors.xaml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -55,19 +36,17 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/3e52048584b143508865bd3fd34e64c4f61920/4d/1776cfba/Canvas.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/3e52048584b143508865bd3fd34e64c4f61920/55/cb59f082/GroupBox.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/3e52048584b143508865bd3fd34e64c4f61920/59/4a53a6c2/HeaderedContentControl.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/3e52048584b143508865bd3fd34e64c4f61920/74/1d5ad99c/Decorator.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/3e52048584b143508865bd3fd34e64c4f61920/7a/75207f3d/Panel.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/3e52048584b143508865bd3fd34e64c4f61920/7d/fb359484/Line.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/3e52048584b143508865bd3fd34e64c4f61920/c1/943f8a57/Border.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/3e52048584b143508865bd3fd34e64c4f61920/cb/77fd60f3/Grid.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/3e52048584b143508865bd3fd34e64c4f61920/d6/2752f6d4/FrameworkElement.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/3e52048584b143508865bd3fd34e64c4f61920/e0/3c4bf806/Path.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/3e52048584b143508865bd3fd34e64c4f61920/e6/89403abe/ContentControl.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/3e52048584b143508865bd3fd34e64c4f61920/fd/35984ae2/Shape.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/96de4d22483443818be09f08c4c8d1f08258b0/bb/bbce2ff2/ImageSource.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/5928219faefc4ea6b1892c726c8c49a9f61910/02/d54412e5/Border.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/8627859306af40dc8a1dd42f7cecd5a4f608a0/0c/2644715a/ContentControl.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/8627859306af40dc8a1dd42f7cecd5a4f608a0/8e/63112a48/XamlReader.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/e1657c4d9b7146d6b243e9a34eae6471825908/02/5ef9efca/ImageSource.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/175b54becf6877369f497486d4ea29889a97d9d173ea1c631f80acf278b4b7/Animatable.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/86c9856164d1157e52522a57177a0b044f2287711e94e7c59e9a028f9a124d/GradientStop.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/8a89681d6cd80331b17bcc156cbd714b4bcafd73f5be83749e75f9f3d66531/brushes.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/b4671ca1344fd16c9c17e5777ecd94f089632ca980ef3cc8fb4dc5d71f6dd32d/PropertyMetadata.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/d0db11e55b76dc7f234163f6cee32b297b8ddb591fb0b5cbad1b46ed17343e18/Window.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/e261e7c751368e4e487d2eb671dfd79e32981c6863291580884eca26fe079/GradientStop.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/e4e8886b208868416341c18e8dec6533738df3eed99e22c8c4e3fd31cc9ee4/Window.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Helium.Demo/MainWindow.xaml" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="MetaFilesCheckinStateConfiguration" checkMetaFiles="true" />
@@ -80,48 +59,48 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    ".NET Project.HeliumDemo.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "HELIUM-8",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "XamlPreviewOptionsPage",
-    "timeTracker.activityTracker": "null",
-    "timeTracker.comment": "",
-    "timeTracker.inactivityPeriodInMills": "600000",
-    "timeTracker.isAutoTrackingEnable": "false",
-    "timeTracker.isAutoTrackingTemporaryDisabled": "false",
-    "timeTracker.isManualTrackingEnable": "false",
-    "timeTracker.isPaused": "true",
-    "timeTracker.isPostAfterCommitEnabled": "false",
-    "timeTracker.isPostedScheduled": "true",
-    "timeTracker.isRunning": "false",
-    "timeTracker.isScheduledEnabled": "false",
-    "timeTracker.isWhenProjectClosedEnabled": "false",
-    "timeTracker.issueId": "Default",
-    "timeTracker.issueIdReadable": "Default",
-    "timeTracker.pausedTime": "0",
-    "timeTracker.query": "",
-    "timeTracker.recordedTime": "0",
-    "timeTracker.scheduledPeriod": "19:00:0",
-    "timeTracker.startTime": "0",
-    "timeTracker.timeInMills": "0",
-    "timeTracker.type": "Development",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;.NET Project.HeliumDemo.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;HELIUM-8&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;XamlPreviewOptionsPage&quot;,
+    &quot;timeTracker.activityTracker&quot;: &quot;null&quot;,
+    &quot;timeTracker.comment&quot;: &quot;&quot;,
+    &quot;timeTracker.inactivityPeriodInMills&quot;: &quot;600000&quot;,
+    &quot;timeTracker.isAutoTrackingEnable&quot;: &quot;false&quot;,
+    &quot;timeTracker.isAutoTrackingTemporaryDisabled&quot;: &quot;false&quot;,
+    &quot;timeTracker.isManualTrackingEnable&quot;: &quot;false&quot;,
+    &quot;timeTracker.isPaused&quot;: &quot;true&quot;,
+    &quot;timeTracker.isPostAfterCommitEnabled&quot;: &quot;false&quot;,
+    &quot;timeTracker.isPostedScheduled&quot;: &quot;true&quot;,
+    &quot;timeTracker.isRunning&quot;: &quot;false&quot;,
+    &quot;timeTracker.isScheduledEnabled&quot;: &quot;false&quot;,
+    &quot;timeTracker.isWhenProjectClosedEnabled&quot;: &quot;false&quot;,
+    &quot;timeTracker.issueId&quot;: &quot;Default&quot;,
+    &quot;timeTracker.issueIdReadable&quot;: &quot;Default&quot;,
+    &quot;timeTracker.pausedTime&quot;: &quot;0&quot;,
+    &quot;timeTracker.query&quot;: &quot;&quot;,
+    &quot;timeTracker.recordedTime&quot;: &quot;0&quot;,
+    &quot;timeTracker.scheduledPeriod&quot;: &quot;19:00:0&quot;,
+    &quot;timeTracker.startTime&quot;: &quot;0&quot;,
+    &quot;timeTracker.timeInMills&quot;: &quot;0&quot;,
+    &quot;timeTracker.type&quot;: &quot;Development&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
-  "keyToStringList": {
-    "rider.external.source.directories": [
-      "C:\\Users\\sasha\\AppData\\Roaming\\JetBrains\\Rider2024.1\\resharper-host\\DecompilerCache",
-      "C:\\Users\\sasha\\AppData\\Roaming\\JetBrains\\Rider2024.1\\resharper-host\\SourcesCache",
-      "C:\\Users\\sasha\\AppData\\Local\\Symbols\\src"
+  &quot;keyToStringList&quot;: {
+    &quot;rider.external.source.directories&quot;: [
+      &quot;C:\\Users\\sasha\\AppData\\Roaming\\JetBrains\\Rider2024.1\\resharper-host\\DecompilerCache&quot;,
+      &quot;C:\\Users\\sasha\\AppData\\Roaming\\JetBrains\\Rider2024.1\\resharper-host\\SourcesCache&quot;,
+      &quot;C:\\Users\\sasha\\AppData\\Local\\Symbols\\src&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="RunManager">
     <configuration name="HeliumDemo" type="DotNetProject" factoryName=".NET Project">
       <option name="EXE_PATH" value="" />
@@ -168,6 +147,11 @@
       <workItem from="1719572580703" duration="1222000" />
       <workItem from="1721382676205" duration="4580000" />
       <workItem from="1721537691302" duration="6769000" />
+      <workItem from="1722854512235" duration="672000" />
+      <workItem from="1722920964640" duration="5273000" />
+      <workItem from="1723028584420" duration="2993000" />
+      <workItem from="1723173154201" duration="12000" />
+      <workItem from="1723178659188" duration="60000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit">
       <option name="closed" value="true" />

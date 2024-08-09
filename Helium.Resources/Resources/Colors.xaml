@@ -5,17 +5,17 @@
     <Color x:Key="BlackColor">#212121</Color>
     
     <!-- Primary Colors -->
-    <Color x:Key="PrimaryColor50">#f4f6fa</Color>
-    <Color x:Key="PrimaryColor100">#e6eaf3</Color>
-    <Color x:Key="PrimaryColor200">#d2d9eb</Color>
-    <Color x:Key="PrimaryColor300">#b3c1dd</Color>
-    <Color x:Key="PrimaryColor400">#8ea1cc</Color>
-    <Color x:Key="PrimaryColor500">#7385be</Color>          
-    <Color x:Key="PrimaryColor600">#5c6aad</Color>          <!-- lock -->
-    <Color x:Key="PrimaryColor700">#555ea0</Color>
-    <Color x:Key="PrimaryColor800">#4a4f83</Color>          
-    <Color x:Key="PrimaryColor900">#3f4469</Color>
-    <Color x:Key="PrimaryColor950">#292b42</Color>
+    <Color x:Key="PrimaryColor50">#f3f6fb</Color>
+    <Color x:Key="PrimaryColor100">#e3ebf6</Color>
+    <Color x:Key="PrimaryColor200">#ceddef</Color>
+    <Color x:Key="PrimaryColor300">#adc5e3</Color>
+    <Color x:Key="PrimaryColor400">#85a8d5</Color>
+    <Color x:Key="PrimaryColor500">#688cc9</Color>          
+    <Color x:Key="PrimaryColor600">#5574bb</Color>          <!-- lock -->
+    <Color x:Key="PrimaryColor700">#4a62aa</Color>
+    <Color x:Key="PrimaryColor800">#41528c</Color>          
+    <Color x:Key="PrimaryColor900">#384670</Color>
+    <Color x:Key="PrimaryColor950">#262d45</Color>
     
     <!-- Red Palette -->
     <Color x:Key="AttentionColor50">#fcf4f4</Color>

@@ -8,7 +8,7 @@
     </PropertyGroup>
 
     <ItemGroup>
-      <Page Update="Themes\Styles\HeImageButton.xaml">
+      <Page Update="Themes\Styles\HeImageButtonBase.xaml">
         <Generator>MSBuild:Compile</Generator>
         <XamlRuntime>Wpf</XamlRuntime>
         <SubType>Designer</SubType>

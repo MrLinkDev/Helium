@@ -5,17 +5,17 @@
     <Brush x:Key="BlackBrush">#212121</Brush>
     
     <!-- Primary brushes -->
-    <Brush x:Key="PrimaryBrush50">#f4f6fa</Brush>
-    <Brush x:Key="PrimaryBrush100">#e6eaf3</Brush>
-    <Brush x:Key="PrimaryBrush200">#d2d9eb</Brush>
-    <Brush x:Key="PrimaryBrush300">#b3c1dd</Brush>
-    <Brush x:Key="PrimaryBrush400">#8ea1cc</Brush>
-    <Brush x:Key="PrimaryBrush500">#7385be</Brush>          
-    <Brush x:Key="PrimaryBrush600">#5c6aad</Brush>
-    <Brush x:Key="PrimaryBrush700">#555ea0</Brush>
-    <Brush x:Key="PrimaryBrush800">#4a4f83</Brush>          <!-- lock -->
-    <Brush x:Key="PrimaryBrush900">#3f4469</Brush>
-    <Brush x:Key="PrimaryBrush950">#292b42</Brush>
+    <Brush x:Key="PrimaryBrush50">#f3f6fb</Brush>
+    <Brush x:Key="PrimaryBrush100">#e3ebf6</Brush>
+    <Brush x:Key="PrimaryBrush200">#ceddef</Brush>
+    <Brush x:Key="PrimaryBrush300">#adc5e3</Brush>
+    <Brush x:Key="PrimaryBrush400">#85a8d5</Brush>
+    <Brush x:Key="PrimaryBrush500">#688cc9</Brush>          
+    <Brush x:Key="PrimaryBrush600">#5574bb</Brush>
+    <Brush x:Key="PrimaryBrush700">#4a62aa</Brush>
+    <Brush x:Key="PrimaryBrush800">#41528c</Brush>          <!-- lock -->
+    <Brush x:Key="PrimaryBrush900">#384670</Brush>
+    <Brush x:Key="PrimaryBrush950">#262d45</Brush>
     
     <!-- Red Palette -->
     <Brush x:Key="AttentionBrush50">#fcf4f4</Brush>

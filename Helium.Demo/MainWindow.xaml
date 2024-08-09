@@ -15,14 +15,6 @@
         Background="#212121"
         WindowStartupLocation="CenterScreen">
     
-    <Window.Resources>
-        <ResourceDictionary>
-            <ResourceDictionary.MergedDictionaries>
-                <ResourceDictionary Source="/Helium.Resources;component/Resources/Icons.xaml"/>
-            </ResourceDictionary.MergedDictionaries>
-        </ResourceDictionary>
-    </Window.Resources>
-    
     <DockPanel
         LastChildFill="False">
         <buttons:HeButtonFlat
@@ -64,26 +56,22 @@
             Text="Disabled">
         </buttons:HeButtonBezel>
 
-        <imageButton:HeImageButton
+        <imageButton:HeImageButtonBezel
             DockPanel.Dock="Top"
             Width="56"
-            Height="40"
-            Content="{StaticResource CloseIconDefault}">
-        </imageButton:HeImageButton>
+            Height="40">
+            
+            <ContentControl>
+                <Image Source="/Helium.Resources;component/Resources/Icons/32px/close_icon.png"/>
+            </ContentControl>
+            
+        </imageButton:HeImageButtonBezel>
 
-        <imageButton:HeImageButton
+        <imageButton:HeImageButtonBezel
             DockPanel.Dock="Top"
             Width="56"
-            Height="40"
-            Content="{StaticResource CloseIconDefault}">
-        </imageButton:HeImageButton>
-
-        <imageButton:HeImageButton
-            DockPanel.Dock="Top"
-            Width="56"
-            Height="40"
-            Content="{StaticResource CloseIconDefault}">
-        </imageButton:HeImageButton>
+            Height="40">
+        </imageButton:HeImageButtonBezel>
 
 
     </DockPanel>
