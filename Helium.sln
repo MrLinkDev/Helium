@@ -1,10 +1,16 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HeliumDemo", "HeliumDemo\HeliumDemo.csproj", "{9F49BC90-E8DC-4623-A9EC-519F19F134B9}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Helium.Demo", "Helium.Demo\Helium.Demo.csproj", "{9F49BC90-E8DC-4623-A9EC-519F19F134B9}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "He", "He", "{FC6879F4-2FD1-46A7-95F8-49CD35B274E5}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Helium.Button", "Helium.Button\Helium.Button.csproj", "{9A5140F2-1C42-45A3-9024-A2147F52998F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Basic", "He\Basic\Basic.csproj", "{18AC1AB9-0D1D-4991-9A60-48316AED7B93}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Helium.Resources", "Helium.Resources\Helium.Resources.csproj", "{CF495872-E417-46DB-8DE5-998BF4D9F851}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Helium.Window", "Helium.Window\Helium.Window.csproj", "{88FD085A-674F-496A-BA5D-8A02AAEBE6BA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Helium.ImageButton", "Helium.ImageButton\Helium.ImageButton.csproj", "{ED9797C2-7622-4B9C-ADF4-DFE052D072D1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Helium.CardView", "Helium.CardView\Helium.CardView.csproj", "{0B368AD2-F97D-4780-8B2B-33561DFA92BB}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -16,12 +22,27 @@ Global
 		{9F49BC90-E8DC-4623-A9EC-519F19F134B9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9F49BC90-E8DC-4623-A9EC-519F19F134B9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9F49BC90-E8DC-4623-A9EC-519F19F134B9}.Release|Any CPU.Build.0 = Release|Any CPU
-		{18AC1AB9-0D1D-4991-9A60-48316AED7B93}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{18AC1AB9-0D1D-4991-9A60-48316AED7B93}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{18AC1AB9-0D1D-4991-9A60-48316AED7B93}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{18AC1AB9-0D1D-4991-9A60-48316AED7B93}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9A5140F2-1C42-45A3-9024-A2147F52998F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9A5140F2-1C42-45A3-9024-A2147F52998F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9A5140F2-1C42-45A3-9024-A2147F52998F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9A5140F2-1C42-45A3-9024-A2147F52998F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CF495872-E417-46DB-8DE5-998BF4D9F851}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CF495872-E417-46DB-8DE5-998BF4D9F851}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CF495872-E417-46DB-8DE5-998BF4D9F851}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CF495872-E417-46DB-8DE5-998BF4D9F851}.Release|Any CPU.Build.0 = Release|Any CPU
+		{88FD085A-674F-496A-BA5D-8A02AAEBE6BA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{88FD085A-674F-496A-BA5D-8A02AAEBE6BA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{88FD085A-674F-496A-BA5D-8A02AAEBE6BA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{88FD085A-674F-496A-BA5D-8A02AAEBE6BA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ED9797C2-7622-4B9C-ADF4-DFE052D072D1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ED9797C2-7622-4B9C-ADF4-DFE052D072D1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ED9797C2-7622-4B9C-ADF4-DFE052D072D1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ED9797C2-7622-4B9C-ADF4-DFE052D072D1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0B368AD2-F97D-4780-8B2B-33561DFA92BB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0B368AD2-F97D-4780-8B2B-33561DFA92BB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0B368AD2-F97D-4780-8B2B-33561DFA92BB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0B368AD2-F97D-4780-8B2B-33561DFA92BB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
-		{18AC1AB9-0D1D-4991-9A60-48316AED7B93} = {FC6879F4-2FD1-46A7-95F8-49CD35B274E5}
 	EndGlobalSection
 EndGlobal
