@@ -15,7 +15,10 @@ namespace HeliumDemo;
 /// Interaction logic for MainWindow.xaml
 /// </summary>
 public partial class MainWindow : Window {
+    public bool IsPressed { get; set; } = true;
+    
     public MainWindow() {
         InitializeComponent();
+        DataContext = this;
     }
 }

@@ -15,64 +15,96 @@
         Background="#212121"
         WindowStartupLocation="CenterScreen">
     
-    <DockPanel
-        LastChildFill="False">
-        <buttons:HeButtonFlat
-            DockPanel.Dock="Top"
-            Margin="8"
-            Text="Текст">
-        </buttons:HeButtonFlat>
-
-        <buttons:HeButtonFlat
-            DockPanel.Dock="Top"
-            Margin="8"
-            IsEnabled="False"
-            Text="Disabled">
-        </buttons:HeButtonFlat>
-
-        <buttons:HeButtonOutline
-            DockPanel.Dock="Top"
-            Margin="8"
-            Text="Текст">
-        </buttons:HeButtonOutline>
-
-        <buttons:HeButtonOutline
-            DockPanel.Dock="Top"
-            Margin="8"
-            IsEnabled="False"
-            Text="Disabled">
-        </buttons:HeButtonOutline>
-
-        <buttons:HeButtonBezel
-            DockPanel.Dock="Top"
-            Margin="8"
-            Text="Текст">
-        </buttons:HeButtonBezel>
-
-        <buttons:HeButtonBezel
-            DockPanel.Dock="Top"
-            Margin="8"
-            IsEnabled="False"
-            Text="Disabled">
-        </buttons:HeButtonBezel>
-
-        <imageButton:HeImageButtonBezel
-            DockPanel.Dock="Top"
-            Width="56"
-            Height="40">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        
+        <DockPanel
+            Grid.Column="0"
+            LastChildFill="False">
+            <buttons:HeButtonFlat
+                DockPanel.Dock="Top"
+                Width="100"
+                Height="32"
+                Margin="8"
+                Text="Default">
+            </buttons:HeButtonFlat>
             
-            <ContentControl>
-                <Image Source="/Helium.Resources;component/Resources/Icons/32px/close_icon.png"/>
-            </ContentControl>
+            <buttons:HeButtonFlat
+                DockPanel.Dock="Top"
+                Width="100"
+                Height="32"
+                Margin="8"
+                IsEnabled="False"
+                Text="Disabled">
+            </buttons:HeButtonFlat>
+        </DockPanel>
+        
+        <DockPanel
+            Grid.Column="1"
+            LastChildFill="False">
+            <buttons:HeButtonBezel
+                DockPanel.Dock="Top"
+                Width="100"
+                Height="32"
+                Margin="8"
+                Text="Default">
+            </buttons:HeButtonBezel>
             
-        </imageButton:HeImageButtonBezel>
-
-        <imageButton:HeImageButtonBezel
-            DockPanel.Dock="Top"
-            Width="56"
-            Height="40">
-        </imageButton:HeImageButtonBezel>
-
-
-    </DockPanel>
+            <buttons:HeButtonBezel
+                DockPanel.Dock="Top"
+                Width="100"
+                Height="32"
+                Margin="8"
+                IsEnabled="False"
+                Text="Disabled">
+            </buttons:HeButtonBezel>
+        </DockPanel>
+        
+        <DockPanel
+            Grid.Column="2"
+            LastChildFill="False">
+            <imageButton:HeImageButtonBezel
+                DockPanel.Dock="Top"
+                Width="32"
+                Height="32"
+                Margin="8"
+                ImageSource="/Helium.Resources;component/Resources/Icons/32px/close_icon.png"/>
+            
+            <imageButton:HeImageButtonBezel
+                DockPanel.Dock="Top"
+                Width="32"
+                Height="32"
+                Margin="8"
+                IsEnabled="False"
+                ImageSourceDisabled="/Helium.Resources;component/Resources/Icons/32px/maximize_icon.png"
+                ImageSource="/Helium.Resources;component/Resources/Icons/32px/close_icon.png"/>
+            
+        </DockPanel>
+        
+        <DockPanel
+            Grid.Column="3"
+            LastChildFill="False">
+            <imageButton:HeImageButtonFlat
+                DockPanel.Dock="Top"
+                Width="32"
+                Height="32"
+                Margin="8"
+                ImageSource="/Helium.Resources;component/Resources/Icons/32px/close_icon.png"/>
+            
+            <imageButton:HeImageButtonFlat
+                DockPanel.Dock="Top"
+                Width="32"
+                Height="32"
+                Margin="8"
+                IsEnabled="False"
+                ImageSourceDisabled="/Helium.Resources;component/Resources/Icons/32px/maximize_icon.png"
+                ImageSource="/Helium.Resources;component/Resources/Icons/32px/close_icon.png"/>
+            
+        </DockPanel>
+    </Grid>
 </Window>

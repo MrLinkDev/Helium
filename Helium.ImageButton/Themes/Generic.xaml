@@ -3,5 +3,6 @@
     <ResourceDictionary.MergedDictionaries>
         <ResourceDictionary Source="/Helium.ImageButton;component/Themes/Styles/HeImageButtonBase.xaml"/>
         <ResourceDictionary Source="/Helium.ImageButton;component/Themes/Styles/HeImageButtonBezel.xaml"/>
+        <ResourceDictionary Source="/Helium.ImageButton;component/Themes/Styles/HeImageButtonFlat.xaml"/>
     </ResourceDictionary.MergedDictionaries>
 </ResourceDictionary>
