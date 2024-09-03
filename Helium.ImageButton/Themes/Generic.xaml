@@ -1,8 +1,0 @@
-﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
-    <ResourceDictionary.MergedDictionaries>
-        <ResourceDictionary Source="/Helium.ImageButton;component/Themes/Styles/HeImageButtonBase.xaml"/>
-        <ResourceDictionary Source="/Helium.ImageButton;component/Themes/Styles/HeImageButtonBezel.xaml"/>
-        <ResourceDictionary Source="/Helium.ImageButton;component/Themes/Styles/HeImageButtonFlat.xaml"/>
-    </ResourceDictionary.MergedDictionaries>
-</ResourceDictionary>

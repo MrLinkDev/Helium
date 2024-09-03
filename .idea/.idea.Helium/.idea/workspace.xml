@@ -9,16 +9,56 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8b4ced28-5d3a-4a47-8b27-449f63f07d28" name="Changes" comment="Добавлен ImageButton в плоском варианте">
-      <change afterPath="$PROJECT_DIR$/Helium.ImageButton/Themes/Styles/HeImageButtonFlat.xaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Helium/Controls/ImageButton/HeImageButtonTransparent.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Helium/Controls/ImageButton/Styles/HeImageButtonFlatTransparent.xaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Helium/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Helium/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Helium.Button/HeButtonBase.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Helium.Button/HeButtonBase.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Helium.Button/AssemblyInfo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Helium/AssemblyInfo.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Helium.Button/HeButtonBase.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Helium/Controls/Button/HeButtonBase.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Helium.Button/HeButtonBezel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Helium/Controls/Button/HeButtonBezel.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Helium.Button/HeButtonFlat.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Helium/Controls/Button/HeButtonFlat.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Helium.Button/HeButtonOutline.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Helium.Button/Themes/Generic.xaml" beforeDir="false" afterPath="$PROJECT_DIR$/Helium.Button/Themes/Generic.xaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Helium.Button/Themes/Styles/HeButtonBezel.xaml" beforeDir="false" afterPath="$PROJECT_DIR$/Helium.Button/Themes/Styles/HeButtonBezel.xaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Helium.Button/Themes/Styles/HeButtonFlat.xaml" beforeDir="false" afterPath="$PROJECT_DIR$/Helium.Button/Themes/Styles/HeButtonFlat.xaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Helium.Button/Helium.Button.csproj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Helium.Button/Themes/Generic.xaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Helium.Button/Themes/Styles/HeButtonBase.xaml" beforeDir="false" afterPath="$PROJECT_DIR$/Helium/Controls/Button/Styles/HeButtonBase.xaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Helium.Button/Themes/Styles/HeButtonBezel.xaml" beforeDir="false" afterPath="$PROJECT_DIR$/Helium/Controls/Button/Styles/HeButtonBezel.xaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Helium.Button/Themes/Styles/HeButtonFlat.xaml" beforeDir="false" afterPath="$PROJECT_DIR$/Helium/Controls/Button/Styles/HeButtonFlat.xaml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Helium.Button/Themes/Styles/HeButtonOutline.xaml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Helium.ImageButton/Themes/Styles/HeImageButtonBezel.xaml" beforeDir="false" afterPath="$PROJECT_DIR$/Helium.ImageButton/Themes/Styles/HeImageButtonBezel.xaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Helium.Resources/Resources/Brushes.xaml" beforeDir="false" afterPath="$PROJECT_DIR$/Helium.Resources/Resources/Brushes.xaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Helium.CardView/AssemblyInfo.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Helium.CardView/HeCardView.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Helium.CardView/Helium.CardView.csproj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Helium.CardView/Themes/Generic.xaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Helium.Demo/Helium.Demo.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Helium.Demo/Helium.Demo.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Helium.Demo/MainWindow.xaml" beforeDir="false" afterPath="$PROJECT_DIR$/Helium.Demo/MainWindow.xaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Helium.Demo/MainWindow.xaml.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Helium.Demo/MainWindow.xaml.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Helium.ImageButton/AssemblyInfo.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Helium.ImageButton/HeImageButtonBase.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Helium/Controls/ImageButton/HeImageButtonBase.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Helium.ImageButton/HeImageButtonBezel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Helium/Controls/ImageButton/HeImageButtonBezel.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Helium.ImageButton/HeImageButtonFlat.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Helium/Controls/ImageButton/HeImageButtonFlat.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Helium.ImageButton/Helium.ImageButton.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Helium/Helium.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Helium.ImageButton/Themes/Generic.xaml" beforeDir="false" afterPath="$PROJECT_DIR$/Helium/Themes/Generic.xaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Helium.ImageButton/Themes/Styles/HeImageButtonBase.xaml" beforeDir="false" afterPath="$PROJECT_DIR$/Helium/Controls/ImageButton/Styles/HeImageButtonBase.xaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Helium.ImageButton/Themes/Styles/HeImageButtonBezel.xaml" beforeDir="false" afterPath="$PROJECT_DIR$/Helium/Controls/ImageButton/Styles/HeImageButtonBezel.xaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Helium.ImageButton/Themes/Styles/HeImageButtonFlat.xaml" beforeDir="false" afterPath="$PROJECT_DIR$/Helium/Controls/ImageButton/Styles/HeImageButtonFlat.xaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Helium.Resources/Helium.Resources.csproj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Helium.Resources/Resources/Brushes.xaml" beforeDir="false" afterPath="$PROJECT_DIR$/Helium/Resources/Brushes.xaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Helium.Resources/Resources/Colors.xaml" beforeDir="false" afterPath="$PROJECT_DIR$/Helium/Resources/Colors.xaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Helium.Resources/Resources/Dimensions.xaml" beforeDir="false" afterPath="$PROJECT_DIR$/Helium/Resources/Dimensions.xaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Helium.Resources/Resources/Icons.xaml" beforeDir="false" afterPath="$PROJECT_DIR$/Helium/Resources/Icons.xaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Helium.Resources/Resources/Icons/32px/close_icon.png" beforeDir="false" afterPath="$PROJECT_DIR$/Helium/Resources/Icons/32px/close_icon.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Helium.Resources/Resources/Icons/32px/maximize_icon.png" beforeDir="false" afterPath="$PROJECT_DIR$/Helium/Resources/Icons/32px/maximize_icon.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Helium.Resources/Resources/Icons/32px/minimize_icon.png" beforeDir="false" afterPath="$PROJECT_DIR$/Helium/Resources/Icons/32px/minimize_icon.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Helium.Resources/Resources/Icons/32px/normal_icon.png" beforeDir="false" afterPath="$PROJECT_DIR$/Helium/Resources/Icons/32px/normal_icon.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Helium.Resources/Resources/Icons/Paths/CloseIcon.xaml" beforeDir="false" afterPath="$PROJECT_DIR$/Helium/Resources/Icons/Paths/CloseIcon.xaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Helium.Resources/Resources/Icons/Paths/MaximizeIcon.xaml" beforeDir="false" afterPath="$PROJECT_DIR$/Helium/Resources/Icons/Paths/MaximizeIcon.xaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Helium.Resources/Resources/Icons/Paths/MinimizeIcon.xaml" beforeDir="false" afterPath="$PROJECT_DIR$/Helium/Resources/Icons/Paths/MinimizeIcon.xaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Helium.Window/AssemblyInfo.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Helium.Window/HeWindow.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Helium/Controls/Window/HeWindow.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Helium.Window/Helium.Window.csproj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Helium.Window/Themes/Generic.xaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Helium.Window/Themes/Styles/HeWindow.xaml" beforeDir="false" afterPath="$PROJECT_DIR$/Helium/Controls/Window/Styles/HeWindow.xaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Helium.sln" beforeDir="false" afterPath="$PROJECT_DIR$/Helium.sln" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Helium.sln.DotSettings.user" beforeDir="false" afterPath="$PROJECT_DIR$/Helium.sln.DotSettings.user" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -41,6 +81,7 @@
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/8627859306af40dc8a1dd42f7cecd5a4f608a0/0c/2644715a/ContentControl.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/8627859306af40dc8a1dd42f7cecd5a4f608a0/8e/63112a48/XamlReader.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/89fbf49063c34e53a31d071cb0e702a6f608a0/93/bcf342b8/FrameworkPropertyMetadata.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/89fbf49063c34e53a31d071cb0e702a6f608a0/e3/74434e41/XamlReader.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/94a30115a8ed47ff824ae9839344c0388258a0/e5/4eb2cdd5/UIPropertyMetadata.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/e1657c4d9b7146d6b243e9a34eae6471825908/02/5ef9efca/ImageSource.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/175b54becf6877369f497486d4ea29889a97d9d173ea1c631f80acf278b4b7/Animatable.cs" root0="FORCE_HIGHLIGHTING" />
@@ -51,7 +92,9 @@
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/e261e7c751368e4e487d2eb671dfd79e32981c6863291580884eca26fe079/GradientStop.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/e4e8886b208868416341c18e8dec6533738df3eed99e22c8c4e3fd31cc9ee4/Window.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Helium.Demo/MainWindow.xaml" root0="FORCE_HIGHLIGHTING" />
-    <setting file="mock://D:/Projects/Helium/Helium.Demo/MainWindow.xaml" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Helium/Controls/Button/HeButtonBase.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Helium/Controls/Button/HeButtonBezel.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Helium/Controls/Button/HeButtonFlat.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="MetaFilesCheckinStateConfiguration" checkMetaFiles="true" />
   <component name="ProjectColorInfo">{
@@ -67,13 +110,13 @@
   "keyToString": {
     ".NET Project.HeliumDemo.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "HELIUM-8",
+    "git-widget-placeholder": "main",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "XamlPreviewOptionsPage",
+    "settings.editor.selected.configurable": "RiderUnitTestingPageId",
     "timeTracker.activityTracker": "null",
     "timeTracker.comment": "",
     "timeTracker.inactivityPeriodInMills": "600000",
@@ -160,6 +203,7 @@
       <workItem from="1724389980109" duration="692000" />
       <workItem from="1724403908503" duration="11000" />
       <workItem from="1725332350638" duration="4918000" />
+      <workItem from="1725341000914" duration="9321000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit">
       <option name="closed" value="true" />
