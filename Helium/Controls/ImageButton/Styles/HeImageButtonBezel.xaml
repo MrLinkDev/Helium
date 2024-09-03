@@ -52,7 +52,9 @@
 
                         <Grid>
                             <ContentControl>
-                                <Image>
+                                <Image
+                                    Width="{TemplateBinding ImageWidth}"
+                                    Height="{TemplateBinding ImageHeight}">
                                     <Image.Style>
                                         <Style TargetType="Image">
                                             <Setter 

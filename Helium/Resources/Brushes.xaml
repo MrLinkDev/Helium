@@ -41,7 +41,7 @@
     <Brush x:Key="BlackBrush700">#4f4f4f</Brush>
     <Brush x:Key="BlackBrush800">#454545</Brush>       
     <Brush x:Key="BlackBrush900">#3d3d3d</Brush>
-    <Brush x:Key="BlackBrush950">#212121</Brush>            <!-- lock -->
+    <Brush x:Key="BlackBrush950">#202020</Brush>            <!-- lock -->
     
     
 </ResourceDictionary>

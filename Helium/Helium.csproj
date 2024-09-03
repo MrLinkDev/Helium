@@ -91,10 +91,14 @@
     </ItemGroup>
 
     <ItemGroup>
-      <Resource Include="Resources\Icons\32px\close_icon.png" />
-      <Resource Include="Resources\Icons\32px\maximize_icon.png" />
-      <Resource Include="Resources\Icons\32px\minimize_icon.png" />
-      <Resource Include="Resources\Icons\32px\normal_icon.png" />
+      <Resource Include="Resources\Icons\close_icon.png" />
+      <Resource Include="Resources\Icons\default_icon.png" />
+      <Resource Include="Resources\Icons\maximize_icon.png" />
+      <Resource Include="Resources\Icons\minimize_icon.png" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <PackageReference Include="Alexander.Gorbunov.Lithium" Version="1.1.0" />
     </ItemGroup>
 
 </Project>

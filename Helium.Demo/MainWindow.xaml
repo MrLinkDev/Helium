@@ -74,7 +74,7 @@
                 Width="32"
                 Height="32"
                 Margin="8"
-                ImageSource="/Helium;component/Resources/Icons/32px/close_icon.png"/>
+                ImageSource="/Helium;component/Resources/Icons/close_icon.png"/>
             
             <imageButton:HeImageButtonBezel
                 DockPanel.Dock="Top"
@@ -82,8 +82,8 @@
                 Height="32"
                 Margin="8"
                 IsEnabled="False"
-                ImageSourceDisabled="/Helium;component/Resources/Icons/32px/maximize_icon.png"
-                ImageSource="/Helium;component/Resources/Icons/32px/close_icon.png"/>
+                ImageSourceDisabled="/Helium;component/Resources/Icons/maximize_icon.png"
+                ImageSource="/Helium;component/Resources/Icons/close_icon.png"/>
             
         </DockPanel>
         
@@ -95,7 +95,7 @@
                 Width="32"
                 Height="32"
                 Margin="8"
-                ImageSource="/Helium;component/Resources/Icons/32px/close_icon.png"/>
+                ImageSource="/Helium;component/Resources/Icons/close_icon.png"/>
             
             <imageButton:HeImageButtonFlat
                 DockPanel.Dock="Top"
@@ -103,8 +103,8 @@
                 Height="32"
                 Margin="8"
                 IsEnabled="False"
-                ImageSourceDisabled="/Helium;component/Resources/Icons/32px/maximize_icon.png"
-                ImageSource="/Helium;component/Resources/Icons/32px/close_icon.png"/>
+                ImageSourceDisabled="/Helium;component/Resources/Icons/maximize_icon.png"
+                ImageSource="/Helium;component/Resources/Icons/close_icon.png"/>
             
         </DockPanel>
         
@@ -116,7 +116,7 @@
                 Width="32"
                 Height="32"
                 Margin="8"
-                ImageSource="/Helium;component/Resources/Icons/32px/close_icon.png"/>
+                ImageSource="/Helium;component/Resources/Icons/close_icon.png"/>
             
             <imageButton:HeImageButtonFlatTransparent
                 DockPanel.Dock="Top"
@@ -124,8 +124,8 @@
                 Height="32"
                 Margin="8"
                 IsEnabled="False"
-                ImageSourceDisabled="/Helium;component/Resources/Icons/32px/maximize_icon.png"
-                ImageSource="/Helium;component/Resources/Icons/32px/close_icon.png"/>
+                ImageSourceDisabled="/Helium;component/Resources/Icons/maximize_icon.png"
+                ImageSource="/Helium;component/Resources/Icons/close_icon.png"/>
             
         </DockPanel>
     </Grid>

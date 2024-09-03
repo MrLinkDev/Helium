@@ -20,13 +20,15 @@
 
                         Background="{TemplateBinding Background}"
 
-                        CornerRadius="{TemplateBinding CornerRadius}"
+                        CornerRadius="0"
 
                         SnapsToDevicePixels="True">
 
                         <Grid>
                             <ContentControl>
-                                <Image>
+                                <Image
+                                    Width="{TemplateBinding ImageWidth}"
+                                    Height="{TemplateBinding ImageHeight}">
                                     <Image.Style>
                                         <Style TargetType="Image">
                                             <Setter 
