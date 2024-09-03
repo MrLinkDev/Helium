@@ -11,9 +11,9 @@
     <Brush x:Key="PrimaryBrush300">#adc5e3</Brush>
     <Brush x:Key="PrimaryBrush400">#85a8d5</Brush>
     <Brush x:Key="PrimaryBrush500">#688cc9</Brush>          
-    <Brush x:Key="PrimaryBrush600">#5574bb</Brush>
+    <Brush x:Key="PrimaryBrush600">#5574bb</Brush>          <!-- lock -->
     <Brush x:Key="PrimaryBrush700">#4a62aa</Brush>
-    <Brush x:Key="PrimaryBrush800">#41528c</Brush>          <!-- lock -->
+    <Brush x:Key="PrimaryBrush800">#41528c</Brush>          
     <Brush x:Key="PrimaryBrush900">#384670</Brush>
     <Brush x:Key="PrimaryBrush950">#262d45</Brush>
     

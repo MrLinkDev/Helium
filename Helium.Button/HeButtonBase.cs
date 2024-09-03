@@ -1,5 +1,8 @@
-﻿using System.Windows;
+﻿using System.ComponentModel;
+using System.Runtime.CompilerServices;
+using System.Windows;
 using System.Windows.Controls.Primitives;
+using System.Windows.Media;
 
 namespace Helium.Button;
 
@@ -11,13 +14,15 @@ public class HeButtonBase : ButtonBase {
         nameof(CornerRadius),
         typeof(CornerRadius),
         typeof(HeButtonBase),
-        new PropertyMetadata(new CornerRadius(2)));
+        new FrameworkPropertyMetadata(new CornerRadius(2), 
+            FrameworkPropertyMetadataOptions.AffectsRender));
 
     public static readonly DependencyProperty TextProperty = DependencyProperty.Register(
         nameof(Text),
         typeof(string),
         typeof(HeButtonBase),
-        new PropertyMetadata(string.Empty));
+        new FrameworkPropertyMetadata(string.Empty, 
+            FrameworkPropertyMetadataOptions.AffectsRender));
 
     #endregion
 
@@ -34,5 +39,4 @@ public class HeButtonBase : ButtonBase {
     }
 
     #endregion
-    
 }
