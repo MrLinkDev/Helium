@@ -127,11 +127,11 @@
                         </Trigger>
 
                         <Trigger Property="IsEnabled" Value="False">
-                            <Setter Property="Background" Value="{StaticResource PrimaryBrush100}" />
+                            <Setter Property="Background" Value="{StaticResource PrimaryBrush950}" />
 
                             <Setter Property="BorderThickness" Value="{StaticResource Thickness0}" />
 
-                            <Setter Property="Foreground" Value="{StaticResource PrimaryBrush400}" />
+                            <Setter Property="Foreground" Value="{StaticResource PrimaryBrush700}" />
                         </Trigger>
                     </ControlTemplate.Triggers>
                 </ControlTemplate>

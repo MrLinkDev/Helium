@@ -58,11 +58,11 @@
                         <Trigger Property="IsEnabled" Value="False">
                             <Setter 
                                 Property="Background" 
-                                Value="{StaticResource PrimaryBrush100}"/>
+                                Value="{StaticResource PrimaryBrush950}"/>
                             
                             <Setter
                                 Property="Foreground"
-                                Value="{StaticResource PrimaryBrush400}"/>
+                                Value="{StaticResource PrimaryBrush700}"/>
                         </Trigger>
                     </ControlTemplate.Triggers>
                 </ControlTemplate>
