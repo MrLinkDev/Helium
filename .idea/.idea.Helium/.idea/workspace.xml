@@ -8,15 +8,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8b4ced28-5d3a-4a47-8b27-449f63f07d28" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Helium/Controls/ImageButton/HeImageButtonTransparentAttention.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Helium/Controls/ImageButton/Styles/HeImageButtonFlatTransparentAttention.xaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Helium/Resources/Icons/app_icon.png" afterDir="false" />
+    <list default="true" id="8b4ced28-5d3a-4a47-8b27-449f63f07d28" name="Changes" comment="Реализовано кастомное окно">
+      <change afterPath="$PROJECT_DIR$/Helium/Controls/RadioButton/HeRadioButton.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Helium/Controls/RadioButton/Styles/HeRadioButton.xaml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Helium/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Helium/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Helium.Demo/MainWindow.xaml" beforeDir="false" afterPath="$PROJECT_DIR$/Helium.Demo/MainWindow.xaml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Helium.sln.DotSettings.user" beforeDir="false" afterPath="$PROJECT_DIR$/Helium.sln.DotSettings.user" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Helium/Controls/Window/HeWindow.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Helium/Controls/Window/HeWindow.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Helium/Controls/Window/Styles/HeWindow.xaml" beforeDir="false" afterPath="$PROJECT_DIR$/Helium/Controls/Window/Styles/HeWindow.xaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Helium/Helium.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Helium/Helium.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Helium/Resources/Dimensions.xaml" beforeDir="false" afterPath="$PROJECT_DIR$/Helium/Resources/Dimensions.xaml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Helium/Themes/Generic.xaml" beforeDir="false" afterPath="$PROJECT_DIR$/Helium/Themes/Generic.xaml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -45,6 +44,7 @@
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/89fbf49063c34e53a31d071cb0e702a6f608a0/78/157fcfa3/Window.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/89fbf49063c34e53a31d071cb0e702a6f608a0/8c/41ba65d7/ResourcePart.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/89fbf49063c34e53a31d071cb0e702a6f608a0/93/bcf342b8/FrameworkPropertyMetadata.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/89fbf49063c34e53a31d071cb0e702a6f608a0/9d/d36c4bbd/RadioButton.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/89fbf49063c34e53a31d071cb0e702a6f608a0/b3/cce1c174/DockPanel.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/89fbf49063c34e53a31d071cb0e702a6f608a0/ce/060c9ed3/Border.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/89fbf49063c34e53a31d071cb0e702a6f608a0/e0/2e0abbcf/Panel.cs" root0="SKIP_HIGHLIGHTING" />
@@ -175,7 +175,7 @@
       <workItem from="1725341000914" duration="12802000" />
       <workItem from="1725427152975" duration="50000" />
       <workItem from="1725427215451" duration="66000" />
-      <workItem from="1725427293651" duration="12729000" />
+      <workItem from="1725427293651" duration="14794000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit">
       <option name="closed" value="true" />
@@ -233,7 +233,15 @@
       <option name="project" value="LOCAL" />
       <updated>1725362261176</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Реализовано кастомное окно">
+      <option name="closed" value="true" />
+      <created>1725444896314</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1725444896314</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -263,6 +271,7 @@
     <MESSAGE value="Добавлен ImageButton в плоском варианте" />
     <MESSAGE value="Реорганизована структура проекта" />
     <MESSAGE value="Изменён вид окна" />
-    <option name="LAST_COMMIT_MESSAGE" value="Изменён вид окна" />
+    <MESSAGE value="Реализовано кастомное окно" />
+    <option name="LAST_COMMIT_MESSAGE" value="Реализовано кастомное окно" />
   </component>
 </project>

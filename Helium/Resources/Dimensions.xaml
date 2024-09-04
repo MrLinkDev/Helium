@@ -60,4 +60,7 @@
     <system:Double x:Key="ToolbarButtonWidth">40</system:Double>
     <system:Double x:Key="ToolbarButtonHeight">40</system:Double>
     
+    <!-- RadioButton -->
+    <system:Double x:Key="EllipseSize">16</system:Double>
+    
 </ResourceDictionary>

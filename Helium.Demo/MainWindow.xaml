@@ -7,6 +7,7 @@
         xmlns:button="clr-namespace:Helium.Controls.Button;assembly=Helium"
         xmlns:imageButton="clr-namespace:Helium.Controls.ImageButton;assembly=Helium"
         xmlns:window="clr-namespace:Helium.Controls.Window;assembly=Helium"
+        xmlns:radioButton="clr-namespace:Helium.Controls.RadioButton;assembly=Helium"
 
         mc:Ignorable="d"
         Title="MainWindow"
@@ -27,6 +28,7 @@
         <DockPanel
             Grid.Column="0"
             LastChildFill="False">
+            
             <button:HeButtonFlat
                 DockPanel.Dock="Top"
                 Width="100"
@@ -43,6 +45,9 @@
                 IsEnabled="False"
                 Text="Disabled">
             </button:HeButtonFlat>
+            
+            <radioButton:HeRadioButton
+                DockPanel.Dock="Top"/>
         </DockPanel>
         
         <DockPanel
