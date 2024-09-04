@@ -9,15 +9,6 @@
         <ResourceDictionary Source="/Helium;component/Resources/Dimensions.xaml" />
     </ResourceDictionary.MergedDictionaries>
 
-    <LinearGradientBrush
-        x:Key="GradientToolbarBackground"
-        StartPoint="0,0"
-        EndPoint="1,0">
-        <GradientStop Offset="-0.3" Color="{StaticResource BlackColor800}" />
-        <GradientStop Offset="0.1" Color="{StaticResource PrimaryColor800}" />
-        <GradientStop Offset="0.5" Color="{StaticResource BlackColor800}" />
-    </LinearGradientBrush>
-
     <Style x:Key="MinimizeButtonStyle" TargetType="{x:Type Button}">
         <Setter Property="Template">
             <Setter.Value>
@@ -25,17 +16,17 @@
                     <Border
                         Width="{StaticResource ToolbarButtonWidth}"
                         Height="{StaticResource ToolbarButtonHeight}"
-                        
+
                         Margin="0"
                         Padding="8"
-                        
+
                         SnapsToDevicePixels="True"
-                        
+
                         Background="{StaticResource PrimaryBrush500}">
-                        
+
                         <Image Source="/Helium.Resources;component/Resources/Icons/32px/minimize_icon.png" />
                     </Border>
-                    
+
                     <ControlTemplate.Triggers>
                         <Trigger Property="IsMouseOver" Value="true">
                             <Setter Property="Background" Value="{StaticResource PrimaryBrush600}" />
@@ -60,72 +51,109 @@
             </Setter.Value>
         </Setter>
 
-        <!-- <Setter Property="MinWidth" Value="{StaticResource MinWindowWidth}" /> -->
-        <!-- <Setter Property="MinHeight" Value="{StaticResource MinWindowHeight}" /> -->
-
         <Setter Property="Width" Value="{StaticResource WindowWidth}" />
         <Setter Property="Height" Value="{StaticResource WindowHeight}" />
 
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="local:HeWindow">
-                    <DockPanel LastChildFill="True">
-                        <Border
-                            DockPanel.Dock="Top"
-                            Height="{StaticResource ToolbarHeight}"
-                            
-                            Background="{StaticResource GradientToolbarBackground}"
-                            BorderThickness="0">
-                            
-                            <Grid>
+                    <Border
+                        BorderThickness="{TemplateBinding BorderThickness}">
+                        <DockPanel LastChildFill="True">
+                            <Border
+                                DockPanel.Dock="Top"
+                                Height="{StaticResource ToolbarHeight}"
+                                BorderThickness="0">
                                 
-                                <Grid.ColumnDefinitions>
-                                    <ColumnDefinition/>
-                                    <ColumnDefinition Width="Auto"/>
-                                </Grid.ColumnDefinitions>
-                                
-                                <DockPanel
-                                    Grid.Column="0"
-                                    x:Name="WindowToolbar">
-                                    
-                                </DockPanel>
-                                
-                                <DockPanel 
-                                    Grid.Column="1"
-                                    LastChildFill="False">
-                                    <imageButton:HeImageButtonFlatTransparent
-                                        DockPanel.Dock="Right"
-                                        Height="{StaticResource ToolbarHeight}"
-                                        Width="46"
-                                        ImageHeight="16"
-                                        ImageWidth="16"
-                                        ImageSource="/Helium;component/Resources/Icons/close_icon.png"/>
-                                    <imageButton:HeImageButtonFlatTransparent
-                                        DockPanel.Dock="Right"
-                                        Height="{StaticResource ToolbarHeight}"
-                                        Width="46"
-                                        ImageHeight="16"
-                                        ImageWidth="16"
-                                        ImageSource="/Helium;component/Resources/Icons/maximize_icon.png"/>
-                                    <imageButton:HeImageButtonFlatTransparent
-                                        DockPanel.Dock="Right"
-                                        Height="{StaticResource ToolbarHeight}"
-                                        Width="46"
-                                        ImageHeight="16"
-                                        ImageWidth="16"
-                                        ImageSource="/Helium;component/Resources/Icons/minimize_icon.png"/>
-                                </DockPanel>
-                            </Grid>
-                            
-                        </Border>
+                                <Border.Background>
+                                    <LinearGradientBrush
+                                        StartPoint="0,0"
+                                        EndPoint="540,0"
+                                        MappingMode="Absolute">
+                                        <GradientStop Offset="0.1" Color="{Binding Path=ToolbarAccent, RelativeSource={RelativeSource TemplatedParent}}" />
+                                        <GradientStop Offset="0.6" Color="{StaticResource BlackColor800}" />
+                                    </LinearGradientBrush>
+                                </Border.Background>
 
-                        <StackPanel
-                            DockPanel.Dock="Bottom"
-                            Background="{TemplateBinding BodyBackground}">
+                                <Grid>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition />
+                                        <ColumnDefinition Width="Auto" />
+                                    </Grid.ColumnDefinitions>
 
-                            <ContentPresenter />
-                        </StackPanel>
-                    </DockPanel>
+                                    <DockPanel
+                                        Grid.Column="0"
+                                        x:Name="WindowToolbar">
+                                        
+                                        <Image
+                                            x:Name="AppButton"
+                                            DockPanel.Dock="Left"
+                                            Height="16"
+                                            Width="16"
+                                            VerticalAlignment="Center"
+                                            Margin="16, 8, 16, 8"
+                                            Source="{TemplateBinding AppIcon}" />
+
+                                        <Label
+                                            DockPanel.Dock="Left"
+                                            
+                                            FontSize="{StaticResource FontSize}"
+                                            Foreground="{StaticResource BlackBrush50}"
+
+                                            VerticalContentAlignment="Center"
+                                            
+                                            Padding="0"
+                                            Margin="0"
+
+                                            Content="Multitone" />
+                                        
+                                        <ContentPresenter
+                                            Content="{TemplateBinding ToolbarContent}"/>
+                                    </DockPanel>
+
+                                    <DockPanel
+                                        Grid.Column="1"
+                                        LastChildFill="False">
+                                        <imageButton:HeImageButtonFlatTransparentAttention
+                                            x:Name="CloseButton"
+                                            DockPanel.Dock="Right"
+                                            Height="{StaticResource ToolbarHeight}"
+                                            Width="46"
+                                            ImageHeight="16"
+                                            ImageWidth="16"
+                                            ImageSource="/Helium;component/Resources/Icons/close_icon.png" />
+                                        
+                                        <imageButton:HeImageButtonFlatTransparent
+                                            x:Name="MaximizeButton"
+                                            DockPanel.Dock="Right"
+                                            Height="{StaticResource ToolbarHeight}"
+                                            Width="46"
+                                            ImageHeight="16"
+                                            ImageWidth="16"
+                                            ImageSource="/Helium;component/Resources/Icons/maximize_icon.png">
+                                        </imageButton:HeImageButtonFlatTransparent>
+                                        
+                                        <imageButton:HeImageButtonFlatTransparent
+                                            x:Name="MinimizeButton"
+                                            DockPanel.Dock="Right"
+                                            Height="{StaticResource ToolbarHeight}"
+                                            Width="46"
+                                            ImageHeight="16"
+                                            ImageWidth="16"
+                                            ImageSource="/Helium;component/Resources/Icons/minimize_icon.png" />
+                                    </DockPanel>
+                                </Grid>
+
+                            </Border>
+
+                            <StackPanel
+                                DockPanel.Dock="Bottom"
+                                Background="{TemplateBinding BodyBackground}">
+
+                                <ContentPresenter />
+                            </StackPanel>
+                        </DockPanel>
+                    </Border>
                 </ControlTemplate>
             </Setter.Value>
         </Setter>

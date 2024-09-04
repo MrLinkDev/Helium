@@ -88,6 +88,11 @@
         <XamlRuntime>Wpf</XamlRuntime>
         <SubType>Designer</SubType>
       </Page>
+      <Page Update="Controls\ImageButton\Styles\HeImageButtonFlatTransparentAttention.xaml">
+        <Generator>MSBuild:Compile</Generator>
+        <XamlRuntime>Wpf</XamlRuntime>
+        <SubType>Designer</SubType>
+      </Page>
     </ItemGroup>
 
     <ItemGroup>
@@ -95,10 +100,7 @@
       <Resource Include="Resources\Icons\default_icon.png" />
       <Resource Include="Resources\Icons\maximize_icon.png" />
       <Resource Include="Resources\Icons\minimize_icon.png" />
-    </ItemGroup>
-
-    <ItemGroup>
-      <PackageReference Include="Alexander.Gorbunov.Lithium" Version="1.1.0" />
+      <Resource Include="Resources\Icons\app_icon.png" />
     </ItemGroup>
 
 </Project>
