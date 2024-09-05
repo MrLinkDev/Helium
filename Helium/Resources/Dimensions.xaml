@@ -62,5 +62,8 @@
     
     <!-- RadioButton -->
     <system:Double x:Key="EllipseSize">16</system:Double>
+    <system:Double x:Key="EllipseInnerSize">8</system:Double>
+    
+    <system:Double x:Key="EllipseStrokeSize">2</system:Double>
     
 </ResourceDictionary>

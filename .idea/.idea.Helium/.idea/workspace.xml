@@ -8,15 +8,18 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8b4ced28-5d3a-4a47-8b27-449f63f07d28" name="Changes" comment="Реализовано кастомное окно">
-      <change afterPath="$PROJECT_DIR$/Helium/Controls/RadioButton/HeRadioButton.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Helium/Controls/RadioButton/Styles/HeRadioButton.xaml" afterDir="false" />
+    <list default="true" id="8b4ced28-5d3a-4a47-8b27-449f63f07d28" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/Helium/Resources/HeResources.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Helium/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Helium/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Helium.Demo/Helium.Demo.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Helium.Demo/Helium.Demo.csproj" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Helium.Demo/MainWindow.xaml" beforeDir="false" afterPath="$PROJECT_DIR$/Helium.Demo/MainWindow.xaml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Helium.sln.DotSettings.user" beforeDir="false" afterPath="$PROJECT_DIR$/Helium.sln.DotSettings.user" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Helium/Controls/RadioButton/HeRadioButton.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Helium/Controls/RadioButton/HeRadioButton.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Helium/Controls/RadioButton/Styles/HeRadioButton.xaml" beforeDir="false" afterPath="$PROJECT_DIR$/Helium/Controls/RadioButton/Styles/HeRadioButton.xaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Helium/Controls/Window/HeWindow.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Helium/Controls/Window/HeWindow.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Helium/Controls/Window/Styles/HeWindow.xaml" beforeDir="false" afterPath="$PROJECT_DIR$/Helium/Controls/Window/Styles/HeWindow.xaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Helium/Helium.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Helium/Helium.csproj" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Helium/Resources/Dimensions.xaml" beforeDir="false" afterPath="$PROJECT_DIR$/Helium/Resources/Dimensions.xaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Helium/Themes/Generic.xaml" beforeDir="false" afterPath="$PROJECT_DIR$/Helium/Themes/Generic.xaml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -50,6 +53,8 @@
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/89fbf49063c34e53a31d071cb0e702a6f608a0/e0/2e0abbcf/Panel.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/89fbf49063c34e53a31d071cb0e702a6f608a0/e3/74434e41/XamlReader.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/94a30115a8ed47ff824ae9839344c0388258a0/e5/4eb2cdd5/UIPropertyMetadata.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/dfe3f00af14542faa9c699feef6c4064843308/3d/04311e24/KnownColors.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/dfe3f00af14542faa9c699feef6c4064843308/dd/bacb0dff/Brushes.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/e1657c4d9b7146d6b243e9a34eae6471825908/02/5ef9efca/ImageSource.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/e8eaaff227e6408d999b1f9e2e2b0ab43f918/01/bfcb1e86/Uri.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/175b54becf6877369f497486d4ea29889a97d9d173ea1c631f80acf278b4b7/Animatable.cs" root0="FORCE_HIGHLIGHTING" />
@@ -77,6 +82,7 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     ".NET Project.HeliumDemo.executor": "Run",
+    "Publish to folder.Publish Helium.Demo to folder.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "XThreadsFramesViewSplitterKey": "0.50049555",
     "git-widget-placeholder": "main",
@@ -110,7 +116,11 @@
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
-  <component name="RunManager">
+  <component name="RunManager" selected=".NET Project.HeliumDemo">
+    <configuration name="Publish Helium.Demo to folder" type="DotNetFolderPublish" factoryName="Publish to folder">
+      <riderPublish configuration="Release" platform="Any CPU" runtime="win-x64" self_contained="true" target_folder="$PROJECT_DIR$/Helium.Demo/bin/Release/net481/win-x64/publish" target_framework="net8.0-windows" uuid_high="-6968831617811069405" uuid_low="-6202492843019127623" />
+      <method v="2" />
+    </configuration>
     <configuration name="HeliumDemo" type="DotNetProject" factoryName=".NET Project">
       <option name="EXE_PATH" value="" />
       <option name="PROGRAM_PARAMETERS" value="" />
@@ -129,6 +139,10 @@
         <option name="Build" />
       </method>
     </configuration>
+    <list>
+      <item itemvalue=".NET Project.HeliumDemo" />
+      <item itemvalue="Publish to folder.Publish Helium.Demo to folder" />
+    </list>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -175,7 +189,12 @@
       <workItem from="1725341000914" duration="12802000" />
       <workItem from="1725427152975" duration="50000" />
       <workItem from="1725427215451" duration="66000" />
-      <workItem from="1725427293651" duration="14794000" />
+      <workItem from="1725427293651" duration="15201000" />
+      <workItem from="1725502935075" duration="63000" />
+      <workItem from="1725503013635" duration="759000" />
+      <workItem from="1725505851772" duration="16000" />
+      <workItem from="1725505876173" duration="22000" />
+      <workItem from="1725506210565" duration="7558000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit">
       <option name="closed" value="true" />
@@ -241,7 +260,15 @@
       <option name="project" value="LOCAL" />
       <updated>1725444896314</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Исправлена проблема с нерабочим тулбаром, если в нём нет элементов">
+      <option name="closed" value="true" />
+      <created>1725447143251</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1725447143251</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -272,6 +299,7 @@
     <MESSAGE value="Реорганизована структура проекта" />
     <MESSAGE value="Изменён вид окна" />
     <MESSAGE value="Реализовано кастомное окно" />
-    <option name="LAST_COMMIT_MESSAGE" value="Реализовано кастомное окно" />
+    <MESSAGE value="Исправлена проблема с нерабочим тулбаром, если в нём нет элементов" />
+    <option name="LAST_COMMIT_MESSAGE" value="Исправлена проблема с нерабочим тулбаром, если в нём нет элементов" />
   </component>
 </project>

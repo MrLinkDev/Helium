@@ -29,6 +29,12 @@ public class HeWindow : System.Windows.Window {
         new FrameworkPropertyMetadata(
             new BitmapImage(
                 new Uri("pack://application:,,,/Helium;component/Resources/Icons/app_icon.png"))));
+    
+    public static readonly DependencyProperty WindowTitleProperty = DependencyProperty.Register(
+        nameof(WindowTitle),
+        typeof(string),
+        typeof(HeWindow),
+        new FrameworkPropertyMetadata("Helium Window"));
 
     public static readonly DependencyProperty ToolbarAccentProperty = DependencyProperty.Register(
         nameof(ToolbarAccent),
@@ -55,6 +61,11 @@ public class HeWindow : System.Windows.Window {
     public ImageSource AppIcon {
         get => (ImageSource)GetValue(AppIconProperty);
         set => SetValue(AppIconProperty, value);
+    }
+
+    public string WindowTitle {
+        get => (string)GetValue(WindowTitleProperty);
+        set => SetValue(WindowTitleProperty, value);
     }
 
     public Color ToolbarAccent {

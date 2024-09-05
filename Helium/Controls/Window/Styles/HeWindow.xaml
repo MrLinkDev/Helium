@@ -106,7 +106,7 @@
                                             Padding="0"
                                             Margin="0"
 
-                                            Content="Multitone" />
+                                            Content="{TemplateBinding WindowTitle}" />
                                         
                                         <ContentPresenter
                                             DockPanel.Dock="Right"
