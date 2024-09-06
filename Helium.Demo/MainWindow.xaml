@@ -13,118 +13,222 @@
 
         mc:Ignorable="d"
         Title="MainWindow"
-        Height="450"
-        Width="800"
+        Height="480"
+        Width="840"
         Background="#212121"
         WindowStartupLocation="CenterScreen"
         WindowTitle="Helium Demo">
     
     <Grid>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition/>
-            <ColumnDefinition/>
-            <ColumnDefinition/>
-            <ColumnDefinition/>
-            <ColumnDefinition/>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="Auto"/>
         </Grid.ColumnDefinitions>
         
         <DockPanel
             Grid.Column="0"
-            LastChildFill="False">
+            LastChildFill="False"
+            Margin="16">
+            
+            <button:HeButtonBezel
+                DockPanel.Dock="Top"
+                Text="Default"/>
+            
+            <button:HeButtonBezel
+                DockPanel.Dock="Top"
+                Margin="0, 8,0, 0"
+                Text="Disabled"
+                IsEnabled="False"/>
             
             <button:HeButtonFlat
                 DockPanel.Dock="Top"
-                Width="100"
-                Height="32"
-                Margin="8"
-                Text="Default">
-            </button:HeButtonFlat>
+                Margin="0, 16,0, 0"
+                Text="Default"/>
             
             <button:HeButtonFlat
                 DockPanel.Dock="Top"
-                Width="100"
-                Height="32"
-                Margin="8"
-                IsEnabled="False"
-                Text="Disabled">
-            </button:HeButtonFlat>
+                Margin="0, 8,0, 0"
+                Text="Disabled"
+                IsEnabled="False"/>
             
-            <radioButton:HeRadioButton
+            <Grid
                 DockPanel.Dock="Top">
                 
-                <radioButton:HeRadioButton.Content>
-                    <Label Content="Embedded content"></Label>
-                </radioButton:HeRadioButton.Content>
-            </radioButton:HeRadioButton>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
             
-            <radioButton:HeRadioButton
+                <imageButton:HeImageButtonBezel
+                    Grid.Column="0"
+                    Grid.Row="0"
+                    Margin="0, 16,0, 0"
+                    Width="28"
+                    ImageWidth="16"
+                    ImageHeight="16"
+                    ImageSource="/Helium;component/Resources/Icons/app_icon.png"/>
+            
+                <imageButton:HeImageButtonBezel
+                    Grid.Column="0"
+                    Grid.Row="1"
+                    Margin="0, 8,0, 0"
+                    Width="28"
+                    ImageWidth="16"
+                    ImageHeight="16"
+                    ImageSource="/Helium;component/Resources/Icons/app_icon.png"
+                    IsEnabled="False"/>
+            
+                <imageButton:HeImageButtonFlat
+                    Grid.Column="1"
+                    Grid.Row="0"
+                    Margin="0, 16,0, 0"
+                    Width="28"
+                    ImageWidth="16"
+                    ImageHeight="16"
+                    ImageSource="/Helium;component/Resources/Icons/app_icon.png"/>
+            
+                <imageButton:HeImageButtonFlat
+                    Grid.Column="1"
+                    Grid.Row="1"
+                    Margin="0, 8,0, 0"
+                    Width="28"
+                    ImageWidth="16"
+                    ImageHeight="16"
+                    ImageSource="/Helium;component/Resources/Icons/app_icon.png"
+                    IsEnabled="False"/>
+            </Grid>
+            
+            <Grid
                 DockPanel.Dock="Top">
                 
-                <radioButton:HeRadioButton.Content>
-                    <Label Content="Embedded content"></Label>
-                </radioButton:HeRadioButton.Content>
-            </radioButton:HeRadioButton>
-            
-            <radioButton:HeRadioButton
-                DockPanel.Dock="Top">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
                 
-                <radioButton:HeRadioButton.Content>
-                    <Label Content="Embedded content"></Label>
-                </radioButton:HeRadioButton.Content>
-            </radioButton:HeRadioButton>
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
             
-            <radioButton:HeRadioButton
-                DockPanel.Dock="Top"
-                IsEnabled="False"
-                Content="Disabled String content">
-            </radioButton:HeRadioButton>
+                <imageButton:HeImageButtonFlatTransparent
+                    Grid.Column="0"
+                    Grid.Row="0"
+                    Margin="0, 16,0, 0"
+                    Width="28"
+                    ImageWidth="16"
+                    ImageHeight="16"
+                    ImageSource="/Helium;component/Resources/Icons/app_icon.png"/>
             
-            <radioButton:HeRadioButton
-                DockPanel.Dock="Top"
-                IsEnabled="False">
-                
-                <radioButton:HeRadioButton.Content>
-                    <Label Content="Disabled Embedded content"></Label>
-                </radioButton:HeRadioButton.Content>
-            </radioButton:HeRadioButton>
+                <imageButton:HeImageButtonFlatTransparent
+                    Grid.Column="0"
+                    Grid.Row="1"
+                    Margin="0, 8,0, 0"
+                    Width="28"
+                    ImageWidth="16"
+                    ImageHeight="16"
+                    ImageSource="/Helium;component/Resources/Icons/app_icon.png"
+                    IsEnabled="False"/>
+            
+                <imageButton:HeImageButtonFlatTransparentAttention
+                    Grid.Column="1"
+                    Grid.Row="0"
+                    Margin="0, 16,0, 0"
+                    Width="28"
+                    ImageWidth="16"
+                    ImageHeight="16"
+                    ImageSource="/Helium;component/Resources/Icons/app_icon.png"/>
+            
+                <imageButton:HeImageButtonFlatTransparentAttention
+                    Grid.Column="1"
+                    Grid.Row="1"
+                    Margin="0, 8,0, 0"
+                    Width="28"
+                    ImageWidth="16"
+                    ImageHeight="16"
+                    ImageSource="/Helium;component/Resources/Icons/app_icon.png"
+                    IsEnabled="False"/>
+            </Grid>
         </DockPanel>
         
         <DockPanel
             Grid.Column="1"
-            LastChildFill="False">
-            <button:HeButtonBezel
-                DockPanel.Dock="Top"
-                Width="100"
-                Height="32"
-                Margin="8"
-                Text="Default">
-            </button:HeButtonBezel>
+            LastChildFill="False"
+            Margin="0, 16, 16, 16">
             
-            <button:HeButtonBezel
+            <radioButton:HeRadioButton
                 DockPanel.Dock="Top"
-                Width="100"
-                Height="32"
-                Margin="8"
-                IsEnabled="False"
-                Text="Disabled">
-            </button:HeButtonBezel>
+                Content="Embedded Content 1"/>
             
-            <checkBox:HeCheckBox
+            <radioButton:HeRadioButton
                 DockPanel.Dock="Top"
-                Content="Content 1"/>
+                Content="Embedded Content 2"/>
             
-            <checkBox:HeCheckBox
-                DockPanel.Dock="Top"
-                Content="Content 2"/>
-            
-            <checkBox:HeCheckBox
-                DockPanel.Dock="Top"
-                Content="Content 3"/>
-            
-            <checkBox:HeCheckBox
+            <radioButton:HeRadioButton
                 DockPanel.Dock="Top"
                 IsEnabled="False"
-                Content="D Content"/>
+                Content="Embedded Content Disabled"/>
+            
+            <radioButton:HeRadioButton
+                DockPanel.Dock="Top"
+                Margin="0, 16, 0, 0">
+                <radioButton:HeRadioButton.Content>
+                    <Label
+                        VerticalAlignment="Center"
+                        Foreground="White"
+                        Content="Custom Content 1"/>
+                </radioButton:HeRadioButton.Content>
+            </radioButton:HeRadioButton>
+            
+            <radioButton:HeRadioButton
+                DockPanel.Dock="Top">
+                <radioButton:HeRadioButton.Content>
+                    <Label
+                        VerticalAlignment="Center"
+                        Foreground="White"
+                        Content="Custom Content 2"/>
+                </radioButton:HeRadioButton.Content>
+            </radioButton:HeRadioButton>
+            
+            <radioButton:HeRadioButton
+                DockPanel.Dock="Top"
+                IsEnabled="False">
+                <radioButton:HeRadioButton.Content>
+                    <Label
+                        VerticalAlignment="Center"
+                        Foreground="White"
+                        Content="Custom Content Disabled"/>
+                </radioButton:HeRadioButton.Content>
+            </radioButton:HeRadioButton>
+            
+            <checkBox:HeCheckBox
+                DockPanel.Dock="Top"
+                Margin="0, 16, 0, 0"
+                Content="Embedded Content"/>
+            
+            <checkBox:HeCheckBox
+                DockPanel.Dock="Top"
+                IsEnabled="False"
+                Content="Embedded Content Disabled"/>
+            
+            <checkBox:HeCheckBox
+                DockPanel.Dock="Top"
+                Margin="0, 16, 0, 0">
+                <checkBox:HeCheckBox.Content>
+                    <Label
+                        VerticalAlignment="Center"
+                        Foreground="White"
+                        Content="Custom Content"/>
+                </checkBox:HeCheckBox.Content>
+            </checkBox:HeCheckBox>
             
             <checkBox:HeCheckBox
                 DockPanel.Dock="Top"
@@ -132,81 +236,10 @@
                 <checkBox:HeCheckBox.Content>
                     <Label
                         VerticalAlignment="Center"
-                        Content="DE Content"/>
+                        Foreground="White"
+                        Content="Custom Content Disabled"/>
                 </checkBox:HeCheckBox.Content>
             </checkBox:HeCheckBox>
-            
-            <checkBox:HeCheckBox
-                DockPanel.Dock="Top">
-                <checkBox:HeCheckBox.Content>
-                    <Label
-                        VerticalAlignment="Center"
-                        Content="E Content"/>
-                </checkBox:HeCheckBox.Content>
-            </checkBox:HeCheckBox>
-        </DockPanel>
-        
-        <DockPanel
-            Grid.Column="2"
-            LastChildFill="False">
-            <imageButton:HeImageButtonBezel
-                DockPanel.Dock="Top"
-                Width="32"
-                Height="32"
-                Margin="8"
-                ImageSource="/Helium;component/Resources/Icons/close_icon.png"/>
-            
-            <imageButton:HeImageButtonBezel
-                DockPanel.Dock="Top"
-                Width="32"
-                Height="32"
-                Margin="8"
-                IsEnabled="False"
-                ImageSourceDisabled="/Helium;component/Resources/Icons/maximize_icon.png"
-                ImageSource="/Helium;component/Resources/Icons/close_icon.png"/>
-            
-        </DockPanel>
-        
-        <DockPanel
-            Grid.Column="3"
-            LastChildFill="False">
-            <imageButton:HeImageButtonFlat
-                DockPanel.Dock="Top"
-                Width="32"
-                Height="32"
-                Margin="8"
-                ImageSource="/Helium;component/Resources/Icons/close_icon.png"/>
-            
-            <imageButton:HeImageButtonFlat
-                DockPanel.Dock="Top"
-                Width="32"
-                Height="32"
-                Margin="8"
-                IsEnabled="False"
-                ImageSourceDisabled="/Helium;component/Resources/Icons/maximize_icon.png"
-                ImageSource="/Helium;component/Resources/Icons/close_icon.png"/>
-            
-        </DockPanel>
-        
-        <DockPanel
-            Grid.Column="4"
-            LastChildFill="False">
-            <imageButton:HeImageButtonFlatTransparent
-                DockPanel.Dock="Top"
-                Width="32"
-                Height="32"
-                Margin="8"
-                ImageSource="/Helium;component/Resources/Icons/close_icon.png"/>
-            
-            <imageButton:HeImageButtonFlatTransparent
-                DockPanel.Dock="Top"
-                Width="32"
-                Height="32"
-                Margin="8"
-                IsEnabled="False"
-                ImageSourceDisabled="/Helium;component/Resources/Icons/maximize_icon.png"
-                ImageSource="/Helium;component/Resources/Icons/close_icon.png"/>
-            
         </DockPanel>
     </Grid>
 </window:HeWindow>

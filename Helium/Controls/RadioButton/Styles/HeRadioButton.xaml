@@ -8,7 +8,6 @@
     </ResourceDictionary.MergedDictionaries>
     
     <Style TargetType="{x:Type button:HeRadioButton}">
-        <Setter Property="Width" Value="{StaticResource Width12X}"/>
         <Setter Property="Height" Value="{StaticResource Height}"/>
         
         <Setter Property="FontSize" Value="{StaticResource FontSize}"/>
