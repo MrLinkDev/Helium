@@ -83,7 +83,7 @@
                     Width="28"
                     ImageWidth="16"
                     ImageHeight="16"
-                    ImageSource="/Helium;component/Resources/Icons/app_icon.png"
+                    ImageSourceDisabled="/Helium;component/Resources/Icons/app_icon.png"
                     IsEnabled="False"/>
             
                 <imageButton:HeImageButtonFlat
@@ -102,7 +102,7 @@
                     Width="28"
                     ImageWidth="16"
                     ImageHeight="16"
-                    ImageSource="/Helium;component/Resources/Icons/app_icon.png"
+                    ImageSourceDisabled="/Helium;component/Resources/Icons/app_icon.png"
                     IsEnabled="False"/>
             </Grid>
             
@@ -135,7 +135,7 @@
                     Width="28"
                     ImageWidth="16"
                     ImageHeight="16"
-                    ImageSource="/Helium;component/Resources/Icons/app_icon.png"
+                    ImageSourceDisabled="/Helium;component/Resources/Icons/app_icon.png"
                     IsEnabled="False"/>
             
                 <imageButton:HeImageButtonFlatTransparentAttention
@@ -154,7 +154,7 @@
                     Width="28"
                     ImageWidth="16"
                     ImageHeight="16"
-                    ImageSource="/Helium;component/Resources/Icons/app_icon.png"
+                    ImageSourceDisabled="/Helium;component/Resources/Icons/app_icon.png"
                     IsEnabled="False"/>
             </Grid>
         </DockPanel>
