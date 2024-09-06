@@ -30,6 +30,7 @@
     <system:Double x:Key="Width20X">140</system:Double>
     
     <!-- Corner Radius -->
+    <CornerRadius x:Key="Radius2">2</CornerRadius>
     <CornerRadius x:Key="Radius4">4</CornerRadius>
     <CornerRadius x:Key="Radius8">8</CornerRadius>
     <CornerRadius x:Key="Radius16">16</CornerRadius>
@@ -39,8 +40,11 @@
     <Thickness x:Key="Thickness1">1</Thickness>
     <Thickness x:Key="Thickness2">2</Thickness>
     
-    <!-- Margin -->
+    <!-- Padding -->
     <Thickness x:Key="Padding4">4</Thickness>
+    
+    <!-- Margin -->
+    <Thickness x:Key="Margin4">4</Thickness>
     
     <!-- Font size -->
     <system:Double x:Key="FontSize">14</system:Double>

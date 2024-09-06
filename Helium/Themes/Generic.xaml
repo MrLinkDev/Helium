@@ -18,5 +18,9 @@
         <ResourceDictionary Source="/Helium;component/Controls/CheckBox/Styles/HeCheckBox.xaml"/>
         
         <ResourceDictionary Source="/Helium;component/Controls/EditText/Styles/HeEditText.xaml"/>
+        
+        <ResourceDictionary Source="/Helium;component/Controls/XButton/Styles/HeXValueButtonBase.xaml"/>
+        <ResourceDictionary Source="/Helium;component/Controls/XButton/Styles/HeXValueButtonBezel.xaml"/>
+        <ResourceDictionary Source="/Helium;component/Controls/XButton/Styles/HeXValueButtonFlat.xaml"/>
     </ResourceDictionary.MergedDictionaries>
 </ResourceDictionary>

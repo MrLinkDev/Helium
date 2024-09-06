@@ -11,6 +11,7 @@
         xmlns:resources="clr-namespace:Helium.Resources;assembly=Helium"
         xmlns:checkBox="clr-namespace:Helium.Controls.CheckBox;assembly=Helium"
         xmlns:editText="clr-namespace:Helium.Controls.EditText;assembly=Helium"
+        xmlns:xButton="clr-namespace:Helium.Controls.XButton;assembly=Helium"
 
         mc:Ignorable="d"
         Title="MainWindow"
@@ -281,6 +282,16 @@
                 Margin="0, 8, 0, 0"
                 IsEnabled="False"
                 Text="{Binding DoubleData, UpdateSourceTrigger=PropertyChanged}"/>
+        </DockPanel>
+        
+        <DockPanel
+            Grid.Column="3"
+            LastChildFill="False"
+            Margin="0, 16, 16, 16">
+            
+            <xButton:HeXValueButtonFlat
+                DockPanel.Dock="Top"
+                Text="Default X"/>
         </DockPanel>
     </Grid>
 </window:HeWindow>

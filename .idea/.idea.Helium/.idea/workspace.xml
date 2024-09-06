@@ -8,15 +8,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8b4ced28-5d3a-4a47-8b27-449f63f07d28" name="Changes" comment="Исправлен цвет для Disabled-варианта прозрачной HeImageButton">
-      <change afterPath="$PROJECT_DIR$/Helium/Controls/EditText/HeEditText.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Helium/Controls/EditText/Styles/HeEditText.xaml" afterDir="false" />
+    <list default="true" id="8b4ced28-5d3a-4a47-8b27-449f63f07d28" name="Changes" comment="Добавлен HeEditText. У HeCheckBox добавлена реакция фона на состояния IsMouseOver и IsPressed">
+      <change afterPath="$PROJECT_DIR$/Helium/Controls/XButton/HeXValueButtonBase.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Helium/Controls/XButton/HeXValueButtonBezel.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Helium/Controls/XButton/HeXValueButtonFlat.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Helium/Controls/XButton/Styles/HeXValueButtonBase.xaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Helium/Controls/XButton/Styles/HeXValueButtonBezel.xaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Helium/Controls/XButton/Styles/HeXValueButtonFlat.xaml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Helium/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Helium/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Helium.Demo/MainWindow.xaml" beforeDir="false" afterPath="$PROJECT_DIR$/Helium.Demo/MainWindow.xaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Helium.Demo/MainWindow.xaml.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Helium.Demo/MainWindow.xaml.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Helium.sln.DotSettings.user" beforeDir="false" afterPath="$PROJECT_DIR$/Helium.sln.DotSettings.user" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Helium/Controls/CheckBox/Styles/HeCheckBox.xaml" beforeDir="false" afterPath="$PROJECT_DIR$/Helium/Controls/CheckBox/Styles/HeCheckBox.xaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Helium/Controls/Window/HeWindow.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Helium/Controls/Window/HeWindow.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Helium/Controls/Button/Styles/HeButtonBezel.xaml" beforeDir="false" afterPath="$PROJECT_DIR$/Helium/Controls/Button/Styles/HeButtonBezel.xaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Helium/Helium.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Helium/Helium.csproj" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Helium/Resources/Dimensions.xaml" beforeDir="false" afterPath="$PROJECT_DIR$/Helium/Resources/Dimensions.xaml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Helium/Themes/Generic.xaml" beforeDir="false" afterPath="$PROJECT_DIR$/Helium/Themes/Generic.xaml" afterDir="false" />
     </list>
@@ -72,6 +74,9 @@
     <setting file="file://$PROJECT_DIR$/Helium/Controls/Button/HeButtonFlat.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="MetaFilesCheckinStateConfiguration" checkMetaFiles="true" />
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
+  </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 5
 }</component>
@@ -198,7 +203,7 @@
       <workItem from="1725505876173" duration="22000" />
       <workItem from="1725506210565" duration="8470000" />
       <workItem from="1725589367103" duration="137000" />
-      <workItem from="1725589514456" duration="17963000" />
+      <workItem from="1725589514456" duration="21896000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit">
       <option name="closed" value="true" />
@@ -304,7 +309,15 @@
       <option name="project" value="LOCAL" />
       <updated>1725594953613</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="Добавлен HeEditText. У HeCheckBox добавлена реакция фона на состояния IsMouseOver и IsPressed">
+      <option name="closed" value="true" />
+      <created>1725615106377</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1725615106377</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -340,6 +353,7 @@
     <MESSAGE value="Добавлен HeCheckBox" />
     <MESSAGE value="Обновлена разметка демо-проекта, исправлена ширина у HeRadioButton и HeCheckBox" />
     <MESSAGE value="Исправлен цвет для Disabled-варианта прозрачной HeImageButton" />
-    <option name="LAST_COMMIT_MESSAGE" value="Исправлен цвет для Disabled-варианта прозрачной HeImageButton" />
+    <MESSAGE value="Добавлен HeEditText. У HeCheckBox добавлена реакция фона на состояния IsMouseOver и IsPressed" />
+    <option name="LAST_COMMIT_MESSAGE" value="Добавлен HeEditText. У HeCheckBox добавлена реакция фона на состояния IsMouseOver и IsPressed" />
   </component>
 </project>
