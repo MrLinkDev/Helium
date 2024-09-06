@@ -1,13 +1,13 @@
 ﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-                    xmlns:button="clr-namespace:Helium.Controls.RadioButton">
+                    xmlns:local="clr-namespace:Helium.Controls.CheckBox">
     <ResourceDictionary.MergedDictionaries>
         <ResourceDictionary Source="/Helium;component/Resources/Brushes.xaml"/>
         <ResourceDictionary Source="/Helium;component/Resources/Colors.xaml"/>
         <ResourceDictionary Source="/Helium;component/Resources/Dimensions.xaml"/>
     </ResourceDictionary.MergedDictionaries>
     
-    <Style TargetType="{x:Type button:HeRadioButton}">
+    <Style TargetType="{x:Type local:HeCheckBox}">
         <Setter Property="Width" Value="{StaticResource Width12X}"/>
         <Setter Property="Height" Value="{StaticResource Height}"/>
         
@@ -16,34 +16,34 @@
         
         <Setter Property="Template">
             <Setter.Value>
-                <ControlTemplate TargetType="{x:Type button:HeRadioButton}">
+                <ControlTemplate TargetType="{x:Type local:HeCheckBox}">
                     <DockPanel
                         LastChildFill="False">
-                        <Grid
+                        <Border
                             DockPanel.Dock="Left"
+                            Height="{StaticResource CheckBoxSize}"
+                            Width="{StaticResource CheckBoxSize}"
+                            
+                            VerticalAlignment="Center"
+                            HorizontalAlignment="Center"
+                            
+                            Background="{TemplateBinding CheckBoxFill}"
+                            
+                            BorderBrush="{TemplateBinding CheckBoxStroke}"
+                            BorderThickness="{StaticResource CheckBoxStrokeSize}"
+                            
+                            CornerRadius="{StaticResource CheckBoxCornerRadius}"
                             SnapsToDevicePixels="True">
-                            <Ellipse
-                                Height="{StaticResource EllipseSize}"
-                                Width="{StaticResource EllipseSize}"
-                            
-                                VerticalAlignment="Center"
-                                HorizontalAlignment="Center"
-                            
-                                Fill="{TemplateBinding EllipseFill}"
-                            
-                                Stroke="{TemplateBinding EllipseStroke}"
-                                StrokeThickness="{StaticResource EllipseStrokeSize}">
-                            </Ellipse>
                         
-                            <Ellipse
-                                Height="{StaticResource EllipseInnerSize}"
-                                Width="{StaticResource EllipseInnerSize}"
-                            
+                            <Path 
+                                Fill="{TemplateBinding CheckBoxFigureFill}"
                                 VerticalAlignment="Center"
-                                HorizontalAlignment="Center"
-                            
-                                Fill="{TemplateBinding EllipseInnerFill}"/>
-                        </Grid>
+                                HorizontalAlignment="Center">
+                                <Path.Data>
+                                    <PathGeometry Figures="M 0,6 L 1.5,4.5 4,7 10,1 11.5,2.5 4,10 Z"/>
+                                </Path.Data>
+                            </Path>
+                        </Border>
                         
                         <ContentPresenter
                             DockPanel.Dock="Left"
@@ -55,19 +55,20 @@
                     
                     <ControlTemplate.Triggers>
                         <Trigger Property="IsMouseOver" Value="true">
-                            <Setter Property="EllipseStroke" Value="{StaticResource PrimaryBrush600}"/>
+                            <Setter Property="CheckBoxStroke" Value="{StaticResource PrimaryBrush600}"/>
                         </Trigger>
                         
                         <Trigger Property="IsChecked" Value="True">
-                            <Setter Property="EllipseInnerFill" Value="{StaticResource PrimaryBrush500}"/>
+                            <Setter Property="CheckBoxFigureFill" Value="{StaticResource PrimaryBrush50}"/>
+                            <Setter Property="CheckBoxFill" Value="{StaticResource PrimaryBrush500}"/>
                         </Trigger>
                         
                         <Trigger Property="IsPressed" Value="True">
-                            <Setter Property="EllipseStroke" Value="{StaticResource PrimaryBrush700}"/>
+                            <Setter Property="CheckBoxStroke" Value="{StaticResource PrimaryBrush700}"/>
                         </Trigger>
                         
                         <Trigger Property="IsEnabled" Value="False">
-                            <Setter Property="EllipseStroke" Value="{StaticResource PrimaryBrush950}"/>
+                            <Setter Property="CheckBoxStroke" Value="{StaticResource PrimaryBrush950}"/>
                         </Trigger>
                     </ControlTemplate.Triggers>
                 </ControlTemplate>

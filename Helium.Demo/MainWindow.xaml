@@ -8,6 +8,8 @@
         xmlns:imageButton="clr-namespace:Helium.Controls.ImageButton;assembly=Helium"
         xmlns:window="clr-namespace:Helium.Controls.Window;assembly=Helium"
         xmlns:radioButton="clr-namespace:Helium.Controls.RadioButton;assembly=Helium"
+        xmlns:resources="clr-namespace:Helium.Resources;assembly=Helium"
+        xmlns:checkBox="clr-namespace:Helium.Controls.CheckBox;assembly=Helium"
 
         mc:Ignorable="d"
         Title="MainWindow"
@@ -106,6 +108,42 @@
                 IsEnabled="False"
                 Text="Disabled">
             </button:HeButtonBezel>
+            
+            <checkBox:HeCheckBox
+                DockPanel.Dock="Top"
+                Content="Content 1"/>
+            
+            <checkBox:HeCheckBox
+                DockPanel.Dock="Top"
+                Content="Content 2"/>
+            
+            <checkBox:HeCheckBox
+                DockPanel.Dock="Top"
+                Content="Content 3"/>
+            
+            <checkBox:HeCheckBox
+                DockPanel.Dock="Top"
+                IsEnabled="False"
+                Content="D Content"/>
+            
+            <checkBox:HeCheckBox
+                DockPanel.Dock="Top"
+                IsEnabled="False">
+                <checkBox:HeCheckBox.Content>
+                    <Label
+                        VerticalAlignment="Center"
+                        Content="DE Content"/>
+                </checkBox:HeCheckBox.Content>
+            </checkBox:HeCheckBox>
+            
+            <checkBox:HeCheckBox
+                DockPanel.Dock="Top">
+                <checkBox:HeCheckBox.Content>
+                    <Label
+                        VerticalAlignment="Center"
+                        Content="E Content"/>
+                </checkBox:HeCheckBox.Content>
+            </checkBox:HeCheckBox>
         </DockPanel>
         
         <DockPanel

@@ -66,4 +66,10 @@
     
     <system:Double x:Key="EllipseStrokeSize">2</system:Double>
     
+    <!-- CheckBox -->
+    <system:Double x:Key="CheckBoxSize">16</system:Double>
+    
+    <Thickness x:Key="CheckBoxStrokeSize">2</Thickness>
+    <CornerRadius x:Key="CheckBoxCornerRadius">2</CornerRadius>
+    
 </ResourceDictionary>
