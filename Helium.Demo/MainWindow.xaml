@@ -10,6 +10,7 @@
         xmlns:radioButton="clr-namespace:Helium.Controls.RadioButton;assembly=Helium"
         xmlns:resources="clr-namespace:Helium.Resources;assembly=Helium"
         xmlns:checkBox="clr-namespace:Helium.Controls.CheckBox;assembly=Helium"
+        xmlns:editText="clr-namespace:Helium.Controls.EditText;assembly=Helium"
 
         mc:Ignorable="d"
         Title="MainWindow"
@@ -240,6 +241,46 @@
                         Content="Custom Content Disabled"/>
                 </checkBox:HeCheckBox.Content>
             </checkBox:HeCheckBox>
+        </DockPanel>
+        
+        <DockPanel
+            Grid.Column="2"
+            Margin="0, 16, 16, 16"
+            LastChildFill="False">
+            
+            <editText:HeEditText
+                DockPanel.Dock="Top"
+                Text="Enabled with text"/>
+            
+            <editText:HeEditText
+                DockPanel.Dock="Top"
+                Margin="0, 8, 0, 0"
+                IsEnabled="False"
+                Text="Disabled with text"/>
+            
+            <editText:HeEditText
+                DockPanel.Dock="Top"
+                Margin="0, 16, 0, 0"
+                EditTextHint="Enabled with hint"/>
+            
+            <editText:HeEditText
+                DockPanel.Dock="Top"
+                Margin="0, 8, 0, 0"
+                IsEnabled="False"
+                EditTextHint="Disabled with hint"/>
+            
+            <editText:HeEditText
+                x:Name="ValidationErrorEnabled"
+                DockPanel.Dock="Top"
+                Margin="0, 16, 0, 0"
+                Text="{Binding DoubleData, UpdateSourceTrigger=PropertyChanged}"/>
+            
+            <editText:HeEditText
+                x:Name="ValidationErrorDisabled"
+                DockPanel.Dock="Top"
+                Margin="0, 8, 0, 0"
+                IsEnabled="False"
+                Text="{Binding DoubleData, UpdateSourceTrigger=PropertyChanged}"/>
         </DockPanel>
     </Grid>
 </window:HeWindow>

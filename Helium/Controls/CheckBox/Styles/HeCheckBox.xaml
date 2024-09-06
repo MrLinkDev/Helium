@@ -62,9 +62,33 @@
                             <Setter Property="CheckBoxFill" Value="{StaticResource PrimaryBrush500}"/>
                         </Trigger>
                         
+                        <MultiTrigger>
+                            <MultiTrigger.Conditions>
+                                <Condition Property="IsChecked" Value="True"/>
+                                <Condition Property="IsMouseOver" Value="True"/>
+                            </MultiTrigger.Conditions>
+                            
+                            <MultiTrigger.Setters>
+                                <Setter Property="CheckBoxFill" Value="{StaticResource PrimaryBrush600}"/>
+                                <Setter Property="CheckBoxStroke" Value="{StaticResource PrimaryBrush600}"/>
+                            </MultiTrigger.Setters>
+                        </MultiTrigger>
+                        
                         <Trigger Property="IsPressed" Value="True">
                             <Setter Property="CheckBoxStroke" Value="{StaticResource PrimaryBrush700}"/>
                         </Trigger>
+                        
+                        <MultiTrigger>
+                            <MultiTrigger.Conditions>
+                                <Condition Property="IsChecked" Value="True"/>
+                                <Condition Property="IsPressed" Value="True"/>
+                            </MultiTrigger.Conditions>
+                            
+                            <MultiTrigger.Setters>
+                                <Setter Property="CheckBoxFill" Value="{StaticResource PrimaryBrush700}"/>
+                                <Setter Property="CheckBoxStroke" Value="{StaticResource PrimaryBrush700}"/>
+                            </MultiTrigger.Setters>
+                        </MultiTrigger>
                         
                         <Trigger Property="IsEnabled" Value="False">
                             <Setter Property="CheckBoxStroke" Value="{StaticResource PrimaryBrush950}"/>

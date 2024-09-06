@@ -8,11 +8,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8b4ced28-5d3a-4a47-8b27-449f63f07d28" name="Changes" comment="Добавлен HeCheckBox">
+    <list default="true" id="8b4ced28-5d3a-4a47-8b27-449f63f07d28" name="Changes" comment="Исправлен цвет для Disabled-варианта прозрачной HeImageButton">
+      <change afterPath="$PROJECT_DIR$/Helium/Controls/EditText/HeEditText.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Helium/Controls/EditText/Styles/HeEditText.xaml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Helium/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Helium/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Helium.Demo/MainWindow.xaml" beforeDir="false" afterPath="$PROJECT_DIR$/Helium.Demo/MainWindow.xaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Helium.Demo/MainWindow.xaml.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Helium.Demo/MainWindow.xaml.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Helium.sln.DotSettings.user" beforeDir="false" afterPath="$PROJECT_DIR$/Helium.sln.DotSettings.user" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Helium/Controls/CheckBox/Styles/HeCheckBox.xaml" beforeDir="false" afterPath="$PROJECT_DIR$/Helium/Controls/CheckBox/Styles/HeCheckBox.xaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Helium/Controls/RadioButton/Styles/HeRadioButton.xaml" beforeDir="false" afterPath="$PROJECT_DIR$/Helium/Controls/RadioButton/Styles/HeRadioButton.xaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Helium/Controls/Window/HeWindow.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Helium/Controls/Window/HeWindow.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Helium/Resources/Dimensions.xaml" beforeDir="false" afterPath="$PROJECT_DIR$/Helium/Resources/Dimensions.xaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Helium/Themes/Generic.xaml" beforeDir="false" afterPath="$PROJECT_DIR$/Helium/Themes/Generic.xaml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -37,10 +43,12 @@
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/790cf01e57bd4d49ab95fb5b039638f82268b0/08/dfb90c41/DependencyProperty.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/8627859306af40dc8a1dd42f7cecd5a4f608a0/0c/2644715a/ContentControl.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/8627859306af40dc8a1dd42f7cecd5a4f608a0/8e/63112a48/XamlReader.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/89fbf49063c34e53a31d071cb0e702a6f608a0/19/f48af839/FrameworkElement.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/89fbf49063c34e53a31d071cb0e702a6f608a0/78/157fcfa3/Window.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/89fbf49063c34e53a31d071cb0e702a6f608a0/8c/41ba65d7/ResourcePart.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/89fbf49063c34e53a31d071cb0e702a6f608a0/93/bcf342b8/FrameworkPropertyMetadata.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/89fbf49063c34e53a31d071cb0e702a6f608a0/9d/d36c4bbd/RadioButton.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/89fbf49063c34e53a31d071cb0e702a6f608a0/9e/789e390f/TextBox.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/89fbf49063c34e53a31d071cb0e702a6f608a0/b3/cce1c174/DockPanel.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/89fbf49063c34e53a31d071cb0e702a6f608a0/ce/060c9ed3/Border.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/89fbf49063c34e53a31d071cb0e702a6f608a0/e0/2e0abbcf/Panel.cs" root0="SKIP_HIGHLIGHTING" />
@@ -73,43 +81,43 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;.NET Project.HeliumDemo.executor&quot;: &quot;Run&quot;,
-    &quot;Publish to folder.Publish Helium.Demo to folder.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;XThreadsFramesViewSplitterKey&quot;: &quot;0.50049555&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;RiderUnitTestingPageId&quot;,
-    &quot;timeTracker.activityTracker&quot;: &quot;null&quot;,
-    &quot;timeTracker.comment&quot;: &quot;&quot;,
-    &quot;timeTracker.inactivityPeriodInMills&quot;: &quot;600000&quot;,
-    &quot;timeTracker.isAutoTrackingEnable&quot;: &quot;false&quot;,
-    &quot;timeTracker.isAutoTrackingTemporaryDisabled&quot;: &quot;false&quot;,
-    &quot;timeTracker.isManualTrackingEnable&quot;: &quot;false&quot;,
-    &quot;timeTracker.isPaused&quot;: &quot;true&quot;,
-    &quot;timeTracker.isPostAfterCommitEnabled&quot;: &quot;false&quot;,
-    &quot;timeTracker.isPostedScheduled&quot;: &quot;true&quot;,
-    &quot;timeTracker.isRunning&quot;: &quot;false&quot;,
-    &quot;timeTracker.isScheduledEnabled&quot;: &quot;false&quot;,
-    &quot;timeTracker.isWhenProjectClosedEnabled&quot;: &quot;false&quot;,
-    &quot;timeTracker.issueId&quot;: &quot;Default&quot;,
-    &quot;timeTracker.issueIdReadable&quot;: &quot;Default&quot;,
-    &quot;timeTracker.pausedTime&quot;: &quot;0&quot;,
-    &quot;timeTracker.query&quot;: &quot;&quot;,
-    &quot;timeTracker.recordedTime&quot;: &quot;0&quot;,
-    &quot;timeTracker.scheduledPeriod&quot;: &quot;19:00:0&quot;,
-    &quot;timeTracker.startTime&quot;: &quot;0&quot;,
-    &quot;timeTracker.timeInMills&quot;: &quot;0&quot;,
-    &quot;timeTracker.type&quot;: &quot;Development&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    ".NET Project.HeliumDemo.executor": "Run",
+    "Publish to folder.Publish Helium.Demo to folder.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "XThreadsFramesViewSplitterKey": "0.50049555",
+    "git-widget-placeholder": "main",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "RiderUnitTestingPageId",
+    "timeTracker.activityTracker": "null",
+    "timeTracker.comment": "",
+    "timeTracker.inactivityPeriodInMills": "600000",
+    "timeTracker.isAutoTrackingEnable": "false",
+    "timeTracker.isAutoTrackingTemporaryDisabled": "false",
+    "timeTracker.isManualTrackingEnable": "false",
+    "timeTracker.isPaused": "true",
+    "timeTracker.isPostAfterCommitEnabled": "false",
+    "timeTracker.isPostedScheduled": "true",
+    "timeTracker.isRunning": "false",
+    "timeTracker.isScheduledEnabled": "false",
+    "timeTracker.isWhenProjectClosedEnabled": "false",
+    "timeTracker.issueId": "Default",
+    "timeTracker.issueIdReadable": "Default",
+    "timeTracker.pausedTime": "0",
+    "timeTracker.query": "",
+    "timeTracker.recordedTime": "0",
+    "timeTracker.scheduledPeriod": "19:00:0",
+    "timeTracker.startTime": "0",
+    "timeTracker.timeInMills": "0",
+    "timeTracker.type": "Development",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RunManager" selected=".NET Project.HeliumDemo">
     <configuration name="Publish Helium.Demo to folder" type="DotNetFolderPublish" factoryName="Publish to folder">
       <riderPublish configuration="Release" platform="Any CPU" runtime="win-x64" self_contained="true" target_folder="$PROJECT_DIR$/Helium.Demo/bin/Release/net481/win-x64/publish" target_framework="net8.0-windows" uuid_high="-6968831617811069405" uuid_low="-6202492843019127623" />
@@ -190,7 +198,7 @@
       <workItem from="1725505876173" duration="22000" />
       <workItem from="1725506210565" duration="8470000" />
       <workItem from="1725589367103" duration="137000" />
-      <workItem from="1725589514456" duration="4913000" />
+      <workItem from="1725589514456" duration="17963000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit">
       <option name="closed" value="true" />
@@ -280,7 +288,23 @@
       <option name="project" value="LOCAL" />
       <updated>1725592944272</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="Обновлена разметка демо-проекта, исправлена ширина у HeRadioButton и HeCheckBox">
+      <option name="closed" value="true" />
+      <created>1725594764574</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1725594764575</updated>
+    </task>
+    <task id="LOCAL-00013" summary="Исправлен цвет для Disabled-варианта прозрачной HeImageButton">
+      <option name="closed" value="true" />
+      <created>1725594953613</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1725594953613</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -314,6 +338,8 @@
     <MESSAGE value="Исправлена проблема с нерабочим тулбаром, если в нём нет элементов" />
     <MESSAGE value="Добавлен HeRadioButton" />
     <MESSAGE value="Добавлен HeCheckBox" />
-    <option name="LAST_COMMIT_MESSAGE" value="Добавлен HeCheckBox" />
+    <MESSAGE value="Обновлена разметка демо-проекта, исправлена ширина у HeRadioButton и HeCheckBox" />
+    <MESSAGE value="Исправлен цвет для Disabled-варианта прозрачной HeImageButton" />
+    <option name="LAST_COMMIT_MESSAGE" value="Исправлен цвет для Disabled-варианта прозрачной HeImageButton" />
   </component>
 </project>

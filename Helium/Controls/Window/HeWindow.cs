@@ -163,7 +163,6 @@ public class HeWindow : System.Windows.Window {
 
     private void OnMouseMove(object sender, MouseEventArgs e) {
         if (e.LeftButton != MouseButtonState.Pressed) return;
-        Console.WriteLine("Move");
 
         if (WindowState == WindowState.Maximized && !doubleClick) {
             WindowState = WindowState.Normal;

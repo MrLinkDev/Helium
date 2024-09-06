@@ -16,5 +16,7 @@
         <ResourceDictionary Source="/Helium;component/Controls/RadioButton/Styles/HeRadioButton.xaml"/>
         
         <ResourceDictionary Source="/Helium;component/Controls/CheckBox/Styles/HeCheckBox.xaml"/>
+        
+        <ResourceDictionary Source="/Helium;component/Controls/EditText/Styles/HeEditText.xaml"/>
     </ResourceDictionary.MergedDictionaries>
 </ResourceDictionary>

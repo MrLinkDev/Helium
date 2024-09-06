@@ -37,6 +37,10 @@
     <!-- Thickness -->
     <Thickness x:Key="Thickness0">0</Thickness>
     <Thickness x:Key="Thickness1">1</Thickness>
+    <Thickness x:Key="Thickness2">2</Thickness>
+    
+    <!-- Margin -->
+    <Thickness x:Key="Padding4">4</Thickness>
     
     <!-- Font size -->
     <system:Double x:Key="FontSize">14</system:Double>
@@ -71,5 +75,6 @@
     
     <Thickness x:Key="CheckBoxStrokeSize">2</Thickness>
     <CornerRadius x:Key="CheckBoxCornerRadius">2</CornerRadius>
+    
     
 </ResourceDictionary>
