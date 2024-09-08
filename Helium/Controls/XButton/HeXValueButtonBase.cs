@@ -6,6 +6,8 @@ using Helium.Resources;
 namespace Helium.Controls.XButton;
 
 public class HeXValueButtonBase : ButtonBase {
+
+    private bool isInValueInputMode = false;
     
     #region CornerRadius
 
@@ -53,4 +55,15 @@ public class HeXValueButtonBase : ButtonBase {
     }
 
     #endregion
+
+    protected override void OnClick() {
+        base.OnClick();
+
+        isInValueInputMode = !isInValueInputMode;
+        if (isInValueInputMode) {
+            
+        } else {
+            
+        }
+    }
 }
