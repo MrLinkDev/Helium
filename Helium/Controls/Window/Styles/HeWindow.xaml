@@ -9,38 +9,6 @@
         <ResourceDictionary Source="/Helium;component/Resources/Dimensions.xaml" />
     </ResourceDictionary.MergedDictionaries>
 
-    <Style x:Key="MinimizeButtonStyle" TargetType="{x:Type Button}">
-        <Setter Property="Template">
-            <Setter.Value>
-                <ControlTemplate TargetType="{x:Type Button}">
-                    <Border
-                        Width="{StaticResource ToolbarButtonWidth}"
-                        Height="{StaticResource ToolbarButtonHeight}"
-
-                        Margin="0"
-                        Padding="8"
-
-                        SnapsToDevicePixels="True"
-
-                        Background="{StaticResource PrimaryBrush500}">
-
-                        <Image Source="/Helium.Resources;component/Resources/Icons/32px/minimize_icon.png" />
-                    </Border>
-
-                    <ControlTemplate.Triggers>
-                        <Trigger Property="IsMouseOver" Value="true">
-                            <Setter Property="Background" Value="{StaticResource PrimaryBrush600}" />
-                        </Trigger>
-
-                        <Trigger Property="IsPressed" Value="True">
-                            <Setter Property="Background" Value="{StaticResource PrimaryBrush700}" />
-                        </Trigger>
-                    </ControlTemplate.Triggers>
-                </ControlTemplate>
-            </Setter.Value>
-        </Setter>
-    </Style>
-
     <Style TargetType="{x:Type local:HeWindow}">
         <Setter Property="WindowChrome.WindowChrome">
             <Setter.Value>

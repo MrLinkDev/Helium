@@ -292,6 +292,12 @@
             <xButton:HeXValueButtonFlat
                 DockPanel.Dock="Top"
                 Text="Default X"/>
+            
+            <xButton:HeXValueButtonFlat
+                DockPanel.Dock="Top"
+                Margin="0, 8, 0, 0"
+                IsEnabled="False"
+                Text="Default X"/>
         </DockPanel>
     </Grid>
 </window:HeWindow>

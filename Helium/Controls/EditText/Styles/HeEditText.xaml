@@ -11,7 +11,7 @@
     
     <Style TargetType="{x:Type editText:HeEditText}">
         <Setter Property="Height" Value="{StaticResource Height}"/>
-        <Setter Property="Width" Value="{StaticResource Width}"/>
+        <Setter Property="Width" Value="{StaticResource Width20X}"/>
         
         <Setter Property="FontSize" Value="{StaticResource FontSize}"/>
         <Setter Property="Foreground" Value="{StaticResource WhiteBrush}"/>

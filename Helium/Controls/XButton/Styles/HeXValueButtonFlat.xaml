@@ -1,106 +1,344 @@
 ﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-                    xmlns:local="clr-namespace:Helium.Controls.XButton">
-    
+                    xmlns:local="clr-namespace:Helium.Controls.XButton"
+                    xmlns:button="clr-namespace:Helium.Controls.Button"
+                    xmlns:editText="clr-namespace:Helium.Controls.EditText">
+
     <ResourceDictionary.MergedDictionaries>
-        <ResourceDictionary Source="/Helium;component/Controls/XButton/Styles/HeXValueButtonBase.xaml"/>
+        <ResourceDictionary Source="/Helium;component/Controls/XButton/Styles/HeXValueButtonBase.xaml" />
     </ResourceDictionary.MergedDictionaries>
-    
+
     <Style TargetType="{x:Type local:HeXValueButtonFlat}" BasedOn="{StaticResource HeXButtonBase}">
-        <Setter Property="Background" Value="{StaticResource PrimaryBrush500}"/>
-        
-        <Setter Property="Foreground" Value="{StaticResource WhiteBrush}"/>
-        
+        <Setter Property="Background" Value="{StaticResource PrimaryBrush500}" />
+
+        <Setter Property="Foreground" Value="{StaticResource WhiteBrush}" />
+
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type local:HeXValueButtonFlat}">
-                    <Border
-                        Width="{TemplateBinding Width}"
-                        Height="{TemplateBinding Height}"
-                        
-                        Background="{TemplateBinding Background}"
-                        
-                        CornerRadius="{TemplateBinding CornerRadius}"
-                        
-                        SnapsToDevicePixels="True">
-                        
-                        <Grid>
-                            <Grid.RowDefinitions>
-                                <RowDefinition/>
-                                <RowDefinition/>
-                            </Grid.RowDefinitions>
-                            
-                            <TextBlock
-                                Grid.Row="0"
-                                
-                                Width="{TemplateBinding Width}"
-                                Height="Auto"
-                            
-                                VerticalAlignment="Center"
-                                HorizontalAlignment="Stretch"
-                            
-                                TextAlignment="Center"
-                            
-                                FontSize="{TemplateBinding FontSize}"
-                                FontFamily="{TemplateBinding FontFamily}"
-                                Foreground="{TemplateBinding Foreground}"
-                            
-                                Text="{TemplateBinding Text}"/>
+                    <Grid>
+                        <Border
+                            x:Name="PART_PrimaryContent"
+                            Width="{TemplateBinding Width}"
+                            Height="{TemplateBinding Height}"
+
+                            Background="{TemplateBinding Background}"
+
+                            CornerRadius="{TemplateBinding CornerRadius}"
+
+                            SnapsToDevicePixels="True">
+
+                            <Grid>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition />
+                                    <RowDefinition />
+                                </Grid.RowDefinitions>
+
+                                <TextBlock
+                                    Grid.Row="0"
+
+                                    Width="{TemplateBinding Width}"
+                                    Height="Auto"
+
+                                    VerticalAlignment="Center"
+                                    HorizontalAlignment="Stretch"
+
+                                    TextAlignment="Center"
+
+                                    FontSize="{TemplateBinding FontSize}"
+                                    FontFamily="{TemplateBinding FontFamily}"
+                                    Foreground="{TemplateBinding Foreground}"
+
+                                    Text="{TemplateBinding Text}" />
+
+                                <Border
+                                    Grid.Row="1"
+
+                                    Width="Auto"
+                                    Height="Auto"
+
+                                    Background="{TemplateBinding ValueBackground}"
+
+                                    CornerRadius="{StaticResource Radius2}"
+                                    Margin="4, 0, 4, 4"
+
+                                    HorizontalAlignment="Stretch">
+
+                                    <TextBlock
+                                        Width="{TemplateBinding Width}"
+
+                                        Background="Transparent"
+
+                                        TextAlignment="Center"
+
+                                        VerticalAlignment="Center"
+                                        HorizontalAlignment="Center"
+
+                                        Text="Value" />
+                                </Border>
+                            </Grid>
+                        </Border>
+
+                        <Popup
+                            IsOpen="{TemplateBinding IsPopupOpened}"
+                            PlacementTarget="{Binding ElementName=PART_PrimaryContent}"
+                            Placement="Center"
+                            StaysOpen="False">
                             
                             <Border
-                                Grid.Row="1"
-                                
-                                Width="Auto"
-                                Height="Auto"
-                                
-                                Background="{TemplateBinding ValueBackground}"
-                                
-                                CornerRadius="{StaticResource Radius2}"
-                                Margin="4, 0, 4, 4"
-                                
-                                HorizontalAlignment="Stretch">
-                                
+                                Width="{TemplateBinding Width}"
+                                Height="{TemplateBinding Height}"
+
+                                Background="{TemplateBinding Background}"
+
+                                CornerRadius="{TemplateBinding CornerRadius}"
+
+                                SnapsToDevicePixels="True">
+
                                 <TextBlock
+
                                     Width="{TemplateBinding Width}"
-                                
-                                    Background="Transparent"
-                                
-                                    TextAlignment="Center"
-                                
+                                    Height="Auto"
+
                                     VerticalAlignment="Center"
-                                    HorizontalAlignment="Center"
-                                
-                                    Text="Value"/>
+                                    HorizontalAlignment="Stretch"
+
+                                    TextAlignment="Center"
+
+                                    FontSize="{TemplateBinding FontSize}"
+                                    FontFamily="{TemplateBinding FontFamily}"
+                                    Foreground="{TemplateBinding Foreground}"
+
+                                    Text="{TemplateBinding Text}" />
                             </Border>
-                        </Grid>
-                    </Border>
-                    
+
+                        </Popup>
+
+                        <Popup
+                            IsOpen="{TemplateBinding IsPopupOpened}"
+                            PlacementTarget="{Binding ElementName=PART_PrimaryContent}"
+                            Placement="Left"
+                            StaysOpen="False"
+                            HorizontalOffset="20">
+
+                            <Border
+                                Width="{StaticResource XWindowWidth}"
+                                Height="{StaticResource XWindowHeight}"
+
+                                BorderThickness="{StaticResource Thickness2}"
+                                BorderBrush="{StaticResource PrimaryBrush500}"
+
+                                Background="{StaticResource BlackBrush900}"
+
+                                CornerRadius="{StaticResource Radius4}"
+                                Padding="4">
+
+                                <Grid>
+                                    <Grid.Resources>
+                                        <Style TargetType="{x:Type button:HeButtonFlat}">
+                                            <Setter Property="Margin" Value="4" />
+
+                                            <Setter Property="Width" Value="Auto" />
+                                            <Setter Property="Height" Value="Auto" />
+
+                                            <Setter Property="HorizontalAlignment" Value="Stretch" />
+                                        </Style>
+                                    </Grid.Resources>
+
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition />
+                                        <RowDefinition />
+                                        <RowDefinition />
+                                        <RowDefinition />
+                                        <RowDefinition />
+                                        <RowDefinition />
+                                    </Grid.RowDefinitions>
+
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition />
+                                        <ColumnDefinition />
+                                        <ColumnDefinition />
+                                        <ColumnDefinition />
+                                    </Grid.ColumnDefinitions>
+
+                                    <!-- Row 0 -->
+
+                                    <TextBlock
+                                        Grid.Row="0"
+                                        Grid.Column="0"
+                                        Grid.ColumnSpan="2"
+
+                                        Width="Auto"
+                                        Height="Auto"
+
+                                        VerticalAlignment="Center"
+                                        HorizontalAlignment="Stretch"
+
+                                        TextAlignment="Left"
+
+                                        FontSize="{StaticResource FontSize}"
+                                        Foreground="{StaticResource PrimaryBrush50}"
+
+                                        Margin="4, 0, 0, 0"
+
+                                        Text="Start frequency:" />
+
+                                    <editText:HeEditText
+                                        Grid.Row="0"
+                                        Grid.Column="2"
+                                        Grid.ColumnSpan="2"
+                                        Width="Auto"
+                                        Margin="4, 0" />
+
+                                    <!-- Row 1 -->
+
+                                    <button:HeButtonFlat
+                                        Grid.Row="1"
+                                        Grid.Column="0"
+                                        Text="Close" />
+
+                                    <button:HeButtonFlat
+                                        Grid.Row="1"
+                                        Grid.Column="1"
+                                        Text="Clear" />
+
+                                    <button:HeButtonFlat
+                                        Grid.Row="1"
+                                        Grid.Column="2"
+                                        Text="back" />
+
+                                    <button:HeButtonFlat
+                                        Grid.Row="1"
+                                        Grid.Column="3"
+                                        Text="G" />
+
+                                    <!-- Row 2 -->
+
+                                    <button:HeButtonFlat
+                                        Grid.Row="2"
+                                        Grid.Column="0"
+                                        Text="7" />
+
+                                    <button:HeButtonFlat
+                                        Grid.Row="2"
+                                        Grid.Column="1"
+                                        Text="8" />
+
+                                    <button:HeButtonFlat
+                                        Grid.Row="2"
+                                        Grid.Column="2"
+                                        Text="9" />
+
+                                    <button:HeButtonFlat
+                                        Grid.Row="2"
+                                        Grid.Column="3"
+                                        Text="M" />
+
+                                    <!-- Row 3 -->
+
+                                    <button:HeButtonFlat
+                                        Grid.Row="3"
+                                        Grid.Column="0"
+                                        Text="4" />
+
+                                    <button:HeButtonFlat
+                                        Grid.Row="3"
+                                        Grid.Column="1"
+                                        Text="5" />
+
+                                    <button:HeButtonFlat
+                                        Grid.Row="3"
+                                        Grid.Column="2"
+                                        Text="6" />
+
+                                    <button:HeButtonFlat
+                                        Grid.Row="3"
+                                        Grid.Column="3"
+                                        Text="K" />
+
+                                    <!-- Row 4 -->
+
+                                    <button:HeButtonFlat
+                                        Grid.Row="4"
+                                        Grid.Column="0"
+                                        Text="1" />
+
+                                    <button:HeButtonFlat
+                                        Grid.Row="4"
+                                        Grid.Column="1"
+                                        Text="2" />
+
+                                    <button:HeButtonFlat
+                                        Grid.Row="4"
+                                        Grid.Column="2"
+                                        Text="3" />
+
+                                    <button:HeButtonFlat
+                                        Grid.Row="4"
+                                        Grid.Column="3"
+                                        Text="U" />
+
+                                    <!-- Row 5 -->
+
+                                    <button:HeButtonFlat
+                                        Grid.Row="5"
+                                        Grid.Column="0"
+                                        Text="0" />
+
+                                    <button:HeButtonFlat
+                                        Grid.Row="5"
+                                        Grid.Column="1"
+                                        Text="." />
+
+                                    <button:HeButtonFlat
+                                        Grid.Row="5"
+                                        Grid.Column="2"
+                                        Text="+/-" />
+
+                                    <button:HeButtonFlat
+                                        Grid.Row="5"
+                                        Grid.Column="3"
+                                        Text="Enter" />
+                                </Grid>
+                            </Border>
+                        </Popup>
+                    </Grid>
+
                     <ControlTemplate.Triggers>
                         <Trigger Property="IsMouseOver" Value="True">
-                            <Setter 
-                                Property="Background" 
-                                Value="{StaticResource PrimaryBrush600}"/>
+                            <Setter
+                                Property="Background"
+                                Value="{StaticResource PrimaryBrush600}" />
+                            <Setter
+                                Property="ValueBackground"
+                                Value="{StaticResource PrimaryBrush800}" />
                         </Trigger>
-                        
+
                         <Trigger Property="IsPressed" Value="True">
-                            <Setter 
-                                Property="Background" 
-                                Value="{StaticResource PrimaryBrush700}"/>
+                            <Setter
+                                Property="Background"
+                                Value="{StaticResource PrimaryBrush700}" />
+                            <Setter
+                                Property="ValueBackground"
+                                Value="{StaticResource PrimaryBrush900}" />
                         </Trigger>
-                        
+
                         <Trigger Property="IsEnabled" Value="False">
-                            <Setter 
-                                Property="Background" 
-                                Value="{StaticResource PrimaryBrush950}"/>
-                            
+                            <Setter
+                                Property="Background"
+                                Value="{StaticResource PrimaryBrush950}" />
+                            <Setter
+                                Property="ValueBackground"
+                                Value="{StaticResource PrimaryBrush900}" />
+
                             <Setter
                                 Property="Foreground"
-                                Value="{StaticResource PrimaryBrush700}"/>
+                                Value="{StaticResource PrimaryBrush700}" />
                         </Trigger>
                     </ControlTemplate.Triggers>
                 </ControlTemplate>
             </Setter.Value>
         </Setter>
     </Style>
-    
+
 </ResourceDictionary>

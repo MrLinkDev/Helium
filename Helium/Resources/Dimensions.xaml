@@ -24,7 +24,8 @@
     <system:Double x:Key="Height20X">56</system:Double>
     
     <!-- Width -->
-    <system:Double x:Key="Width">140</system:Double>
+    <system:Double x:Key="Width">70</system:Double>
+    <system:Double x:Key="Width07X">49</system:Double>
     <system:Double x:Key="Width12X">84</system:Double>
     <system:Double x:Key="Width15X">105</system:Double>
     <system:Double x:Key="Width20X">140</system:Double>
@@ -80,5 +81,12 @@
     <Thickness x:Key="CheckBoxStrokeSize">2</Thickness>
     <CornerRadius x:Key="CheckBoxCornerRadius">2</CornerRadius>
     
+    
+    
+    <!-- XWindow Height -->
+    <system:Double x:Key="XWindowHeight">240</system:Double>
+    
+    <!-- XWindow Width -->
+    <system:Double x:Key="XWindowWidth">300</system:Double>
     
 </ResourceDictionary>

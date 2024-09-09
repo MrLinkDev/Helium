@@ -12,6 +12,7 @@
         <ResourceDictionary Source="/Helium;component/Controls/ImageButton/Styles/HeImageButtonFlatTransparentAttention.xaml"/>
         
         <ResourceDictionary Source="/Helium;component/Controls/Window/Styles/HeWindow.xaml"/>
+        <ResourceDictionary Source="/Helium;component/Controls/Window/Styles/HeXWindow.xaml"/>
         
         <ResourceDictionary Source="/Helium;component/Controls/RadioButton/Styles/HeRadioButton.xaml"/>
         

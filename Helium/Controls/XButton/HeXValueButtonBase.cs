@@ -7,7 +7,20 @@ namespace Helium.Controls.XButton;
 
 public class HeXValueButtonBase : ButtonBase {
 
-    private bool isInValueInputMode = false;
+    #region IsPopupOpened
+
+    public static readonly DependencyProperty IsPopupOpenedProperty = DependencyProperty.Register(
+        nameof(IsPopupOpened),
+        typeof(bool),
+        typeof(HeXValueButtonBase),
+        new FrameworkPropertyMetadata(false, FrameworkPropertyMetadataOptions.AffectsRender));
+    
+    public bool IsPopupOpened {
+        get => (bool)GetValue(IsPopupOpenedProperty);
+        set => SetValue(IsPopupOpenedProperty, value);
+    }
+    
+    #endregion
     
     #region CornerRadius
 
@@ -56,14 +69,5 @@ public class HeXValueButtonBase : ButtonBase {
 
     #endregion
 
-    protected override void OnClick() {
-        base.OnClick();
-
-        isInValueInputMode = !isInValueInputMode;
-        if (isInValueInputMode) {
-            
-        } else {
-            
-        }
-    }
+    
 }
