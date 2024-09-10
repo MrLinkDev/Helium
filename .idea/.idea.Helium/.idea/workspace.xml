@@ -9,19 +9,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8b4ced28-5d3a-4a47-8b27-449f63f07d28" name="Changes" comment="Добавлен HeEditText. У HeCheckBox добавлена реакция фона на состояния IsMouseOver и IsPressed">
-      <change afterPath="$PROJECT_DIR$/Helium/Controls/Window/HeXWindow.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Helium/Controls/Window/Styles/HeXWindow.xaml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Helium/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Helium/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Helium.Demo/MainWindow.xaml" beforeDir="false" afterPath="$PROJECT_DIR$/Helium.Demo/MainWindow.xaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Helium.sln.DotSettings.user" beforeDir="false" afterPath="$PROJECT_DIR$/Helium.sln.DotSettings.user" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Helium/Controls/EditText/Styles/HeEditText.xaml" beforeDir="false" afterPath="$PROJECT_DIR$/Helium/Controls/EditText/Styles/HeEditText.xaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Helium/Controls/Window/Styles/HeWindow.xaml" beforeDir="false" afterPath="$PROJECT_DIR$/Helium/Controls/Window/Styles/HeWindow.xaml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Helium/Controls/XButton/HeXValueButtonBase.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Helium/Controls/XButton/HeXValueButtonBase.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Helium/Controls/XButton/HeXValueButtonFlat.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Helium/Controls/XButton/HeXValueButtonFlat.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Helium/Controls/XButton/Styles/HeXValueButtonFlat.xaml" beforeDir="false" afterPath="$PROJECT_DIR$/Helium/Controls/XButton/Styles/HeXValueButtonFlat.xaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Helium/Helium.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Helium/Helium.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Helium/Resources/Dimensions.xaml" beforeDir="false" afterPath="$PROJECT_DIR$/Helium/Resources/Dimensions.xaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Helium/Themes/Generic.xaml" beforeDir="false" afterPath="$PROJECT_DIR$/Helium/Themes/Generic.xaml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -92,10 +83,9 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
-    ".NET Project.HeliumDemo.executor": "Run",
+    ".NET Project.HeliumDemo.executor": "Debug",
     "Publish to folder.Publish Helium.Demo to folder.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "XThreadsFramesViewSplitterKey": "0.50049555",
     "git-widget-placeholder": "main",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
@@ -208,6 +198,9 @@
       <workItem from="1725506210565" duration="8470000" />
       <workItem from="1725589367103" duration="137000" />
       <workItem from="1725589514456" duration="21896000" />
+      <workItem from="1725936183421" duration="181000" />
+      <workItem from="1725936370220" duration="12062000" />
+      <workItem from="1725954528697" duration="7696000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit">
       <option name="closed" value="true" />
@@ -359,5 +352,24 @@
     <MESSAGE value="Исправлен цвет для Disabled-варианта прозрачной HeImageButton" />
     <MESSAGE value="Добавлен HeEditText. У HeCheckBox добавлена реакция фона на состояния IsMouseOver и IsPressed" />
     <option name="LAST_COMMIT_MESSAGE" value="Добавлен HeEditText. У HeCheckBox добавлена реакция фона на состояния IsMouseOver и IsPressed" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Helium/Controls/XButton/HeXValueButtonFlat.cs</url>
+          <line>58</line>
+          <properties documentPath="D:\Projects\Helium\Helium\Controls\XButton\HeXValueButtonFlat.cs" containingFunctionPresentation="Method 'PopupOnClosed'">
+            <startOffsets>
+              <option value="1743" />
+            </startOffsets>
+            <endOffsets>
+              <option value="1778" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

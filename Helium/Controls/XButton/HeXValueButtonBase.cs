@@ -1,5 +1,6 @@
 ﻿using System.Windows;
 using System.Windows.Controls.Primitives;
+using System.Windows.Data;
 using System.Windows.Media;
 using Helium.Resources;
 
@@ -13,13 +14,40 @@ public class HeXValueButtonBase : ButtonBase {
         nameof(IsPopupOpened),
         typeof(bool),
         typeof(HeXValueButtonBase),
-        new FrameworkPropertyMetadata(false, FrameworkPropertyMetadataOptions.AffectsRender));
+        new FrameworkPropertyMetadata(
+            false, 
+            FrameworkPropertyMetadataOptions.AffectsRender | FrameworkPropertyMetadataOptions.BindsTwoWayByDefault, 
+            null,
+            null, 
+            false, 
+            UpdateSourceTrigger.PropertyChanged));
     
     public bool IsPopupOpened {
         get => (bool)GetValue(IsPopupOpenedProperty);
         set => SetValue(IsPopupOpenedProperty, value);
     }
+
+    #endregion
     
+    #region PopupPlacement
+
+    public static readonly DependencyProperty PopupPlacementProperty = DependencyProperty.Register(
+        nameof(PopupPlacement),
+        typeof(PlacementMode),
+        typeof(HeXValueButtonBase),
+        new FrameworkPropertyMetadata(
+            PlacementMode.Left, 
+            FrameworkPropertyMetadataOptions.AffectsRender | FrameworkPropertyMetadataOptions.BindsTwoWayByDefault, 
+            null,
+            null, 
+            false, 
+            UpdateSourceTrigger.PropertyChanged));
+    
+    public PlacementMode PopupPlacement {
+        get => (PlacementMode)GetValue(PopupPlacementProperty);
+        set => SetValue(PopupPlacementProperty, value);
+    }
+
     #endregion
     
     #region CornerRadius
