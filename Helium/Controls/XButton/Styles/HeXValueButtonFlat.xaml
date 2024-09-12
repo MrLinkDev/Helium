@@ -85,9 +85,10 @@
                             IsOpen="{TemplateBinding IsPopupOpened}"
                             PlacementTarget="{Binding ElementName=PrimaryContent}"
                             Placement="{TemplateBinding PopupPlacement}"
-                            StaysOpen="False"
                             AllowsTransparency="True"
-                            HorizontalOffset="6">
+                            StaysOpen="False"
+                            HorizontalOffset="6"
+                            IsEnabled="True">
 
                             <Border
                                 Width="{StaticResource XWindowWidth}"
@@ -103,7 +104,7 @@
 
                                 <Grid>
                                     <Grid.Resources>
-                                        <Style TargetType="{x:Type button:HeButtonFlat}">
+                                        <Style TargetType="{x:Type button:HeButton}">
                                             <Setter Property="Margin" Value="4" />
 
                                             <Setter Property="Width" Value="Auto" />
@@ -160,110 +161,110 @@
 
                                     <!-- Row 1 -->
 
-                                    <button:HeButtonFlat
+                                    <button:HeButton
                                         Grid.Row="1"
                                         Grid.Column="0"
                                         Text="Close" />
 
-                                    <button:HeButtonFlat
+                                    <button:HeButton
                                         Grid.Row="1"
                                         Grid.Column="1"
                                         Text="Clear" />
 
-                                    <button:HeButtonFlat
+                                    <button:HeButton
                                         Grid.Row="1"
                                         Grid.Column="2"
                                         Text="back" />
 
-                                    <button:HeButtonFlat
+                                    <button:HeButton
                                         Grid.Row="1"
                                         Grid.Column="3"
                                         Text="G" />
 
                                     <!-- Row 2 -->
 
-                                    <button:HeButtonFlat
+                                    <button:HeButton
                                         Grid.Row="2"
                                         Grid.Column="0"
                                         Text="7" />
 
-                                    <button:HeButtonFlat
+                                    <button:HeButton
                                         Grid.Row="2"
                                         Grid.Column="1"
                                         Text="8" />
 
-                                    <button:HeButtonFlat
+                                    <button:HeButton
                                         Grid.Row="2"
                                         Grid.Column="2"
                                         Text="9" />
 
-                                    <button:HeButtonFlat
+                                    <button:HeButton
                                         Grid.Row="2"
                                         Grid.Column="3"
                                         Text="M" />
 
                                     <!-- Row 3 -->
 
-                                    <button:HeButtonFlat
+                                    <button:HeButton
                                         Grid.Row="3"
                                         Grid.Column="0"
                                         Text="4" />
 
-                                    <button:HeButtonFlat
+                                    <button:HeButton
                                         Grid.Row="3"
                                         Grid.Column="1"
                                         Text="5" />
 
-                                    <button:HeButtonFlat
+                                    <button:HeButton
                                         Grid.Row="3"
                                         Grid.Column="2"
                                         Text="6" />
 
-                                    <button:HeButtonFlat
+                                    <button:HeButton
                                         Grid.Row="3"
                                         Grid.Column="3"
                                         Text="K" />
 
                                     <!-- Row 4 -->
 
-                                    <button:HeButtonFlat
+                                    <button:HeButton
                                         Grid.Row="4"
                                         Grid.Column="0"
                                         Text="1" />
 
-                                    <button:HeButtonFlat
+                                    <button:HeButton
                                         Grid.Row="4"
                                         Grid.Column="1"
                                         Text="2" />
 
-                                    <button:HeButtonFlat
+                                    <button:HeButton
                                         Grid.Row="4"
                                         Grid.Column="2"
                                         Text="3" />
 
-                                    <button:HeButtonFlat
+                                    <button:HeButton
                                         Grid.Row="4"
                                         Grid.Column="3"
                                         Text="U" />
 
                                     <!-- Row 5 -->
 
-                                    <button:HeButtonFlat
+                                    <button:HeButton
                                         Grid.Row="5"
                                         Grid.Column="0"
                                         Text="0" />
 
-                                    <button:HeButtonFlat
+                                    <button:HeButton
                                         Grid.Row="5"
                                         Grid.Column="1"
                                         Text="." />
 
-                                    <button:HeButtonFlat
+                                    <button:HeButton
                                         Grid.Row="5"
                                         Grid.Column="2"
                                         Text="+/-" />
 
-                                    <button:HeButtonFlat
+                                    <button:HeButton
                                         Grid.Row="5"
                                         Grid.Column="3"
                                         Text="Enter" />

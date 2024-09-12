@@ -18,22 +18,10 @@ public class HeXValueButtonFlat : HeXValueButtonBase {
     }
 
     protected override void OnMouseLeftButtonDown(MouseButtonEventArgs e) {
-        Console.WriteLine("OnMouseLeftButtonDown");
-        if (IsPopupOpened) {
-            e.Handled = true;
-            return;
-        }
-
-        IsPressed = true;
-    }
-
-    protected override void OnPreviewMouseLeftButtonDown(MouseButtonEventArgs e) {
-        Console.WriteLine("OnPreviewMouseLeftButtonDown");
-        base.OnPreviewMouseLeftButtonDown(e);
+        if (!IsPopupOpened) IsPressed = true;
     }
 
     protected override void OnMouseLeftButtonUp(MouseButtonEventArgs e) {
-        Console.WriteLine("OnMouseLeftButtonUp");
         base.OnMouseLeftButtonUp(e);
         
         if (!IsPressed) return;
@@ -48,20 +36,11 @@ public class HeXValueButtonFlat : HeXValueButtonBase {
         Popup? popup = GetTemplateChild("XButtonPopup") as Popup;
         
         if (popup == null) return;
-
-        popup.MouseLeftButtonDown += HandlePopupClick;
-        popup.MouseLeftButtonUp += HandlePopupClick;
         
         popup.Closed += PopupOnClosed;
     }
     
     private void PopupOnClosed(object? sender, EventArgs e) {
-        Console.WriteLine("PopupOnClosed");
         IsPopupOpened = false;
-    }
-
-    private void HandlePopupClick(object sender, MouseButtonEventArgs e) {
-        Console.WriteLine("HandlePopupClick");
-        e.Handled = true;
     }
 }

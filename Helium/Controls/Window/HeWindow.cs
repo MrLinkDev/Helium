@@ -122,8 +122,8 @@ public class HeWindow : System.Windows.Window {
 
     private void SetupWindowToolbar(DockPanel panel, HeImageButtonBase minimizeButton, HeImageButtonBase maximizeButton,
         HeImageButtonBase closeButton) {
-        panel.MouseLeftButtonDown += OnMouseDown;
         
+        panel.MouseLeftButtonDown += OnMouseDown;
         panel.MouseMove += OnMouseMove;
 
         minimizeButton.Click += MinimizeButtonOnClick;
@@ -158,6 +158,8 @@ public class HeWindow : System.Windows.Window {
                     WindowState = WindowState.Normal;
                     break;
             }
+        } else {
+            DragMove();
         }
     }
 
@@ -174,8 +176,8 @@ public class HeWindow : System.Windows.Window {
 
             Left = x;
             Top = pointerPosition.Y - 24;
+            
+            DragMove();
         }
-
-        DragMove();
     }
 }

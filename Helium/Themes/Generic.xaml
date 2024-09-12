@@ -1,18 +1,16 @@
 ﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
     <ResourceDictionary.MergedDictionaries>
-        <ResourceDictionary Source="/Helium;component/Controls/Button/Styles/HeButtonBase.xaml"/>
-        <ResourceDictionary Source="/Helium;component/Controls/Button/Styles/HeButtonBezel.xaml"/>
-        <ResourceDictionary Source="/Helium;component/Controls/Button/Styles/HeButtonFlat.xaml"/>
+        <ResourceDictionary Source="/Helium;component/Controls/Button/Styles/HeButton.xaml"/>
         
         <ResourceDictionary Source="/Helium;component/Controls/ImageButton/Styles/HeImageButtonBase.xaml"/>
         <ResourceDictionary Source="/Helium;component/Controls/ImageButton/Styles/HeImageButtonBezel.xaml"/>
+        
         <ResourceDictionary Source="/Helium;component/Controls/ImageButton/Styles/HeImageButtonFlat.xaml"/>
         <ResourceDictionary Source="/Helium;component/Controls/ImageButton/Styles/HeImageButtonFlatTransparent.xaml"/>
         <ResourceDictionary Source="/Helium;component/Controls/ImageButton/Styles/HeImageButtonFlatTransparentAttention.xaml"/>
         
         <ResourceDictionary Source="/Helium;component/Controls/Window/Styles/HeWindow.xaml"/>
-        <ResourceDictionary Source="/Helium;component/Controls/Window/Styles/HeXWindow.xaml"/>
         
         <ResourceDictionary Source="/Helium;component/Controls/RadioButton/Styles/HeRadioButton.xaml"/>
         

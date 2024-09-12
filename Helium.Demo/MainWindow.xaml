@@ -35,26 +35,106 @@
             LastChildFill="False"
             Margin="16">
             
-            <button:HeButtonBezel
-                DockPanel.Dock="Top"
-                Text="Default"/>
+            <Grid
+                DockPanel.Dock="Top">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                
+                <DockPanel
+                    Grid.Column="0"
+                    LastChildFill="False">
+                    <button:HeButton
+                        DockPanel.Dock="Top"
+                        Text="Default"
+                        HeType="Bezel"/>
             
-            <button:HeButtonBezel
-                DockPanel.Dock="Top"
-                Margin="0, 8,0, 0"
-                Text="Disabled"
-                IsEnabled="False"/>
+                    <button:HeButton
+                        DockPanel.Dock="Top"
+                        Margin="0, 8,0, 0"
+                        Text="Disabled"
+                        IsEnabled="False"
+                        HeType="Bezel"/>
             
-            <button:HeButtonFlat
-                DockPanel.Dock="Top"
-                Margin="0, 16,0, 0"
-                Text="Default"/>
+                    <button:HeButton
+                        DockPanel.Dock="Top"
+                        Margin="0, 16,0, 0"
+                        Text="Default"
+                        HeType="Bezel"
+                        HeTheme="Attention"/>
             
-            <button:HeButtonFlat
-                DockPanel.Dock="Top"
-                Margin="0, 8,0, 0"
-                Text="Disabled"
-                IsEnabled="False"/>
+                    <button:HeButton
+                        DockPanel.Dock="Top"
+                        Margin="0, 8,0, 0"
+                        Text="Disabled"
+                        IsEnabled="False"
+                        HeType="Bezel"
+                        HeTheme="Attention"/>
+            
+                    <button:HeButton
+                        DockPanel.Dock="Top"
+                        Margin="0, 16,0, 0"
+                        Text="Default"
+                        HeType="Bezel"
+                        HeTheme="Black"/>
+            
+                    <button:HeButton
+                        DockPanel.Dock="Top"
+                        Margin="0, 8,0, 0"
+                        Text="Disabled"
+                        IsEnabled="False"
+                        HeType="Bezel"
+                        HeTheme="Black"/>
+                </DockPanel>
+                
+                <DockPanel
+                    Grid.Column="1"
+                    LastChildFill="False"
+                    Margin="8, 0, 0, 0">
+                    <button:HeButton
+                        DockPanel.Dock="Top"
+                        Text="Default"
+                        HeType="Flat"/>
+            
+                    <button:HeButton
+                        DockPanel.Dock="Top"
+                        Margin="0, 8,0, 0"
+                        Text="Disabled"
+                        IsEnabled="False"
+                        HeType="Flat"/>
+            
+                    <button:HeButton
+                        DockPanel.Dock="Top"
+                        Margin="0, 16,0, 0"
+                        Text="Default"
+                        HeType="Flat"
+                        HeTheme="Attention"/>
+            
+                    <button:HeButton
+                        DockPanel.Dock="Top"
+                        Margin="0, 8,0, 0"
+                        Text="Disabled"
+                        IsEnabled="False"
+                        HeType="Flat"
+                        HeTheme="Attention"/>
+            
+                    <button:HeButton
+                        DockPanel.Dock="Top"
+                        Margin="0, 16,0, 0"
+                        Text="Default"
+                        HeType="Flat"
+                        HeTheme="Black"/>
+            
+                    <button:HeButton
+                        DockPanel.Dock="Top"
+                        Margin="0, 8,0, 0"
+                        Text="Disabled"
+                        IsEnabled="False"
+                        HeType="Flat"
+                        HeTheme="Black"/>
+                </DockPanel>
+            </Grid>
             
             <Grid
                 DockPanel.Dock="Top">
