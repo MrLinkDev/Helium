@@ -467,13 +467,15 @@
 
             <xButton:HeXValueButton
                 DockPanel.Dock="Top"
-                Text="Default X" />
+                ValueName="Start"
+                FullValueName="Start Frequency"
+                Value="10.25"/>
 
             <xButton:HeXValueButton
                 DockPanel.Dock="Top"
                 Margin="0, 8, 0, 0"
                 IsEnabled="False"
-                Text="Default X" />
+                ValueName="Stop" />
         </DockPanel>
     </Grid>
 </window:HeWindow>

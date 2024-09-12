@@ -8,27 +8,18 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8b4ced28-5d3a-4a47-8b27-449f63f07d28" name="Changes" comment="Изменён на тон ниже цвет кнопок для темы Attention">
-      <change afterPath="$PROJECT_DIR$/Helium/Controls/XButton/Styles/HeXValueButton.xaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Helium/Controls/XButton/Styles/Templates/HeXValueButtonFlatTemplates.xaml" afterDir="false" />
+    <list default="true" id="8b4ced28-5d3a-4a47-8b27-449f63f07d28" name="Changes" comment="HeXValueButton приведён к виду HeButton">
+      <change afterPath="$PROJECT_DIR$/Helium/Controls/XButton/Converters/ValueConverter.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Helium/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Helium/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Helium.Demo/MainWindow.xaml" beforeDir="false" afterPath="$PROJECT_DIR$/Helium.Demo/MainWindow.xaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Helium/Controls/XButton/HeXValueButtonBase.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Helium/Controls/XButton/HeXValueButton.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Helium/Controls/XButton/HeXValueButtonBezel.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Helium/Controls/XButton/HeXValueButtonFlat.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Helium/Controls/XButton/Styles/HeXValueButtonBase.xaml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Helium/Controls/XButton/Styles/HeXValueButtonBezel.xaml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Helium/Controls/XButton/Styles/HeXValueButtonFlat.xaml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Helium/Helium.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Helium/Helium.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Helium/Themes/Generic.xaml" beforeDir="false" afterPath="$PROJECT_DIR$/Helium/Themes/Generic.xaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Helium/Controls/XButton/HeXValueButton.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Helium/Controls/XButton/HeXValueButton.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Helium/Controls/XButton/Styles/HeXValueButton.xaml" beforeDir="false" afterPath="$PROJECT_DIR$/Helium/Controls/XButton/Styles/HeXValueButton.xaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Helium/Controls/XButton/Styles/Templates/HeXValueButtonFlatTemplates.xaml" beforeDir="false" afterPath="$PROJECT_DIR$/Helium/Controls/XButton/Styles/Templates/HeXValueButtonFlatTemplates.xaml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
-  </component>
-  <component name="DpaMonitoringSettings">
-    <option name="autoShow" value="false" />
   </component>
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
@@ -72,9 +63,6 @@
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/e261e7c751368e4e487d2eb671dfd79e32981c6863291580884eca26fe079/GradientStop.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/e4e8886b208868416341c18e8dec6533738df3eed99e22c8c4e3fd31cc9ee4/Window.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Helium.Demo/MainWindow.xaml" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Helium/Controls/Button/HeButtonBase.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Helium/Controls/Button/HeButtonBezel.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Helium/Controls/Button/HeButtonFlat.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="MetaFilesCheckinStateConfiguration" checkMetaFiles="true" />
   <component name="ProblemsViewState">
@@ -209,7 +197,7 @@
       <workItem from="1725936183421" duration="181000" />
       <workItem from="1725936370220" duration="12062000" />
       <workItem from="1725954528697" duration="7762000" />
-      <workItem from="1726108510019" duration="13158000" />
+      <workItem from="1726108510019" duration="23476000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit">
       <option name="closed" value="true" />
@@ -355,7 +343,15 @@
       <option name="project" value="LOCAL" />
       <updated>1726120576544</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="HeXValueButton приведён к виду HeButton">
+      <option name="closed" value="true" />
+      <created>1726122512858</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1726122512858</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -396,6 +392,7 @@
     <MESSAGE value="Кнопки теперь объединены в один класс, в котором есть параметры типа и темы" />
     <MESSAGE value="HeImageButton приведены к виду HeButton" />
     <MESSAGE value="Изменён на тон ниже цвет кнопок для темы Attention" />
-    <option name="LAST_COMMIT_MESSAGE" value="Изменён на тон ниже цвет кнопок для темы Attention" />
+    <MESSAGE value="HeXValueButton приведён к виду HeButton" />
+    <option name="LAST_COMMIT_MESSAGE" value="HeXValueButton приведён к виду HeButton" />
   </component>
 </project>

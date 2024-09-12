@@ -2,13 +2,16 @@
                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
                     xmlns:local="clr-namespace:Helium.Controls.XButton"
                     xmlns:button="clr-namespace:Helium.Controls.Button"
-                    xmlns:editText="clr-namespace:Helium.Controls.EditText">
+                    xmlns:editText="clr-namespace:Helium.Controls.EditText"
+                    xmlns:converters="clr-namespace:Helium.Controls.XButton.Converters">
 
     <ResourceDictionary.MergedDictionaries>
         <ResourceDictionary Source="/Helium;component/Resources/Brushes.xaml" />
         <ResourceDictionary Source="/Helium;component/Resources/Colors.xaml" />
         <ResourceDictionary Source="/Helium;component/Resources/Dimensions.xaml" />
     </ResourceDictionary.MergedDictionaries>
+    
+    <converters:ValueConverter x:Key="ValueConverter"/>
 
     <ControlTemplate x:Key="HeXValueButtonFlatDefault" TargetType="{x:Type local:HeXValueButton}">
         <Grid>
@@ -44,9 +47,9 @@
 
                         FontSize="{TemplateBinding FontSize}"
                         FontFamily="{TemplateBinding FontFamily}"
-                        Foreground="{StaticResource PrimaryBrush50}"
+                        Foreground="{TemplateBinding Foreground}"
 
-                        Text="{TemplateBinding Text}" />
+                        Text="{TemplateBinding ValueName}" />
 
                     <Border
                         x:Name="ValueDisplay"
@@ -66,14 +69,14 @@
                             Width="{TemplateBinding Width}"
 
                             Background="Transparent"
-                            Foreground="{StaticResource PrimaryBrush50}"
+                            Foreground="{TemplateBinding Foreground}"
 
                             TextAlignment="Center"
 
                             VerticalAlignment="Center"
                             HorizontalAlignment="Center"
 
-                            Text="Value" />
+                            Text="{TemplateBinding Value}" />
                     </Border>
                 </Grid>
             </Border>
@@ -148,36 +151,44 @@
 
                             Margin="4, 0, 0, 0"
 
-                            Text="Start frequency:" />
+                            Text="{TemplateBinding FullValueName}"/>
 
                         <editText:HeEditText
+                            x:Name="EditText"
                             Grid.Row="0"
                             Grid.Column="2"
                             Grid.ColumnSpan="2"
                             Width="Auto"
-                            Margin="4, 0" />
+                            Margin="4, 0" 
+                            Text="{TemplateBinding Value}"/>
 
                         <!-- Row 1 -->
 
                         <button:HeButton
+                            x:Name="ButtonClose"
                             Grid.Row="1"
                             Grid.Column="0"
                             HeTheme="Attention"
-                            Text="Close" />
+                            Text="Отмена" />
 
                         <button:HeButton
+                            x:Name="ButtonClear"
                             Grid.Row="1"
                             Grid.Column="1"
+                            FocusManager.FocusedElement="{Binding ElementName=EditText}"
                             HeTheme="Black"
-                            Text="Clear" />
+                            Text="C" />
 
                         <button:HeButton
+                            x:Name="ButtonBackspace"
                             Grid.Row="1"
                             Grid.Column="2"
+                            FocusManager.FocusedElement="{Binding ElementName=EditText}"
                             HeTheme="Black"
                             Text="back" />
 
                         <button:HeButton
+                            x:Name="ButtonExp1"
                             Grid.Row="1"
                             Grid.Column="3"
                             HeTheme="Black"
@@ -186,21 +197,28 @@
                         <!-- Row 2 -->
 
                         <button:HeButton
+                            x:Name="Button7"
                             Grid.Row="2"
                             Grid.Column="0"
+                            FocusManager.FocusedElement="{Binding ElementName=EditText}"
                             Text="7" />
 
                         <button:HeButton
+                            x:Name="Button8"
                             Grid.Row="2"
                             Grid.Column="1"
+                            FocusManager.FocusedElement="{Binding ElementName=EditText}"
                             Text="8" />
 
                         <button:HeButton
+                            x:Name="Button9"
                             Grid.Row="2"
                             Grid.Column="2"
+                            FocusManager.FocusedElement="{Binding ElementName=EditText}"
                             Text="9" />
 
                         <button:HeButton
+                            x:Name="ButtonExp2"
                             Grid.Row="2"
                             Grid.Column="3"
                             HeTheme="Black"
@@ -209,21 +227,28 @@
                         <!-- Row 3 -->
 
                         <button:HeButton
+                            x:Name="Button4"
                             Grid.Row="3"
                             Grid.Column="0"
+                            FocusManager.FocusedElement="{Binding ElementName=EditText}"
                             Text="4" />
 
                         <button:HeButton
+                            x:Name="Button5"
                             Grid.Row="3"
                             Grid.Column="1"
+                            FocusManager.FocusedElement="{Binding ElementName=EditText}"
                             Text="5" />
 
                         <button:HeButton
+                            x:Name="Button6"
                             Grid.Row="3"
                             Grid.Column="2"
+                            FocusManager.FocusedElement="{Binding ElementName=EditText}"
                             Text="6" />
 
                         <button:HeButton
+                            x:Name="ButtonExp3"
                             Grid.Row="3"
                             Grid.Column="3"
                             HeTheme="Black"
@@ -232,21 +257,28 @@
                         <!-- Row 4 -->
 
                         <button:HeButton
+                            x:Name="Button1"
                             Grid.Row="4"
                             Grid.Column="0"
+                            FocusManager.FocusedElement="{Binding ElementName=EditText}"
                             Text="1" />
 
                         <button:HeButton
+                            x:Name="Button2"
                             Grid.Row="4"
                             Grid.Column="1"
+                            FocusManager.FocusedElement="{Binding ElementName=EditText}"
                             Text="2" />
 
                         <button:HeButton
+                            x:Name="Button3"
                             Grid.Row="4"
                             Grid.Column="2"
+                            FocusManager.FocusedElement="{Binding ElementName=EditText}"
                             Text="3" />
 
                         <button:HeButton
+                            x:Name="ButtonExp4"
                             Grid.Row="4"
                             Grid.Column="3"
                             HeTheme="Black"
@@ -255,27 +287,34 @@
                         <!-- Row 5 -->
 
                         <button:HeButton
+                            x:Name="Button0"
                             Grid.Row="5"
                             Grid.Column="0"
+                            FocusManager.FocusedElement="{Binding ElementName=EditText}"
                             Text="0" />
 
                         <button:HeButton
+                            x:Name="ButtonDot"
                             Grid.Row="5"
                             Grid.Column="1"
+                            FocusManager.FocusedElement="{Binding ElementName=EditText}"
                             HeTheme="Black"
                             Text="." />
 
                         <button:HeButton
+                            x:Name="ButtonSign"
                             Grid.Row="5"
                             Grid.Column="2"
+                            FocusManager.FocusedElement="{Binding ElementName=EditText}"
                             HeTheme="Black"
                             Text="+/-" />
 
                         <button:HeButton
+                            x:Name="ButtonEnter"
                             Grid.Row="5"
                             Grid.Column="3"
                             HeTheme="Black"
-                            Text="Enter" />
+                            Text="Ввод" />
                     </Grid>
                 </Border>
             </Popup>
@@ -362,7 +401,7 @@
 
                 Margin="{TemplateBinding CornerRadius}"
 
-                Text="{TemplateBinding Text}" />
+                Text="{TemplateBinding ValueName}" />
         </Border>
 
         <ControlTemplate.Triggers>
@@ -422,7 +461,7 @@
 
                 Margin="{TemplateBinding CornerRadius}"
 
-                Text="{TemplateBinding Text}" />
+                Text="{TemplateBinding ValueName}" />
         </Border>
 
         <ControlTemplate.Triggers>
