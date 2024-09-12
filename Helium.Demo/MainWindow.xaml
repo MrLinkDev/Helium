@@ -147,7 +147,7 @@
                 <Grid
                     Grid.Column="0"
                     Margin="0, 16, 0, 0">
-                    
+
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition />
                         <ColumnDefinition />
@@ -285,7 +285,7 @@
                 <Grid
                     Grid.Column="1"
                     Margin="0, 16, 0, 0">
-                    
+
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition />
                         <ColumnDefinition />
@@ -465,11 +465,11 @@
             LastChildFill="False"
             Margin="0, 16, 16, 16">
 
-            <xButton:HeXValueButtonFlat
+            <xButton:HeXValueButton
                 DockPanel.Dock="Top"
                 Text="Default X" />
 
-            <xButton:HeXValueButtonFlat
+            <xButton:HeXValueButton
                 DockPanel.Dock="Top"
                 Margin="0, 8, 0, 0"
                 IsEnabled="False"

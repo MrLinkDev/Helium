@@ -1,0 +1,56 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:button="clr-namespace:Helium.Controls.XButton">
+    
+    <ResourceDictionary.MergedDictionaries>
+        <ResourceDictionary Source="/Helium;component/Controls/XButton/Styles/Templates/HeXValueButtonFlatTemplates.xaml"/>
+    </ResourceDictionary.MergedDictionaries>
+    
+    <Style TargetType="{x:Type button:HeXValueButton}">
+        <Setter Property="Width" Value="{StaticResource Width12X}"/>
+        <Setter Property="Height" Value="{StaticResource Height15X}"/>
+        
+        <Setter Property="CornerRadius" Value="{StaticResource Radius4}"/>
+        
+        <Setter Property="FontSize" Value="{StaticResource FontSize}"/>
+        <Setter Property="FontWeight" Value="Normal"/>
+        
+        <Setter Property="Template" Value="{StaticResource HeXValueButtonFlatDefault}"/>
+        
+        <Style.Triggers>
+            <MultiTrigger>
+                <MultiTrigger.Conditions>
+                    <Condition Property="HeTheme" Value="Default"/>
+                    <Condition Property="HeType" Value="Flat"/>
+                </MultiTrigger.Conditions>
+                
+                <MultiTrigger.Setters>
+                    <Setter Property="Template" Value="{StaticResource HeXValueButtonFlatDefault}"/>
+                </MultiTrigger.Setters>
+            </MultiTrigger>
+            
+            <MultiTrigger>
+                <MultiTrigger.Conditions>
+                    <Condition Property="HeTheme" Value="Attention"/>
+                    <Condition Property="HeType" Value="Flat"/>
+                </MultiTrigger.Conditions>
+                
+                <MultiTrigger.Setters>
+                    <Setter Property="Template" Value="{StaticResource HeXValueButtonFlatAttention}"/>
+                </MultiTrigger.Setters>
+            </MultiTrigger>
+            
+            <MultiTrigger>
+                <MultiTrigger.Conditions>
+                    <Condition Property="HeTheme" Value="Black"/>
+                    <Condition Property="HeType" Value="Flat"/>
+                </MultiTrigger.Conditions>
+                
+                <MultiTrigger.Setters>
+                    <Setter Property="Template" Value="{StaticResource HeXValueButtonFlatBlack}"/>
+                </MultiTrigger.Setters>
+            </MultiTrigger>
+        </Style.Triggers>
+    </Style>
+    
+</ResourceDictionary>
