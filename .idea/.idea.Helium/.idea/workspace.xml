@@ -8,16 +8,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8b4ced28-5d3a-4a47-8b27-449f63f07d28" name="Changes" comment="Кнопки теперь объединены в один класс, в котором есть параметры типа и темы">
-      <change afterPath="$PROJECT_DIR$/Helium/Controls/ImageButton/HeImageButton.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Helium/Controls/ImageButton/Styles/HeImageButton.xaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Helium/Controls/ImageButton/Styles/Templates/HeImageButtonBezelTemplates.xaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Helium/Controls/ImageButton/Styles/Templates/HeImageButtonFlatTemplates.xaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Helium/Controls/ImageButton/Styles/Templates/HeImageButtonTransparentTemplates.xaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Helium/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Helium/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Helium.Demo/MainWindow.xaml" beforeDir="false" afterPath="$PROJECT_DIR$/Helium.Demo/MainWindow.xaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Helium/Helium.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Helium/Helium.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Helium/Themes/Generic.xaml" beforeDir="false" afterPath="$PROJECT_DIR$/Helium/Themes/Generic.xaml" afterDir="false" />
+    <list default="true" id="8b4ced28-5d3a-4a47-8b27-449f63f07d28" name="Changes" comment="HeImageButton приведены к виду HeButton">
+      <change beforePath="$PROJECT_DIR$/Helium/Controls/RadioButton/Styles/HeRadioButton.xaml" beforeDir="false" afterPath="$PROJECT_DIR$/Helium/Controls/RadioButton/Styles/HeRadioButton.xaml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -206,7 +198,7 @@
       <workItem from="1725936183421" duration="181000" />
       <workItem from="1725936370220" duration="12062000" />
       <workItem from="1725954528697" duration="7762000" />
-      <workItem from="1726108510019" duration="10764000" />
+      <workItem from="1726108510019" duration="11069000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit">
       <option name="closed" value="true" />
@@ -336,7 +328,15 @@
       <option name="project" value="LOCAL" />
       <updated>1726119059416</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="HeImageButton приведены к виду HeButton">
+      <option name="closed" value="true" />
+      <created>1726120326028</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1726120326028</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -375,6 +375,7 @@
     <MESSAGE value="Добавлен HeEditText. У HeCheckBox добавлена реакция фона на состояния IsMouseOver и IsPressed" />
     <MESSAGE value="Убран лишний Popup" />
     <MESSAGE value="Кнопки теперь объединены в один класс, в котором есть параметры типа и темы" />
-    <option name="LAST_COMMIT_MESSAGE" value="Кнопки теперь объединены в один класс, в котором есть параметры типа и темы" />
+    <MESSAGE value="HeImageButton приведены к виду HeButton" />
+    <option name="LAST_COMMIT_MESSAGE" value="HeImageButton приведены к виду HeButton" />
   </component>
 </project>

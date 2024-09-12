@@ -164,21 +164,25 @@
                                     <button:HeButton
                                         Grid.Row="1"
                                         Grid.Column="0"
+                                        HeTheme="Attention"
                                         Text="Close" />
 
                                     <button:HeButton
                                         Grid.Row="1"
                                         Grid.Column="1"
+                                        HeTheme="Black"
                                         Text="Clear" />
 
                                     <button:HeButton
                                         Grid.Row="1"
                                         Grid.Column="2"
+                                        HeTheme="Black"
                                         Text="back" />
 
                                     <button:HeButton
                                         Grid.Row="1"
                                         Grid.Column="3"
+                                        HeTheme="Black"
                                         Text="G" />
 
                                     <!-- Row 2 -->
@@ -201,6 +205,7 @@
                                     <button:HeButton
                                         Grid.Row="2"
                                         Grid.Column="3"
+                                        HeTheme="Black"
                                         Text="M" />
 
                                     <!-- Row 3 -->
@@ -223,6 +228,7 @@
                                     <button:HeButton
                                         Grid.Row="3"
                                         Grid.Column="3"
+                                        HeTheme="Black"
                                         Text="K" />
 
                                     <!-- Row 4 -->
@@ -245,6 +251,7 @@
                                     <button:HeButton
                                         Grid.Row="4"
                                         Grid.Column="3"
+                                        HeTheme="Black"
                                         Text="U" />
 
                                     <!-- Row 5 -->
@@ -257,16 +264,19 @@
                                     <button:HeButton
                                         Grid.Row="5"
                                         Grid.Column="1"
+                                        HeTheme="Black"
                                         Text="." />
 
                                     <button:HeButton
                                         Grid.Row="5"
                                         Grid.Column="2"
+                                        HeTheme="Black"
                                         Text="+/-" />
 
                                     <button:HeButton
                                         Grid.Row="5"
                                         Grid.Column="3"
+                                        HeTheme="Black"
                                         Text="Enter" />
                                 </Grid>
                             </Border>

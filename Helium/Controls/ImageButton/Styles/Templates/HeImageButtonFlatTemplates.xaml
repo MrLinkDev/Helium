@@ -115,19 +115,19 @@
             <Trigger Property="IsMouseOver" Value="False">
                 <Setter
                     Property="Background"
-                    Value="{StaticResource AttentionBrush500}" />
+                    Value="{StaticResource AttentionBrush600}" />
             </Trigger>
             
             <Trigger Property="IsMouseOver" Value="True">
                 <Setter
                     Property="Background"
-                    Value="{StaticResource AttentionBrush600}" />
+                    Value="{StaticResource AttentionBrush700}" />
             </Trigger>
 
             <Trigger Property="IsPressed" Value="True">
                 <Setter
                     Property="Background"
-                    Value="{StaticResource AttentionBrush700}" />
+                    Value="{StaticResource AttentionBrush800}" />
             </Trigger>
 
             <Trigger Property="IsEnabled" Value="False">
