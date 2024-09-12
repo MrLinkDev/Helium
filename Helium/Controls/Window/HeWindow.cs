@@ -13,7 +13,7 @@ public class HeWindow : System.Windows.Window {
     private Thickness maximizedWindowThickness = new Thickness(8);
     private Thickness normalWindowThickness = new Thickness(0);
 
-    private HeImageButtonBase? maximizeButton;
+    private HeImageButton? maximizeButton;
 
     private BitmapImage maximizeIcon;
     private BitmapImage normalizeIcon;
@@ -100,9 +100,9 @@ public class HeWindow : System.Windows.Window {
 
         DockPanel? panel = GetTemplateChild("WindowToolbar") as DockPanel;
 
-        maximizeButton = GetTemplateChild("MaximizeButton") as HeImageButtonBase;
-        HeImageButtonBase? minimizeButton = GetTemplateChild("MinimizeButton") as HeImageButtonBase;
-        HeImageButtonBase? closeButton = GetTemplateChild("CloseButton") as HeImageButtonBase;
+        maximizeButton = GetTemplateChild("MaximizeButton") as HeImageButton;
+        HeImageButton? minimizeButton = GetTemplateChild("MinimizeButton") as HeImageButton;
+        HeImageButton? closeButton = GetTemplateChild("CloseButton") as HeImageButton;
         
         SizeChanged += OnSizeChanged;
 
@@ -120,8 +120,8 @@ public class HeWindow : System.Windows.Window {
         }
     }
 
-    private void SetupWindowToolbar(DockPanel panel, HeImageButtonBase minimizeButton, HeImageButtonBase maximizeButton,
-        HeImageButtonBase closeButton) {
+    private void SetupWindowToolbar(DockPanel panel, HeImageButton minimizeButton, HeImageButton maximizeButton,
+        HeImageButton closeButton) {
         
         panel.MouseLeftButtonDown += OnMouseDown;
         panel.MouseMove += OnMouseMove;

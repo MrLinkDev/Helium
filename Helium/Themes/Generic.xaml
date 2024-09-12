@@ -3,12 +3,7 @@
     <ResourceDictionary.MergedDictionaries>
         <ResourceDictionary Source="/Helium;component/Controls/Button/Styles/HeButton.xaml"/>
         
-        <ResourceDictionary Source="/Helium;component/Controls/ImageButton/Styles/HeImageButtonBase.xaml"/>
-        <ResourceDictionary Source="/Helium;component/Controls/ImageButton/Styles/HeImageButtonBezel.xaml"/>
-        
-        <ResourceDictionary Source="/Helium;component/Controls/ImageButton/Styles/HeImageButtonFlat.xaml"/>
-        <ResourceDictionary Source="/Helium;component/Controls/ImageButton/Styles/HeImageButtonFlatTransparent.xaml"/>
-        <ResourceDictionary Source="/Helium;component/Controls/ImageButton/Styles/HeImageButtonFlatTransparentAttention.xaml"/>
+        <ResourceDictionary Source="/Helium;component/Controls/ImageButton/Styles/HeImageButton.xaml"/>
         
         <ResourceDictionary Source="/Helium;component/Controls/Window/Styles/HeWindow.xaml"/>
         

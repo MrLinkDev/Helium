@@ -1,93 +1,93 @@
 ﻿<window:HeWindow x:Class="HeliumDemo.MainWindow"
-        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:HeliumDemo"
-        xmlns:button="clr-namespace:Helium.Controls.Button;assembly=Helium"
-        xmlns:imageButton="clr-namespace:Helium.Controls.ImageButton;assembly=Helium"
-        xmlns:window="clr-namespace:Helium.Controls.Window;assembly=Helium"
-        xmlns:radioButton="clr-namespace:Helium.Controls.RadioButton;assembly=Helium"
-        xmlns:resources="clr-namespace:Helium.Resources;assembly=Helium"
-        xmlns:checkBox="clr-namespace:Helium.Controls.CheckBox;assembly=Helium"
-        xmlns:editText="clr-namespace:Helium.Controls.EditText;assembly=Helium"
-        xmlns:xButton="clr-namespace:Helium.Controls.XButton;assembly=Helium"
+                 xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                 xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                 xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+                 xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+                 xmlns:local="clr-namespace:HeliumDemo"
+                 xmlns:button="clr-namespace:Helium.Controls.Button;assembly=Helium"
+                 xmlns:imageButton="clr-namespace:Helium.Controls.ImageButton;assembly=Helium"
+                 xmlns:window="clr-namespace:Helium.Controls.Window;assembly=Helium"
+                 xmlns:radioButton="clr-namespace:Helium.Controls.RadioButton;assembly=Helium"
+                 xmlns:resources="clr-namespace:Helium.Resources;assembly=Helium"
+                 xmlns:checkBox="clr-namespace:Helium.Controls.CheckBox;assembly=Helium"
+                 xmlns:editText="clr-namespace:Helium.Controls.EditText;assembly=Helium"
+                 xmlns:xButton="clr-namespace:Helium.Controls.XButton;assembly=Helium"
 
-        mc:Ignorable="d"
-        Title="MainWindow"
-        Height="480"
-        Width="840"
-        Background="#212121"
-        WindowStartupLocation="CenterScreen"
-        WindowTitle="Helium Demo">
-    
+                 mc:Ignorable="d"
+                 Title="MainWindow"
+                 Height="540"
+                 Width="880"
+                 Background="#212121"
+                 WindowStartupLocation="CenterScreen"
+                 WindowTitle="Helium Demo">
+
     <Grid>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="Auto"/>
-            <ColumnDefinition Width="Auto"/>
-            <ColumnDefinition Width="Auto"/>
-            <ColumnDefinition Width="Auto"/>
-            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="Auto" />
+            <ColumnDefinition Width="Auto" />
+            <ColumnDefinition Width="Auto" />
+            <ColumnDefinition Width="Auto" />
+            <ColumnDefinition Width="Auto" />
         </Grid.ColumnDefinitions>
-        
+
         <DockPanel
             Grid.Column="0"
             LastChildFill="False"
             Margin="16">
-            
+
             <Grid
                 DockPanel.Dock="Top">
                 <Grid.ColumnDefinitions>
-                    <ColumnDefinition/>
-                    <ColumnDefinition/>
+                    <ColumnDefinition />
+                    <ColumnDefinition />
                 </Grid.ColumnDefinitions>
-                
+
                 <DockPanel
                     Grid.Column="0"
                     LastChildFill="False">
                     <button:HeButton
                         DockPanel.Dock="Top"
                         Text="Default"
-                        HeType="Bezel"/>
-            
+                        HeType="Bezel" />
+
                     <button:HeButton
                         DockPanel.Dock="Top"
                         Margin="0, 8,0, 0"
                         Text="Disabled"
                         IsEnabled="False"
-                        HeType="Bezel"/>
-            
+                        HeType="Bezel" />
+
                     <button:HeButton
                         DockPanel.Dock="Top"
                         Margin="0, 16,0, 0"
                         Text="Default"
                         HeType="Bezel"
-                        HeTheme="Attention"/>
-            
+                        HeTheme="Attention" />
+
                     <button:HeButton
                         DockPanel.Dock="Top"
                         Margin="0, 8,0, 0"
                         Text="Disabled"
                         IsEnabled="False"
                         HeType="Bezel"
-                        HeTheme="Attention"/>
-            
+                        HeTheme="Attention" />
+
                     <button:HeButton
                         DockPanel.Dock="Top"
                         Margin="0, 16,0, 0"
                         Text="Default"
                         HeType="Bezel"
-                        HeTheme="Black"/>
-            
+                        HeTheme="Black" />
+
                     <button:HeButton
                         DockPanel.Dock="Top"
                         Margin="0, 8,0, 0"
                         Text="Disabled"
                         IsEnabled="False"
                         HeType="Bezel"
-                        HeTheme="Black"/>
+                        HeTheme="Black" />
                 </DockPanel>
-                
+
                 <DockPanel
                     Grid.Column="1"
                     LastChildFill="False"
@@ -95,170 +95,266 @@
                     <button:HeButton
                         DockPanel.Dock="Top"
                         Text="Default"
-                        HeType="Flat"/>
-            
+                        HeType="Flat" />
+
                     <button:HeButton
                         DockPanel.Dock="Top"
                         Margin="0, 8,0, 0"
                         Text="Disabled"
                         IsEnabled="False"
-                        HeType="Flat"/>
-            
+                        HeType="Flat" />
+
                     <button:HeButton
                         DockPanel.Dock="Top"
                         Margin="0, 16,0, 0"
                         Text="Default"
                         HeType="Flat"
-                        HeTheme="Attention"/>
-            
+                        HeTheme="Attention" />
+
                     <button:HeButton
                         DockPanel.Dock="Top"
                         Margin="0, 8,0, 0"
                         Text="Disabled"
                         IsEnabled="False"
                         HeType="Flat"
-                        HeTheme="Attention"/>
-            
+                        HeTheme="Attention" />
+
                     <button:HeButton
                         DockPanel.Dock="Top"
                         Margin="0, 16,0, 0"
                         Text="Default"
                         HeType="Flat"
-                        HeTheme="Black"/>
-            
+                        HeTheme="Black" />
+
                     <button:HeButton
                         DockPanel.Dock="Top"
                         Margin="0, 8,0, 0"
                         Text="Disabled"
                         IsEnabled="False"
                         HeType="Flat"
-                        HeTheme="Black"/>
+                        HeTheme="Black" />
                 </DockPanel>
             </Grid>
-            
+
             <Grid
                 DockPanel.Dock="Top">
-                
+
                 <Grid.ColumnDefinitions>
-                    <ColumnDefinition/>
-                    <ColumnDefinition/>
+                    <ColumnDefinition />
+                    <ColumnDefinition />
                 </Grid.ColumnDefinitions>
-                
-                <Grid.RowDefinitions>
-                    <RowDefinition/>
-                    <RowDefinition/>
-                </Grid.RowDefinitions>
-            
-                <imageButton:HeImageButtonBezel
+
+                <Grid
                     Grid.Column="0"
-                    Grid.Row="0"
-                    Margin="0, 16,0, 0"
-                    Width="28"
-                    ImageWidth="16"
-                    ImageHeight="16"
-                    ImageSource="/Helium;component/Resources/Icons/app_icon.png"/>
-            
-                <imageButton:HeImageButtonBezel
-                    Grid.Column="0"
-                    Grid.Row="1"
-                    Margin="0, 8,0, 0"
-                    Width="28"
-                    ImageWidth="16"
-                    ImageHeight="16"
-                    ImageSourceDisabled="/Helium;component/Resources/Icons/app_icon.png"
-                    IsEnabled="False"/>
-            
-                <imageButton:HeImageButtonFlat
+                    Margin="0, 16, 0, 0">
+                    
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition />
+                        <ColumnDefinition />
+                    </Grid.ColumnDefinitions>
+
+                    <DockPanel
+                        Grid.Column="0"
+                        LastChildFill="False">
+                        <imageButton:HeImageButton
+                            Width="28"
+                            ImageWidth="16"
+                            ImageHeight="16"
+                            DockPanel.Dock="Top"
+                            ImageSource="/Helium;component/Resources/Icons/app_icon.png"
+                            HeType="Bezel" />
+
+                        <imageButton:HeImageButton
+                            Width="28"
+                            ImageWidth="16"
+                            ImageHeight="16"
+                            DockPanel.Dock="Top"
+                            Margin="0, 8,0, 0"
+                            ImageSourceDisabled="/Helium;component/Resources/Icons/app_icon.png"
+                            IsEnabled="False"
+                            HeType="Bezel" />
+
+                        <imageButton:HeImageButton
+                            Width="28"
+                            ImageWidth="16"
+                            ImageHeight="16"
+                            DockPanel.Dock="Top"
+                            Margin="0, 16,0, 0"
+                            ImageSource="/Helium;component/Resources/Icons/app_icon.png"
+                            HeType="Bezel"
+                            HeTheme="Attention" />
+
+                        <imageButton:HeImageButton
+                            Width="28"
+                            ImageWidth="16"
+                            ImageHeight="16"
+                            DockPanel.Dock="Top"
+                            Margin="0, 8,0, 0"
+                            ImageSourceDisabled="/Helium;component/Resources/Icons/app_icon.png"
+                            IsEnabled="False"
+                            HeType="Bezel"
+                            HeTheme="Attention" />
+
+                        <imageButton:HeImageButton
+                            Width="28"
+                            ImageWidth="16"
+                            ImageHeight="16"
+                            DockPanel.Dock="Top"
+                            Margin="0, 16,0, 0"
+                            ImageSource="/Helium;component/Resources/Icons/app_icon.png"
+                            HeType="Bezel"
+                            HeTheme="Black" />
+
+                        <imageButton:HeImageButton
+                            Width="28"
+                            ImageWidth="16"
+                            ImageHeight="16"
+                            DockPanel.Dock="Top"
+                            Margin="0, 8,0, 0"
+                            ImageSourceDisabled="/Helium;component/Resources/Icons/app_icon.png"
+                            IsEnabled="False"
+                            HeType="Bezel"
+                            HeTheme="Black" />
+                    </DockPanel>
+
+                    <DockPanel
+                        Grid.Column="1"
+                        LastChildFill="False">
+                        <imageButton:HeImageButton
+                            Width="28"
+                            ImageWidth="16"
+                            ImageHeight="16"
+                            DockPanel.Dock="Top"
+                            ImageSource="/Helium;component/Resources/Icons/app_icon.png"
+                            HeType="Flat" />
+
+                        <imageButton:HeImageButton
+                            Width="28"
+                            ImageWidth="16"
+                            ImageHeight="16"
+                            DockPanel.Dock="Top"
+                            Margin="0, 8,0, 0"
+                            ImageSourceDisabled="/Helium;component/Resources/Icons/app_icon.png"
+                            IsEnabled="False"
+                            HeType="Flat" />
+
+                        <imageButton:HeImageButton
+                            Width="28"
+                            ImageWidth="16"
+                            ImageHeight="16"
+                            DockPanel.Dock="Top"
+                            Margin="0, 16,0, 0"
+                            ImageSource="/Helium;component/Resources/Icons/app_icon.png"
+                            HeType="Flat"
+                            HeTheme="Attention" />
+
+                        <imageButton:HeImageButton
+                            Width="28"
+                            ImageWidth="16"
+                            ImageHeight="16"
+                            DockPanel.Dock="Top"
+                            Margin="0, 8,0, 0"
+                            ImageSourceDisabled="/Helium;component/Resources/Icons/app_icon.png"
+                            IsEnabled="False"
+                            HeType="Flat"
+                            HeTheme="Attention" />
+
+                        <imageButton:HeImageButton
+                            Width="28"
+                            ImageWidth="16"
+                            ImageHeight="16"
+                            DockPanel.Dock="Top"
+                            Margin="0, 16,0, 0"
+                            ImageSource="/Helium;component/Resources/Icons/app_icon.png"
+                            HeType="Flat"
+                            HeTheme="Black" />
+
+                        <imageButton:HeImageButton
+                            Width="28"
+                            ImageWidth="16"
+                            ImageHeight="16"
+                            DockPanel.Dock="Top"
+                            Margin="0, 8,0, 0"
+                            ImageSourceDisabled="/Helium;component/Resources/Icons/app_icon.png"
+                            IsEnabled="False"
+                            HeType="Flat"
+                            HeTheme="Black" />
+                    </DockPanel>
+                </Grid>
+
+                <Grid
                     Grid.Column="1"
-                    Grid.Row="0"
-                    Margin="0, 16,0, 0"
-                    Width="28"
-                    ImageWidth="16"
-                    ImageHeight="16"
-                    ImageSource="/Helium;component/Resources/Icons/app_icon.png"/>
-            
-                <imageButton:HeImageButtonFlat
-                    Grid.Column="1"
-                    Grid.Row="1"
-                    Margin="0, 8,0, 0"
-                    Width="28"
-                    ImageWidth="16"
-                    ImageHeight="16"
-                    ImageSourceDisabled="/Helium;component/Resources/Icons/app_icon.png"
-                    IsEnabled="False"/>
-            </Grid>
-            
-            <Grid
-                DockPanel.Dock="Top">
-                
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition/>
-                    <ColumnDefinition/>
-                </Grid.ColumnDefinitions>
-                
-                <Grid.RowDefinitions>
-                    <RowDefinition/>
-                    <RowDefinition/>
-                </Grid.RowDefinitions>
-            
-                <imageButton:HeImageButtonFlatTransparent
-                    Grid.Column="0"
-                    Grid.Row="0"
-                    Margin="0, 16,0, 0"
-                    Width="28"
-                    ImageWidth="16"
-                    ImageHeight="16"
-                    ImageSource="/Helium;component/Resources/Icons/app_icon.png"/>
-            
-                <imageButton:HeImageButtonFlatTransparent
-                    Grid.Column="0"
-                    Grid.Row="1"
-                    Margin="0, 8,0, 0"
-                    Width="28"
-                    ImageWidth="16"
-                    ImageHeight="16"
-                    ImageSourceDisabled="/Helium;component/Resources/Icons/app_icon.png"
-                    IsEnabled="False"/>
-            
-                <imageButton:HeImageButtonFlatTransparentAttention
-                    Grid.Column="1"
-                    Grid.Row="0"
-                    Margin="0, 16,0, 0"
-                    Width="28"
-                    ImageWidth="16"
-                    ImageHeight="16"
-                    ImageSource="/Helium;component/Resources/Icons/app_icon.png"/>
-            
-                <imageButton:HeImageButtonFlatTransparentAttention
-                    Grid.Column="1"
-                    Grid.Row="1"
-                    Margin="0, 8,0, 0"
-                    Width="28"
-                    ImageWidth="16"
-                    ImageHeight="16"
-                    ImageSourceDisabled="/Helium;component/Resources/Icons/app_icon.png"
-                    IsEnabled="False"/>
+                    Margin="0, 16, 0, 0">
+                    
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition />
+                        <ColumnDefinition />
+                    </Grid.ColumnDefinitions>
+
+                    <DockPanel
+                        Grid.Column="0"
+                        LastChildFill="False">
+                        <imageButton:HeImageButton
+                            Width="28"
+                            ImageWidth="16"
+                            ImageHeight="16"
+                            DockPanel.Dock="Top"
+                            ImageSource="/Helium;component/Resources/Icons/app_icon.png"
+                            HeType="Transparent" />
+
+                        <imageButton:HeImageButton
+                            Width="28"
+                            ImageWidth="16"
+                            ImageHeight="16"
+                            DockPanel.Dock="Top"
+                            Margin="0, 8,0, 0"
+                            ImageSourceDisabled="/Helium;component/Resources/Icons/app_icon.png"
+                            IsEnabled="False"
+                            HeType="Transparent" />
+
+                        <imageButton:HeImageButton
+                            Width="28"
+                            ImageWidth="16"
+                            ImageHeight="16"
+                            DockPanel.Dock="Top"
+                            Margin="0, 16,0, 0"
+                            ImageSource="/Helium;component/Resources/Icons/app_icon.png"
+                            HeType="Transparent"
+                            HeTheme="Attention" />
+
+                        <imageButton:HeImageButton
+                            Width="28"
+                            ImageWidth="16"
+                            ImageHeight="16"
+                            DockPanel.Dock="Top"
+                            Margin="0, 8,0, 0"
+                            ImageSourceDisabled="/Helium;component/Resources/Icons/app_icon.png"
+                            IsEnabled="False"
+                            HeType="Transparent"
+                            HeTheme="Attention" />
+                    </DockPanel>
+                </Grid>
             </Grid>
         </DockPanel>
-        
+
         <DockPanel
             Grid.Column="1"
             LastChildFill="False"
             Margin="0, 16, 16, 16">
-            
+
             <radioButton:HeRadioButton
                 DockPanel.Dock="Top"
-                Content="Embedded Content 1"/>
-            
+                Content="Embedded Content 1" />
+
             <radioButton:HeRadioButton
                 DockPanel.Dock="Top"
-                Content="Embedded Content 2"/>
-            
+                Content="Embedded Content 2" />
+
             <radioButton:HeRadioButton
                 DockPanel.Dock="Top"
                 IsEnabled="False"
-                Content="Embedded Content Disabled"/>
-            
+                Content="Embedded Content Disabled" />
+
             <radioButton:HeRadioButton
                 DockPanel.Dock="Top"
                 Margin="0, 16, 0, 0">
@@ -266,20 +362,20 @@
                     <Label
                         VerticalAlignment="Center"
                         Foreground="White"
-                        Content="Custom Content 1"/>
+                        Content="Custom Content 1" />
                 </radioButton:HeRadioButton.Content>
             </radioButton:HeRadioButton>
-            
+
             <radioButton:HeRadioButton
                 DockPanel.Dock="Top">
                 <radioButton:HeRadioButton.Content>
                     <Label
                         VerticalAlignment="Center"
                         Foreground="White"
-                        Content="Custom Content 2"/>
+                        Content="Custom Content 2" />
                 </radioButton:HeRadioButton.Content>
             </radioButton:HeRadioButton>
-            
+
             <radioButton:HeRadioButton
                 DockPanel.Dock="Top"
                 IsEnabled="False">
@@ -287,20 +383,20 @@
                     <Label
                         VerticalAlignment="Center"
                         Foreground="White"
-                        Content="Custom Content Disabled"/>
+                        Content="Custom Content Disabled" />
                 </radioButton:HeRadioButton.Content>
             </radioButton:HeRadioButton>
-            
+
             <checkBox:HeCheckBox
                 DockPanel.Dock="Top"
                 Margin="0, 16, 0, 0"
-                Content="Embedded Content"/>
-            
+                Content="Embedded Content" />
+
             <checkBox:HeCheckBox
                 DockPanel.Dock="Top"
                 IsEnabled="False"
-                Content="Embedded Content Disabled"/>
-            
+                Content="Embedded Content Disabled" />
+
             <checkBox:HeCheckBox
                 DockPanel.Dock="Top"
                 Margin="0, 16, 0, 0">
@@ -308,10 +404,10 @@
                     <Label
                         VerticalAlignment="Center"
                         Foreground="White"
-                        Content="Custom Content"/>
+                        Content="Custom Content" />
                 </checkBox:HeCheckBox.Content>
             </checkBox:HeCheckBox>
-            
+
             <checkBox:HeCheckBox
                 DockPanel.Dock="Top"
                 IsEnabled="False">
@@ -319,65 +415,65 @@
                     <Label
                         VerticalAlignment="Center"
                         Foreground="White"
-                        Content="Custom Content Disabled"/>
+                        Content="Custom Content Disabled" />
                 </checkBox:HeCheckBox.Content>
             </checkBox:HeCheckBox>
         </DockPanel>
-        
+
         <DockPanel
             Grid.Column="2"
             Margin="0, 16, 16, 16"
             LastChildFill="False">
-            
+
             <editText:HeEditText
                 DockPanel.Dock="Top"
-                Text="Enabled with text"/>
-            
+                Text="Enabled with text" />
+
             <editText:HeEditText
                 DockPanel.Dock="Top"
                 Margin="0, 8, 0, 0"
                 IsEnabled="False"
-                Text="Disabled with text"/>
-            
+                Text="Disabled with text" />
+
             <editText:HeEditText
                 DockPanel.Dock="Top"
                 Margin="0, 16, 0, 0"
-                EditTextHint="Enabled with hint"/>
-            
+                EditTextHint="Enabled with hint" />
+
             <editText:HeEditText
                 DockPanel.Dock="Top"
                 Margin="0, 8, 0, 0"
                 IsEnabled="False"
-                EditTextHint="Disabled with hint"/>
-            
+                EditTextHint="Disabled with hint" />
+
             <editText:HeEditText
                 x:Name="ValidationErrorEnabled"
                 DockPanel.Dock="Top"
                 Margin="0, 16, 0, 0"
-                Text="{Binding DoubleData, UpdateSourceTrigger=PropertyChanged}"/>
-            
+                Text="{Binding DoubleData, UpdateSourceTrigger=PropertyChanged}" />
+
             <editText:HeEditText
                 x:Name="ValidationErrorDisabled"
                 DockPanel.Dock="Top"
                 Margin="0, 8, 0, 0"
                 IsEnabled="False"
-                Text="{Binding DoubleData, UpdateSourceTrigger=PropertyChanged}"/>
+                Text="{Binding DoubleData, UpdateSourceTrigger=PropertyChanged}" />
         </DockPanel>
-        
+
         <DockPanel
             Grid.Column="3"
             LastChildFill="False"
             Margin="0, 16, 16, 16">
-            
+
             <xButton:HeXValueButtonFlat
                 DockPanel.Dock="Top"
-                Text="Default X"/>
-            
+                Text="Default X" />
+
             <xButton:HeXValueButtonFlat
                 DockPanel.Dock="Top"
                 Margin="0, 8, 0, 0"
                 IsEnabled="False"
-                Text="Default X"/>
+                Text="Default X" />
         </DockPanel>
     </Grid>
 </window:HeWindow>

@@ -1,0 +1,403 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:local="clr-namespace:Helium.Controls.ImageButton">
+
+    <ResourceDictionary.MergedDictionaries>
+        <ResourceDictionary Source="/Helium;component/Resources/Brushes.xaml" />
+        <ResourceDictionary Source="/Helium;component/Resources/Colors.xaml" />
+        <ResourceDictionary Source="/Helium;component/Resources/Dimensions.xaml" />
+    </ResourceDictionary.MergedDictionaries>
+
+    <ControlTemplate x:Key="HeImageButtonBezelDefault" TargetType="{x:Type local:HeImageButton}">
+        <Border
+            Width="{TemplateBinding Width}"
+            Height="{TemplateBinding Height}"
+
+            Background="{TemplateBinding Background}"
+
+            BorderBrush="{TemplateBinding BorderBrush}"
+            BorderThickness="{TemplateBinding BorderThickness}"
+
+            CornerRadius="{TemplateBinding CornerRadius}"
+
+            SnapsToDevicePixels="True">
+
+            <Grid>
+                <ContentControl>
+                    <Image
+                        Width="{TemplateBinding ImageWidth}"
+                        Height="{TemplateBinding ImageHeight}">
+                        <Image.Style>
+                            <Style TargetType="Image">
+                                <Setter 
+                                    Property="Source" 
+                                    Value="{Binding RelativeSource={RelativeSource TemplatedParent}, Path=ImageSource}"/>
+                                            
+                                <Style.Triggers>
+                                    <Trigger Property="IsEnabled" Value="False">
+                                        <Setter 
+                                            Property="Source" 
+                                            Value="{Binding RelativeSource={RelativeSource TemplatedParent}, Path=ImageSourceDisabled}"/>
+                                    </Trigger>
+                                </Style.Triggers>
+                            </Style>
+                        </Image.Style>
+                    </Image>
+                </ContentControl>
+            </Grid>
+        </Border>
+
+        <ControlTemplate.Triggers>
+            <Trigger Property="IsMouseOver" Value="False">
+                <Setter Property="BorderThickness" Value="{StaticResource Thickness1}" />
+                <Setter Property="Background">
+                    <Setter.Value>
+                        <LinearGradientBrush
+                            StartPoint="0,0"
+                            EndPoint="0,1">
+                            <GradientStop Offset="0" Color="{StaticResource PrimaryColor500}"/>
+                            <GradientStop Offset="0.9" Color="{StaticResource PrimaryColor600}"/>
+                        </LinearGradientBrush>
+                    </Setter.Value>
+                </Setter>
+        
+                <Setter Property="BorderBrush">
+                    <Setter.Value>
+                        <LinearGradientBrush
+                            StartPoint="0,0"
+                            EndPoint="0,1">
+                            <GradientStop Offset="0" Color="{StaticResource PrimaryColor300}"/>
+                            <GradientStop Offset="0.2" Color="{StaticResource PrimaryColor500}"/>
+                            <GradientStop Offset="0.7" Color="{StaticResource PrimaryColor600}"/>
+                            <GradientStop Offset="0.9" Color="{StaticResource PrimaryColor800}"/>
+                        </LinearGradientBrush>
+                    </Setter.Value>
+                </Setter>
+            </Trigger>
+            
+            <Trigger Property="IsMouseOver" Value="True">
+                <Setter Property="BorderThickness" Value="{StaticResource Thickness1}" />
+                <Setter Property="Background">
+                    <Setter.Value>
+                        <LinearGradientBrush
+                            StartPoint="0,0"
+                            EndPoint="0,1">
+                            <GradientStop Offset="0" Color="{StaticResource PrimaryColor600}" />
+                            <GradientStop Offset="0.9" Color="{StaticResource PrimaryColor700}" />
+                        </LinearGradientBrush>
+                    </Setter.Value>
+                </Setter>
+
+                <Setter Property="BorderBrush">
+                    <Setter.Value>
+                        <LinearGradientBrush
+                            StartPoint="0,0"
+                            EndPoint="0,1">
+                            <GradientStop Offset="0" Color="{StaticResource PrimaryColor400}" />
+                            <GradientStop Offset="0.2" Color="{StaticResource PrimaryColor600}" />
+                            <GradientStop Offset="0.7" Color="{StaticResource PrimaryColor700}" />
+                            <GradientStop Offset="0.9" Color="{StaticResource PrimaryColor900}" />
+                        </LinearGradientBrush>
+                    </Setter.Value>
+                </Setter>
+            </Trigger>
+
+            <Trigger Property="IsPressed" Value="True">
+                <Setter Property="BorderThickness" Value="{StaticResource Thickness1}" />
+                <Setter Property="Background">
+                    <Setter.Value>
+                        <LinearGradientBrush
+                            StartPoint="0,0"
+                            EndPoint="0,1">
+                            <GradientStop Offset="0" Color="{StaticResource PrimaryColor700}" />
+                            <GradientStop Offset="0.9" Color="{StaticResource PrimaryColor800}" />
+                        </LinearGradientBrush>
+                    </Setter.Value>
+                </Setter>
+
+                <Setter Property="BorderBrush">
+                    <Setter.Value>
+                        <LinearGradientBrush
+                            StartPoint="0,0"
+                            EndPoint="0,1">
+                            <GradientStop Offset="0" Color="{StaticResource PrimaryColor500}" />
+                            <GradientStop Offset="0.2" Color="{StaticResource PrimaryColor700}" />
+                            <GradientStop Offset="0.7" Color="{StaticResource PrimaryColor800}" />
+                            <GradientStop Offset="0.9" Color="{StaticResource PrimaryColor950}" />
+                        </LinearGradientBrush>
+                    </Setter.Value>
+                </Setter>
+            </Trigger>
+
+            <Trigger Property="IsEnabled" Value="False">
+                <Setter Property="Background" Value="{StaticResource PrimaryBrush950}" />
+
+                <Setter Property="BorderThickness" Value="{StaticResource Thickness0}" />
+
+                <Setter Property="Foreground" Value="{StaticResource PrimaryBrush700}" />
+            </Trigger>
+        </ControlTemplate.Triggers>
+    </ControlTemplate>
+
+    <ControlTemplate x:Key="HeImageButtonBezelAttention" TargetType="{x:Type local:HeImageButton}">
+        <Border
+            Width="{TemplateBinding Width}"
+            Height="{TemplateBinding Height}"
+
+            Background="{TemplateBinding Background}"
+
+            BorderBrush="{TemplateBinding BorderBrush}"
+            BorderThickness="{TemplateBinding BorderThickness}"
+
+            CornerRadius="{TemplateBinding CornerRadius}"
+
+            SnapsToDevicePixels="True">
+
+            <Grid>
+                <ContentControl>
+                    <Image
+                        Width="{TemplateBinding ImageWidth}"
+                        Height="{TemplateBinding ImageHeight}">
+                        <Image.Style>
+                            <Style TargetType="Image">
+                                <Setter 
+                                    Property="Source" 
+                                    Value="{Binding RelativeSource={RelativeSource TemplatedParent}, Path=ImageSource}"/>
+                                            
+                                <Style.Triggers>
+                                    <Trigger Property="IsEnabled" Value="False">
+                                        <Setter 
+                                            Property="Source" 
+                                            Value="{Binding RelativeSource={RelativeSource TemplatedParent}, Path=ImageSourceDisabled}"/>
+                                    </Trigger>
+                                </Style.Triggers>
+                            </Style>
+                        </Image.Style>
+                    </Image>
+                </ContentControl>
+            </Grid>
+        </Border>
+
+        <ControlTemplate.Triggers>
+            <Trigger Property="IsMouseOver" Value="False">
+                <Setter Property="BorderThickness" Value="{StaticResource Thickness1}" />
+                <Setter Property="Background">
+                    <Setter.Value>
+                        <LinearGradientBrush
+                            StartPoint="0,0"
+                            EndPoint="0,1">
+                            <GradientStop Offset="0" Color="{StaticResource AttentionColor500}"/>
+                            <GradientStop Offset="0.9" Color="{StaticResource AttentionColor600}"/>
+                        </LinearGradientBrush>
+                    </Setter.Value>
+                </Setter>
+        
+                <Setter Property="BorderBrush">
+                    <Setter.Value>
+                        <LinearGradientBrush
+                            StartPoint="0,0"
+                            EndPoint="0,1">
+                            <GradientStop Offset="0" Color="{StaticResource AttentionColor300}"/>
+                            <GradientStop Offset="0.2" Color="{StaticResource AttentionColor500}"/>
+                            <GradientStop Offset="0.7" Color="{StaticResource AttentionColor600}"/>
+                            <GradientStop Offset="0.9" Color="{StaticResource AttentionColor800}"/>
+                        </LinearGradientBrush>
+                    </Setter.Value>
+                </Setter>
+            </Trigger>
+            
+            <Trigger Property="IsMouseOver" Value="True">
+                <Setter Property="BorderThickness" Value="{StaticResource Thickness1}" />
+                <Setter Property="Background">
+                    <Setter.Value>
+                        <LinearGradientBrush
+                            StartPoint="0,0"
+                            EndPoint="0,1">
+                            <GradientStop Offset="0" Color="{StaticResource AttentionColor600}" />
+                            <GradientStop Offset="0.9" Color="{StaticResource AttentionColor700}" />
+                        </LinearGradientBrush>
+                    </Setter.Value>
+                </Setter>
+
+                <Setter Property="BorderBrush">
+                    <Setter.Value>
+                        <LinearGradientBrush
+                            StartPoint="0,0"
+                            EndPoint="0,1">
+                            <GradientStop Offset="0" Color="{StaticResource AttentionColor400}" />
+                            <GradientStop Offset="0.2" Color="{StaticResource AttentionColor600}" />
+                            <GradientStop Offset="0.7" Color="{StaticResource AttentionColor700}" />
+                            <GradientStop Offset="0.9" Color="{StaticResource AttentionColor900}" />
+                        </LinearGradientBrush>
+                    </Setter.Value>
+                </Setter>
+            </Trigger>
+
+            <Trigger Property="IsPressed" Value="True">
+                <Setter Property="BorderThickness" Value="{StaticResource Thickness1}" />
+                <Setter Property="Background">
+                    <Setter.Value>
+                        <LinearGradientBrush
+                            StartPoint="0,0"
+                            EndPoint="0,1">
+                            <GradientStop Offset="0" Color="{StaticResource AttentionColor700}" />
+                            <GradientStop Offset="0.9" Color="{StaticResource AttentionColor800}" />
+                        </LinearGradientBrush>
+                    </Setter.Value>
+                </Setter>
+
+                <Setter Property="BorderBrush">
+                    <Setter.Value>
+                        <LinearGradientBrush
+                            StartPoint="0,0"
+                            EndPoint="0,1">
+                            <GradientStop Offset="0" Color="{StaticResource AttentionColor500}" />
+                            <GradientStop Offset="0.2" Color="{StaticResource AttentionColor700}" />
+                            <GradientStop Offset="0.7" Color="{StaticResource AttentionColor800}" />
+                            <GradientStop Offset="0.9" Color="{StaticResource AttentionColor950}" />
+                        </LinearGradientBrush>
+                    </Setter.Value>
+                </Setter>
+            </Trigger>
+
+            <Trigger Property="IsEnabled" Value="False">
+                <Setter Property="Background" Value="{StaticResource AttentionBrush950}" />
+
+                <Setter Property="BorderThickness" Value="{StaticResource Thickness0}" />
+
+                <Setter Property="Foreground" Value="{StaticResource AttentionBrush700}" />
+            </Trigger>
+        </ControlTemplate.Triggers>
+    </ControlTemplate>
+    
+    <ControlTemplate x:Key="HeImageButtonBezelBlack" TargetType="{x:Type local:HeImageButton}">
+        <Border
+            Width="{TemplateBinding Width}"
+            Height="{TemplateBinding Height}"
+
+            Background="{TemplateBinding Background}"
+
+            BorderBrush="{TemplateBinding BorderBrush}"
+            BorderThickness="{TemplateBinding BorderThickness}"
+
+            CornerRadius="{TemplateBinding CornerRadius}"
+
+            SnapsToDevicePixels="True">
+
+            <Grid>
+                <ContentControl>
+                    <Image
+                        Width="{TemplateBinding ImageWidth}"
+                        Height="{TemplateBinding ImageHeight}">
+                        <Image.Style>
+                            <Style TargetType="Image">
+                                <Setter 
+                                    Property="Source" 
+                                    Value="{Binding RelativeSource={RelativeSource TemplatedParent}, Path=ImageSource}"/>
+                                            
+                                <Style.Triggers>
+                                    <Trigger Property="IsEnabled" Value="False">
+                                        <Setter 
+                                            Property="Source" 
+                                            Value="{Binding RelativeSource={RelativeSource TemplatedParent}, Path=ImageSourceDisabled}"/>
+                                    </Trigger>
+                                </Style.Triggers>
+                            </Style>
+                        </Image.Style>
+                    </Image>
+                </ContentControl>
+            </Grid>
+        </Border>
+
+        <ControlTemplate.Triggers>
+            <Trigger Property="IsMouseOver" Value="False">
+                <Setter Property="BorderThickness" Value="{StaticResource Thickness1}" />
+                <Setter Property="Background">
+                    <Setter.Value>
+                        <LinearGradientBrush
+                            StartPoint="0,0"
+                            EndPoint="0,1">
+                            <GradientStop Offset="0" Color="{StaticResource BlackColor500}"/>
+                            <GradientStop Offset="0.9" Color="{StaticResource BlackColor600}"/>
+                        </LinearGradientBrush>
+                    </Setter.Value>
+                </Setter>
+        
+                <Setter Property="BorderBrush">
+                    <Setter.Value>
+                        <LinearGradientBrush
+                            StartPoint="0,0"
+                            EndPoint="0,1">
+                            <GradientStop Offset="0" Color="{StaticResource BlackColor300}"/>
+                            <GradientStop Offset="0.2" Color="{StaticResource BlackColor500}"/>
+                            <GradientStop Offset="0.7" Color="{StaticResource BlackColor600}"/>
+                            <GradientStop Offset="0.9" Color="{StaticResource BlackColor800}"/>
+                        </LinearGradientBrush>
+                    </Setter.Value>
+                </Setter>
+            </Trigger>
+            
+            <Trigger Property="IsMouseOver" Value="True">
+                <Setter Property="BorderThickness" Value="{StaticResource Thickness1}" />
+                <Setter Property="Background">
+                    <Setter.Value>
+                        <LinearGradientBrush
+                            StartPoint="0,0"
+                            EndPoint="0,1">
+                            <GradientStop Offset="0" Color="{StaticResource BlackColor600}" />
+                            <GradientStop Offset="0.9" Color="{StaticResource BlackColor700}" />
+                        </LinearGradientBrush>
+                    </Setter.Value>
+                </Setter>
+
+                <Setter Property="BorderBrush">
+                    <Setter.Value>
+                        <LinearGradientBrush
+                            StartPoint="0,0"
+                            EndPoint="0,1">
+                            <GradientStop Offset="0" Color="{StaticResource BlackColor400}" />
+                            <GradientStop Offset="0.2" Color="{StaticResource BlackColor600}" />
+                            <GradientStop Offset="0.7" Color="{StaticResource BlackColor700}" />
+                            <GradientStop Offset="0.9" Color="{StaticResource BlackColor900}" />
+                        </LinearGradientBrush>
+                    </Setter.Value>
+                </Setter>
+            </Trigger>
+
+            <Trigger Property="IsPressed" Value="True">
+                <Setter Property="BorderThickness" Value="{StaticResource Thickness1}" />
+                <Setter Property="Background">
+                    <Setter.Value>
+                        <LinearGradientBrush
+                            StartPoint="0,0"
+                            EndPoint="0,1">
+                            <GradientStop Offset="0" Color="{StaticResource BlackColor700}" />
+                            <GradientStop Offset="0.9" Color="{StaticResource BlackColor800}" />
+                        </LinearGradientBrush>
+                    </Setter.Value>
+                </Setter>
+
+                <Setter Property="BorderBrush">
+                    <Setter.Value>
+                        <LinearGradientBrush
+                            StartPoint="0,0"
+                            EndPoint="0,1">
+                            <GradientStop Offset="0" Color="{StaticResource BlackColor500}" />
+                            <GradientStop Offset="0.2" Color="{StaticResource BlackColor700}" />
+                            <GradientStop Offset="0.7" Color="{StaticResource BlackColor800}" />
+                            <GradientStop Offset="0.9" Color="{StaticResource BlackColor950}" />
+                        </LinearGradientBrush>
+                    </Setter.Value>
+                </Setter>
+            </Trigger>
+
+            <Trigger Property="IsEnabled" Value="False">
+                <Setter Property="Background" Value="{StaticResource BlackBrush900}" />
+
+                <Setter Property="BorderThickness" Value="{StaticResource Thickness0}" />
+
+                <Setter Property="Foreground" Value="{StaticResource BlackBrush700}" />
+            </Trigger>
+        </ControlTemplate.Triggers>
+    </ControlTemplate>
+</ResourceDictionary>

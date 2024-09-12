@@ -8,26 +8,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8b4ced28-5d3a-4a47-8b27-449f63f07d28" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Helium/Controls/Button/HeButton.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Helium/Controls/Button/Styles/HeButtonBezelTemplates.xaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Helium/Controls/Button/Styles/HeButtonFlatTemplates.xaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Helium/Utilities/HeTheme.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Helium/Utilities/HeType.cs" afterDir="false" />
+    <list default="true" id="8b4ced28-5d3a-4a47-8b27-449f63f07d28" name="Changes" comment="Кнопки теперь объединены в один класс, в котором есть параметры типа и темы">
+      <change afterPath="$PROJECT_DIR$/Helium/Controls/ImageButton/HeImageButton.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Helium/Controls/ImageButton/Styles/HeImageButton.xaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Helium/Controls/ImageButton/Styles/Templates/HeImageButtonBezelTemplates.xaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Helium/Controls/ImageButton/Styles/Templates/HeImageButtonFlatTemplates.xaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Helium/Controls/ImageButton/Styles/Templates/HeImageButtonTransparentTemplates.xaml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Helium/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Helium/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Helium.Demo/MainWindow.xaml" beforeDir="false" afterPath="$PROJECT_DIR$/Helium.Demo/MainWindow.xaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Helium.sln.DotSettings.user" beforeDir="false" afterPath="$PROJECT_DIR$/Helium.sln.DotSettings.user" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Helium/Controls/Button/HeButtonBase.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Helium/Controls/Button/HeButtonBezel.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Helium/Controls/Button/HeButtonFlat.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Helium/Controls/Button/Styles/HeButtonBase.xaml" beforeDir="false" afterPath="$PROJECT_DIR$/Helium/Controls/Button/Styles/HeButton.xaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Helium/Controls/Button/Styles/HeButtonBezel.xaml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Helium/Controls/Button/Styles/HeButtonFlat.xaml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Helium/Controls/Window/HeWindow.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Helium/Controls/Window/HeWindow.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Helium/Controls/Window/HeXWindow.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Helium/Controls/Window/Styles/HeXWindow.xaml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Helium/Controls/XButton/HeXValueButtonFlat.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Helium/Controls/XButton/HeXValueButtonFlat.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Helium/Controls/XButton/Styles/HeXValueButtonFlat.xaml" beforeDir="false" afterPath="$PROJECT_DIR$/Helium/Controls/XButton/Styles/HeXValueButtonFlat.xaml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Helium/Helium.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Helium/Helium.csproj" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Helium/Themes/Generic.xaml" beforeDir="false" afterPath="$PROJECT_DIR$/Helium/Themes/Generic.xaml" afterDir="false" />
     </list>
@@ -218,7 +206,7 @@
       <workItem from="1725936183421" duration="181000" />
       <workItem from="1725936370220" duration="12062000" />
       <workItem from="1725954528697" duration="7762000" />
-      <workItem from="1726108510019" duration="9651000" />
+      <workItem from="1726108510019" duration="10764000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit">
       <option name="closed" value="true" />
@@ -340,7 +328,15 @@
       <option name="project" value="LOCAL" />
       <updated>1725965817088</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="Кнопки теперь объединены в один класс, в котором есть параметры типа и темы">
+      <option name="closed" value="true" />
+      <created>1726119059416</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1726119059416</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -378,6 +374,7 @@
     <MESSAGE value="Исправлен цвет для Disabled-варианта прозрачной HeImageButton" />
     <MESSAGE value="Добавлен HeEditText. У HeCheckBox добавлена реакция фона на состояния IsMouseOver и IsPressed" />
     <MESSAGE value="Убран лишний Popup" />
-    <option name="LAST_COMMIT_MESSAGE" value="Убран лишний Popup" />
+    <MESSAGE value="Кнопки теперь объединены в один класс, в котором есть параметры типа и темы" />
+    <option name="LAST_COMMIT_MESSAGE" value="Кнопки теперь объединены в один класс, в котором есть параметры типа и темы" />
   </component>
 </project>

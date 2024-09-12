@@ -85,30 +85,37 @@
                                     <DockPanel
                                         Grid.Column="1"
                                         LastChildFill="False">
-                                        <imageButton:HeImageButtonFlatTransparentAttention
+                                        <imageButton:HeImageButton
                                             x:Name="CloseButton"
                                             DockPanel.Dock="Right"
+                                            HeTheme="Attention"
+                                            HeType="Transparent"
                                             Height="{StaticResource ToolbarHeight}"
                                             Width="46"
+                                            CornerRadius="0"
                                             ImageHeight="16"
                                             ImageWidth="16"
                                             ImageSource="/Helium;component/Resources/Icons/close_icon.png" />
                                         
-                                        <imageButton:HeImageButtonFlatTransparent
+                                        <imageButton:HeImageButton
                                             x:Name="MaximizeButton"
                                             DockPanel.Dock="Right"
+                                            HeType="Transparent"
                                             Height="{StaticResource ToolbarHeight}"
                                             Width="46"
+                                            CornerRadius="0"
                                             ImageHeight="16"
                                             ImageWidth="16"
                                             ImageSource="/Helium;component/Resources/Icons/maximize_icon.png">
-                                        </imageButton:HeImageButtonFlatTransparent>
+                                        </imageButton:HeImageButton>
                                         
-                                        <imageButton:HeImageButtonFlatTransparent
+                                        <imageButton:HeImageButton
                                             x:Name="MinimizeButton"
                                             DockPanel.Dock="Right"
+                                            HeType="Transparent"
                                             Height="{StaticResource ToolbarHeight}"
                                             Width="46"
+                                            CornerRadius="0"
                                             ImageHeight="16"
                                             ImageWidth="16"
                                             ImageSource="/Helium;component/Resources/Icons/minimize_icon.png" />
