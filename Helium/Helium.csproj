@@ -6,7 +6,6 @@
         <UseWPF>true</UseWPF>
         <ImplicitUsings>enable</ImplicitUsings>
         <LangVersion>12</LangVersion>
-        <AssemblyName>Alexander.Gorbunov.Helium</AssemblyName>
         <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
         <PackageId>Alexander.Gorbunov.Helium</PackageId>
         <Version>0.1</Version>
