@@ -6,6 +6,12 @@
         <UseWPF>true</UseWPF>
         <ImplicitUsings>enable</ImplicitUsings>
         <LangVersion>12</LangVersion>
+        <AssemblyName>Alexander.Gorbunov.Helium</AssemblyName>
+        <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+        <PackageId>Alexander.Gorbunov.Helium</PackageId>
+        <Version>0.1</Version>
+        <Authors>Alexander Gorbunov</Authors>
+        <AssemblyVersion>0.1</AssemblyVersion>
     </PropertyGroup>
 
     <ItemGroup>
@@ -112,6 +118,7 @@
       <Resource Include="Resources\Icons\maximize_icon.png" />
       <Resource Include="Resources\Icons\minimize_icon.png" />
       <Resource Include="Resources\Icons\app_icon.png" />
+      <Resource Include="Resources\Icons\backspace_icon.png" />
     </ItemGroup>
 
 </Project>

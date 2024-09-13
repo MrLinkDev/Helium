@@ -8,18 +8,27 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8b4ced28-5d3a-4a47-8b27-449f63f07d28" name="Changes" comment="HeXValueButton приведён к виду HeButton">
-      <change afterPath="$PROJECT_DIR$/Helium/Controls/XButton/Converters/ValueConverter.cs" afterDir="false" />
+    <list default="true" id="8b4ced28-5d3a-4a47-8b27-449f63f07d28" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/Helium/Controls/XButton/Utilities/HeXValueType.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Helium/Controls/XButton/Utilities/HeXValueTypeExtension.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Helium/Resources/Icons/backspace_icon.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Helium/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Helium/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Helium.Demo/MainWindow.xaml" beforeDir="false" afterPath="$PROJECT_DIR$/Helium.Demo/MainWindow.xaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Helium/Controls/Button/Styles/HeButton.xaml" beforeDir="false" afterPath="$PROJECT_DIR$/Helium/Controls/Button/Styles/HeButton.xaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Helium/Controls/EditText/HeEditText.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Helium/Controls/EditText/HeEditText.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Helium/Controls/ImageButton/Styles/HeImageButton.xaml" beforeDir="false" afterPath="$PROJECT_DIR$/Helium/Controls/ImageButton/Styles/HeImageButton.xaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Helium/Controls/XButton/Converters/ValueConverter.cs" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Helium/Controls/XButton/HeXValueButton.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Helium/Controls/XButton/HeXValueButton.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Helium/Controls/XButton/Styles/HeXValueButton.xaml" beforeDir="false" afterPath="$PROJECT_DIR$/Helium/Controls/XButton/Styles/HeXValueButton.xaml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Helium/Controls/XButton/Styles/Templates/HeXValueButtonFlatTemplates.xaml" beforeDir="false" afterPath="$PROJECT_DIR$/Helium/Controls/XButton/Styles/Templates/HeXValueButtonFlatTemplates.xaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Helium/Helium.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Helium/Helium.csproj" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="DpaMonitoringSettings">
+    <option name="autoShow" value="false" />
   </component>
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
@@ -197,7 +206,8 @@
       <workItem from="1725936183421" duration="181000" />
       <workItem from="1725936370220" duration="12062000" />
       <workItem from="1725954528697" duration="7762000" />
-      <workItem from="1726108510019" duration="23476000" />
+      <workItem from="1726108510019" duration="23604000" />
+      <workItem from="1726195301210" duration="14597000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit">
       <option name="closed" value="true" />
@@ -351,7 +361,15 @@
       <option name="project" value="LOCAL" />
       <updated>1726122512858</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="Подключены методы для всех кнопок в окне XButton, кроме кнопок ввода">
+      <option name="closed" value="true" />
+      <created>1726139449775</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1726139449775</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -393,6 +411,7 @@
     <MESSAGE value="HeImageButton приведены к виду HeButton" />
     <MESSAGE value="Изменён на тон ниже цвет кнопок для темы Attention" />
     <MESSAGE value="HeXValueButton приведён к виду HeButton" />
-    <option name="LAST_COMMIT_MESSAGE" value="HeXValueButton приведён к виду HeButton" />
+    <MESSAGE value="Подключены методы для всех кнопок в окне XButton, кроме кнопок ввода" />
+    <option name="LAST_COMMIT_MESSAGE" value="Подключены методы для всех кнопок в окне XButton, кроме кнопок ввода" />
   </component>
 </project>

@@ -8,8 +8,8 @@
     </ResourceDictionary.MergedDictionaries>
     
     <Style TargetType="{x:Type button:HeButton}">
-        <Setter Property="Width" Value="{StaticResource Width12X}"/>
-        <Setter Property="Height" Value="{StaticResource Height}"/>
+        <Setter Property="Width" Value="Auto"/>
+        <Setter Property="Height" Value="Auto"/>
         
         <Setter Property="CornerRadius" Value="{StaticResource Radius4}"/>
         

@@ -3,15 +3,13 @@
                     xmlns:local="clr-namespace:Helium.Controls.XButton"
                     xmlns:button="clr-namespace:Helium.Controls.Button"
                     xmlns:editText="clr-namespace:Helium.Controls.EditText"
-                    xmlns:converters="clr-namespace:Helium.Controls.XButton.Converters">
+                    xmlns:imageButton="clr-namespace:Helium.Controls.ImageButton">
 
     <ResourceDictionary.MergedDictionaries>
         <ResourceDictionary Source="/Helium;component/Resources/Brushes.xaml" />
         <ResourceDictionary Source="/Helium;component/Resources/Colors.xaml" />
         <ResourceDictionary Source="/Helium;component/Resources/Dimensions.xaml" />
     </ResourceDictionary.MergedDictionaries>
-    
-    <converters:ValueConverter x:Key="ValueConverter"/>
 
     <ControlTemplate x:Key="HeXValueButtonFlatDefault" TargetType="{x:Type local:HeXValueButton}">
         <Grid>
@@ -76,7 +74,7 @@
                             VerticalAlignment="Center"
                             HorizontalAlignment="Center"
 
-                            Text="{TemplateBinding Value}" />
+                            Text="{TemplateBinding DisplayedValue}" />
                     </Border>
                 </Grid>
             </Border>
@@ -107,10 +105,11 @@
                         <Grid.Resources>
                             <Style TargetType="{x:Type button:HeButton}">
                                 <Setter Property="Margin" Value="4" />
-
-                                <Setter Property="Width" Value="Auto" />
-                                <Setter Property="Height" Value="Auto" />
-
+                                <Setter Property="HorizontalAlignment" Value="Stretch" />
+                            </Style>
+                            
+                            <Style TargetType="{x:Type imageButton:HeImageButton}">
+                                <Setter Property="Margin" Value="4" />
                                 <Setter Property="HorizontalAlignment" Value="Stretch" />
                             </Style>
                         </Grid.Resources>
@@ -160,7 +159,7 @@
                             Grid.ColumnSpan="2"
                             Width="Auto"
                             Margin="4, 0" 
-                            Text="{TemplateBinding Value}"/>
+                            Text="{Binding RelativeSource={RelativeSource TemplatedParent}, Path=TempValue, UpdateSourceTrigger=PropertyChanged}"/>
 
                         <!-- Row 1 -->
 
@@ -179,20 +178,22 @@
                             HeTheme="Black"
                             Text="C" />
 
-                        <button:HeButton
+                        <imageButton:HeImageButton
                             x:Name="ButtonBackspace"
                             Grid.Row="1"
                             Grid.Column="2"
                             FocusManager.FocusedElement="{Binding ElementName=EditText}"
                             HeTheme="Black"
-                            Text="back" />
+                            ImageHeight="16"
+                            ImageWidth="16"
+                            ImageSource="/Helium;component/Resources/Icons/backspace_icon.png" />
 
                         <button:HeButton
                             x:Name="ButtonExp1"
                             Grid.Row="1"
                             Grid.Column="3"
                             HeTheme="Black"
-                            Text="G" />
+                            Visibility="Hidden"/>
 
                         <!-- Row 2 -->
 
@@ -222,7 +223,7 @@
                             Grid.Row="2"
                             Grid.Column="3"
                             HeTheme="Black"
-                            Text="M" />
+                            Visibility="Hidden"/>
 
                         <!-- Row 3 -->
 
@@ -252,7 +253,7 @@
                             Grid.Row="3"
                             Grid.Column="3"
                             HeTheme="Black"
-                            Text="K" />
+                            Visibility="Hidden" />
 
                         <!-- Row 4 -->
 
@@ -282,7 +283,7 @@
                             Grid.Row="4"
                             Grid.Column="3"
                             HeTheme="Black"
-                            Text="U" />
+                            Visibility="Hidden"/>
 
                         <!-- Row 5 -->
 

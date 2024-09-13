@@ -20,8 +20,30 @@
                  Background="#212121"
                  WindowStartupLocation="CenterScreen"
                  WindowTitle="Helium Demo">
+    
+    <window:HeWindow.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="/Helium;component/Resources/Dimensions.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </window:HeWindow.Resources>
 
     <Grid>
+        <Grid.Resources>
+            <Style TargetType="{x:Type button:HeButton}">
+                <Setter Property="Width" Value="{StaticResource Width12X}"/>
+                <Setter Property="Height" Value="{StaticResource Height}"/>
+            </Style>
+            
+            <Style TargetType="{x:Type imageButton:HeImageButton}">
+                <Setter Property="Width" Value="{StaticResource Height}"/>
+                <Setter Property="Height" Value="{StaticResource Height}"/>
+                <Setter Property="ImageHeight" Value="16"/>
+                <Setter Property="ImageWidth" Value="16"/>
+            </Style>
+        </Grid.Resources>
+        
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="Auto" />
             <ColumnDefinition Width="Auto" />
@@ -157,17 +179,11 @@
                         Grid.Column="0"
                         LastChildFill="False">
                         <imageButton:HeImageButton
-                            Width="28"
-                            ImageWidth="16"
-                            ImageHeight="16"
                             DockPanel.Dock="Top"
                             ImageSource="/Helium;component/Resources/Icons/app_icon.png"
                             HeType="Bezel" />
 
                         <imageButton:HeImageButton
-                            Width="28"
-                            ImageWidth="16"
-                            ImageHeight="16"
                             DockPanel.Dock="Top"
                             Margin="0, 8,0, 0"
                             ImageSourceDisabled="/Helium;component/Resources/Icons/app_icon.png"
@@ -175,9 +191,6 @@
                             HeType="Bezel" />
 
                         <imageButton:HeImageButton
-                            Width="28"
-                            ImageWidth="16"
-                            ImageHeight="16"
                             DockPanel.Dock="Top"
                             Margin="0, 16,0, 0"
                             ImageSource="/Helium;component/Resources/Icons/app_icon.png"
@@ -185,9 +198,6 @@
                             HeTheme="Attention" />
 
                         <imageButton:HeImageButton
-                            Width="28"
-                            ImageWidth="16"
-                            ImageHeight="16"
                             DockPanel.Dock="Top"
                             Margin="0, 8,0, 0"
                             ImageSourceDisabled="/Helium;component/Resources/Icons/app_icon.png"
@@ -196,9 +206,6 @@
                             HeTheme="Attention" />
 
                         <imageButton:HeImageButton
-                            Width="28"
-                            ImageWidth="16"
-                            ImageHeight="16"
                             DockPanel.Dock="Top"
                             Margin="0, 16,0, 0"
                             ImageSource="/Helium;component/Resources/Icons/app_icon.png"
@@ -206,9 +213,6 @@
                             HeTheme="Black" />
 
                         <imageButton:HeImageButton
-                            Width="28"
-                            ImageWidth="16"
-                            ImageHeight="16"
                             DockPanel.Dock="Top"
                             Margin="0, 8,0, 0"
                             ImageSourceDisabled="/Helium;component/Resources/Icons/app_icon.png"
@@ -221,17 +225,11 @@
                         Grid.Column="1"
                         LastChildFill="False">
                         <imageButton:HeImageButton
-                            Width="28"
-                            ImageWidth="16"
-                            ImageHeight="16"
                             DockPanel.Dock="Top"
                             ImageSource="/Helium;component/Resources/Icons/app_icon.png"
                             HeType="Flat" />
 
                         <imageButton:HeImageButton
-                            Width="28"
-                            ImageWidth="16"
-                            ImageHeight="16"
                             DockPanel.Dock="Top"
                             Margin="0, 8,0, 0"
                             ImageSourceDisabled="/Helium;component/Resources/Icons/app_icon.png"
@@ -239,9 +237,6 @@
                             HeType="Flat" />
 
                         <imageButton:HeImageButton
-                            Width="28"
-                            ImageWidth="16"
-                            ImageHeight="16"
                             DockPanel.Dock="Top"
                             Margin="0, 16,0, 0"
                             ImageSource="/Helium;component/Resources/Icons/app_icon.png"
@@ -249,9 +244,6 @@
                             HeTheme="Attention" />
 
                         <imageButton:HeImageButton
-                            Width="28"
-                            ImageWidth="16"
-                            ImageHeight="16"
                             DockPanel.Dock="Top"
                             Margin="0, 8,0, 0"
                             ImageSourceDisabled="/Helium;component/Resources/Icons/app_icon.png"
@@ -260,9 +252,6 @@
                             HeTheme="Attention" />
 
                         <imageButton:HeImageButton
-                            Width="28"
-                            ImageWidth="16"
-                            ImageHeight="16"
                             DockPanel.Dock="Top"
                             Margin="0, 16,0, 0"
                             ImageSource="/Helium;component/Resources/Icons/app_icon.png"
@@ -270,9 +259,6 @@
                             HeTheme="Black" />
 
                         <imageButton:HeImageButton
-                            Width="28"
-                            ImageWidth="16"
-                            ImageHeight="16"
                             DockPanel.Dock="Top"
                             Margin="0, 8,0, 0"
                             ImageSourceDisabled="/Helium;component/Resources/Icons/app_icon.png"
@@ -295,17 +281,11 @@
                         Grid.Column="0"
                         LastChildFill="False">
                         <imageButton:HeImageButton
-                            Width="28"
-                            ImageWidth="16"
-                            ImageHeight="16"
                             DockPanel.Dock="Top"
                             ImageSource="/Helium;component/Resources/Icons/app_icon.png"
                             HeType="Transparent" />
 
                         <imageButton:HeImageButton
-                            Width="28"
-                            ImageWidth="16"
-                            ImageHeight="16"
                             DockPanel.Dock="Top"
                             Margin="0, 8,0, 0"
                             ImageSourceDisabled="/Helium;component/Resources/Icons/app_icon.png"
@@ -313,9 +293,6 @@
                             HeType="Transparent" />
 
                         <imageButton:HeImageButton
-                            Width="28"
-                            ImageWidth="16"
-                            ImageHeight="16"
                             DockPanel.Dock="Top"
                             Margin="0, 16,0, 0"
                             ImageSource="/Helium;component/Resources/Icons/app_icon.png"
@@ -323,9 +300,6 @@
                             HeTheme="Attention" />
 
                         <imageButton:HeImageButton
-                            Width="28"
-                            ImageWidth="16"
-                            ImageHeight="16"
                             DockPanel.Dock="Top"
                             Margin="0, 8,0, 0"
                             ImageSourceDisabled="/Helium;component/Resources/Icons/app_icon.png"
@@ -469,13 +443,28 @@
                 DockPanel.Dock="Top"
                 ValueName="Start"
                 FullValueName="Start Frequency"
-                Value="10.25"/>
+                XValueType="FREQUENCY"
+                DisplayedValue="10.25"/>
 
             <xButton:HeXValueButton
                 DockPanel.Dock="Top"
                 Margin="0, 8, 0, 0"
                 IsEnabled="False"
                 ValueName="Stop" />
+
+            <xButton:HeXValueButton
+                DockPanel.Dock="Top"
+                Margin="0, 8, 0, 0"
+                XValueType="DBM"
+                ValueName="Power"
+                FullValueName="Power"/>
+
+            <xButton:HeXValueButton
+                DockPanel.Dock="Top"
+                Margin="0, 8, 0, 0"
+                ValueName="Points"
+                FullValueName="Points"
+                XValueType="NONE"/>
         </DockPanel>
     </Grid>
 </window:HeWindow>
