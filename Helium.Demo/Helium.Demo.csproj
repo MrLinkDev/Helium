@@ -14,7 +14,12 @@
       <DebugType>none</DebugType>
     </PropertyGroup>
 
+    <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+      <PlatformTarget>x64</PlatformTarget>
+    </PropertyGroup>
+
     <ItemGroup>
+      <ProjectReference Include="..\Helium.Plot\Helium.Plot.csproj" />
       <ProjectReference Include="..\Helium\Helium.csproj" />
     </ItemGroup>
 

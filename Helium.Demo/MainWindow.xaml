@@ -12,6 +12,7 @@
                  xmlns:checkBox="clr-namespace:Helium.Controls.CheckBox;assembly=Helium"
                  xmlns:editText="clr-namespace:Helium.Controls.EditText;assembly=Helium"
                  xmlns:xButton="clr-namespace:Helium.Controls.XButton;assembly=Helium"
+                 xmlns:plot="clr-namespace:Helium.Plot;assembly=Helium.Plot"
 
                  mc:Ignorable="d"
                  Title="MainWindow"
@@ -49,7 +50,7 @@
             <ColumnDefinition Width="Auto" />
             <ColumnDefinition Width="Auto" />
             <ColumnDefinition Width="Auto" />
-            <ColumnDefinition Width="Auto" />
+            <ColumnDefinition />
         </Grid.ColumnDefinitions>
 
         <DockPanel
@@ -466,5 +467,7 @@
                 FullValueName="Points"
                 XValueType="NONE"/>
         </DockPanel>
+        
+        <plot:HePlot Grid.Column="4"/>
     </Grid>
 </window:HeWindow>
