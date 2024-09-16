@@ -468,6 +468,5 @@
                 XValueType="NONE"/>
         </DockPanel>
         
-        <plot:HePlot Grid.Column="4"/>
     </Grid>
 </window:HeWindow>

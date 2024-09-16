@@ -8,10 +8,6 @@
     </PropertyGroup>
 
     <ItemGroup>
-      <ProjectReference Include="..\..\Amethyst\Amethyst\Amethyst.vcxproj" />
-    </ItemGroup>
-
-    <ItemGroup>
       <Page Update="Styles\HePlot.xaml">
         <Generator>MSBuild:Compile</Generator>
         <XamlRuntime>Wpf</XamlRuntime>
@@ -22,6 +18,10 @@
         <XamlRuntime>Wpf</XamlRuntime>
         <SubType>Designer</SubType>
       </Page>
+    </ItemGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\Amethyst\Amethyst\Amethyst.vcxproj" />
     </ItemGroup>
 
 </Project>
