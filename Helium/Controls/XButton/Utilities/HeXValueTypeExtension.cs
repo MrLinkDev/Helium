@@ -17,6 +17,13 @@ public static class HeXValueTypeExtension {
         return attributes[0].Units;
     }
     
+    public static string GetDefaultUnit(this Enum value) {
+        DefaultUnitAttribute[]? attributes = GetAttributes<DefaultUnitAttribute>(value);
+        
+        if (attributes == null || attributes.Length == 0) return string.Empty;
+        return attributes[0].DefaultUnit;
+    }
+    
     private static T[]? GetAttributes<T>(Enum value) where T : class {
         Type type = value.GetType();
 
@@ -35,4 +42,8 @@ public class ExpAttribute(params double[] values) : Attribute {
 
 public class UnitsAttribute(params string[] values) : Attribute {
     public string[] Units { get; } = values;
+}
+
+public class DefaultUnitAttribute(string value) : Attribute {
+    public string DefaultUnit { get; } = value;
 }

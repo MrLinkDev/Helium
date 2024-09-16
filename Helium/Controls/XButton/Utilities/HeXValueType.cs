@@ -4,6 +4,7 @@ public enum HeXValueType {
     [Exp]
     NONE,
     
+    [DefaultUnit("Гц")]
     [Units("ГГц", "МГц", "кГц")]
     [Exp(1e9, 1e6, 1e3)]
     FREQUENCY,

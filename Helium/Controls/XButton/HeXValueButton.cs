@@ -284,6 +284,8 @@ public class HeXValueButton : ButtonBase {
     public override void OnApplyTemplate() {
         base.OnApplyTemplate();
 
+        DisplayedValue = GetDisplayedValue(Value);
+
         Popup? popup = GetTemplateChild("XButtonPopup") as Popup;
         if (popup == null) return;
 
@@ -447,22 +449,48 @@ public class HeXValueButton : ButtonBase {
     }
 
     private void EnterValue(double exp = 1) {
-        double value;
         try {
-            value = double.Parse(TempValue);
-            value *= exp;
+            Value = double.Parse(TempValue);
+            Value *= exp;
 
-            if (value < MinValue) {
-                value = MinValue;
-            } else if (value > MaxValue) {
-                value = MaxValue;
+            if (Value < MinValue) {
+                Value = MinValue;
+            } else if (Value > MaxValue) {
+                Value = MaxValue;
             }
         } catch (Exception e) {
-            value = MinValue;
+            Value = MinValue;
         }
 
-        DisplayedValue = $"{value:0.###}";
+        DisplayedValue = GetDisplayedValue(Value);
         Close();
+    }
+
+    private string GetDisplayedValue(double value) {
+        // TODO: Вынести units и exp, так как они часто используются
+        var units = XValueType.GetUnits();
+        var exp = XValueType.GetExp();
+
+        int pos = exp.Length;
+        
+        for (; pos >= 0; pos--) {
+            if (value >= 1000) {
+                value /= 1000;
+                continue;
+            }
+            break;
+        }
+        
+        if (units.Length == 0) return $"{value:0.###}";
+        if (units.Length == 1 || pos == exp.Length) return $"{value:0.###} {XValueType.GetDefaultUnit()}";
+
+        try {
+            double.Parse(units[pos]);
+            return $"{value:0.###}";
+        } catch (FormatException e) {
+            return $"{value:0.###} {units[pos]}";
+        }
+
     }
 
     #endregion
@@ -474,7 +502,7 @@ public class HeXValueButton : ButtonBase {
     }
 
     private void PopupOnOpened(object sender, EventArgs e) {
-        TempValue = DisplayedValue;
+        TempValue = Value.ToString(CultureInfo.InvariantCulture);
 
         editText.Focus();
         
@@ -487,7 +515,7 @@ public class HeXValueButton : ButtonBase {
         }
 
         editText.SelectionStart = 0;
-        editText.SelectionLength = DisplayedValue.Length;
+        editText.SelectionLength = TempValue.Length;
     }
 
     private void PopupOnClosed(object? sender, EventArgs e) {

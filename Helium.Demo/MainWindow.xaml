@@ -445,7 +445,7 @@
                 ValueName="Start"
                 FullValueName="Start Frequency"
                 XValueType="FREQUENCY"
-                DisplayedValue="10.25"/>
+                Value="10.25"/>
 
             <xButton:HeXValueButton
                 DockPanel.Dock="Top"
