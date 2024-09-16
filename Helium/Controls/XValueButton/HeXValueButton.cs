@@ -11,7 +11,7 @@ using Helium.Controls.XButton.Utilities;
 using Helium.Resources;
 using Helium.Utilities;
 
-namespace Helium.Controls.XButton;
+namespace Helium.Controls.XValueButton;
 
 public class HeXValueButton : ButtonBase {
     private bool isPressed = false;
@@ -474,7 +474,7 @@ public class HeXValueButton : ButtonBase {
         int pos = exp.Length;
         
         for (; pos >= 0; pos--) {
-            if (value >= 1000) {
+            if (value >= 1000 || value <= -1000) {
                 value /= 1000;
                 continue;
             }

@@ -13,6 +13,7 @@
                  xmlns:editText="clr-namespace:Helium.Controls.EditText;assembly=Helium"
                  xmlns:xButton="clr-namespace:Helium.Controls.XButton;assembly=Helium"
                  xmlns:plot="clr-namespace:Helium.Plot;assembly=Helium.Plot"
+                 xmlns:xValueButton="clr-namespace:Helium.Controls.XValueButton;assembly=Helium"
 
                  mc:Ignorable="d"
                  Title="MainWindow"
@@ -440,27 +441,27 @@
             LastChildFill="False"
             Margin="0, 16, 16, 16">
 
-            <xButton:HeXValueButton
+            <xValueButton:HeXValueButton
                 DockPanel.Dock="Top"
                 ValueName="Start"
                 FullValueName="Start Frequency"
                 XValueType="FREQUENCY"
                 Value="10.25"/>
 
-            <xButton:HeXValueButton
+            <xValueButton:HeXValueButton
                 DockPanel.Dock="Top"
                 Margin="0, 8, 0, 0"
                 IsEnabled="False"
                 ValueName="Stop" />
 
-            <xButton:HeXValueButton
+            <xValueButton:HeXValueButton
                 DockPanel.Dock="Top"
                 Margin="0, 8, 0, 0"
                 XValueType="DBM"
                 ValueName="Power"
                 FullValueName="Power"/>
 
-            <xButton:HeXValueButton
+            <xValueButton:HeXValueButton
                 DockPanel.Dock="Top"
                 Margin="0, 8, 0, 0"
                 ValueName="Points"

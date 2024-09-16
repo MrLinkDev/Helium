@@ -12,6 +12,6 @@
         
         <ResourceDictionary Source="/Helium;component/Controls/EditText/Styles/HeEditText.xaml"/>
         
-        <ResourceDictionary Source="/Helium;component/Controls/XButton/Styles/HeXValueButton.xaml"/>
+        <ResourceDictionary Source="/Helium;component/Controls/XValueButton/Styles/HeXValueButton.xaml"/>
     </ResourceDictionary.MergedDictionaries>
 </ResourceDictionary>

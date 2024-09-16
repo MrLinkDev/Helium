@@ -3,7 +3,8 @@
                     xmlns:local="clr-namespace:Helium.Controls.XButton"
                     xmlns:button="clr-namespace:Helium.Controls.Button"
                     xmlns:editText="clr-namespace:Helium.Controls.EditText"
-                    xmlns:imageButton="clr-namespace:Helium.Controls.ImageButton">
+                    xmlns:imageButton="clr-namespace:Helium.Controls.ImageButton"
+                    xmlns:xValueButton="clr-namespace:Helium.Controls.XValueButton">
 
     <ResourceDictionary.MergedDictionaries>
         <ResourceDictionary Source="/Helium;component/Resources/Brushes.xaml" />
@@ -11,7 +12,7 @@
         <ResourceDictionary Source="/Helium;component/Resources/Dimensions.xaml" />
     </ResourceDictionary.MergedDictionaries>
 
-    <ControlTemplate x:Key="HeXValueButtonFlatDefault" TargetType="{x:Type local:HeXValueButton}">
+    <ControlTemplate x:Key="HeXValueButtonFlatDefault" TargetType="{x:Type xValueButton:HeXValueButton}">
         <Grid>
             <Border
                 x:Name="ValueButtonBase"
@@ -377,7 +378,7 @@
         </ControlTemplate.Triggers>
     </ControlTemplate>
 
-    <ControlTemplate x:Key="HeXValueButtonFlatAttention" TargetType="{x:Type local:HeXValueButton}">
+    <ControlTemplate x:Key="HeXValueButtonFlatAttention" TargetType="{x:Type xValueButton:HeXValueButton}">
         <Border
             Width="{TemplateBinding Width}"
             Height="{TemplateBinding Height}"
@@ -437,7 +438,7 @@
         </ControlTemplate.Triggers>
     </ControlTemplate>
 
-    <ControlTemplate x:Key="HeXValueButtonFlatBlack" TargetType="{x:Type local:HeXValueButton}">
+    <ControlTemplate x:Key="HeXValueButtonFlatBlack" TargetType="{x:Type xValueButton:HeXValueButton}">
         <Border
             Width="{TemplateBinding Width}"
             Height="{TemplateBinding Height}"
