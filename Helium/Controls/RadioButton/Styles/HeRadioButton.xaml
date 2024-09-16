@@ -49,6 +49,7 @@
                             Margin="4, 0, 0, 0"
                             VerticalAlignment="Center"
                             HorizontalAlignment="Left"
+                            IsEnabled="{TemplateBinding IsEnabled}"
                             Content="{TemplateBinding Content}"/>
                     </DockPanel>
                     

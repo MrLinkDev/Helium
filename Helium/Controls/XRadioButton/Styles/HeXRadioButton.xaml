@@ -1,0 +1,36 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:button="clr-namespace:Helium.Controls.XRadioButton">
+    <ResourceDictionary.MergedDictionaries>
+        <ResourceDictionary Source="/Helium;component/Resources/Brushes.xaml"/>
+        <ResourceDictionary Source="/Helium;component/Resources/Colors.xaml"/>
+        <ResourceDictionary Source="/Helium;component/Resources/Dimensions.xaml"/>
+        
+        <ResourceDictionary Source="/Helium;component/Controls/XRadioButton/Styles/Templates/HeXRadioButtonFlatTemplates.xaml"/>
+    </ResourceDictionary.MergedDictionaries>
+    
+    <Style TargetType="{x:Type button:HeXRadioButton}">
+        <Setter Property="Width" Value="{StaticResource Width12X}"/>
+        <Setter Property="Height" Value="{StaticResource Height15X}"/>
+        
+        <Setter Property="CornerRadius" Value="{StaticResource Radius4}"/>
+        
+        <Setter Property="FontSize" Value="{StaticResource FontSize}"/>
+        <Setter Property="Foreground" Value="{StaticResource WhiteBrush}"/>
+        
+        <Setter Property="Template" Value="{StaticResource HeXRadioButtonFlatDefault}"/>
+        
+        <Style.Triggers>
+            <MultiTrigger>
+                <MultiTrigger.Conditions>
+                    <Condition Property="HeTheme" Value="Default"/>
+                    <Condition Property="HeType" Value="Flat"/>
+                </MultiTrigger.Conditions>
+                
+                <MultiTrigger.Setters>
+                    <Setter Property="Template" Value="{StaticResource HeXRadioButtonFlatDefault}"/>
+                </MultiTrigger.Setters>
+            </MultiTrigger>
+        </Style.Triggers>
+    </Style>
+</ResourceDictionary>

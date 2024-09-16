@@ -42,4 +42,17 @@
     <Color x:Key="BlackColor800">#454545</Color>       
     <Color x:Key="BlackColor900">#3d3d3d</Color>
     <Color x:Key="BlackColor950">#212121</Color>            <!-- lock -->
+    
+    <!-- Green Palette -->
+    <Color x:Key="GreenColor50">#f2fbf5</Color>
+    <Color x:Key="GreenColor100">#e2f8e9</Color>            <!-- lock -->
+    <Color x:Key="GreenColor200">#c3efd1</Color>
+    <Color x:Key="GreenColor300">#94e1ae</Color>
+    <Color x:Key="GreenColor400">#5eca82</Color>
+    <Color x:Key="GreenColor500">#38af61</Color>
+    <Color x:Key="GreenColor600">#29904c</Color>
+    <Color x:Key="GreenColor700">#24713f</Color>
+    <Color x:Key="GreenColor800">#215a36</Color>       
+    <Color x:Key="GreenColor900">#1d4a2e</Color>
+    <Color x:Key="GreenColor950">#0b2816</Color>
 </ResourceDictionary>

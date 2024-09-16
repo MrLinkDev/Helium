@@ -14,6 +14,7 @@
                  xmlns:xButton="clr-namespace:Helium.Controls.XButton;assembly=Helium"
                  xmlns:plot="clr-namespace:Helium.Plot;assembly=Helium.Plot"
                  xmlns:xValueButton="clr-namespace:Helium.Controls.XValueButton;assembly=Helium"
+                 xmlns:xRadioButton="clr-namespace:Helium.Controls.XRadioButton;assembly=Helium"
 
                  mc:Ignorable="d"
                  Title="MainWindow"
@@ -467,6 +468,23 @@
                 ValueName="Points"
                 FullValueName="Points"
                 XValueType="NONE"/>
+            
+            
+            <xRadioButton:HeXRadioButton
+                DockPanel.Dock="Top"
+                Margin="0, 16, 0, 0"
+                Content="XRadio 1"/>
+            
+            <xRadioButton:HeXRadioButton
+                DockPanel.Dock="Top"
+                Margin="0, 8, 0, 0"
+                Content="XRadio 2"/>
+            
+            <xRadioButton:HeXRadioButton
+                DockPanel.Dock="Top"
+                Margin="0, 8, 0, 0"
+                Content="Disabled"
+                IsEnabled="False"/>
         </DockPanel>
         
     </Grid>

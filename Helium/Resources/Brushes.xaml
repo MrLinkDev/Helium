@@ -43,5 +43,18 @@
     <Brush x:Key="BlackBrush900">#3d3d3d</Brush>
     <Brush x:Key="BlackBrush950">#202020</Brush>            <!-- lock -->
     
+    <!-- Green Palette -->
+    <Brush x:Key="GreenBrush50">#f2fbf5</Brush>
+    <Brush x:Key="GreenBrush100">#e2f8e9</Brush>            <!-- lock -->
+    <Brush x:Key="GreenBrush200">#c3efd1</Brush>
+    <Brush x:Key="GreenBrush300">#94e1ae</Brush>
+    <Brush x:Key="GreenBrush400">#5eca82</Brush>
+    <Brush x:Key="GreenBrush500">#38af61</Brush>
+    <Brush x:Key="GreenBrush600">#29904c</Brush>
+    <Brush x:Key="GreenBrush700">#24713f</Brush>
+    <Brush x:Key="GreenBrush800">#215a36</Brush>       
+    <Brush x:Key="GreenBrush900">#1d4a2e</Brush>
+    <Brush x:Key="GreenBrush950">#0b2816</Brush>
+
     
 </ResourceDictionary>
