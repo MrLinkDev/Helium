@@ -473,10 +473,18 @@ public class HeXValueButton : ButtonBase {
         e.Handled = true;
     }
 
-    private void PopupOnOpened(object? sender, EventArgs e) {
+    private void PopupOnOpened(object sender, EventArgs e) {
         TempValue = DisplayedValue;
 
         editText.Focus();
+        
+        Popup popup = (Popup)sender;
+        
+        if (popup.PointToScreen(new Point()).X - popup.Width < 0) {
+            popup.HorizontalOffset = -popup.HorizontalOffset;
+        } else {
+            if  (popup.HorizontalOffset < 0) popup.HorizontalOffset = -popup.HorizontalOffset;
+        }
 
         editText.SelectionStart = 0;
         editText.SelectionLength = DisplayedValue.Length;

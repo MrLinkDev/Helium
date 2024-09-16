@@ -81,18 +81,19 @@
 
             <Popup
                 x:Name="XButtonPopup"
+                
+                Width="{StaticResource XWindowWidth}"
+                Height="{StaticResource XWindowHeight}"
+                
                 IsOpen="{TemplateBinding IsPopupOpened}"
                 PlacementTarget="{Binding ElementName=PrimaryContent}"
-                Placement="{TemplateBinding PopupPlacement}"
+                Placement="Left"
                 AllowsTransparency="True"
                 StaysOpen="False"
                 HorizontalOffset="6"
                 IsEnabled="True">
 
                 <Border
-                    Width="{StaticResource XWindowWidth}"
-                    Height="{StaticResource XWindowHeight}"
-
                     BorderThickness="{StaticResource Thickness2}"
                     BorderBrush="{StaticResource PrimaryBrush500}"
 
