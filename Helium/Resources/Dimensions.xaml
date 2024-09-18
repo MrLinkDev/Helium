@@ -69,6 +69,18 @@
     <system:Double x:Key="ToolbarButtonWidth">40</system:Double>
     <system:Double x:Key="ToolbarButtonHeight">40</system:Double>
     
+    <!-- Dialog Window -->
+    <system:Double x:Key="DialogToolbarHeight">32</system:Double>
+    
+    <GridLength x:Key="DialogToolbarTitleSectionWidth">200</GridLength>
+    <GridLength x:Key="DialogToolbarButtonsSectionWidth">100</GridLength>
+    
+    <system:Double x:Key="DialogWindowWidth">300</system:Double>
+    <system:Double x:Key="DialogWindowHeight">200</system:Double>
+    
+    <system:Double x:Key="DialogToolbarButtonWidth">32</system:Double>
+    <system:Double x:Key="DialogToolbarButtonHeight">32</system:Double>
+    
     <!-- RadioButton -->
     <system:Double x:Key="EllipseSize">16</system:Double>
     <system:Double x:Key="EllipseInnerSize">8</system:Double>

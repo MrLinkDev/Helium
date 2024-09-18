@@ -15,6 +15,7 @@
                  xmlns:plot="clr-namespace:Helium.Plot;assembly=Helium.Plot"
                  xmlns:xValueButton="clr-namespace:Helium.Controls.XValueButton;assembly=Helium"
                  xmlns:xRadioButton="clr-namespace:Helium.Controls.XRadioButton;assembly=Helium"
+                 xmlns:indicator="clr-namespace:Helium.Controls.Indicator;assembly=Helium"
 
                  mc:Ignorable="d"
                  Title="MainWindow"
@@ -73,7 +74,8 @@
                     <button:HeButton
                         DockPanel.Dock="Top"
                         Text="Default"
-                        HeType="Bezel" />
+                        HeType="Bezel" 
+                        Click="ButtonBase_OnClick"/>
 
                     <button:HeButton
                         DockPanel.Dock="Top"
@@ -487,5 +489,25 @@
                 IsEnabled="False"/>
         </DockPanel>
         
+        <DockPanel 
+            Grid.Column="4"
+            LastChildFill="False"
+            Margin="0, 16, 16, 0">
+            
+            <DockPanel 
+                DockPanel.Dock="Top"
+                LastChildFill="False">
+                
+                <indicator:HeIndicator 
+                    x:Name="Indicator"
+                    DockPanel.Dock="Left"/>
+                
+                <button:HeButton
+                    DockPanel.Dock="Right"
+                    Text="Indicator"
+                    HeType="Flat"
+                    Click="ChangeIndicatorState"/>
+            </DockPanel>
+        </DockPanel>
     </Grid>
 </window:HeWindow>

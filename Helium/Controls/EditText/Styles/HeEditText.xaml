@@ -118,8 +118,8 @@
                         </Trigger>
                         
                         <Trigger Property="Validation.HasError" Value="True">
-                            <Setter Property="EditTextBorder" Value="{StaticResource AttentionBrush500}"/>
-                            <Setter Property="SelectionBrush" Value="{StaticResource AttentionBrush500}"/>
+                            <Setter Property="EditTextBorder" Value="{StaticResource RedBrush500}"/>
+                            <Setter Property="SelectionBrush" Value="{StaticResource RedBrush500}"/>
                         </Trigger>
                     </ControlTemplate.Triggers>
                 </ControlTemplate>

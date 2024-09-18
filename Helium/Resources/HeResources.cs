@@ -18,17 +18,17 @@ public static class HeColors {
     public static Color PrimaryColor900 => (Color)ColorConverter.ConvertFromString("#384670");
     public static Color PrimaryColor950 => (Color)ColorConverter.ConvertFromString("#262d45");
     
-    public static Color AttentionColor50 => (Color)ColorConverter.ConvertFromString("#fcf4f4");
-    public static Color AttentionColor100 => (Color)ColorConverter.ConvertFromString("#fae6e6");
-    public static Color AttentionColor200 => (Color)ColorConverter.ConvertFromString("#f7d1d1");
-    public static Color AttentionColor300 => (Color)ColorConverter.ConvertFromString("#f0b1b1");
-    public static Color AttentionColor400 => (Color)ColorConverter.ConvertFromString("#e68383");
-    public static Color AttentionColor500 => (Color)ColorConverter.ConvertFromString("#d85b5b");
-    public static Color AttentionColor600 => (Color)ColorConverter.ConvertFromString("#c43e3e");
-    public static Color AttentionColor700 => (Color)ColorConverter.ConvertFromString("#a43131");
-    public static Color AttentionColor800 => (Color)ColorConverter.ConvertFromString("#832a2a");
-    public static Color AttentionColor900 => (Color)ColorConverter.ConvertFromString("#722a2a");
-    public static Color AttentionColor950 => (Color)ColorConverter.ConvertFromString("#3d1212");
+    public static Color RedColor50 => (Color)ColorConverter.ConvertFromString("#fcf4f4");
+    public static Color RedColor100 => (Color)ColorConverter.ConvertFromString("#fae6e6");
+    public static Color RedColor200 => (Color)ColorConverter.ConvertFromString("#f7d1d1");
+    public static Color RedColor300 => (Color)ColorConverter.ConvertFromString("#f0b1b1");
+    public static Color RedColor400 => (Color)ColorConverter.ConvertFromString("#e68383");
+    public static Color RedColor500 => (Color)ColorConverter.ConvertFromString("#d85b5b");
+    public static Color RedColor600 => (Color)ColorConverter.ConvertFromString("#c43e3e");
+    public static Color RedColor700 => (Color)ColorConverter.ConvertFromString("#a43131");
+    public static Color RedColor800 => (Color)ColorConverter.ConvertFromString("#832a2a");
+    public static Color RedColor900 => (Color)ColorConverter.ConvertFromString("#722a2a");
+    public static Color RedColor950 => (Color)ColorConverter.ConvertFromString("#3d1212");
     
     public static Color BlackColor50 => (Color)ColorConverter.ConvertFromString("#f6f6f6");
     public static Color BlackColor100 => (Color)ColorConverter.ConvertFromString("#e7e7e7");
@@ -53,6 +53,18 @@ public static class HeColors {
     public static Color GreenColor800 => (Color)ColorConverter.ConvertFromString("#215a36");
     public static Color GreenColor900 => (Color)ColorConverter.ConvertFromString("#1d4a2e");
     public static Color GreenColor950 => (Color)ColorConverter.ConvertFromString("#0b2816");
+    
+    public static Color OrangeColor50 => (Color)ColorConverter.ConvertFromString("#fff9eb");
+    public static Color OrangeColor100 => (Color)ColorConverter.ConvertFromString("#feedc7");
+    public static Color OrangeColor200 => (Color)ColorConverter.ConvertFromString("#fdd98a");
+    public static Color OrangeColor300 => (Color)ColorConverter.ConvertFromString("#fdc763");
+    public static Color OrangeColor400 => (Color)ColorConverter.ConvertFromString("#fca623");
+    public static Color OrangeColor500 => (Color)ColorConverter.ConvertFromString("#f6830a");
+    public static Color OrangeColor600 => (Color)ColorConverter.ConvertFromString("#da5e05");
+    public static Color OrangeColor700 => (Color)ColorConverter.ConvertFromString("#b53f08");
+    public static Color OrangeColor800 => (Color)ColorConverter.ConvertFromString("#93300d");
+    public static Color OrangeColor900 => (Color)ColorConverter.ConvertFromString("#78290f");
+    public static Color OrangeColor950 => (Color)ColorConverter.ConvertFromString("#451203");
 }
 
 public static class HeBrushes {
@@ -68,17 +80,17 @@ public static class HeBrushes {
     public static SolidColorBrush PrimaryBrush900 => new SolidColorBrush(HeColors.PrimaryColor900);
     public static SolidColorBrush PrimaryBrush950 => new SolidColorBrush(HeColors.PrimaryColor950);
     
-    public static SolidColorBrush AttentionBrush50 => new SolidColorBrush(HeColors.AttentionColor50);
-    public static SolidColorBrush AttentionBrush100 => new SolidColorBrush(HeColors.AttentionColor100);
-    public static SolidColorBrush AttentionBrush200 => new SolidColorBrush(HeColors.AttentionColor200);
-    public static SolidColorBrush AttentionBrush300 => new SolidColorBrush(HeColors.AttentionColor300);
-    public static SolidColorBrush AttentionBrush400 => new SolidColorBrush(HeColors.AttentionColor400);
-    public static SolidColorBrush AttentionBrush500 => new SolidColorBrush(HeColors.AttentionColor500);
-    public static SolidColorBrush AttentionBrush600 => new SolidColorBrush(HeColors.AttentionColor600);
-    public static SolidColorBrush AttentionBrush700 => new SolidColorBrush(HeColors.AttentionColor700);
-    public static SolidColorBrush AttentionBrush800 => new SolidColorBrush(HeColors.AttentionColor800);
-    public static SolidColorBrush AttentionBrush900 => new SolidColorBrush(HeColors.AttentionColor900);
-    public static SolidColorBrush AttentionBrush950 => new SolidColorBrush(HeColors.AttentionColor950);
+    public static SolidColorBrush RedBrush50 => new SolidColorBrush(HeColors.RedColor50);
+    public static SolidColorBrush RedBrush100 => new SolidColorBrush(HeColors.RedColor100);
+    public static SolidColorBrush RedBrush200 => new SolidColorBrush(HeColors.RedColor200);
+    public static SolidColorBrush RedBrush300 => new SolidColorBrush(HeColors.RedColor300);
+    public static SolidColorBrush RedBrush400 => new SolidColorBrush(HeColors.RedColor400);
+    public static SolidColorBrush RedBrush500 => new SolidColorBrush(HeColors.RedColor500);
+    public static SolidColorBrush RedBrush600 => new SolidColorBrush(HeColors.RedColor600);
+    public static SolidColorBrush RedBrush700 => new SolidColorBrush(HeColors.RedColor700);
+    public static SolidColorBrush RedBrush800 => new SolidColorBrush(HeColors.RedColor800);
+    public static SolidColorBrush RedBrush900 => new SolidColorBrush(HeColors.RedColor900);
+    public static SolidColorBrush RedBrush950 => new SolidColorBrush(HeColors.RedColor950);
     
     public static SolidColorBrush BlackBrush50 => new SolidColorBrush(HeColors.BlackColor50);
     public static SolidColorBrush BlackBrush100 => new SolidColorBrush(HeColors.BlackColor100);
@@ -103,4 +115,16 @@ public static class HeBrushes {
     public static SolidColorBrush GreenBrush800 => new SolidColorBrush(HeColors.GreenColor800);
     public static SolidColorBrush GreenBrush900 => new SolidColorBrush(HeColors.GreenColor900);
     public static SolidColorBrush GreenBrush950 => new SolidColorBrush(HeColors.GreenColor950);
+    
+    public static SolidColorBrush OrangeBrush50 => new SolidColorBrush(HeColors.OrangeColor50);
+    public static SolidColorBrush OrangeBrush100 => new SolidColorBrush(HeColors.OrangeColor100);
+    public static SolidColorBrush OrangeBrush200 => new SolidColorBrush(HeColors.OrangeColor200);
+    public static SolidColorBrush OrangeBrush300 => new SolidColorBrush(HeColors.OrangeColor300);
+    public static SolidColorBrush OrangeBrush400 => new SolidColorBrush(HeColors.OrangeColor400);
+    public static SolidColorBrush OrangeBrush500 => new SolidColorBrush(HeColors.OrangeColor500);
+    public static SolidColorBrush OrangeBrush600 => new SolidColorBrush(HeColors.OrangeColor600);
+    public static SolidColorBrush OrangeBrush700 => new SolidColorBrush(HeColors.OrangeColor700);
+    public static SolidColorBrush OrangeBrush800 => new SolidColorBrush(HeColors.OrangeColor800);
+    public static SolidColorBrush OrangeBrush900 => new SolidColorBrush(HeColors.OrangeColor900);
+    public static SolidColorBrush OrangeBrush950 => new SolidColorBrush(HeColors.OrangeColor950);
 }

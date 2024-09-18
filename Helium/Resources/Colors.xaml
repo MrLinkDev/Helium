@@ -18,17 +18,17 @@
     <Color x:Key="PrimaryColor950">#262d45</Color>
     
     <!-- Red Palette -->
-    <Color x:Key="AttentionColor50">#fcf4f4</Color>
-    <Color x:Key="AttentionColor100">#fae6e6</Color>
-    <Color x:Key="AttentionColor200">#f7d1d1</Color>
-    <Color x:Key="AttentionColor300">#f0b1b1</Color>
-    <Color x:Key="AttentionColor400">#e68383</Color>
-    <Color x:Key="AttentionColor500">#d85b5b</Color>
-    <Color x:Key="AttentionColor600">#c43e3e</Color>
-    <Color x:Key="AttentionColor700">#a43131</Color>
-    <Color x:Key="AttentionColor800">#832a2a</Color>        <!-- lock -->
-    <Color x:Key="AttentionColor900">#722a2a</Color>
-    <Color x:Key="AttentionColor950">#3d1212</Color>
+    <Color x:Key="RedColor50">#fcf4f4</Color>
+    <Color x:Key="RedColor100">#fae6e6</Color>
+    <Color x:Key="RedColor200">#f7d1d1</Color>
+    <Color x:Key="RedColor300">#f0b1b1</Color>
+    <Color x:Key="RedColor400">#e68383</Color>
+    <Color x:Key="RedColor500">#d85b5b</Color>
+    <Color x:Key="RedColor600">#c43e3e</Color>
+    <Color x:Key="RedColor700">#a43131</Color>
+    <Color x:Key="RedColor800">#832a2a</Color>        <!-- lock -->
+    <Color x:Key="RedColor900">#722a2a</Color>
+    <Color x:Key="RedColor950">#3d1212</Color>
     
     <!-- Black Palette -->
     <Color x:Key="BlackColor50">#f6f6f6</Color>
@@ -55,4 +55,18 @@
     <Color x:Key="GreenColor800">#215a36</Color>       
     <Color x:Key="GreenColor900">#1d4a2e</Color>
     <Color x:Key="GreenColor950">#0b2816</Color>
+    
+    <!-- Orange Palette -->
+    <Color x:Key="OrangeColor50">#fff9eb</Color>
+    <Color x:Key="OrangeColor100">#feedc7</Color>
+    <Color x:Key="OrangeColor200">#fdd98a</Color>
+    <Color x:Key="OrangeColor300">#fdc763</Color>            <!-- lock -->
+    <Color x:Key="OrangeColor400">#fca623</Color>
+    <Color x:Key="OrangeColor500">#f6830a</Color>
+    <Color x:Key="OrangeColor600">#da5e05</Color>
+    <Color x:Key="OrangeColor700">#b53f08</Color>
+    <Color x:Key="OrangeColor800">#93300d</Color>       
+    <Color x:Key="OrangeColor900">#78290f</Color>
+    <Color x:Key="OrangeColor950">#451203</Color>
+    
 </ResourceDictionary>

@@ -1,0 +1,118 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:local="clr-namespace:Helium.Controls.Window"
+                    xmlns:imageButton="clr-namespace:Helium.Controls.ImageButton">
+
+    <ResourceDictionary.MergedDictionaries>
+        <ResourceDictionary Source="/Helium;component/Resources/Brushes.xaml" />
+        <ResourceDictionary Source="/Helium;component/Resources/Colors.xaml" />
+        <ResourceDictionary Source="/Helium;component/Resources/Dimensions.xaml" />
+    </ResourceDictionary.MergedDictionaries>
+
+    <Style TargetType="{x:Type local:HeDialogWindow}">
+        <Setter Property="WindowChrome.WindowChrome">
+            <Setter.Value>
+                <WindowChrome
+                    GlassFrameThickness="1"
+                    CornerRadius="8"
+                    CaptionHeight="0"/>
+            </Setter.Value>
+        </Setter>
+
+        <Setter Property="Width" Value="{StaticResource DialogWindowWidth}" />
+        <Setter Property="Height" Value="{StaticResource DialogWindowHeight}" />
+        <Setter Property="ResizeMode" Value="CanResizeWithGrip"/>
+
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="local:HeDialogWindow">
+                    <Border
+                        BorderThickness="{TemplateBinding BorderThickness}">
+                        <DockPanel LastChildFill="True">
+                            <Border
+                                DockPanel.Dock="Top"
+                                Height="{StaticResource DialogToolbarHeight}"
+                                BorderThickness="0">
+                                
+                                <Border.Background>
+                                    <LinearGradientBrush
+                                        StartPoint="0,0"
+                                        EndPoint="540,0"
+                                        MappingMode="Absolute">
+                                        <GradientStop Offset="0.1" Color="{Binding Path=ToolbarAccent, RelativeSource={RelativeSource TemplatedParent}}" />
+                                        <GradientStop Offset="0.6" Color="{StaticResource BlackColor800}" />
+                                    </LinearGradientBrush>
+                                </Border.Background>
+
+                                <Grid>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition />
+                                        <ColumnDefinition Width="Auto" />
+                                    </Grid.ColumnDefinitions>
+
+                                    <DockPanel
+                                        Grid.Column="0"
+                                        x:Name="WindowToolbar"
+                                        Background="Transparent">
+                                        
+                                        <Image
+                                            x:Name="AppButton"
+                                            DockPanel.Dock="Left"
+                                            Height="16"
+                                            Width="16"
+                                            VerticalAlignment="Center"
+                                            Margin="16, 8, 16, 8"
+                                            Source="{TemplateBinding AppIcon}" />
+
+                                        <Label
+                                            DockPanel.Dock="Left"
+                                            
+                                            FontSize="{StaticResource FontSize}"
+                                            Foreground="{StaticResource BlackBrush50}"
+
+                                            VerticalContentAlignment="Center"
+                                            
+                                            Padding="0"
+                                            Margin="0"
+
+                                            Content="{TemplateBinding WindowTitle}" />
+                                        
+                                        <ContentPresenter
+                                            DockPanel.Dock="Right"
+                                            HorizontalAlignment="Stretch"
+                                            Content="{TemplateBinding ToolbarContent}"/>
+                                    </DockPanel>
+
+                                    <DockPanel
+                                        Grid.Column="1"
+                                        LastChildFill="False">
+                                        <imageButton:HeImageButton
+                                            x:Name="CloseButton"
+                                            DockPanel.Dock="Right"
+                                            HeTheme="Attention"
+                                            HeType="Transparent"
+                                            Height="{StaticResource DialogToolbarHeight}"
+                                            Width="32"
+                                            CornerRadius="0"
+                                            ImageHeight="16"
+                                            ImageWidth="16"
+                                            ImageSource="/Helium;component/Resources/Icons/close_icon.png" />
+                                    </DockPanel>
+                                </Grid>
+
+                            </Border>
+
+                            <StackPanel
+                                DockPanel.Dock="Bottom"
+                                Background="{TemplateBinding BodyBackground}">
+
+                                <ContentPresenter />
+                            </StackPanel>
+                        </DockPanel>
+                    </Border>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+</ResourceDictionary>

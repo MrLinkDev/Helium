@@ -10,6 +10,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using Helium.Controls.Indicator.Utilities;
 using Helium.Controls.Window;
 
 namespace HeliumDemo;
@@ -46,5 +47,23 @@ public partial class MainWindow : HeWindow, INotifyPropertyChanged {
         field = value;
         OnPropertyChanged(propertyName);
         return true;
+    }
+
+    private void ButtonBase_OnClick(object sender, RoutedEventArgs e) {
+        HeDialogWindow dialogWindow = new HeDialogWindow();
+        dialogWindow.WindowTitle = "Dialog window";
+
+        dialogWindow.ShowDialog();
+    }
+
+    private void ChangeIndicatorState(object sender, RoutedEventArgs e) {
+        if (Indicator.State == null) Indicator.State = ConnectionState.None;
+        var currentState = (ConnectionState)Indicator.State;
+        
+        if (currentState == ConnectionState.NoConnection) Indicator.State = ConnectionState.None;
+        else {
+            currentState += 1;
+            Indicator.State = currentState;
+        }
     }
 }

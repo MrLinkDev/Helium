@@ -18,17 +18,17 @@
     <Brush x:Key="PrimaryBrush950">#262d45</Brush>
     
     <!-- Red Palette -->
-    <Brush x:Key="AttentionBrush50">#fcf4f4</Brush>
-    <Brush x:Key="AttentionBrush100">#fae6e6</Brush>
-    <Brush x:Key="AttentionBrush200">#f7d1d1</Brush>
-    <Brush x:Key="AttentionBrush300">#f0b1b1</Brush>
-    <Brush x:Key="AttentionBrush400">#e68383</Brush>
-    <Brush x:Key="AttentionBrush500">#d85b5b</Brush>
-    <Brush x:Key="AttentionBrush600">#c43e3e</Brush>
-    <Brush x:Key="AttentionBrush700">#a43131</Brush>
-    <Brush x:Key="AttentionBrush800">#832a2a</Brush>        <!-- lock -->
-    <Brush x:Key="AttentionBrush900">#722a2a</Brush>
-    <Brush x:Key="AttentionBrush950">#3d1212</Brush>
+    <Brush x:Key="RedBrush50">#fcf4f4</Brush>
+    <Brush x:Key="RedBrush100">#fae6e6</Brush>
+    <Brush x:Key="RedBrush200">#f7d1d1</Brush>
+    <Brush x:Key="RedBrush300">#f0b1b1</Brush>
+    <Brush x:Key="RedBrush400">#e68383</Brush>
+    <Brush x:Key="RedBrush500">#d85b5b</Brush>
+    <Brush x:Key="RedBrush600">#c43e3e</Brush>
+    <Brush x:Key="RedBrush700">#a43131</Brush>
+    <Brush x:Key="RedBrush800">#832a2a</Brush>        <!-- lock -->
+    <Brush x:Key="RedBrush900">#722a2a</Brush>
+    <Brush x:Key="RedBrush950">#3d1212</Brush>
     
     <!-- Black Palette -->
     <Brush x:Key="BlackBrush50">#f6f6f6</Brush>
@@ -55,6 +55,19 @@
     <Brush x:Key="GreenBrush800">#215a36</Brush>       
     <Brush x:Key="GreenBrush900">#1d4a2e</Brush>
     <Brush x:Key="GreenBrush950">#0b2816</Brush>
+    
+    <!-- Orange Palette -->
+    <Brush x:Key="OrangeBrush50">#fff9eb</Brush>
+    <Brush x:Key="OrangeBrush100">#feedc7</Brush>
+    <Brush x:Key="OrangeBrush200">#fdd98a</Brush>
+    <Brush x:Key="OrangeBrush300">#fdc763</Brush>            <!-- lock -->
+    <Brush x:Key="OrangeBrush400">#fca623</Brush>
+    <Brush x:Key="OrangeBrush500">#f6830a</Brush>
+    <Brush x:Key="OrangeBrush600">#da5e05</Brush>
+    <Brush x:Key="OrangeBrush700">#b53f08</Brush>
+    <Brush x:Key="OrangeBrush800">#93300d</Brush>       
+    <Brush x:Key="OrangeBrush900">#78290f</Brush>
+    <Brush x:Key="OrangeBrush950">#451203</Brush>
 
     
 </ResourceDictionary>

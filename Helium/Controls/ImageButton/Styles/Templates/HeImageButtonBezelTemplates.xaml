@@ -186,8 +186,8 @@
                         <LinearGradientBrush
                             StartPoint="0,0"
                             EndPoint="0,1">
-                            <GradientStop Offset="0" Color="{StaticResource AttentionColor500}"/>
-                            <GradientStop Offset="0.9" Color="{StaticResource AttentionColor600}"/>
+                            <GradientStop Offset="0" Color="{StaticResource RedColor500}"/>
+                            <GradientStop Offset="0.9" Color="{StaticResource RedColor600}"/>
                         </LinearGradientBrush>
                     </Setter.Value>
                 </Setter>
@@ -197,10 +197,10 @@
                         <LinearGradientBrush
                             StartPoint="0,0"
                             EndPoint="0,1">
-                            <GradientStop Offset="0" Color="{StaticResource AttentionColor300}"/>
-                            <GradientStop Offset="0.2" Color="{StaticResource AttentionColor500}"/>
-                            <GradientStop Offset="0.7" Color="{StaticResource AttentionColor600}"/>
-                            <GradientStop Offset="0.9" Color="{StaticResource AttentionColor800}"/>
+                            <GradientStop Offset="0" Color="{StaticResource RedColor300}"/>
+                            <GradientStop Offset="0.2" Color="{StaticResource RedColor500}"/>
+                            <GradientStop Offset="0.7" Color="{StaticResource RedColor600}"/>
+                            <GradientStop Offset="0.9" Color="{StaticResource RedColor800}"/>
                         </LinearGradientBrush>
                     </Setter.Value>
                 </Setter>
@@ -213,8 +213,8 @@
                         <LinearGradientBrush
                             StartPoint="0,0"
                             EndPoint="0,1">
-                            <GradientStop Offset="0" Color="{StaticResource AttentionColor600}" />
-                            <GradientStop Offset="0.9" Color="{StaticResource AttentionColor700}" />
+                            <GradientStop Offset="0" Color="{StaticResource RedColor600}" />
+                            <GradientStop Offset="0.9" Color="{StaticResource RedColor700}" />
                         </LinearGradientBrush>
                     </Setter.Value>
                 </Setter>
@@ -224,10 +224,10 @@
                         <LinearGradientBrush
                             StartPoint="0,0"
                             EndPoint="0,1">
-                            <GradientStop Offset="0" Color="{StaticResource AttentionColor400}" />
-                            <GradientStop Offset="0.2" Color="{StaticResource AttentionColor600}" />
-                            <GradientStop Offset="0.7" Color="{StaticResource AttentionColor700}" />
-                            <GradientStop Offset="0.9" Color="{StaticResource AttentionColor900}" />
+                            <GradientStop Offset="0" Color="{StaticResource RedColor400}" />
+                            <GradientStop Offset="0.2" Color="{StaticResource RedColor600}" />
+                            <GradientStop Offset="0.7" Color="{StaticResource RedColor700}" />
+                            <GradientStop Offset="0.9" Color="{StaticResource RedColor900}" />
                         </LinearGradientBrush>
                     </Setter.Value>
                 </Setter>
@@ -240,8 +240,8 @@
                         <LinearGradientBrush
                             StartPoint="0,0"
                             EndPoint="0,1">
-                            <GradientStop Offset="0" Color="{StaticResource AttentionColor700}" />
-                            <GradientStop Offset="0.9" Color="{StaticResource AttentionColor800}" />
+                            <GradientStop Offset="0" Color="{StaticResource RedColor700}" />
+                            <GradientStop Offset="0.9" Color="{StaticResource RedColor800}" />
                         </LinearGradientBrush>
                     </Setter.Value>
                 </Setter>
@@ -251,21 +251,21 @@
                         <LinearGradientBrush
                             StartPoint="0,0"
                             EndPoint="0,1">
-                            <GradientStop Offset="0" Color="{StaticResource AttentionColor500}" />
-                            <GradientStop Offset="0.2" Color="{StaticResource AttentionColor700}" />
-                            <GradientStop Offset="0.7" Color="{StaticResource AttentionColor800}" />
-                            <GradientStop Offset="0.9" Color="{StaticResource AttentionColor950}" />
+                            <GradientStop Offset="0" Color="{StaticResource RedColor500}" />
+                            <GradientStop Offset="0.2" Color="{StaticResource RedColor700}" />
+                            <GradientStop Offset="0.7" Color="{StaticResource RedColor800}" />
+                            <GradientStop Offset="0.9" Color="{StaticResource RedColor950}" />
                         </LinearGradientBrush>
                     </Setter.Value>
                 </Setter>
             </Trigger>
 
             <Trigger Property="IsEnabled" Value="False">
-                <Setter Property="Background" Value="{StaticResource AttentionBrush950}" />
+                <Setter Property="Background" Value="{StaticResource RedBrush950}" />
 
                 <Setter Property="BorderThickness" Value="{StaticResource Thickness0}" />
 
-                <Setter Property="Foreground" Value="{StaticResource AttentionBrush700}" />
+                <Setter Property="Foreground" Value="{StaticResource RedBrush700}" />
             </Trigger>
         </ControlTemplate.Triggers>
     </ControlTemplate>
