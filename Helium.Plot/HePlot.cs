@@ -28,11 +28,6 @@ public class HePlot : Decorator {
             new FrameworkPropertyMetadata(typeof(HePlot)));
     }
 
-    public override void OnApplyTemplate() {
-        base.OnApplyTemplate();
-        
-    }
-
     public override void BeginInit() {
         Loaded += OnLoaded;
         
@@ -42,15 +37,12 @@ public class HePlot : Decorator {
         
         base.BeginInit();
     }
-    private void Tick(object sender, EventArgs e) {
-        if (Child != null) {
-            Child.InvalidateVisual();
-        }
+    private void Tick(object? sender, EventArgs e) {
+        Child?.InvalidateVisual();
     }
 
     private void OnLoaded(object sender, RoutedEventArgs e) {
         HwndHost host = new Amethyst.GlWindow();
         Child = host;
     }
-    
 }

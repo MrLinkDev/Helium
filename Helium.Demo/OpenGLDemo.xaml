@@ -1,17 +1,14 @@
 ﻿<window:HeWindow x:Class="HeliumDemo.OpenGLDemo"
-        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-        xmlns:local="clr-namespace:HeliumDemo"
-        xmlns:plot="clr-namespace:Helium.Plot;assembly=Helium.Plot"
-        xmlns:window="clr-namespace:Helium.Controls.Window;assembly=Helium"
-        mc:Ignorable="d"
-        Title="OpenGLDemo" Height="450" Width="800">
+                 xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                 xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                 xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+                 xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+                 xmlns:local="clr-namespace:HeliumDemo"
+                 xmlns:plot="clr-namespace:Helium.Plot;assembly=Helium.Plot"
+                 xmlns:window="clr-namespace:Helium.Controls.Window;assembly=Helium"
+                 mc:Ignorable="d"
+                 Title="OpenGLDemo" Height="450" Width="800">
     <DockPanel>
-        <plot:HePlot
-            Height="400"
-            VerticalAlignment="Center"
-            MouseLeftButtonDown="UIElement_OnMouseLeftButtonDown"/>
+        <plot:HePlot/>
     </DockPanel>
 </window:HeWindow>
