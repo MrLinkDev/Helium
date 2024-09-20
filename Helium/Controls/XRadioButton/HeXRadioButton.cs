@@ -38,7 +38,6 @@ public class HeXRadioButton : System.Windows.Controls.RadioButton {
     
     #endregion
     
-    
     #region CornerRadius
 
     public static readonly DependencyProperty CornerRadiusProperty = DependencyProperty.Register(
@@ -85,17 +84,17 @@ public class HeXRadioButton : System.Windows.Controls.RadioButton {
 
     #endregion
 
-    #region EllipseInnerFill
+    #region StrokeFill
 
-    public static readonly DependencyProperty EllipseInnerFillProperty = DependencyProperty.Register(
-        nameof(EllipseInnerFill),
+    public static readonly DependencyProperty StrokeFillProperty = DependencyProperty.Register(
+        nameof(StrokeFill),
         typeof(Brush),
         typeof(HeXRadioButton),
         new FrameworkPropertyMetadata(HeBrushes.BlackBrush950));
     
-    public Brush EllipseInnerFill {
-        get => (Brush)GetValue(EllipseInnerFillProperty);
-        set => SetValue(EllipseInnerFillProperty, value);
+    public Brush StrokeFill {
+        get => (Brush)GetValue(StrokeFillProperty);
+        set => SetValue(StrokeFillProperty, value);
     }
 
     #endregion

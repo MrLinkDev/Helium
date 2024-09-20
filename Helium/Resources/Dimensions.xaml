@@ -101,4 +101,10 @@
     <!-- XWindow Width -->
     <system:Double x:Key="XWindowWidth">300</system:Double>
     
+    <!-- XRadioButton -->
+    <system:Double x:Key="XEllipseSize">14</system:Double>
+    <system:Double x:Key="XEllipseInnerSize">8</system:Double>
+    
+    <system:Double x:Key="XEllipseStrokeSize">2</system:Double>
+    
 </ResourceDictionary>

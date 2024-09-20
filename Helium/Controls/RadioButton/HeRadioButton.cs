@@ -37,7 +37,7 @@ public class HeRadioButton : System.Windows.Controls.RadioButton {
 
     #endregion
 
-    #region EllipseInnerFill
+    #region StrokeFill
 
     public static readonly DependencyProperty EllipseInnerFillProperty = DependencyProperty.Register(
         nameof(EllipseInnerFill),

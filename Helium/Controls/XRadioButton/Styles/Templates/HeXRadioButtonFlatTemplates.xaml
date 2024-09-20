@@ -18,66 +18,69 @@
             CornerRadius="{TemplateBinding CornerRadius}"
 
             SnapsToDevicePixels="True">
-            
+
             <DockPanel
                 LastChildFill="False">
                 <Grid
                     DockPanel.Dock="Left"
                     SnapsToDevicePixels="True">
+                    
                     <Ellipse
-                        Height="{StaticResource EllipseSize}"
-                        Width="{StaticResource EllipseSize}"
-                            
+                        Height="{StaticResource XEllipseSize}"
+                        Width="{StaticResource XEllipseSize}"
+
                         VerticalAlignment="Center"
                         HorizontalAlignment="Center"
-                            
+                        
+                        Margin="4, 4, 4, 0"
+
                         Fill="{TemplateBinding EllipseFill}"
-                            
-                        Stroke="{TemplateBinding EllipseStroke}"
-                        StrokeThickness="{StaticResource EllipseStrokeSize}">
+                        Stroke="{TemplateBinding StrokeFill}"
+                        StrokeThickness="2">
                     </Ellipse>
-                        
-                    <Ellipse
-                        Height="{StaticResource EllipseInnerSize}"
-                        Width="{StaticResource EllipseInnerSize}"
-                            
-                        VerticalAlignment="Center"
-                        HorizontalAlignment="Center"
-                            
-                        Fill="{TemplateBinding EllipseInnerFill}"/>
                 </Grid>
-                        
+
                 <ContentPresenter
                     DockPanel.Dock="Left"
                     Margin="4, 0, 0, 0"
                     VerticalAlignment="Center"
                     HorizontalAlignment="Left"
-                    Content="{TemplateBinding Content}"/>
+                    Content="{TemplateBinding Content}" />
             </DockPanel>
         </Border>
 
         <ControlTemplate.Triggers>
             <Trigger Property="IsMouseOver" Value="False">
                 <Setter Property="Background" Value="{StaticResource PrimaryBrush500}" />
+                
+                <Setter Property="EllipseFill" Value="{StaticResource PrimaryBrush800}" />
+                <Setter Property="StrokeFill" Value="{StaticResource PrimaryBrush700}" />
             </Trigger>
-            
+
             <Trigger Property="IsMouseOver" Value="True">
                 <Setter Property="Background" Value="{StaticResource PrimaryBrush600}" />
-                <Setter Property="EllipseStroke" Value="{StaticResource PrimaryBrush600}"/>
-                <Setter Property="EllipseInnerFill" Value="{StaticResource PrimaryBrush800}"/>
+                
+                <Setter Property="EllipseFill" Value="{StaticResource PrimaryBrush900}" />
+                <Setter Property="StrokeFill" Value="{StaticResource PrimaryBrush800}" />
             </Trigger>
-                        
+
             <Trigger Property="IsChecked" Value="True">
-                <Setter Property="EllipseInnerFill" Value="{StaticResource GreenBrush500}"/>
+                <Setter Property="EllipseFill" Value="{StaticResource GreenBrush500}" />
+                <Setter Property="StrokeFill" Value="{StaticResource GreenBrush800}" />
             </Trigger>
 
             <Trigger Property="IsPressed" Value="True">
                 <Setter Property="Background" Value="{StaticResource PrimaryBrush700}" />
-                <Setter Property="EllipseStroke" Value="{StaticResource PrimaryBrush700}"/>
+                
+                <Setter Property="EllipseFill" Value="{StaticResource PrimaryBrush950}" />
+                <Setter Property="StrokeFill" Value="{StaticResource PrimaryBrush900}" />
             </Trigger>
 
             <Trigger Property="IsEnabled" Value="False">
                 <Setter Property="Background" Value="{StaticResource PrimaryBrush950}" />
+                
+                <Setter Property="EllipseFill" Value="{StaticResource PrimaryBrush900}" />
+                <Setter Property="StrokeFill" Value="{StaticResource PrimaryBrush700}" />
 
                 <Setter Property="Foreground" Value="{StaticResource PrimaryBrush700}" />
             </Trigger>
