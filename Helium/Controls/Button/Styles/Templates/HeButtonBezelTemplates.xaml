@@ -36,6 +36,7 @@
                 Foreground="{StaticResource PrimaryBrush50}"
 
                 Margin="{TemplateBinding CornerRadius}"
+                TextWrapping="WrapWithOverflow"
 
                 Text="{TemplateBinding Text}" />
         </Border>
@@ -160,6 +161,7 @@
                 Foreground="{StaticResource RedBrush50}"
 
                 Margin="{TemplateBinding CornerRadius}"
+                TextWrapping="WrapWithOverflow"
 
                 Text="{TemplateBinding Text}" />
         </Border>
@@ -284,6 +286,7 @@
                 Foreground="{StaticResource BlackBrush50}"
 
                 Margin="{TemplateBinding CornerRadius}"
+                TextWrapping="WrapWithOverflow"
 
                 Text="{TemplateBinding Text}" />
         </Border>

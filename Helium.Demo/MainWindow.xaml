@@ -73,7 +73,7 @@
                     LastChildFill="False">
                     <button:HeButton
                         DockPanel.Dock="Top"
-                        Text="Default"
+                        Text="very very looooong text"
                         HeType="Bezel" 
                         Click="ButtonBase_OnClick"/>
 
