@@ -8,7 +8,43 @@
                  xmlns:window="clr-namespace:Helium.Controls.Window;assembly=Helium"
                  mc:Ignorable="d"
                  Title="OpenGLDemo" Height="450" Width="800">
-    <DockPanel>
-        <plot:HePlot/>
-    </DockPanel>
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition Width="120"/>
+        </Grid.ColumnDefinitions>
+        
+        <plot:HePlot 
+            x:Name="Plot"
+            Grid.Column="0"/>
+        
+        <DockPanel 
+            Grid.Column="1">
+            
+            <Button
+                DockPanel.Dock="Top"
+                Margin="8"
+                Content="Get ptr"
+                Click="GetPtr"/>
+            
+            <Slider 
+                DockPanel.Dock="Top"
+                Margin="8"
+                Minimum="0"
+                Maximum="1"
+                ValueChanged="OnValueChangedRed"/>
+            <Slider 
+                DockPanel.Dock="Top"
+                Margin="8"
+                Minimum="0"
+                Maximum="1"
+                ValueChanged="OnValueChangedGreen"/>
+            <Slider 
+                DockPanel.Dock="Top"
+                Margin="8"
+                Minimum="0"
+                Maximum="1"
+                ValueChanged="OnValueChangedBlue"/>
+        </DockPanel>
+    </Grid>
 </window:HeWindow>

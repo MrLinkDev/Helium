@@ -1,12 +1,18 @@
-﻿using System.Windows;
+﻿using System.Runtime.InteropServices;
+using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Interop;
 using System.Windows.Threading;
+using Amethyst;
 
 namespace Helium.Plot;
 
 public class HePlot : Decorator {
+    
     private DispatcherTimer updateTimer = new DispatcherTimer();
+
+    public IntPtr ActivityPtr;
+    public IntPtr ScreenPtr;
     
     #region FrameRate
 
@@ -37,12 +43,19 @@ public class HePlot : Decorator {
         
         base.BeginInit();
     }
+    
     private void Tick(object? sender, EventArgs e) {
         Child?.InvalidateVisual();
     }
 
     private void OnLoaded(object sender, RoutedEventArgs e) {
-        HwndHost host = new Amethyst.GlWindow();
-        Child = host;
+        GlWindow window = new GlWindow();
+        Child = window;
+        
+        unsafe {
+            ActivityPtr = (IntPtr) window.activity;
+        }
     }
+    
+    
 }
