@@ -23,5 +23,9 @@ public partial class OpenGLDemo : HeWindow {
 
     private void GetPtr(object sender, RoutedEventArgs e) {
     }
+
+    private void FrameRateChanged(object sender, RoutedPropertyChangedEventArgs<double> e) {
+        Plot.FrameRate = (int) e.NewValue;
+    }
 }
 

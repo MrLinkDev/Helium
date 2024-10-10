@@ -20,11 +20,14 @@ public class HePlot : Decorator {
         nameof(FrameRate),
         typeof(int),
         typeof(HePlot),
-        new FrameworkPropertyMetadata(60));
+        new FrameworkPropertyMetadata(10));
     
     public int FrameRate {
         get => (int)GetValue(FrameRateProperty);
-        set => SetValue(FrameRateProperty, value);
+        set {
+            SetValue(FrameRateProperty, value);
+            updateTimer.Interval = new TimeSpan(TimeSpan.TicksPerSecond / FrameRate);
+        }
     }
 
     #endregion

@@ -45,6 +45,14 @@
                 Minimum="0"
                 Maximum="1"
                 ValueChanged="OnValueChangedBlue"/>
+            
+            <Slider 
+                DockPanel.Dock="Top"
+                Margin="8"
+                Minimum="2"
+                Maximum="60"
+                Value="30"
+                ValueChanged="FrameRateChanged"/>
         </DockPanel>
     </Grid>
 </window:HeWindow>
