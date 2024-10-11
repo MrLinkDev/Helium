@@ -3,6 +3,7 @@ using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Interop;
 using System.Windows.Threading;
+
 using Amethyst;
 
 namespace Helium.Plot;
@@ -10,9 +11,14 @@ namespace Helium.Plot;
 public class HePlot : Decorator {
     
     private DispatcherTimer updateTimer = new DispatcherTimer();
+    
+    public Action OnReady { get; set; }
+    public Action OnUpdate { get; set; }
 
     public IntPtr ActivityPtr;
     public IntPtr ScreenPtr;
+
+    public uint currentTraceId = 0;
     
     #region FrameRate
 
@@ -49,6 +55,7 @@ public class HePlot : Decorator {
     
     private void Tick(object? sender, EventArgs e) {
         Child?.InvalidateVisual();
+        OnUpdate.Invoke();
     }
 
     private void OnLoaded(object sender, RoutedEventArgs e) {
@@ -57,8 +64,17 @@ public class HePlot : Decorator {
         
         unsafe {
             ActivityPtr = (IntPtr) window.activity;
+            ScreenPtr = AmethystApi.GetScreenPtr(ActivityPtr);
         }
+        
+        OnReady.Invoke();
+    }
+
+    public void AddTrace(uint traceId, float[] dataPtr, uint points) {
+        AmethystApi.AddTrace(ScreenPtr, traceId, dataPtr, points);
     }
     
-    
+    public void RemoveTrace(uint traceId) {
+        AmethystApi.RemoveTrace(ScreenPtr, traceId);
+    }
 }

@@ -24,27 +24,14 @@
             <Button
                 DockPanel.Dock="Top"
                 Margin="8"
-                Content="Get ptr"
-                Click="GetPtr"/>
+                Content="Add Trace"
+                Click="AddTrace"/>
             
-            <Slider 
+            <Button
                 DockPanel.Dock="Top"
                 Margin="8"
-                Minimum="0"
-                Maximum="1"
-                ValueChanged="OnValueChangedRed"/>
-            <Slider 
-                DockPanel.Dock="Top"
-                Margin="8"
-                Minimum="0"
-                Maximum="1"
-                ValueChanged="OnValueChangedGreen"/>
-            <Slider 
-                DockPanel.Dock="Top"
-                Margin="8"
-                Minimum="0"
-                Maximum="1"
-                ValueChanged="OnValueChangedBlue"/>
+                Content="Remove Trace"
+                Click="RemoveTrace"/>
             
             <Slider 
                 DockPanel.Dock="Top"
