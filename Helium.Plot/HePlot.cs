@@ -70,7 +70,7 @@ public class HePlot : Decorator {
         OnReady.Invoke();
     }
 
-    public void AddTrace(uint traceId, float[] dataPtr, uint points) {
+    public void AddTrace(uint traceId, IntPtr dataPtr, uint points) {
         AmethystApi.AddTrace(ScreenPtr, traceId, dataPtr, points);
     }
     

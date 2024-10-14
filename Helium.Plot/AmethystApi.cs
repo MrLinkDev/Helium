@@ -11,7 +11,7 @@ public static class AmethystApi {
     public static extern void UpdateScreen(IntPtr screenPtr);
     
     [DllImport("Amethyst.dll", CharSet = CharSet.Unicode, CallingConvention = CallingConvention.Cdecl)]
-    public static extern void AddTrace(IntPtr screenPtr, uint traceId, [MarshalAs(UnmanagedType.LPArray)] float[] dataPtr, uint points);
+    public static extern void AddTrace(IntPtr screenPtr, uint traceId, IntPtr dataPtr, uint points);
     
     [DllImport("Amethyst.dll", CharSet = CharSet.Unicode, CallingConvention = CallingConvention.Cdecl)]
     public static extern void RemoveTrace(IntPtr screenPtr, uint traceId);

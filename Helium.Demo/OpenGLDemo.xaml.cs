@@ -26,9 +26,15 @@ public partial class OpenGLDemo : HeWindow {
         Plot.OnReady = () => {
             data1 = new float[size];
             data2 = new float[size];
+            
+            GCHandle data1Handle = GCHandle.Alloc(data1, GCHandleType.Pinned);
+            GCHandle data2Handle = GCHandle.Alloc(data2, GCHandleType.Pinned);
+
+            IntPtr data1Ptr = data1Handle.AddrOfPinnedObject();
+            IntPtr data2Ptr = data2Handle.AddrOfPinnedObject();
         
-            Plot.AddTrace(0, data1, points);
-            Plot.AddTrace(1, data2, points);
+            Plot.AddTrace(0, data1Ptr, points);
+            Plot.AddTrace(1, data2Ptr, points);
         
             AmethystApi.SetStartStopX(Plot.ScreenPtr, 0, -1, 1);
             AmethystApi.SetStartStopY(Plot.ScreenPtr, 0, -1, 1);
@@ -44,8 +50,10 @@ public partial class OpenGLDemo : HeWindow {
                     data2[i * 2 + 0] = -1.0f + i * ((float)2 / (points - 1));
                     data2[i * 2 + 1] = float.Sin(c * ((float) i / size) + p + d);
                 }
-
+                
                 p += (f / size) * 10;
+                Console.Out.WriteLine($"P = {p:F2}; d1[0] = ({data1[0]:F2};{data1[1]:F2}); d1[-1] = ({data1[^2]:F2};{data1[^1]:F2})");
+                Console.Out.WriteLine($"P = {p:F2}; d2[0] = ({data2[0]:F2};{data2[1]:F2}); d2[-1] = ({data2[^2]:F2};{data2[^1]:F2})");
             
                 AmethystApi.UpdateScreen(Plot.ScreenPtr);
             };
