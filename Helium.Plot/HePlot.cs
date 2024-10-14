@@ -77,4 +77,24 @@ public class HePlot : Decorator {
     public void RemoveTrace(uint traceId) {
         AmethystApi.RemoveTrace(ScreenPtr, traceId);
     }
+
+    public void AddMarker(uint traceId, uint markerId, float x, float y) {
+        AmethystApi.AddMarker(ScreenPtr, traceId, markerId, x, y);
+    }
+
+    public void SetMarkerX(uint traceId, uint markerId, float x) {
+        AmethystApi.SetMarkerX(ScreenPtr, traceId, markerId, x);
+    }
+
+    public void SetMarkerY(uint traceId, uint markerId, float y) {
+        AmethystApi.SetMarkerY(ScreenPtr, traceId, markerId, y);
+    }
+
+    public void PlaceMarker(uint traceId, uint markerId, float x, float y) {
+        AmethystApi.PlaceMarker(ScreenPtr, traceId, markerId, x, y);
+    }
+
+    public void RemoveMarker(uint traceId, uint markerId) {
+        AmethystApi.RemoveMarker(ScreenPtr, traceId, markerId);
+    }
 }

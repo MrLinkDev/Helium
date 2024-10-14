@@ -24,14 +24,14 @@
             <Button
                 DockPanel.Dock="Top"
                 Margin="8"
-                Content="Add Trace"
-                Click="AddTrace"/>
+                Content="Add Marker"
+                Click="AddMarker"/>
             
             <Button
                 DockPanel.Dock="Top"
                 Margin="8"
-                Content="Remove Trace"
-                Click="RemoveTrace"/>
+                Content="Remove Marker"
+                Click="RemoveMarker"/>
             
             <Slider 
                 DockPanel.Dock="Top"
