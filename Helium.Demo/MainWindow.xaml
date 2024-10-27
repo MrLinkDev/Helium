@@ -11,11 +11,13 @@
                  xmlns:resources="clr-namespace:Helium.Resources;assembly=Helium"
                  xmlns:checkBox="clr-namespace:Helium.Controls.CheckBox;assembly=Helium"
                  xmlns:editText="clr-namespace:Helium.Controls.EditText;assembly=Helium"
-                 xmlns:xButton="clr-namespace:Helium.Controls.XButton;assembly=Helium"
+                 xmlns:xButton="clr-namespace:Helium.Controls.XValueButton;assembly=Helium"
                  xmlns:plot="clr-namespace:Helium.Plot;assembly=Helium.Plot"
                  xmlns:xValueButton="clr-namespace:Helium.Controls.XValueButton;assembly=Helium"
                  xmlns:xRadioButton="clr-namespace:Helium.Controls.XRadioButton;assembly=Helium"
                  xmlns:indicator="clr-namespace:Helium.Controls.Indicator;assembly=Helium"
+                 xmlns:switch="clr-namespace:Helium.Controls.Switch;assembly=Helium"
+                 xmlns:system="clr-namespace:System;assembly=System.Runtime"
 
                  mc:Ignorable="d"
                  Title="MainWindow"
@@ -410,6 +412,14 @@
                         Content="Oversized checkbox" />
                 </checkBox:HeCheckBox.Content>
             </checkBox:HeCheckBox>
+            
+            <switch:HeSwitch Width="400">
+                <switch:HeSwitch.Values>
+                    <system:String>Button 1</system:String>
+                    <system:String>Button 2</system:String>
+                    <system:String>Button 3</system:String>
+                </switch:HeSwitch.Values>
+            </switch:HeSwitch>
         </DockPanel>
 
         <DockPanel

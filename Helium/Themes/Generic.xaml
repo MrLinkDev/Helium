@@ -11,6 +11,9 @@
         
         <ResourceDictionary Source="/Helium;component/Controls/CheckBox/Styles/HeCheckBox.xaml"/>
         
+        <ResourceDictionary Source="/Helium;component/Controls/Switch/Styles/HeSwitchToggle.xaml"/>
+        <ResourceDictionary Source="/Helium;component/Controls/Switch/Styles/HeSwitch.xaml"/>
+        
         <ResourceDictionary Source="/Helium;component/Controls/EditText/Styles/HeEditText.xaml"/>
         
         <ResourceDictionary Source="/Helium;component/Controls/Indicator/Styles/HeIndicator.xaml"/>

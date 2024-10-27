@@ -7,7 +7,7 @@ using System.Windows.Media;
 using Helium.Controls.Button;
 using Helium.Controls.EditText;
 using Helium.Controls.ImageButton;
-using Helium.Controls.XButton.Utilities;
+using Helium.Controls.XValueButton.Utilities;
 using Helium.Resources;
 using Helium.Utilities;
 
@@ -314,8 +314,6 @@ public class HeXValueButton : ButtonBase {
             e.Handled = true;
             return;
         }
-
-        Console.WriteLine($"Key = {e.Key}");
 
         if (e.Key == Key.Decimal || e.Key == Key.OemPeriod) {
             AddDot();
