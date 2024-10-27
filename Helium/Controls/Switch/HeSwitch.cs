@@ -57,14 +57,23 @@ public class HeSwitch : Control {
 
             HeSwitchToggle button = new HeSwitchToggle(i) {
                 Width = Double.NaN,
+                Height = Double.NaN,
+                
                 Text = Values[i],
                 IsChecked = i == Position
             };
 
             button.Checked += (sender, args) => Position = button.Index;
 
-            if (i == 0) button.HeSwitchTogglePosition = HeSwitchTogglePosition.Left;
-            if (i == Values.Count - 1) button.HeSwitchTogglePosition = HeSwitchTogglePosition.Right;
+            if (i == 0) {
+                button.HeSwitchTogglePosition = HeSwitchTogglePosition.Left;
+                button.Margin = new Thickness(0, 0, -1, 0);
+            }
+            else if (i == Values.Count - 1) {
+                button.HeSwitchTogglePosition = HeSwitchTogglePosition.Right;
+                button.Margin = new Thickness(-1, 0, 0, 0);
+            }
+            else button.Margin = new Thickness(-1, 0, -1, 0);
             
             container.Children.Add(button);
             Grid.SetColumn(button, i);

@@ -56,7 +56,7 @@
                             
                             <Setter
                                 Property="BorderThickness"
-                                Value="2, 2, 0, 2"/>
+                                Value="2, 2, 2, 2"/>
                         </Trigger>
                         
                         <Trigger Property="HeSwitchTogglePosition" Value="Center">
@@ -66,7 +66,7 @@
                             
                             <Setter
                                 Property="BorderThickness"
-                                Value="2"/>
+                                Value="2, 2, 2, 2"/>
                         </Trigger>
                         
                         <Trigger Property="HeSwitchTogglePosition" Value="Right">
@@ -76,7 +76,7 @@
                             
                             <Setter
                                 Property="BorderThickness"
-                                Value="0, 2, 2, 2"/>
+                                Value="2, 2, 2, 2"/>
                         </Trigger>
                         
                         <Trigger Property="IsMouseOver" Value="False">

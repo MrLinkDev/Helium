@@ -413,11 +413,13 @@
                 </checkBox:HeCheckBox.Content>
             </checkBox:HeCheckBox>
             
-            <switch:HeSwitch Width="400">
+            <switch:HeSwitch Width="400" Height="40">
                 <switch:HeSwitch.Values>
                     <system:String>Button 1</system:String>
                     <system:String>Button 2</system:String>
                     <system:String>Button 3</system:String>
+                    <system:String>Button 4</system:String>
+                    <system:String>Button 5</system:String>
                 </switch:HeSwitch.Values>
             </switch:HeSwitch>
         </DockPanel>
