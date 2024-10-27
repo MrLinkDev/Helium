@@ -7,6 +7,36 @@ namespace Helium.Controls.CheckBox;
 
 public class HeCheckBox : System.Windows.Controls.CheckBox {
     
+    #region CheckBoxHeight
+
+    public static readonly DependencyProperty CheckBoxHeightProperty = DependencyProperty.Register(
+        nameof(CheckBoxHeight),
+        typeof(double),
+        typeof(HeCheckBox),
+        new FrameworkPropertyMetadata(16.0));
+    
+    public double CheckBoxHeight {
+        get => (double)GetValue(CheckBoxHeightProperty);
+        set => SetValue(CheckBoxHeightProperty, value);
+    }
+
+    #endregion
+    
+    #region CheckBoxWidth
+
+    public static readonly DependencyProperty CheckBoxWidthProperty = DependencyProperty.Register(
+        nameof(CheckBoxWidth),
+        typeof(double),
+        typeof(HeCheckBox),
+        new FrameworkPropertyMetadata(16.0));
+    
+    public double CheckBoxWidth {
+        get => (double)GetValue(CheckBoxWidthProperty);
+        set => SetValue(CheckBoxWidthProperty, value);
+    }
+
+    #endregion
+    
     #region CheckBoxStroke
 
     public static readonly DependencyProperty CheckBoxStrokeProperty = DependencyProperty.Register(

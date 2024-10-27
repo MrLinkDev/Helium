@@ -397,6 +397,19 @@
                         Content="Custom Content Disabled" />
                 </checkBox:HeCheckBox.Content>
             </checkBox:HeCheckBox>
+            
+            <checkBox:HeCheckBox
+                DockPanel.Dock="Top"
+                CheckBoxHeight="24"
+                CheckBoxWidth="24"
+                Margin="0, 16, 0, 0">
+                <checkBox:HeCheckBox.Content>
+                    <Label
+                        VerticalAlignment="Center"
+                        Foreground="White"
+                        Content="Oversized checkbox" />
+                </checkBox:HeCheckBox.Content>
+            </checkBox:HeCheckBox>
         </DockPanel>
 
         <DockPanel
