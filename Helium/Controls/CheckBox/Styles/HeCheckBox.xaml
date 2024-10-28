@@ -20,8 +20,8 @@
                         LastChildFill="False">
                         <Border
                             DockPanel.Dock="Left"
-                            Height="{StaticResource CheckBoxSize}"
-                            Width="{StaticResource CheckBoxSize}"
+                            Height="{TemplateBinding CheckBoxHeight}"
+                            Width="{TemplateBinding CheckBoxWidth}"
                             
                             VerticalAlignment="Center"
                             HorizontalAlignment="Center"

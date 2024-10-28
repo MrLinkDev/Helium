@@ -1,0 +1,136 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:button="clr-namespace:Helium.Controls.Switch">
+    <ResourceDictionary.MergedDictionaries>
+        <ResourceDictionary Source="/Helium;component/Resources/Brushes.xaml" />
+        <ResourceDictionary Source="/Helium;component/Resources/Colors.xaml" />
+        <ResourceDictionary Source="/Helium;component/Resources/Dimensions.xaml" />
+    </ResourceDictionary.MergedDictionaries>
+
+    <Style TargetType="{x:Type button:HeSwitchToggle}">
+        <Setter Property="Height" Value="{StaticResource Height}" />
+
+        <Setter Property="FontSize" Value="{StaticResource FontSize}" />
+        <Setter Property="Foreground" Value="{StaticResource WhiteBrush}" />
+
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type button:HeSwitchToggle}">
+                    <Border
+                        Width="{TemplateBinding Width}"
+                        Height="{TemplateBinding Height}"
+
+                        Background="{TemplateBinding Background}"
+                        
+                        CornerRadius="{TemplateBinding CornerRadius}"
+                        BorderBrush="{TemplateBinding BorderBrush}"
+                        
+                        BorderThickness="{TemplateBinding BorderThickness}"
+                        
+                        SnapsToDevicePixels="True">
+
+                        <TextBlock
+                            Width="{TemplateBinding Width}"
+                            Height="Auto"
+
+                            VerticalAlignment="Center"
+                            HorizontalAlignment="Stretch"
+
+                            TextAlignment="Center"
+
+                            FontSize="{TemplateBinding FontSize}"
+                            FontFamily="{TemplateBinding FontFamily}"
+                            Foreground="{StaticResource PrimaryBrush50}"
+
+                            Margin="{TemplateBinding CornerRadius}"
+                            TextWrapping="WrapWithOverflow"
+
+                            Text="{TemplateBinding Text}" />
+                    </Border>
+
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="HeSwitchTogglePosition" Value="Left">
+                            <Setter
+                                Property="CornerRadius"
+                                Value="2, 0, 0, 2" />
+                            
+                            <Setter
+                                Property="BorderThickness"
+                                Value="2, 2, 2, 2"/>
+                        </Trigger>
+                        
+                        <Trigger Property="HeSwitchTogglePosition" Value="Center">
+                            <Setter
+                                Property="CornerRadius"
+                                Value="0" />
+                            
+                            <Setter
+                                Property="BorderThickness"
+                                Value="2, 2, 2, 2"/>
+                        </Trigger>
+                        
+                        <Trigger Property="HeSwitchTogglePosition" Value="Right">
+                            <Setter
+                                Property="CornerRadius"
+                                Value="0, 2, 2, 0" />
+                            
+                            <Setter
+                                Property="BorderThickness"
+                                Value="2, 2, 2, 2"/>
+                        </Trigger>
+                        
+                        <Trigger Property="IsMouseOver" Value="False">
+                            <Setter
+                                Property="BorderBrush"
+                                Value="{StaticResource BlackBrush500}" />
+                            
+                            <Setter
+                                Property="Background"
+                                Value="Transparent" />
+                        </Trigger>
+
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter
+                                Property="BorderBrush"
+                                Value="{StaticResource PrimaryBrush600}" />
+                            
+                            <Setter
+                                Property="Background"
+                                Value="{StaticResource PrimaryBrush600}" />
+                        </Trigger>
+                        
+                        <Trigger Property="IsChecked" Value="True">
+                            <Setter
+                                Property="BorderBrush"
+                                Value="{StaticResource PrimaryBrush500}" />
+                            
+                            <Setter
+                                Property="Background"
+                                Value="{StaticResource PrimaryBrush500}" />
+                        </Trigger>
+
+                        <Trigger Property="IsPressed" Value="True">
+                            <Setter
+                                Property="BorderBrush"
+                                Value="{StaticResource PrimaryBrush700}" />
+                            
+                            <Setter
+                                Property="Background"
+                                Value="{StaticResource PrimaryBrush700}" />
+                        </Trigger>
+
+                        <Trigger Property="IsEnabled" Value="False">
+                            <Setter
+                                Property="BorderBrush"
+                                Value="{StaticResource PrimaryBrush950}" />
+
+                            <Setter
+                                Property="Foreground"
+                                Value="{StaticResource PrimaryBrush700}" />
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+</ResourceDictionary>

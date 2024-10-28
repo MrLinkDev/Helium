@@ -3,7 +3,7 @@ using System.Text.Unicode;
 
 namespace Helium.Plot;
 
-public static class AmethystApi {
+public class AmethystApi {
     [DllImport("Amethyst.dll", CharSet = CharSet.Unicode, CallingConvention = CallingConvention.Cdecl)]
     public static extern IntPtr GetScreenPtr(IntPtr activityPtr);
     

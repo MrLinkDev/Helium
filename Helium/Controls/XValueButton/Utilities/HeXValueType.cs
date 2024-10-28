@@ -1,4 +1,4 @@
-﻿namespace Helium.Controls.XButton.Utilities;
+﻿namespace Helium.Controls.XValueButton.Utilities;
 
 public enum HeXValueType {
     [Exp]

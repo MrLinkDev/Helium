@@ -1,6 +1,6 @@
 ﻿using System.Reflection;
 
-namespace Helium.Controls.XButton.Utilities;
+namespace Helium.Controls.XValueButton.Utilities;
 
 public static class HeXValueTypeExtension {
     public static double[] GetExp(this Enum value) {
