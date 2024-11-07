@@ -22,8 +22,8 @@
 
                  mc:Ignorable="d"
                  Title="MainWindow"
-                 Height="540"
-                 Width="880"
+                 Height="720"
+                 Width="1280"
                  Background="#212121"
                  WindowStartupLocation="CenterScreen"
                  WindowTitle="Helium Demo">
@@ -56,7 +56,7 @@
             <ColumnDefinition Width="Auto" />
             <ColumnDefinition Width="Auto" />
             <ColumnDefinition Width="Auto" />
-            <ColumnDefinition />
+            <ColumnDefinition Width="Auto" />
         </Grid.ColumnDefinitions>
 
         <DockPanel
@@ -416,7 +416,7 @@
             
             <switch:HeSwitch 
                 DockPanel.Dock="Top" 
-                Width="400" Height="40"
+                Height="40"
                 Margin="0, 16, 0, 0">
                 <switch:HeSwitch.Values>
                     <x:Array Type="{x:Type system:String}">
@@ -431,7 +431,7 @@
             
             <switch:HeSwitch 
                 DockPanel.Dock="Top" 
-                Width="400" Height="40"
+                Height="40"
                 Margin="0, 16, 0, 0">
                 <switch:HeSwitch.Values>
                     <x:Array Type="{x:Type system:String}">
@@ -546,7 +546,8 @@
                 
                 <indicator:HeIndicator 
                     x:Name="Indicator"
-                    DockPanel.Dock="Left"/>
+                    DockPanel.Dock="Left"
+                    Margin="8"/>
                 
                 <button:HeButton
                     DockPanel.Dock="Right"
