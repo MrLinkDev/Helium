@@ -18,11 +18,12 @@
                  xmlns:indicator="clr-namespace:Helium.Controls.Indicator;assembly=Helium"
                  xmlns:switch="clr-namespace:Helium.Controls.Switch;assembly=Helium"
                  xmlns:system="clr-namespace:System;assembly=System.Runtime"
+                 xmlns:generic="clr-namespace:System.Collections.Generic;assembly=System.Collections"
 
                  mc:Ignorable="d"
                  Title="MainWindow"
-                 Height="540"
-                 Width="880"
+                 Height="720"
+                 Width="1280"
                  Background="#212121"
                  WindowStartupLocation="CenterScreen"
                  WindowTitle="Helium Demo">
@@ -55,7 +56,7 @@
             <ColumnDefinition Width="Auto" />
             <ColumnDefinition Width="Auto" />
             <ColumnDefinition Width="Auto" />
-            <ColumnDefinition />
+            <ColumnDefinition Width="Auto" />
         </Grid.ColumnDefinitions>
 
         <DockPanel
@@ -413,13 +414,33 @@
                 </checkBox:HeCheckBox.Content>
             </checkBox:HeCheckBox>
             
-            <switch:HeSwitch Width="400" Height="40">
+            <switch:HeSwitch 
+                DockPanel.Dock="Top" 
+                Height="40"
+                Margin="0, 16, 0, 0">
                 <switch:HeSwitch.Values>
-                    <system:String>Button 1</system:String>
-                    <system:String>Button 2</system:String>
-                    <system:String>Button 3</system:String>
-                    <system:String>Button 4</system:String>
-                    <system:String>Button 5</system:String>
+                    <x:Array Type="{x:Type system:String}">
+                        <system:String>0</system:String>
+                        <system:String>1</system:String>
+                        <system:String>2</system:String>
+                        <system:String>3</system:String>
+                        <system:String>4</system:String>
+                    </x:Array>
+                </switch:HeSwitch.Values>
+            </switch:HeSwitch>
+            
+            <switch:HeSwitch 
+                DockPanel.Dock="Top" 
+                Height="40"
+                Margin="0, 16, 0, 0">
+                <switch:HeSwitch.Values>
+                    <x:Array Type="{x:Type system:String}">
+                        <system:String>5</system:String>
+                        <system:String>6</system:String>
+                        <system:String>7</system:String>
+                        <system:String>8</system:String>
+                        <system:String>9</system:String>
+                    </x:Array>
                 </switch:HeSwitch.Values>
             </switch:HeSwitch>
         </DockPanel>
@@ -525,7 +546,8 @@
                 
                 <indicator:HeIndicator 
                     x:Name="Indicator"
-                    DockPanel.Dock="Left"/>
+                    DockPanel.Dock="Left"
+                    Margin="8"/>
                 
                 <button:HeButton
                     DockPanel.Dock="Right"

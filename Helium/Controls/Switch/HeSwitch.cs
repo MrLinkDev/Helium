@@ -12,12 +12,11 @@ public class HeSwitch : Control {
 
     public static readonly DependencyProperty ValuesProperty = DependencyProperty.Register(
         nameof(Values),
-        typeof(List<string>),
-        typeof(HeSwitch),
-        new FrameworkPropertyMetadata(new List<string>()));
+        typeof(IEnumerable<string>),
+        typeof(HeSwitch));
     
-    public List<string> Values {
-        get => (List<string>)GetValue(ValuesProperty);
+    public IEnumerable<string> Values {
+        get => (IEnumerable<string>)GetValue(ValuesProperty);
         set => SetValue(ValuesProperty, value);
     }
 
@@ -52,34 +51,39 @@ public class HeSwitch : Control {
         container.Children.Clear();
         container.ColumnDefinitions.Clear();
 
-        for (int i = 0; i < Values.Count; ++i) {
+        IEnumerator enumerator = Values.GetEnumerator();
+        enumerator.Reset();
+
+        int pos = 0;
+        
+        while (enumerator.MoveNext()) {
             container.ColumnDefinitions.Add(new ColumnDefinition());
 
-            HeSwitchToggle button = new HeSwitchToggle(i) {
+            HeSwitchToggle button = new HeSwitchToggle(pos) {
                 Width = Double.NaN,
                 Height = Double.NaN,
                 
-                Text = Values[i],
-                IsChecked = i == Position
+                Text = (string)enumerator.Current,
+                IsChecked = pos == Position
             };
 
             button.Checked += (sender, args) => Position = button.Index;
 
-            if (i == 0) {
+            if (pos == 0) {
                 button.HeSwitchTogglePosition = HeSwitchTogglePosition.Left;
                 button.Margin = new Thickness(0, 0, -1, 0);
             }
-            else if (i == Values.Count - 1) {
+            else if (pos == Values.Count() - 1) {
                 button.HeSwitchTogglePosition = HeSwitchTogglePosition.Right;
                 button.Margin = new Thickness(-1, 0, 0, 0);
             }
             else button.Margin = new Thickness(-1, 0, -1, 0);
             
+            Grid.SetColumn(button, pos);
             container.Children.Add(button);
-            Grid.SetColumn(button, i);
+
+            pos++;
         }
-        
-        Values.Clear();
     }
     
     
