@@ -20,5 +20,10 @@
         
         <ResourceDictionary Source="/Helium;component/Controls/XValueButton/Styles/HeXValueButton.xaml"/>
         <ResourceDictionary Source="/Helium;component/Controls/XRadioButton/Styles/HeXRadioButton.xaml"/>
+        
+        <ResourceDictionary Source="/Helium;component/Controls/ComboBox/Styles/HeComboBox.xaml"/>
+        <ResourceDictionary Source="/Helium;component/Controls/ComboBox/Styles/HeComboBoxItem.xaml"/>
+        <ResourceDictionary Source="/Helium;component/Controls/ComboBox/Styles/HeComboBoxTextBox.xaml"/>
+        <ResourceDictionary Source="/Helium;component/Controls/ComboBox/Styles/HeComboBoxToggleButton.xaml"/>
     </ResourceDictionary.MergedDictionaries>
 </ResourceDictionary>

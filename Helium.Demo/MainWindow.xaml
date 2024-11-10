@@ -19,6 +19,7 @@
                  xmlns:switch="clr-namespace:Helium.Controls.Switch;assembly=Helium"
                  xmlns:system="clr-namespace:System;assembly=System.Runtime"
                  xmlns:generic="clr-namespace:System.Collections.Generic;assembly=System.Collections"
+                 xmlns:comboBox="clr-namespace:Helium.Controls.ComboBox;assembly=Helium"
 
                  mc:Ignorable="d"
                  Title="MainWindow"
@@ -227,6 +228,15 @@
                             IsEnabled="False"
                             HeType="Bezel"
                             HeTheme="Black" />
+                        
+                        <comboBox:HeComboBox
+                            DockPanel.Dock="Top"
+                            Margin="0, 8,0, 0">
+                            <system:String>Tom</system:String>
+                            <system:String>Bob</system:String>
+                            <system:String>Sam</system:String>
+                            <system:String>Alice</system:String>
+                        </comboBox:HeComboBox>
                     </DockPanel>
 
                     <DockPanel
