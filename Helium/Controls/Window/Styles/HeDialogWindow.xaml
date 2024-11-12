@@ -102,12 +102,12 @@
 
                             </Border>
 
-                            <StackPanel
+                            <Grid
                                 DockPanel.Dock="Bottom"
                                 Background="{TemplateBinding BodyBackground}">
 
                                 <ContentPresenter />
-                            </StackPanel>
+                            </Grid>
                         </DockPanel>
                     </Border>
                 </ControlTemplate>
