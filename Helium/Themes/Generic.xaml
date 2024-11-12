@@ -20,5 +20,8 @@
         
         <ResourceDictionary Source="/Helium;component/Controls/XValueButton/Styles/HeXValueButton.xaml"/>
         <ResourceDictionary Source="/Helium;component/Controls/XRadioButton/Styles/HeXRadioButton.xaml"/>
+        
+        <ResourceDictionary Source="/Helium;component/Controls/TabControl/Styles/HeVTabControl.xaml"/>
+        <ResourceDictionary Source="/Helium;component/Controls/TabControl/Styles/HeVTabItem.xaml"/>
     </ResourceDictionary.MergedDictionaries>
 </ResourceDictionary>

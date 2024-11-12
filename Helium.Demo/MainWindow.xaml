@@ -19,6 +19,7 @@
                  xmlns:switch="clr-namespace:Helium.Controls.Switch;assembly=Helium"
                  xmlns:system="clr-namespace:System;assembly=System.Runtime"
                  xmlns:generic="clr-namespace:System.Collections.Generic;assembly=System.Collections"
+                 xmlns:tabControl="clr-namespace:Helium.Controls.TabControl;assembly=Helium"
 
                  mc:Ignorable="d"
                  Title="MainWindow"
@@ -27,11 +28,11 @@
                  Background="#212121"
                  WindowStartupLocation="CenterScreen"
                  WindowTitle="Helium Demo">
-    
+
     <window:HeWindow.Resources>
         <ResourceDictionary>
             <ResourceDictionary.MergedDictionaries>
-                <ResourceDictionary Source="/Helium;component/Resources/Dimensions.xaml"/>
+                <ResourceDictionary Source="/Helium;component/Resources/Dimensions.xaml" />
             </ResourceDictionary.MergedDictionaries>
         </ResourceDictionary>
     </window:HeWindow.Resources>
@@ -39,24 +40,25 @@
     <Grid>
         <Grid.Resources>
             <Style TargetType="{x:Type button:HeButton}">
-                <Setter Property="Width" Value="{StaticResource Width12X}"/>
-                <Setter Property="Height" Value="{StaticResource Height}"/>
+                <Setter Property="Width" Value="{StaticResource Width12X}" />
+                <Setter Property="Height" Value="{StaticResource Height}" />
             </Style>
-            
+
             <Style TargetType="{x:Type imageButton:HeImageButton}">
-                <Setter Property="Width" Value="{StaticResource Height}"/>
-                <Setter Property="Height" Value="{StaticResource Height}"/>
-                <Setter Property="ImageHeight" Value="16"/>
-                <Setter Property="ImageWidth" Value="16"/>
+                <Setter Property="Width" Value="{StaticResource Height}" />
+                <Setter Property="Height" Value="{StaticResource Height}" />
+                <Setter Property="ImageHeight" Value="16" />
+                <Setter Property="ImageWidth" Value="16" />
             </Style>
         </Grid.Resources>
-        
+
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="Auto" />
             <ColumnDefinition Width="Auto" />
             <ColumnDefinition Width="Auto" />
             <ColumnDefinition Width="Auto" />
             <ColumnDefinition Width="Auto" />
+            <ColumnDefinition />
         </Grid.ColumnDefinitions>
 
         <DockPanel
@@ -77,8 +79,9 @@
                     <button:HeButton
                         DockPanel.Dock="Top"
                         Text="very very looooong text"
-                        HeType="Bezel" 
-                        Click="ButtonBase_OnClick"/>
+                        Height="Auto"
+                        HeType="Bezel"
+                        Click="ButtonBase_OnClick" />
 
                     <button:HeButton
                         DockPanel.Dock="Top"
@@ -400,7 +403,7 @@
                         Content="Custom Content Disabled" />
                 </checkBox:HeCheckBox.Content>
             </checkBox:HeCheckBox>
-            
+
             <checkBox:HeCheckBox
                 DockPanel.Dock="Top"
                 CheckBoxHeight="24"
@@ -413,9 +416,9 @@
                         Content="Oversized checkbox" />
                 </checkBox:HeCheckBox.Content>
             </checkBox:HeCheckBox>
-            
-            <switch:HeSwitch 
-                DockPanel.Dock="Top" 
+
+            <switch:HeSwitch
+                DockPanel.Dock="Top"
                 Height="40"
                 Margin="0, 16, 0, 0">
                 <switch:HeSwitch.Values>
@@ -428,9 +431,9 @@
                     </x:Array>
                 </switch:HeSwitch.Values>
             </switch:HeSwitch>
-            
-            <switch:HeSwitch 
-                DockPanel.Dock="Top" 
+
+            <switch:HeSwitch
+                DockPanel.Dock="Top"
                 Height="40"
                 Margin="0, 16, 0, 0">
                 <switch:HeSwitch.Values>
@@ -495,7 +498,7 @@
                 ValueName="Start"
                 FullValueName="Start Frequency"
                 XValueType="FREQUENCY"
-                Value="10.25"/>
+                Value="10.25" />
 
             <xValueButton:HeXValueButton
                 DockPanel.Dock="Top"
@@ -508,53 +511,86 @@
                 Margin="0, 8, 0, 0"
                 XValueType="DBM"
                 ValueName="Power"
-                FullValueName="Power"/>
+                FullValueName="Power" />
 
             <xValueButton:HeXValueButton
                 DockPanel.Dock="Top"
                 Margin="0, 8, 0, 0"
                 ValueName="Points"
                 FullValueName="Points"
-                XValueType="NONE"/>
-            
-            
+                XValueType="NONE" />
+
+
             <xRadioButton:HeXRadioButton
                 DockPanel.Dock="Top"
                 Margin="0, 16, 0, 0"
-                Content="XRadio 1"/>
-            
+                Content="XRadio 1" />
+
             <xRadioButton:HeXRadioButton
                 DockPanel.Dock="Top"
                 Margin="0, 8, 0, 0"
-                Content="XRadio 2"/>
-            
+                Content="XRadio 2" />
+
             <xRadioButton:HeXRadioButton
                 DockPanel.Dock="Top"
                 Margin="0, 8, 0, 0"
                 Content="Disabled"
-                IsEnabled="False"/>
+                IsEnabled="False" />
         </DockPanel>
-        
-        <DockPanel 
+
+        <DockPanel
             Grid.Column="4"
             LastChildFill="False"
             Margin="0, 16, 16, 0">
-            
-            <DockPanel 
+
+            <DockPanel
                 DockPanel.Dock="Top"
                 LastChildFill="False">
-                
-                <indicator:HeIndicator 
+
+                <indicator:HeIndicator
                     x:Name="Indicator"
                     DockPanel.Dock="Left"
-                    Margin="8"/>
-                
+                    Margin="8" />
+
                 <button:HeButton
                     DockPanel.Dock="Right"
                     Text="Indicator"
                     HeType="Flat"
-                    Click="ChangeIndicatorState"/>
+                    Click="ChangeIndicatorState" />
             </DockPanel>
+        </DockPanel>
+        
+        <DockPanel
+            Grid.Column="5"
+            LastChildFill="True">
+
+            <tabControl:HeVTabControl
+                DockPanel.Dock="Right">
+                <tabControl:HeVTabControl.Items>
+                        <tabControl:HeVTabItem Header="TabItem 1">
+                            <button:HeButton Text="1"/>
+                        </tabControl:HeVTabItem>
+                        <tabControl:HeVTabItem Header="TabItem 2">
+                            <button:HeButton Text="2"/>
+                        </tabControl:HeVTabItem>
+                        <tabControl:HeVTabItem Header="TabItem 3">
+                            <tabControl:HeVTabControl>
+                                <tabControl:HeVTabControl.Items>
+                                    <tabControl:HeVTabItem Header="TabItem 1">
+                                        <button:HeButton Text="1"/>
+                                    </tabControl:HeVTabItem>
+                                    <tabControl:HeVTabItem Header="TabItem 2">
+                                        <button:HeButton Text="2"/>
+                                    </tabControl:HeVTabItem>
+                                    <tabControl:HeVTabItem Header="TabItem 3">
+                                        <button:HeButton Text="3"/>
+                                    </tabControl:HeVTabItem>
+                                </tabControl:HeVTabControl.Items>
+                            </tabControl:HeVTabControl>
+                        </tabControl:HeVTabItem>
+                </tabControl:HeVTabControl.Items>
+            </tabControl:HeVTabControl>
+
         </DockPanel>
     </Grid>
 </window:HeWindow>

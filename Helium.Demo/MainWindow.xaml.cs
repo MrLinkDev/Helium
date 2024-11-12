@@ -52,6 +52,9 @@ public partial class MainWindow : HeWindow, INotifyPropertyChanged {
     private void ButtonBase_OnClick(object sender, RoutedEventArgs e) {
         HeDialogWindow dialogWindow = new HeDialogWindow();
         dialogWindow.WindowTitle = "Dialog window";
+        dialogWindow.ToolbarAccent = (Color)ColorConverter.ConvertFromString("#5c418c");
+        dialogWindow.Width = 400;
+        dialogWindow.Height = 200;
 
         dialogWindow.ShowDialog();
     }
