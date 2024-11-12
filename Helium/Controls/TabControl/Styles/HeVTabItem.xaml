@@ -14,8 +14,8 @@
                 <ControlTemplate TargetType="{x:Type tabControl:HeVTabItem}">
                     <Grid
                         x:Name="Root"
-                        Width="{TemplateBinding Width}"
-                        Height="{TemplateBinding Height}">
+                        Width="{StaticResource Width12X}"
+                        Height="{StaticResource Height15X}">
                         <Border
                             x:Name="Border"
                             Width="Auto"
@@ -34,8 +34,12 @@
                                 ContentSource="Header"
                                 Margin="0"
                                 RecognizesAccessKey="True"
+                                
+                                TextBlock.TextAlignment="Center"
 
-                                TextBlock.Foreground="White" />
+                                TextBlock.FontSize="{TemplateBinding FontSize}"
+                                TextBlock.FontFamily="{TemplateBinding FontFamily}"
+                                TextBlock.Foreground="{StaticResource PrimaryBrush50}" />
                         </Border>
                     </Grid>
                     <ControlTemplate.Triggers>
@@ -74,9 +78,14 @@
                             </MultiTrigger.Conditions>
                             <Setter Property="Background" Value="{StaticResource PrimaryBrush600}" />
                         </MultiTrigger>
-
+                        
                         <Trigger Property="IsPressed" Value="True">
                             <Setter Property="Background" Value="{StaticResource PrimaryBrush700}" />
+                        </Trigger>
+                        
+                        <Trigger Property="IsEnabled" Value="False">
+                            <Setter Property="Background" Value="{StaticResource PrimaryBrush950}" />
+                            <Setter Property="TextBlock.Foreground" TargetName="ContentSite" Value="{StaticResource PrimaryBrush700}" />
                         </Trigger>
                     </ControlTemplate.Triggers>
                 </ControlTemplate>

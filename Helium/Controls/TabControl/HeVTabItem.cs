@@ -27,30 +27,14 @@ public class HeVTabItem : System.Windows.Controls.TabItem {
             new FrameworkPropertyMetadata(typeof(HeVTabItem)));
     }
 
-    public HeVTabItem() {
-        Width = 70;
-        Height = 44;
+    public override void OnApplyTemplate() {
+        base.OnApplyTemplate();
 
-        //Background = HeBrushes.PrimaryBrush500;
-    }
-
-    protected override void OnMouseLeftButtonDown(MouseButtonEventArgs e) {
-        base.OnMouseLeftButtonDown(e);
-
+        Grid grid = (Grid)GetTemplateChild("Root");
         
-    }
-
-    protected override void OnPreviewMouseLeftButtonDown(MouseButtonEventArgs e) {
-        base.OnPreviewMouseLeftButtonDown(e);
-
-        IsPressed = true;
-    }
-
-    protected override void OnPreviewMouseLeftButtonUp(MouseButtonEventArgs e) {
-        base.OnPreviewMouseLeftButtonUp(e);
+        grid.PreviewMouseLeftButtonDown += (sender, args) => IsPressed = true;
+        grid.PreviewMouseLeftButtonUp += (sender, args) => IsPressed = false;
         
-        IsPressed = false;
+        grid.MouseLeave += (sender, args) => IsPressed = false;
     }
-    
-    
 }

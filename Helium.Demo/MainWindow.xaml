@@ -570,7 +570,7 @@
                         <tabControl:HeVTabItem Header="TabItem 1">
                             <button:HeButton Text="1"/>
                         </tabControl:HeVTabItem>
-                        <tabControl:HeVTabItem Header="TabItem 2">
+                        <tabControl:HeVTabItem IsEnabled="False" Header="TabItem 2">
                             <button:HeButton Text="2"/>
                         </tabControl:HeVTabItem>
                         <tabControl:HeVTabItem Header="TabItem 3">
