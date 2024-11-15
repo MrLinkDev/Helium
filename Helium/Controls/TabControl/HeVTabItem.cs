@@ -21,6 +21,19 @@ public class HeVTabItem : System.Windows.Controls.TabItem {
     }
 
     #endregion
+
+    #region Level
+
+    public static readonly DependencyProperty LevelProperty = HeVTabControl.LevelProperty.AddOwner(
+            typeof(HeVTabItem), 
+            new FrameworkPropertyMetadata());
+
+    public int Level {
+        get => (int)GetValue(LevelProperty);
+        set => SetValue(LevelProperty, value);
+    }
+
+    #endregion
     
     static HeVTabItem() {
         DefaultStyleKeyProperty.OverrideMetadata(typeof(HeVTabItem),
