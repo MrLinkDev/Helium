@@ -559,7 +559,7 @@
                     Click="ChangeIndicatorState" />
             </DockPanel>
         </DockPanel>
-        
+
         <DockPanel
             Grid.Column="5"
             LastChildFill="True">
@@ -567,27 +567,27 @@
             <tabControl:HeVTabControl
                 DockPanel.Dock="Right">
                 <tabControl:HeVTabControl.Items>
-                        <tabControl:HeVTabItem Header="TabItem 1">
-                            <button:HeButton Text="1"/>
-                        </tabControl:HeVTabItem>
-                        <tabControl:HeVTabItem Header="TabItem 2">
-                            <button:HeButton Text="2"/>
-                        </tabControl:HeVTabItem>
-                        <tabControl:HeVTabItem Header="TabItem 3">
-                            <tabControl:HeVTabControl>
-                                <tabControl:HeVTabControl.Items>
-                                    <tabControl:HeVTabItem Header="TabItem 1">
-                                        <button:HeButton Text="1"/>
-                                    </tabControl:HeVTabItem>
-                                    <tabControl:HeVTabItem Header="TabItem 2">
-                                        <button:HeButton Text="2"/>
-                                    </tabControl:HeVTabItem>
-                                    <tabControl:HeVTabItem Header="TabItem 3">
-                                        <button:HeButton Text="3"/>
-                                    </tabControl:HeVTabItem>
-                                </tabControl:HeVTabControl.Items>
-                            </tabControl:HeVTabControl>
-                        </tabControl:HeVTabItem>
+                    <tabControl:HeVTabItem Header="TabItem 1">
+                        <button:HeButton Text="1" />
+                    </tabControl:HeVTabItem>
+                    <tabControl:HeVTabItem IsEnabled="False" Header="TabItem 2">
+                        <button:HeButton Text="2" />
+                    </tabControl:HeVTabItem>
+                    <tabControl:HeVTabItem Header="TabItem 3" VerticalContentAlignment="Stretch">
+                        <tabControl:HeVTabControl Level="1">
+                            <tabControl:HeVTabControl.Items>
+                                <tabControl:HeVTabItem Header="TabItem 1">
+                                    <button:HeButton Text="1" />
+                                </tabControl:HeVTabItem>
+                                <tabControl:HeVTabItem Header="TabItem 2">
+                                    <button:HeButton Text="2" />
+                                </tabControl:HeVTabItem>
+                                <tabControl:HeVTabItem Header="TabItem 3">
+                                    <button:HeButton Text="3" />
+                                </tabControl:HeVTabItem>
+                            </tabControl:HeVTabControl.Items>
+                        </tabControl:HeVTabControl>
+                    </tabControl:HeVTabItem>
                 </tabControl:HeVTabControl.Items>
             </tabControl:HeVTabControl>
 

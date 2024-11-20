@@ -21,36 +21,33 @@ public class HeVTabItem : System.Windows.Controls.TabItem {
     }
 
     #endregion
+
+    #region Level
+
+    public static readonly DependencyProperty LevelProperty = HeVTabControl.LevelProperty.AddOwner(
+            typeof(HeVTabItem), 
+            new FrameworkPropertyMetadata());
+
+    public int Level {
+        get => (int)GetValue(LevelProperty);
+        set => SetValue(LevelProperty, value);
+    }
+
+    #endregion
     
     static HeVTabItem() {
         DefaultStyleKeyProperty.OverrideMetadata(typeof(HeVTabItem),
             new FrameworkPropertyMetadata(typeof(HeVTabItem)));
     }
 
-    public HeVTabItem() {
-        Width = 70;
-        Height = 44;
+    public override void OnApplyTemplate() {
+        base.OnApplyTemplate();
 
-        //Background = HeBrushes.PrimaryBrush500;
-    }
-
-    protected override void OnMouseLeftButtonDown(MouseButtonEventArgs e) {
-        base.OnMouseLeftButtonDown(e);
-
+        Grid grid = (Grid)GetTemplateChild("Root");
         
-    }
-
-    protected override void OnPreviewMouseLeftButtonDown(MouseButtonEventArgs e) {
-        base.OnPreviewMouseLeftButtonDown(e);
-
-        IsPressed = true;
-    }
-
-    protected override void OnPreviewMouseLeftButtonUp(MouseButtonEventArgs e) {
-        base.OnPreviewMouseLeftButtonUp(e);
+        grid.PreviewMouseLeftButtonDown += (sender, args) => IsPressed = true;
+        grid.PreviewMouseLeftButtonUp += (sender, args) => IsPressed = false;
         
-        IsPressed = false;
+        grid.MouseLeave += (sender, args) => IsPressed = false;
     }
-    
-    
 }
