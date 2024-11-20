@@ -50,10 +50,4 @@ public class HeVTabControl : System.Windows.Controls.TabControl {
         DefaultStyleKeyProperty.OverrideMetadata(typeof(HeVTabControl),
             new FrameworkPropertyMetadata(typeof(HeVTabControl)));
     }
-
-    protected override void OnSelectionChanged(SelectionChangedEventArgs e) {
-        base.OnSelectionChanged(e);
-        Console.WriteLine(e.OriginalSource.GetType());
-        Console.WriteLine(e.Source.GetType());
-    }
 }
