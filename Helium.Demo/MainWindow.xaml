@@ -573,7 +573,7 @@
                     <tabControl:HeVTabItem IsEnabled="False" Header="TabItem 2">
                         <button:HeButton Text="2" />
                     </tabControl:HeVTabItem>
-                    <tabControl:HeVTabItem Header="TabItem 3" VerticalContentAlignment="Stretch">
+                    <tabControl:HeVTabItem Header="TabItem 3">
                         <tabControl:HeVTabControl Level="1">
                             <tabControl:HeVTabControl.Items>
                                 <tabControl:HeVTabItem Header="TabItem 1">

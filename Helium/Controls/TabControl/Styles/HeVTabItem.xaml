@@ -164,9 +164,13 @@
 
     <Style TargetType="{x:Type tabControl:HeVTabItem}">
         <Setter Property="SnapsToDevicePixels" Value="True"/>
-        <Setter Property="Template" Value="{StaticResource HeVTabItemL0}"/>
 
         <Style.Triggers>
+            <Trigger Property="Level" Value="0">
+                <Setter Property="VerticalContentAlignment" Value="Stretch"/>
+                <Setter Property="Template" Value="{StaticResource HeVTabItemL0}"/>
+            </Trigger>
+            
             <Trigger Property="Level" Value="1">
                 <Setter Property="Template" Value="{StaticResource HeVTabItemL1}"/>
             </Trigger>
