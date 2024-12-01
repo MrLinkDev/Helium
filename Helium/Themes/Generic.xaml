@@ -23,5 +23,10 @@
         
         <ResourceDictionary Source="/Helium;component/Controls/TabControl/Styles/HeVTabControl.xaml"/>
         <ResourceDictionary Source="/Helium;component/Controls/TabControl/Styles/HeVTabItem.xaml"/>
+        
+        <ResourceDictionary Source="/Helium;component/Controls/ComboBox/Styles/HeComboBox.xaml"/>
+        <ResourceDictionary Source="/Helium;component/Controls/ComboBox/Styles/HeComboBoxItem.xaml"/>
+        <ResourceDictionary Source="/Helium;component/Controls/ComboBox/Styles/HeComboBoxTextBox.xaml"/>
+        <ResourceDictionary Source="/Helium;component/Controls/ComboBox/Styles/HeComboBoxToggleButton.xaml"/>
     </ResourceDictionary.MergedDictionaries>
 </ResourceDictionary>
