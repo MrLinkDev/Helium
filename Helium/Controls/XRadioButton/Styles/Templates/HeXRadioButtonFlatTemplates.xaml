@@ -19,10 +19,14 @@
 
             SnapsToDevicePixels="True">
 
-            <DockPanel
-                LastChildFill="False">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                
                 <Grid
-                    DockPanel.Dock="Left"
+                    Grid.Column="0"
                     SnapsToDevicePixels="True">
                     
                     <Ellipse
@@ -32,7 +36,7 @@
                         VerticalAlignment="Center"
                         HorizontalAlignment="Center"
                         
-                        Margin="4, 4, 4, 0"
+                        Margin="4, 0"
 
                         Fill="{TemplateBinding EllipseFill}"
                         Stroke="{TemplateBinding StrokeFill}"
@@ -41,12 +45,12 @@
                 </Grid>
 
                 <ContentPresenter
-                    DockPanel.Dock="Left"
-                    Margin="4, 0, 0, 0"
+                    Grid.Column="1"
                     VerticalAlignment="Center"
                     HorizontalAlignment="Left"
+                    Margin="0, 0, 0, 2"
                     Content="{TemplateBinding Content}" />
-            </DockPanel>
+            </Grid>
         </Border>
 
         <ControlTemplate.Triggers>
