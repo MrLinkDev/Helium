@@ -16,7 +16,7 @@
                     <Border
                         x:Name="PART_ContentHost"
                         Focusable="False"
-                        Background="{TemplateBinding Background}" />
+                        Background="{TemplateBinding Background}"/>
                 </ControlTemplate>
             </Setter.Value>
         </Setter>

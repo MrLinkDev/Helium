@@ -231,6 +231,67 @@
                         
                         <comboBox:HeComboBox
                             DockPanel.Dock="Top"
+                            Margin="0, 8,0, 0"
+                            SelectedIndex="0">
+                            <system:String>Tom</system:String>
+                            <system:String>Bob</system:String>
+                            <system:String>Sam</system:String>
+                            <system:String>Alice</system:String>
+                            <system:String>Alice</system:String>
+                            <system:String>Alice</system:String>
+                            <system:String>Alice</system:String>
+                            <system:String>Alice</system:String>
+                            <system:String>Alice</system:String>
+                            <system:String>Alice</system:String>
+                            <system:String>Alice</system:String>
+                            <system:String>Alice</system:String>
+                            <system:String>Alice</system:String>
+                            <system:String>Alice</system:String>
+                            <system:String>Alice</system:String>
+                            <system:String>Alice</system:String>
+                            <system:String>Alice</system:String>
+                            <system:String>Alice</system:String>
+                            <system:String>Alice</system:String>
+                            <system:String>Alice</system:String>
+                            <system:String>Alice</system:String>
+                            <system:String>Alice</system:String>
+                            <system:String>Alice</system:String>
+                            <system:String>Alice</system:String>
+                            <system:String>Alice</system:String>
+                            <system:String>Alice</system:String>
+                            <system:String>Alice</system:String>
+                            <system:String>Alice</system:String>
+                            <system:String>Alice</system:String>
+                            <system:String>Alice</system:String>
+                        </comboBox:HeComboBox>
+                        
+                        <comboBox:HeComboBox
+                            DockPanel.Dock="Top"
+                            IsEnabled="False"
+                            SelectedIndex="0"
+                            Margin="0, 8,0, 0">
+                            <system:String>Tom</system:String>
+                            <system:String>Bob</system:String>
+                            <system:String>Sam</system:String>
+                            <system:String>Alice</system:String>
+                        </comboBox:HeComboBox>
+                        
+                        <comboBox:HeComboBox
+                            DockPanel.Dock="Top"
+                            IsEditable="True"
+                            SelectedIndex="0"
+                            Margin="0, 8,0, 0">
+                            <system:String>Tom</system:String>
+                            <system:String>Bob</system:String>
+                            <system:String>Sam</system:String>
+                            <system:String>Alice</system:String>
+                        </comboBox:HeComboBox>
+                        
+                        <comboBox:HeComboBox
+                            DockPanel.Dock="Top"
+                            IsEditable="True"
+                            IsEnabled="False"
+                            SelectedIndex="0"
                             Margin="0, 8,0, 0">
                             <system:String>Tom</system:String>
                             <system:String>Bob</system:String>

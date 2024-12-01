@@ -23,11 +23,11 @@
                                 <VisualState x:Name="MouseOver">
                                     <Storyboard>
                                         <ColorAnimationUsingKeyFrames
-                                            Storyboard.TargetProperty="(Panel.Background).(SolidColorBrush.Color)"
+                                            Storyboard.TargetProperty="(BorderBrush).(SolidColorBrush.Color)"
                                             Storyboard.TargetName="Border">
                                             <EasingColorKeyFrame
                                                 KeyTime="0"
-                                                Value="{StaticResource PrimaryColor400}" />
+                                                Value="{StaticResource BlackColor400}" />
                                         </ColorAnimationUsingKeyFrames>
                                     </Storyboard>
                                 </VisualState>
@@ -35,25 +35,18 @@
                                 <VisualState x:Name="Disabled">
                                     <Storyboard>
                                         <ColorAnimationUsingKeyFrames
-                                            Storyboard.TargetProperty="(Panel.Background).(SolidColorBrush.Color)"
-                                            Storyboard.TargetName="Border">
-                                            <EasingColorKeyFrame
-                                                KeyTime="0"
-                                                Value="{StaticResource PrimaryColor950}" />
-                                        </ColorAnimationUsingKeyFrames>
-                                        <ColorAnimationUsingKeyFrames
                                             Storyboard.TargetProperty="(Shape.Fill).(SolidColorBrush.Color)"
                                             Storyboard.TargetName="Arrow">
                                             <EasingColorKeyFrame
                                                 KeyTime="0"
-                                                Value="{StaticResource PrimaryColor950}" />
+                                                Value="{StaticResource BlackColor800}" />
                                         </ColorAnimationUsingKeyFrames>
                                         <ColorAnimationUsingKeyFrames
                                             Storyboard.TargetProperty="(Border.BorderBrush).(SolidColorBrush.Color)"
                                             Storyboard.TargetName="Border">
                                             <EasingColorKeyFrame
                                                 KeyTime="0"
-                                                Value="{StaticResource PrimaryColor950}" />
+                                                Value="{StaticResource BlackColor800}" />
                                         </ColorAnimationUsingKeyFrames>
                                     </Storyboard>
                                 </VisualState>
@@ -62,11 +55,11 @@
                                 <VisualState x:Name="Checked">
                                     <Storyboard>
                                         <ColorAnimationUsingKeyFrames
-                                            Storyboard.TargetProperty="(Panel.Background).(SolidColorBrush.Color)"
+                                            Storyboard.TargetProperty="(BorderBrush).(SolidColorBrush.Color)"
                                             Storyboard.TargetName="Border">
                                             <EasingColorKeyFrame
                                                 KeyTime="0"
-                                                Value="HotPink" />
+                                                Value="{StaticResource PrimaryColor500}" />
                                         </ColorAnimationUsingKeyFrames>
                                     </Storyboard>
                                 </VisualState>
@@ -77,18 +70,16 @@
                         <Border
                             x:Name="Border"
                             Grid.ColumnSpan="2"
-                            CornerRadius="2"
+                            CornerRadius="4"
                             BorderThickness="2"
-                            BorderBrush="{StaticResource PrimaryBrush500}"
+                            BorderBrush="{StaticResource BlackBrush500}"
                             Background="Transparent">
                         </Border>
                         <Border
                             Grid.Column="0"
-                            CornerRadius="2,0,0,2"
-                            Margin="1">
-                            <Border.Background>
-                                <SolidColorBrush Color="Transparent" />
-                            </Border.Background>
+                            CornerRadius="4,0,0,4"
+                            Margin="1"
+                            Background="Transparent">
                         </Border>
                         <Path
                             x:Name="Arrow"
@@ -97,7 +88,7 @@
                             VerticalAlignment="Center"
                             Data="M 0 0 L 4 4 L 8 0 Z">
                             <Path.Fill>
-                                <SolidColorBrush Color="{StaticResource PrimaryColor500}" />
+                                <SolidColorBrush Color="{StaticResource BlackColor500}" />
                             </Path.Fill>
                         </Path>
                     </Grid>

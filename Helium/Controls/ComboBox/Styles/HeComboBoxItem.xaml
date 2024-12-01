@@ -1,22 +1,24 @@
 ﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:comboBox="clr-namespace:Helium.Controls.ComboBox">
     <ResourceDictionary.MergedDictionaries>
         <ResourceDictionary Source="/Helium;component/Resources/Brushes.xaml" />
         <ResourceDictionary Source="/Helium;component/Resources/Colors.xaml" />
         <ResourceDictionary Source="/Helium;component/Resources/Dimensions.xaml" />
     </ResourceDictionary.MergedDictionaries>
 
-    <Style x:Key="{x:Type ComboBoxItem}" TargetType="{x:Type ComboBoxItem}">
+    <Style TargetType="{x:Type comboBox:HeComboBoxItem}">
         <Setter Property="SnapsToDevicePixels" Value="true" />
         <Setter Property="OverridesDefaultStyle" Value="true" />
         <Setter Property="Template">
             <Setter.Value>
-                <ControlTemplate TargetType="{x:Type ComboBoxItem}">
+                <ControlTemplate TargetType="{x:Type comboBox:HeComboBoxItem}">
                     <Border
                         x:Name="Border"
                         Padding="2"
                         SnapsToDevicePixels="true"
-                        Background="Transparent">
+                        Background="Transparent"
+                        CornerRadius="2">
                         <VisualStateManager.VisualStateGroups>
                             <VisualStateGroup x:Name="SelectionStates">
                                 <VisualState x:Name="Unselected" />
