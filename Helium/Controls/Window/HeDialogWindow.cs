@@ -92,7 +92,6 @@ public class HeDialogWindow : System.Windows.Window {
 
     private void SetupWindowToolbar(DockPanel panel, HeImageButton closeButton) {
         panel.MouseLeftButtonDown += OnMouseDown;
-        panel.MouseLeftButtonUp += OnMouseUp;
         
         closeButton.Click += CloseButtonOnClick;
     }
@@ -103,14 +102,7 @@ public class HeDialogWindow : System.Windows.Window {
 
     private void OnMouseDown(object sender, MouseButtonEventArgs e) {
         if (e.ClickCount == 1) {
-            ResizeMode = ResizeMode.NoResize;
             DragMove();
-        }
-    }
-    
-    private void OnMouseUp(object sender, MouseButtonEventArgs e) {
-        if (e.ClickCount == 1) {
-            ResizeMode = ResizeMode.CanResizeWithGrip;
         }
     }
 }

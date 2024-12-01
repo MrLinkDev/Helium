@@ -10,6 +10,7 @@
     </ResourceDictionary.MergedDictionaries>
 
     <Style TargetType="{x:Type local:HeDialogWindow}">
+        <Setter Property="ResizeMode" Value="NoResize"/>
         <Setter Property="WindowChrome.WindowChrome">
             <Setter.Value>
                 <WindowChrome
@@ -21,7 +22,6 @@
 
         <Setter Property="Width" Value="{StaticResource DialogWindowWidth}" />
         <Setter Property="Height" Value="{StaticResource DialogWindowHeight}" />
-        <Setter Property="ResizeMode" Value="CanResizeWithGrip"/>
 
         <Setter Property="Template">
             <Setter.Value>
