@@ -7,39 +7,331 @@
                  xmlns:plot="clr-namespace:Helium.Plot;assembly=Helium.Plot"
                  xmlns:window="clr-namespace:Helium.Controls.Window;assembly=Helium"
                  mc:Ignorable="d"
-                 Title="OpenGLDemo" Height="450" Width="800">
+                 Title="OpenGLDemo" Height="720" Width="1280">
     <Grid>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition/>
-            <ColumnDefinition Width="120"/>
+            <ColumnDefinition />
+            <ColumnDefinition Width="160" />
         </Grid.ColumnDefinitions>
         
-        <plot:HePlot 
+        <Grid.Resources>
+            <Style TargetType="{x:Type Label}">
+                <Setter Property="Foreground" Value="Azure"/>
+            </Style>
+        </Grid.Resources>
+
+        <plot:HePlot
             x:Name="Plot"
-            Grid.Column="0"/>
-        
-        <DockPanel 
-            Grid.Column="1">
-            
+            Grid.Column="0" />
+        <DockPanel
+            Grid.Column="1"
+            LastChildFill="False">
+
+            <Label
+                DockPanel.Dock="Top"
+                Content="Trace Id:"
+                Padding="0"
+                Margin="4, 0" />
+
+            <DockPanel
+                DockPanel.Dock="Top">
+
+                <Button
+                    x:Name="IncreaseTraceId"
+                    DockPanel.Dock="Right"
+                    Margin="4"
+                    Width="28"
+                    Content="+" 
+                    Click="IncreaseTraceId_OnClick"/>
+
+                <Button
+                    x:Name="DecreaseTraceId"
+                    DockPanel.Dock="Right"
+                    Margin="4"
+                    Width="28"
+                    Content="-" 
+                    Click="DecreaseTraceId_OnClick"/>
+
+                <TextBox
+                    x:Name="TraceId"
+                    DockPanel.Dock="Left"
+                    Margin="4"
+                    Text="1" />
+            </DockPanel>
+
+
             <Button
+                x:Name="AddTrace"
                 DockPanel.Dock="Top"
-                Margin="8"
-                Content="Add Marker"
-                Click="AddMarker"/>
-            
+                Margin="4"
+                Content="Add Trace" 
+                Click="AddTrace_OnClick"/>
+
             <Button
+                x:Name="SelectTrace"
                 DockPanel.Dock="Top"
-                Margin="8"
-                Content="Remove Marker"
-                Click="RemoveMarker"/>
+                Margin="4"
+                Content="Select Trace" 
+                Click="SelectTrace_OnClick"/>
+
+            <Button
+                x:Name="RemoveTrace"
+                DockPanel.Dock="Top"
+                Margin="4"
+                Content="Remove Trace" 
+                Click="RemoveTrace_OnClick"/>
+            <Label
+                DockPanel.Dock="Top"
+                Content="Points:"
+                Padding="0"
+                Margin="4, 16, 4, 0" />
+
+            <DockPanel
+                DockPanel.Dock="Top">
+
+                <Button
+                    x:Name="IncreasePoints"
+                    DockPanel.Dock="Right"
+                    Margin="4"
+                    Width="28"
+                    Content="+" 
+                    Click="IncreasePoints_OnClick"/>
+
+                <Button
+                    x:Name="DecreasePoints"
+                    DockPanel.Dock="Right"
+                    Margin="4"
+                    Width="28"
+                    Content="-"
+                    Click="DecreasePoints_OnClick"/>
+
+                <TextBox
+                    x:Name="Points"
+                    DockPanel.Dock="Left"
+                    Margin="4"
+                    Text="101" />
+            </DockPanel>
             
-            <Slider 
+            <Label
                 DockPanel.Dock="Top"
-                Margin="8"
-                Minimum="2"
-                Maximum="60"
-                Value="30"
-                ValueChanged="FrameRateChanged"/>
+                Content="Start X:"
+                Padding="0"
+                Margin="4, 16, 4, 0" />
+
+            <DockPanel
+                DockPanel.Dock="Top">
+
+                <Button
+                    x:Name="IncreaseStartX"
+                    DockPanel.Dock="Right"
+                    Margin="4"
+                    Width="28"
+                    Content="+" 
+                    Click="IncreaseStartX_OnClick"/>
+
+                <Button
+                    x:Name="DecreaseStartX"
+                    DockPanel.Dock="Right"
+                    Margin="4"
+                    Width="28"
+                    Content="-" 
+                    Click="DecreaseStartX_OnClick"/>
+
+                <TextBox
+                    x:Name="StartX"
+                    DockPanel.Dock="Left"
+                    Margin="4"
+                    Text="-1" />
+            </DockPanel>
+
+            <Label
+                DockPanel.Dock="Top"
+                Content="Stop X:"
+                Padding="-1"
+                Margin="4, 4, 4, 0" />
+
+            <DockPanel
+                DockPanel.Dock="Top">
+
+                <Button
+                    x:Name="IncreaseStopX"
+                    DockPanel.Dock="Right"
+                    Margin="4"
+                    Width="28"
+                    Content="+" 
+                    Click="IncreaseStopX_OnClick"/>
+
+                <Button
+                    x:Name="DecreaseStopX"
+                    DockPanel.Dock="Right"
+                    Margin="4"
+                    Width="28"
+                    Content="-" 
+                    Click="DecreaseStopX_OnClick"/>
+
+                <TextBox
+                    x:Name="StopX"
+                    DockPanel.Dock="Left"
+                    Margin="4"
+                    Text="1" />
+            </DockPanel>
+
+            <Label
+                DockPanel.Dock="Top"
+                Content="Start Y:"
+                Padding="0"
+                Margin="4, 4, 4, 0" />
+
+            <DockPanel
+                DockPanel.Dock="Top">
+
+                <Button
+                    x:Name="IncreaseStartY"
+                    DockPanel.Dock="Right"
+                    Margin="4"
+                    Width="28"
+                    Content="+" 
+                    Click="IncreaseStartY_OnClick"/>
+
+                <Button
+                    x:Name="DecreaseStartY"
+                    DockPanel.Dock="Right"
+                    Margin="4"
+                    Width="28"
+                    Content="-" 
+                    Click="DecreaseStartY_OnClick"/>
+
+                <TextBox
+                    x:Name="StartY"
+                    DockPanel.Dock="Left"
+                    Margin="4"
+                    Text="-1" />
+            </DockPanel>
+            
+            <Label
+                DockPanel.Dock="Top"
+                Content="Stop Y:"
+                Padding="0"
+                Margin="4, 4, 4, 0"/>
+            
+            <DockPanel
+                DockPanel.Dock="Top">
+                
+                <Button
+                    x:Name="IncreaseStopY"
+                    DockPanel.Dock="Right"
+                    Margin="4"
+                    Width="28"
+                    Content="+"
+                    Click="IncreaseStopY_OnClick"/>
+                
+                <Button
+                    x:Name="DecreaseStopY"
+                    DockPanel.Dock="Right"
+                    Margin="4"
+                    Width="28"
+                    Content="-"
+                    Click="DecreaseStopY_OnClick"/>
+                
+                <TextBox
+                    x:Name="StopY"
+                    DockPanel.Dock="Left"
+                    Margin="4"
+                    Text="1"/>
+            </DockPanel>
+
+            <Button
+                x:Name="UpdateData"
+                DockPanel.Dock="Top"
+                Margin="4"
+                Content="Update Data" 
+                Click="UpdateData_OnClick"/>
+            
+            <Label
+                DockPanel.Dock="Top"
+                Content="Marker Id:"
+                Padding="0"
+                Margin="4, 16, 4, 0" />
+
+            <DockPanel
+                DockPanel.Dock="Top">
+
+                <Button
+                    x:Name="IncreaseMarkerId"
+                    DockPanel.Dock="Right"
+                    Margin="4"
+                    Width="28"
+                    Content="+" 
+                    Click="IncreaseMarkerId_OnClick"/>
+
+                <Button
+                    x:Name="DecreaseMarkerId"
+                    DockPanel.Dock="Right"
+                    Margin="4"
+                    Width="28"
+                    Content="-" 
+                    Click="DecreaseMarkerId_OnClick"/>
+
+                <TextBox
+                    x:Name="MarkerId"
+                    DockPanel.Dock="Left"
+                    Margin="4"
+                    Text="1" />
+            </DockPanel>
+            
+            <Label
+                DockPanel.Dock="Top"
+                Content="Marker X:"
+                Padding="-1"
+                Margin="4, 4, 4, 0" />
+
+            <DockPanel
+                DockPanel.Dock="Top">
+
+                <Button
+                    x:Name="IncreaseMarkerX"
+                    DockPanel.Dock="Right"
+                    Margin="4"
+                    Width="28"
+                    Content="+" 
+                    Click="IncreaseMarkerX_OnClick"/>
+
+                <Button
+                    x:Name="DecreaseMarkerX"
+                    DockPanel.Dock="Right"
+                    Margin="4"
+                    Width="28"
+                    Content="-" 
+                    Click="DecreaseMarkerX_OnClick"/>
+
+                <TextBox
+                    x:Name="MarkerX"
+                    DockPanel.Dock="Left"
+                    Margin="4"
+                    Text="0" />
+            </DockPanel>
+
+            <Button
+                x:Name="AddMarker"
+                DockPanel.Dock="Top"
+                Margin="4, 16, 4, 4"
+                Content="Add Marker" 
+                Click="AddMarker_OnClick"/>
+
+            <Button
+                x:Name="SelectMarker"
+                DockPanel.Dock="Top"
+                Margin="4"
+                Content="Select Marker"
+                Click="SelectMarker_OnClick"/>
+
+            <Button
+                x:Name="RemoveMarker"
+                DockPanel.Dock="Top"
+                Margin="4"
+                Content="Remove Marker" 
+                Click="RemoveMarker_OnClick"/>
+
         </DockPanel>
     </Grid>
 </window:HeWindow>
