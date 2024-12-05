@@ -8,120 +8,178 @@ using Helium.Plot;
 namespace HeliumDemo;
 
 public partial class OpenGLDemo : HeWindow {
+    private Dictionary<int, float[]> traceDataStorage = new Dictionary<int, float[]>();
 
-    private const uint points = 101;
-    private const uint size = points * 2;
-    
-    private float[] data1;
-    private float[] data2;
-    private float[] data3;
-    private float[] data4;
-
-    private const float f = 2;
-    private float c = 2 * Single.Pi * f;
-    
-    private float p = 0;
-    private const float d = (int) (size / (f * 2));
-
-    private uint markerId = 0;
-    private float markerPos = -1f + ((float)2 / (points - 1));
-
-    private float minPosX = -5e9f;
-    private float maxPosX = -2e9f;
-    
-    private float minPosY = 2e9f;
-    private float maxPosY = 5e9f;
-
-    private float[] markersPos = new float[10];
-    
     public OpenGLDemo() {
         InitializeComponent();
 
-        Plot.OnReady = () => {
-            data1 = new float[size];
-            data2 = new float[size];
-            data3 = new float[4];
-            data4 = new float[4];
-            
-            GCHandle data1Handle = GCHandle.Alloc(data1, GCHandleType.Pinned);
-            GCHandle data2Handle = GCHandle.Alloc(data2, GCHandleType.Pinned);
-            GCHandle data3Handle = GCHandle.Alloc(data3, GCHandleType.Pinned);
-            GCHandle data4Handle = GCHandle.Alloc(data4, GCHandleType.Pinned);
+        Task.Run(() => {
+            while (true) {
+                foreach (var traceStoragePair in traceDataStorage) {
+                    var traceData = traceStoragePair.Value;
 
-            IntPtr data1Ptr = data1Handle.AddrOfPinnedObject();
-            IntPtr data2Ptr = data2Handle.AddrOfPinnedObject();
-            IntPtr data3Ptr = data3Handle.AddrOfPinnedObject();
-            IntPtr data4Ptr = data4Handle.AddrOfPinnedObject();
-        
-            Plot.AddTrace(0, data1Ptr, points);
-            Plot.AddTrace(1, data2Ptr, points);
-            Plot.AddTrace(2, data3Ptr, 2);
-            Plot.AddTrace(3, data4Ptr, 2);
-        
-            AmethystApi.SetStartStopX(Plot.ScreenPtr, 0, minPosX, maxPosX);
-            AmethystApi.SetStartStopY(Plot.ScreenPtr, 0, minPosY, maxPosY);
-        
-            AmethystApi.SetStartStopX(Plot.ScreenPtr, 1, -1, 1);
-            AmethystApi.SetStartStopY(Plot.ScreenPtr, 1, -1, 1);
-        
-            AmethystApi.SetStartStopX(Plot.ScreenPtr, 2, minPosX, maxPosX);
-            AmethystApi.SetStartStopY(Plot.ScreenPtr, 2, -1, 1);
-            
-            AmethystApi.SetStartStopX(Plot.ScreenPtr, 3, -1, 1);
-            AmethystApi.SetStartStopY(Plot.ScreenPtr, 3, minPosY, maxPosY);
-            
-            data3[0] = minPosX;
-            data3[1] = 0;
-            data3[2] = maxPosX;
-            data3[3] = 0;
-                
-            data4[0] = 0;
-            data4[1] = minPosY;
-            data4[2] = 0;
-            data4[3] = maxPosY;
+                    float temp = traceData[1];
 
-            Plot.OnUpdate = () => {
-                float[] x = new float[points];
-                
-                for (int i = 0; i < points; ++i) {
-                    data1[i * 2 + 0] = minPosX + i * ((maxPosX - minPosX) / (points - 1));
-                    data1[i * 2 + 1] =  ((maxPosY + minPosY) / 2) + float.Sin(c * ((float) i / size) + p) * ((maxPosY - minPosY) / 2);
-                
-                    data2[i * 2 + 0] = -1.0f + i * ((float)2 / (points - 1));
-                    data2[i * 2 + 1] = float.Sin(c * ((float) i / size) + p + d);
-
-                    x[i] = data1[i * 2 + 1];
-
-                    if (i == 25) {
-                        //Plot.SetMarkerY(0, 0,  data1[i * 2 + 0],  data1[i * 2 + 1]);
-                        Plot.PlaceMarker(0, 0, data1[i * 2 + 0],  data1[i * 2 + 1]);
+                    for (int i = 0; i < traceData.Length - 2; i += 2) {
+                        traceData[i + 1] = traceData[i + 3];
                     }
 
-                    // for (uint j = 0; j < 10; j++) {
-                    //     if (Math.Abs(markersPos[j] - data1[i * 2 + 0]) < 0.0001) {
-                    //         Plot.SetMarkerY(0, j,  data1[i * 2 + 1]);
-                    //     }
-                    // }
+                    traceData[^1] = temp;
                 }
-                
-                p += (f / size) * 10;
-            
-                AmethystApi.UpdateScreen(Plot.ScreenPtr);
-            };
-        };
+
+                Thread.Sleep(1000 / 30);
+            }
+        });
     }
 
-    private void AddMarker(object sender, RoutedEventArgs e) {
-        Plot.AddMarker(0, 0, -0.5f, 0.0f);
+    private void IncreaseTraceId_OnClick(object sender, RoutedEventArgs e) {
+        TraceId.Text = Convert.ToString(Convert.ToInt32(TraceId.Text) + 1);
+    }
+
+    private void DecreaseTraceId_OnClick(object sender, RoutedEventArgs e) {
+        TraceId.Text = Convert.ToString(Convert.ToInt32(TraceId.Text) - 1);
+    }
+
+    private void AddTrace_OnClick(object sender, RoutedEventArgs e) {
+        int traceId = Convert.ToInt32(TraceId.Text);
+        uint size = Convert.ToUInt32(Points.Text) * 2; // ???
+
+        int startX = Convert.ToInt32(StartX.Text);
+        int stopX = Convert.ToInt32(StopX.Text);
+
+        int startY = Convert.ToInt32(StartY.Text);
+        int stopY = Convert.ToInt32(StopY.Text);
+
+        if (traceDataStorage.ContainsKey(traceId)) return;
+
+        traceDataStorage[traceId] = Plot.AddTrace(traceId, size);
+
+        float[] traceData = traceDataStorage[traceId];
+        float dx = (stopX - startX) / (((float)size / 2) - 1);
+        for (uint i = 0; i < size / 2; i += 1) {
+            traceData[i * 2 + 0] = startX + dx * i;
+            traceData[i * 2 + 1] = MathF.Sin(2 * MathF.PI * 1 * i * 2 / size);
+        }
+
+        Plot.SetStartStopX(traceId, startX, stopX);
+        Plot.SetStartStopY(traceId, startY, stopY);
+    }
+
+    private void SelectTrace_OnClick(object sender, RoutedEventArgs e) {
+        int traceId = Convert.ToInt32(TraceId.Text);
+
+        Plot.SelectTrace(traceId);
+    }
+
+    private void RemoveTrace_OnClick(object sender, RoutedEventArgs e) {
+        int traceId = Convert.ToInt32(TraceId.Text);
+
+        Plot.RemoveTrace(traceId);
+        traceDataStorage.Remove(traceId);
+    }
+
+    private void IncreasePoints_OnClick(object sender, RoutedEventArgs e) {
+        Points.Text = Convert.ToString(Convert.ToInt32(Points.Text) + 1);
+    }
+
+    private void DecreasePoints_OnClick(object sender, RoutedEventArgs e) {
+        Points.Text = Convert.ToString(Convert.ToInt32(Points.Text) - 1);
+    }
+
+    private void IncreaseStartX_OnClick(object sender, RoutedEventArgs e) {
+        StartX.Text = Convert.ToString(Convert.ToInt32(StartX.Text) + 1);
     }
     
-    private void RemoveMarker(object sender, RoutedEventArgs e) {
-        Plot.RemoveMarker(0, --markerId);
-        markerPos -= 0.1f;
+    private void DecreaseStartX_OnClick(object sender, RoutedEventArgs e) {
+        StartX.Text = Convert.ToString(Convert.ToInt32(StartX.Text) - 1);
     }
 
-    private void FrameRateChanged(object sender, RoutedPropertyChangedEventArgs<double> e) {
-        Plot.FrameRate = (int) e.NewValue;
+    private void IncreaseStopX_OnClick(object sender, RoutedEventArgs e) {
+        StopX.Text = Convert.ToString(Convert.ToInt32(StopX.Text) + 1);
+    }
+    
+    private void DecreaseStopX_OnClick(object sender, RoutedEventArgs e) {
+        StopX.Text = Convert.ToString(Convert.ToInt32(StopX.Text) - 1);
+    }
+    
+    private void IncreaseStartY_OnClick(object sender, RoutedEventArgs e) {
+        StartY.Text = Convert.ToString(Convert.ToInt32(StartY.Text) + 1);
+    }
+    
+    private void DecreaseStartY_OnClick(object sender, RoutedEventArgs e) {
+        StartY.Text = Convert.ToString(Convert.ToInt32(StartY.Text) - 1);
+    }
+
+    private void IncreaseStopY_OnClick(object sender, RoutedEventArgs e) {
+        StopY.Text = Convert.ToString(Convert.ToInt32(StopY.Text) + 1);
+    }
+    
+    private void DecreaseStopY_OnClick(object sender, RoutedEventArgs e) {
+        StopY.Text = Convert.ToString(Convert.ToInt32(StopY.Text) - 1);
+    }
+
+    private void UpdateData_OnClick(object sender, RoutedEventArgs e) {
+        int traceId = Convert.ToInt32(TraceId.Text);
+        uint size = Convert.ToUInt32(Points.Text) * 2; // ???
+
+        int startX = Convert.ToInt32(StartX.Text);
+        int stopX = Convert.ToInt32(StopX.Text);
+
+        int startY = Convert.ToInt32(StartY.Text);
+        int stopY = Convert.ToInt32(StopY.Text);
+
+        if (!traceDataStorage.ContainsKey(traceId)) return;
+
+        float[] traceData = new float[size];
+        float dx = (stopX - startX) / (((float)size / 2) - 1);
+        for (uint i = 0; i < size / 2; i += 1) {
+            traceData[i * 2 + 0] = startX + dx * i;
+            traceData[i * 2 + 1] = MathF.Sin(2 * MathF.PI * 1 * i * 2 / size);
+        }
+        
+        Plot.SetData(traceId, traceData);
+        traceDataStorage[traceId] = traceData;
+
+        Plot.SetStartStopX(traceId, startX, stopX);
+        Plot.SetStartStopY(traceId, startY, stopY);
+    }
+
+    private void IncreaseMarkerId_OnClick(object sender, RoutedEventArgs e) {
+        MarkerId.Text = Convert.ToString(Convert.ToInt32(MarkerId.Text) + 1);
+    }
+    
+    private void DecreaseMarkerId_OnClick(object sender, RoutedEventArgs e) {
+        MarkerId.Text = Convert.ToString(Convert.ToInt32(MarkerId.Text) - 1);
+    }
+
+    private void IncreaseMarkerX_OnClick(object sender, RoutedEventArgs e) {
+        MarkerX.Text = Convert.ToString(Convert.ToInt32(MarkerX.Text) + 1);
+    }
+
+    private void DecreaseMarkerX_OnClick(object sender, RoutedEventArgs e) {
+        MarkerX.Text = Convert.ToString(Convert.ToInt32(MarkerX.Text) - 1);
+    }
+
+    private void AddMarker_OnClick(object sender, RoutedEventArgs e) {
+        int traceId = Convert.ToInt32(TraceId.Text);
+        int markerId = Convert.ToInt32(MarkerId.Text);
+        
+        float markerX = Convert.ToSingle(MarkerX.Text);
+        
+        Plot.AddMarker(traceId, markerId, markerX);
+    }
+
+    private void SelectMarker_OnClick(object sender, RoutedEventArgs e) {
+        int traceId = Convert.ToInt32(TraceId.Text);
+        int markerId = Convert.ToInt32(MarkerId.Text);
+        
+        Plot.SelectMarker(traceId, markerId);
+    }
+    
+    private void RemoveMarker_OnClick(object sender, RoutedEventArgs e) {
+        int traceId = Convert.ToInt32(TraceId.Text);
+        int markerId = Convert.ToInt32(MarkerId.Text);
+        
+        Plot.RemoveMarker(traceId, markerId);
     }
 }
-
