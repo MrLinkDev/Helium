@@ -11,14 +11,11 @@ namespace Helium.Plot;
 public class HePlot : Decorator {
     
     private DispatcherTimer updateTimer = new DispatcherTimer();
-    
-    public Action OnReady { get; set; }
-    public Action OnUpdate { get; set; }
 
-    public IntPtr ActivityPtr;
-    public IntPtr ScreenPtr;
+    private IntPtr screenPtr;
+    private IntPtr containerPtr;
 
-    public uint currentTraceId = 0;
+    private Dictionary<int, PlotData> plotDataDict;
     
     #region FrameRate
 
@@ -26,7 +23,7 @@ public class HePlot : Decorator {
         nameof(FrameRate),
         typeof(int),
         typeof(HePlot),
-        new FrameworkPropertyMetadata(10));
+        new FrameworkPropertyMetadata(30));
     
     public int FrameRate {
         get => (int)GetValue(FrameRateProperty);
@@ -55,7 +52,7 @@ public class HePlot : Decorator {
     
     private void Tick(object? sender, EventArgs e) {
         Child?.InvalidateVisual();
-        OnUpdate.Invoke();
+        UpdateScreen();
     }
 
     private void OnLoaded(object sender, RoutedEventArgs e) {
@@ -63,38 +60,89 @@ public class HePlot : Decorator {
         Child = window;
         
         unsafe {
-            ActivityPtr = (IntPtr) window.activity;
-            ScreenPtr = AmethystApi.GetScreenPtr(ActivityPtr);
+            screenPtr = (IntPtr) window.screen;
+            containerPtr = AmethystApi.GetTraceContainerPtr(screenPtr);
         }
-        
-        OnReady.Invoke();
+
+        plotDataDict = new Dictionary<int, PlotData>();
     }
 
-    public void AddTrace(uint traceId, IntPtr dataPtr, uint points) {
-        AmethystApi.AddTrace(ScreenPtr, traceId, dataPtr, points);
+    private void UpdateScreen() {
+        AmethystApi.SetScreenUpdated(screenPtr);
+    }
+
+    #region TraceRegion
+
+    public float[] AddTrace(int traceId, uint size) {
+        if (plotDataDict.TryGetValue(traceId, out PlotData? value)) return value.Data;
+
+        plotDataDict[traceId] = new PlotData(size);
+        AmethystApi.AddTrace(containerPtr, traceId, plotDataDict[traceId].Pointer, plotDataDict[traceId].Points);
+        
+        UpdateScreen();
+        
+        return plotDataDict[traceId].Data;
     }
     
-    public void RemoveTrace(uint traceId) {
-        AmethystApi.RemoveTrace(ScreenPtr, traceId);
+    public void AddTrace(int traceId, float[] data) {
+        plotDataDict[traceId] = new PlotData(data);
+        AmethystApi.AddTrace(containerPtr, traceId, plotDataDict[traceId].Pointer, plotDataDict[traceId].Points);
+        
+        UpdateScreen();
     }
 
-    public void AddMarker(uint traceId, uint markerId, float x, float y) {
-        AmethystApi.AddMarker(ScreenPtr, traceId, markerId, x, y);
+    public void SelectTrace(int traceId) {
+        AmethystApi.SelectTrace(containerPtr, traceId);
+        UpdateScreen();
     }
 
-    public void SetMarkerX(uint traceId, uint markerId, float x) {
-        AmethystApi.SetMarkerX(ScreenPtr, traceId, markerId, x);
+    public void RemoveTrace(int traceId) {
+        AmethystApi.RemoveTrace(containerPtr, traceId);
+        UpdateScreen();
+        
+        plotDataDict[traceId].Dispose();
+        plotDataDict.Remove(traceId);
     }
 
-    public void SetMarkerY(uint traceId, uint markerId, float y) {
-        AmethystApi.SetMarkerY(ScreenPtr, traceId, markerId, y);
+    public void SetData(int traceId, float[] data) {
+        PlotData oldData = plotDataDict[traceId];
+        
+        plotDataDict[traceId] = new PlotData(data);
+        AmethystApi.SetData(containerPtr, traceId, plotDataDict[traceId].Pointer, plotDataDict[traceId].Points);
+        
+        UpdateScreen();
+        
+        oldData.Dispose();
     }
 
-    public void PlaceMarker(uint traceId, uint markerId, float x, float y) {
-        AmethystApi.PlaceMarker(ScreenPtr, traceId, markerId, x, y);
+    public void SetStartStopX(int traceId, float startX, float stopX) {
+        AmethystApi.SetStartStopX(containerPtr, traceId, startX, stopX);
+        UpdateScreen();
+    }
+    
+    public void SetStartStopY(int traceId, float startY, float stopY) {
+        AmethystApi.SetStartStopY(containerPtr, traceId, startY, stopY);
+        UpdateScreen();
     }
 
-    public void RemoveMarker(uint traceId, uint markerId) {
-        AmethystApi.RemoveMarker(ScreenPtr, traceId, markerId);
+    #endregion
+
+    #region MarkerRegion
+
+    public void AddMarker(int traceId, int markerId, float x) {
+        AmethystApi.AddMarker(containerPtr, traceId, markerId, x, 0);
+        UpdateScreen();
     }
+
+    public void SelectMarker(int traceId, int markerId) {
+        AmethystApi.SelectMarker(containerPtr, traceId, markerId);
+        UpdateScreen();
+    }
+    
+    public void RemoveMarker(int traceId, int markerId) {
+        AmethystApi.RemoveMarker(containerPtr, traceId, markerId);
+        UpdateScreen();
+    }
+    
+    #endregion
 }
