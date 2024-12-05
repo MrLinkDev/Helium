@@ -131,14 +131,17 @@ public class HePlot : Decorator {
 
     public void AddMarker(int traceId, int markerId, float x) {
         AmethystApi.AddMarker(containerPtr, traceId, markerId, x, 0);
+        UpdateScreen();
     }
 
     public void SelectMarker(int traceId, int markerId) {
         AmethystApi.SelectMarker(containerPtr, traceId, markerId);
+        UpdateScreen();
     }
     
     public void RemoveMarker(int traceId, int markerId) {
         AmethystApi.RemoveMarker(containerPtr, traceId, markerId);
+        UpdateScreen();
     }
     
     #endregion
