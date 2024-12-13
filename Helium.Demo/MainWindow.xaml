@@ -570,7 +570,7 @@
                 ValueName="Start"
                 FullValueName="Start Frequency"
                 XValueType="FREQUENCY"
-                Value="10.25" />
+                Value="{Binding XValueButtonTestVal}" />
 
             <xValueButton:HeXValueButton
                 DockPanel.Dock="Top"

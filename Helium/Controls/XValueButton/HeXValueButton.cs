@@ -205,7 +205,7 @@ public class HeXValueButton : ButtonBase {
         typeof(double),
         typeof(HeXValueButton),
         new FrameworkPropertyMetadata(0.0,
-            FrameworkPropertyMetadataOptions.AffectsRender));
+            FrameworkPropertyMetadataOptions.AffectsRender | FrameworkPropertyMetadataOptions.BindsTwoWayByDefault));
 
     public double Value {
         get => (double)GetValue(ValueProperty);
@@ -448,14 +448,16 @@ public class HeXValueButton : ButtonBase {
 
     private void EnterValue(double exp = 1) {
         try {
-            Value = double.Parse(TempValue);
-            Value *= exp;
+            double temp = double.Parse(TempValue);
+            temp *= exp;
 
-            if (Value < MinValue) {
+            if (temp < MinValue) {
                 Value = MinValue;
             } else if (Value > MaxValue) {
                 Value = MaxValue;
             }
+            
+            Value = temp;
         } catch (Exception e) {
             Value = MinValue;
         }

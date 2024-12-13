@@ -28,6 +28,16 @@ public partial class MainWindow : HeWindow, INotifyPropertyChanged {
         set => SetField(ref doubleData, value);
     }
 
+    private double xValueButtonTestVal = 5;
+
+    public double XValueButtonTestVal {
+        get => xValueButtonTestVal;
+        set {
+            Console.WriteLine($"XVAL = {value}");
+            SetField(ref xValueButtonTestVal, value);
+        }
+    }
+
     public MainWindow() {
         InitializeComponent();
         DataContext = this;
