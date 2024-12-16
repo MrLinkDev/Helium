@@ -45,7 +45,6 @@ public class HePlot : Decorator {
         
         updateTimer.Interval = new TimeSpan(TimeSpan.TicksPerSecond / FrameRate);
         updateTimer.Tick += Tick;
-        updateTimer.Start();
         
         base.BeginInit();
         
@@ -65,6 +64,8 @@ public class HePlot : Decorator {
             screenPtr = (IntPtr) ((GlWindow)Child).screen;
             containerPtr = AmethystApi.GetTraceContainerPtr(screenPtr);
         }
+        
+        updateTimer.Start();
     }
 
     private void UpdateScreen() {
