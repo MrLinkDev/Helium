@@ -73,11 +73,14 @@ public class HePlot : Decorator {
 
     #region TraceRegion
 
-    public float[] AddTrace(int traceId, uint size) {
+    public float[] AddTrace(int traceId, uint size, float startX, float startY, float stopX, float stopY) {
         if (plotDataDict.TryGetValue(traceId, out PlotData? value)) return value.Data;
 
         plotDataDict[traceId] = new PlotData(size);
         AmethystApi.AddTrace(containerPtr, traceId, plotDataDict[traceId].Pointer, plotDataDict[traceId].Points);
+        
+        AmethystApi.SetStartStopX(containerPtr, traceId, startX, stopX);
+        AmethystApi.SetStartStopY(containerPtr, traceId, startY, stopY);
         
         UpdateScreen();
         
@@ -130,7 +133,7 @@ public class HePlot : Decorator {
     #region MarkerRegion
 
     public void AddMarker(int traceId, int markerId, float x) {
-        AmethystApi.AddMarker(containerPtr, traceId, markerId, x, 0);
+        AmethystApi.AddMarker(containerPtr, traceId, markerId, x);
         UpdateScreen();
     }
 
@@ -141,6 +144,11 @@ public class HePlot : Decorator {
     
     public void RemoveMarker(int traceId, int markerId) {
         AmethystApi.RemoveMarker(containerPtr, traceId, markerId);
+        UpdateScreen();
+    }
+
+    public void SetMarkerX(int traceId, int markerId, float x) {
+        AmethystApi.SetMarkerX(containerPtr, traceId, markerId, x);
         UpdateScreen();
     }
     

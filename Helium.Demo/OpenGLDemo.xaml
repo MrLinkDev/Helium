@@ -332,6 +332,13 @@
                 Content="Remove Marker" 
                 Click="RemoveMarker_OnClick"/>
 
+            <Button
+                x:Name="SetMarkerX"
+                DockPanel.Dock="Top"
+                Margin="4"
+                Content="Set Marker X" 
+                Click="SetMarkerX_OnClick"/>
+
         </DockPanel>
     </Grid>
 </window:HeWindow>
