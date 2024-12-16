@@ -12,10 +12,12 @@
 
     <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
       <DebugType>none</DebugType>
+      <OutputPath>..\Helium.Build\Release\</OutputPath>
     </PropertyGroup>
 
     <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
       <PlatformTarget>x64</PlatformTarget>
+      <OutputPath>..\Helium.Build\Debug\</OutputPath>
     </PropertyGroup>
 
     <ItemGroup>

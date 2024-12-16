@@ -34,7 +34,7 @@ public class HePlot : Decorator {
     }
 
     #endregion
-    
+
     static HePlot() {
         DefaultStyleKeyProperty.OverrideMetadata(typeof(HePlot),
             new FrameworkPropertyMetadata(typeof(HePlot)));
@@ -48,6 +48,11 @@ public class HePlot : Decorator {
         updateTimer.Start();
         
         base.BeginInit();
+        
+        GlWindow window = new GlWindow();
+        Child = window;
+
+        plotDataDict = new Dictionary<int, PlotData>();
     }
     
     private void Tick(object? sender, EventArgs e) {
@@ -56,15 +61,10 @@ public class HePlot : Decorator {
     }
 
     private void OnLoaded(object sender, RoutedEventArgs e) {
-        GlWindow window = new GlWindow();
-        Child = window;
-        
         unsafe {
-            screenPtr = (IntPtr) window.screen;
+            screenPtr = (IntPtr) ((GlWindow)Child).screen;
             containerPtr = AmethystApi.GetTraceContainerPtr(screenPtr);
         }
-
-        plotDataDict = new Dictionary<int, PlotData>();
     }
 
     private void UpdateScreen() {
