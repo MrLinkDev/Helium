@@ -52,7 +52,7 @@ public partial class OpenGLDemo : HeWindow {
 
         if (traceDataStorage.ContainsKey(traceId)) return;
 
-        traceDataStorage[traceId] = Plot.AddTrace(traceId, size);
+        traceDataStorage[traceId] = Plot.AddTrace(traceId, size, startX, startY, stopX, stopY);
 
         float[] traceData = traceDataStorage[traceId];
         float dx = (stopX - startX) / (((float)size / 2) - 1);
@@ -60,9 +60,6 @@ public partial class OpenGLDemo : HeWindow {
             traceData[i * 2 + 0] = startX + dx * i;
             traceData[i * 2 + 1] = MathF.Sin(2 * MathF.PI * 1 * i * 2 / size);
         }
-
-        Plot.SetStartStopX(traceId, startX, stopX);
-        Plot.SetStartStopY(traceId, startY, stopY);
     }
 
     private void SelectTrace_OnClick(object sender, RoutedEventArgs e) {
@@ -181,5 +178,14 @@ public partial class OpenGLDemo : HeWindow {
         int markerId = Convert.ToInt32(MarkerId.Text);
         
         Plot.RemoveMarker(traceId, markerId);
+    }
+
+    private void SetMarkerX_OnClick(object sender, RoutedEventArgs e) {
+        int traceId = Convert.ToInt32(TraceId.Text);
+        int markerId = Convert.ToInt32(MarkerId.Text);
+        
+        float markerX = Convert.ToSingle(MarkerX.Text);
+        
+        Plot.SetMarkerX(traceId, markerId, markerX);
     }
 }

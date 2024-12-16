@@ -6,7 +6,7 @@
     <Style TargetType="{x:Type plot:HePlot}">
         <Setter Property="VerticalAlignment" Value="Stretch"/>
         <Setter Property="HorizontalAlignment" Value="Stretch"/>
-        <Setter Property="Margin" Value="1"></Setter>
+        <Setter Property="Margin" Value="1"/>
     </Style>
     
 </ResourceDictionary>
