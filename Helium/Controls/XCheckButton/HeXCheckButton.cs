@@ -26,6 +26,22 @@ public class HeXCheckButton : System.Windows.Controls.RadioButton {
 
     #endregion
     
+    #region Id
+
+    public static readonly DependencyProperty IdProperty = DependencyProperty.Register(
+        nameof(Id),
+        typeof(int),
+        typeof(HeXCheckButton),
+        new FrameworkPropertyMetadata(-1,
+            FrameworkPropertyMetadataOptions.AffectsRender));
+
+    public int Id {
+        get => (int)GetValue(IdProperty);
+        set => SetValue(IdProperty, value);
+    }
+
+    #endregion
+    
     #region IsOn
 
     public static readonly DependencyProperty IsOnProperty = DependencyProperty.Register(
@@ -44,8 +60,7 @@ public class HeXCheckButton : System.Windows.Controls.RadioButton {
     }
 
     #endregion
-
-
+    
     #region Content
 
     public new static readonly DependencyProperty ContentProperty = DependencyProperty.Register(
