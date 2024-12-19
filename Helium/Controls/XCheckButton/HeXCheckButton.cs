@@ -37,10 +37,14 @@ public class HeXCheckButton : System.Windows.Controls.RadioButton {
 
     public bool IsOn {
         get => (bool)GetValue(IsOnProperty);
-        set => SetValue(IsOnProperty, value);
+        set {
+            SetValue(IsOnProperty, value);
+            IsOnCommand?.Execute(value);
+        }
     }
 
     #endregion
+
 
     #region Content
 
@@ -57,9 +61,44 @@ public class HeXCheckButton : System.Windows.Controls.RadioButton {
 
     #endregion
 
+    #region IsOnCommand
+
+    public static readonly DependencyProperty IsOnCommandProperty = DependencyProperty.Register(
+        nameof(IsOnCommand),
+        typeof(ICommand),
+        typeof(HeXCheckButton),
+        new FrameworkPropertyMetadata(null));
+
+    public ICommand? IsOnCommand {
+        get => (ICommand?)GetValue(IsOnCommandProperty);
+        set => SetValue(IsOnCommandProperty, value);
+    }
+
+    #endregion
+    
+    #region IsCheckedCommand
+
+    public static readonly DependencyProperty IsCheckedCommandProperty = DependencyProperty.Register(
+        nameof(IsCheckedCommand),
+        typeof(ICommand),
+        typeof(HeXCheckButton),
+        new FrameworkPropertyMetadata(null));
+
+    public ICommand? IsCheckedCommand {
+        get => (ICommand?)GetValue(IsCheckedCommandProperty);
+        set => SetValue(IsCheckedCommandProperty, value);
+    }
+
+    #endregion
+
     static HeXCheckButton() {
         DefaultStyleKeyProperty.OverrideMetadata(typeof(HeXCheckButton),
             new FrameworkPropertyMetadata(typeof(HeXCheckButton)));
+    }
+
+    public HeXCheckButton() {
+        Checked += (sender, args) => IsCheckedCommand?.Execute(true);
+        Unchecked += (sender, args) => IsCheckedCommand?.Execute(false);
     }
 
     protected override void OnPreviewMouseLeftButtonUp(MouseButtonEventArgs e) {
@@ -82,6 +121,8 @@ public class HeXCheckButton : System.Windows.Controls.RadioButton {
 
         if (skipOnMouseLeftButtonUpEvent) {
             IsChecked = false;
+            IsCheckedCommand?.Execute(IsChecked);
+            
             IsOn = false;
 
             skipOnMouseLeftButtonUpEvent = false;

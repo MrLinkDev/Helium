@@ -46,17 +46,19 @@ public class HePlot : Decorator {
         updateTimer.Interval = new TimeSpan(TimeSpan.TicksPerSecond / FrameRate);
         updateTimer.Tick += Tick;
         
-        base.BeginInit();
-        
         GlWindow window = new GlWindow();
         Child = window;
 
         plotDataDict = new Dictionary<int, PlotData>();
+        
+        base.BeginInit();
     }
+    
+    
     
     private void Tick(object? sender, EventArgs e) {
         Child?.InvalidateVisual();
-        UpdateScreen();
+        //UpdateScreen();
     }
 
     private void OnLoaded(object sender, RoutedEventArgs e) {
@@ -68,7 +70,7 @@ public class HePlot : Decorator {
         updateTimer.Start();
     }
 
-    private void UpdateScreen() {
+    public void UpdateScreen() {
         AmethystApi.SetScreenUpdated(screenPtr);
     }
 
@@ -91,6 +93,29 @@ public class HePlot : Decorator {
     public void AddTrace(int traceId, float[] data) {
         plotDataDict[traceId] = new PlotData(data);
         AmethystApi.AddTrace(containerPtr, traceId, plotDataDict[traceId].Pointer, plotDataDict[traceId].Points);
+
+        float[] x = new float[data.Length / 2];
+        float[] y = new float[data.Length / 2];
+        
+        for (int i = 0, j = 0; i < data.Length; i += 2, j += 1) {
+            x[j] = data[i];
+            y[j] = data[i + 1];
+        }
+
+        float startX = x.Min();
+        float stopX = x.Max();
+        
+        float startY = y.Min();
+        float stopY = y.Max();
+
+        float dY = MathF.Abs((stopY - startY) * 0.1f);
+        if (dY == 0) dY = 0.1f;
+        
+        startY -= dY;
+        stopY += dY;
+        
+        AmethystApi.SetStartStopX(containerPtr, traceId, startX, stopX);
+        AmethystApi.SetStartStopY(containerPtr, traceId, startY, stopY);
         
         UpdateScreen();
     }

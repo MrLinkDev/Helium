@@ -87,7 +87,7 @@
                         
                         <Trigger Property="IsOn" Value="True">
                             <Setter TargetName="Indicator" Property="BorderBrush" Value="{StaticResource PrimaryBrush500}" />
-                            <Setter TargetName="Indicator" Property="Background" Value="{StaticResource OrangeBrush500}" />
+                            <Setter TargetName="Indicator" Property="Background" Value="{StaticResource PrimaryBrush100}" />
                             
                             <Setter TargetName="Content" Property="Background" Value="{StaticResource PrimaryBrush500}" />
                         </Trigger>
