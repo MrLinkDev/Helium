@@ -612,12 +612,14 @@
             <xCheckButton:HeXCheckButton
                 DockPanel.Dock="Top"
                 Margin="0, 16, 0, 0"
+                Id="1"
                 Content="XCheck 1" 
                 IsOnCommand="{Binding IsOnCmd}"
                 IsCheckedCommand="{Binding IsCheckCmd}"/>
 
             <xCheckButton:HeXCheckButton
                 DockPanel.Dock="Top"
+                Id="2"
                 Margin="0, 8, 0, 0"
                 Content="XCheck 2" />
 

@@ -55,7 +55,7 @@ public class HeXCheckButton : System.Windows.Controls.RadioButton {
         get => (bool)GetValue(IsOnProperty);
         set {
             SetValue(IsOnProperty, value);
-            IsOnCommand?.Execute(value);
+            IsOnCommand?.Execute((Id, value));
         }
     }
 
@@ -112,8 +112,8 @@ public class HeXCheckButton : System.Windows.Controls.RadioButton {
     }
 
     public HeXCheckButton() {
-        Checked += (sender, args) => IsCheckedCommand?.Execute(true);
-        Unchecked += (sender, args) => IsCheckedCommand?.Execute(false);
+        Checked += (sender, args) => IsCheckedCommand?.Execute((Id, true));
+        Unchecked += (sender, args) => IsCheckedCommand?.Execute((Id, false));
     }
 
     protected override void OnPreviewMouseLeftButtonUp(MouseButtonEventArgs e) {
@@ -136,8 +136,6 @@ public class HeXCheckButton : System.Windows.Controls.RadioButton {
 
         if (skipOnMouseLeftButtonUpEvent) {
             IsChecked = false;
-            IsCheckedCommand?.Execute(IsChecked);
-            
             IsOn = false;
 
             skipOnMouseLeftButtonUpEvent = false;
