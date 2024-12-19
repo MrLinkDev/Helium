@@ -69,8 +69,14 @@ public partial class MainWindow : HeWindow, INotifyPropertyChanged {
         ValidationErrorEnabled.Text = "Validation err enabled";
         ValidationErrorDisabled.Text = "Validation err disabled";
 
-        IsOnCmd = new RelayCommand(value => {Console.WriteLine($"IsOn = {value}");});
-        IsCheckCmd = new RelayCommand(value => {Console.WriteLine($"IsCheck = {value}");});
+        IsOnCmd = new RelayCommand(value => {
+            (int, bool) v = ((int, bool))value;
+            Console.WriteLine($"[{v.Item1}] IsOn = {v.Item2}");
+        });
+        IsCheckCmd = new RelayCommand(value => {
+            (int, bool) v = ((int, bool))value;
+            Console.WriteLine($"[{v.Item1}] IsChecked = {v.Item2}");
+        });
     }
     
     
