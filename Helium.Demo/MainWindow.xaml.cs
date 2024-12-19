@@ -18,6 +18,27 @@ namespace HeliumDemo;
 /// <summary>
 /// Interaction logic for MainWindow.xaml
 /// </summary>
+///
+
+public class RelayCommand : ICommand {
+    private Action<object?>? execute;
+    
+    public RelayCommand(Action<object?> execute) {
+        this.execute = execute;
+    }
+
+    public bool CanExecute(object? parameter) {
+        return execute != null;
+    }
+    public void Execute(object? parameter) {
+        if (execute != null) execute(parameter);
+    }
+    public event EventHandler? CanExecuteChanged {
+        add { CommandManager.RequerySuggested += value; }
+        remove { CommandManager.RequerySuggested -= value; }
+    }
+}
+
 public partial class MainWindow : HeWindow, INotifyPropertyChanged {
     public bool IsPressed { get; set; } = true;
 
@@ -27,6 +48,9 @@ public partial class MainWindow : HeWindow, INotifyPropertyChanged {
         get => doubleData;
         set => SetField(ref doubleData, value);
     }
+    
+    public RelayCommand IsOnCmd { get; set; }
+    public RelayCommand IsCheckCmd { get; set; }
 
     private double xValueButtonTestVal = 5;
 
@@ -44,7 +68,12 @@ public partial class MainWindow : HeWindow, INotifyPropertyChanged {
 
         ValidationErrorEnabled.Text = "Validation err enabled";
         ValidationErrorDisabled.Text = "Validation err disabled";
+
+        IsOnCmd = new RelayCommand(value => {Console.WriteLine($"IsOn = {value}");});
+        IsCheckCmd = new RelayCommand(value => {Console.WriteLine($"IsCheck = {value}");});
     }
+    
+    
 
     public event PropertyChangedEventHandler? PropertyChanged;
 
