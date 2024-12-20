@@ -48,7 +48,7 @@ public partial class MainWindow : HeWindow, INotifyPropertyChanged {
         get => doubleData;
         set => SetField(ref doubleData, value);
     }
-    
+
     public RelayCommand IsOnCmd { get; set; }
     public RelayCommand IsCheckCmd { get; set; }
 
@@ -113,5 +113,10 @@ public partial class MainWindow : HeWindow, INotifyPropertyChanged {
             currentState += 1;
             Indicator.State = currentState;
         }
+    }
+
+    private void IncreaseXButtonTestVal(object sender, RoutedEventArgs e) {
+        XValueButtonTestVal = xValueButtonTestVal + 1;
+        Console.WriteLine(XValueButtonTestVal);
     }
 }

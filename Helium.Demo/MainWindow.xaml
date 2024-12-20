@@ -130,7 +130,8 @@
                     <button:HeButton
                         DockPanel.Dock="Top"
                         Text="Default"
-                        HeType="Flat" />
+                        HeType="Flat" 
+                        Click="IncreaseXButtonTestVal"/>
 
                     <button:HeButton
                         DockPanel.Dock="Top"

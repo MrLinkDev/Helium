@@ -58,7 +58,7 @@ public class HePlot : Decorator {
     
     private void Tick(object? sender, EventArgs e) {
         Child?.InvalidateVisual();
-        //UpdateScreen();
+        UpdateScreen();
     }
 
     private void OnLoaded(object sender, RoutedEventArgs e) {

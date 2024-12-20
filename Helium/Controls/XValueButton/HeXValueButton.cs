@@ -1,4 +1,5 @@
-﻿using System.Globalization;
+﻿using System.ComponentModel;
+using System.Globalization;
 using System.Windows;
 using System.Windows.Controls.Primitives;
 using System.Windows.Data;
@@ -204,12 +205,22 @@ public class HeXValueButton : ButtonBase {
         nameof(Value),
         typeof(double),
         typeof(HeXValueButton),
-        new FrameworkPropertyMetadata(0.0,
-            FrameworkPropertyMetadataOptions.AffectsRender | FrameworkPropertyMetadataOptions.BindsTwoWayByDefault));
+        new FrameworkPropertyMetadata(
+            0.0,
+            FrameworkPropertyMetadataOptions.AffectsRender | FrameworkPropertyMetadataOptions.BindsTwoWayByDefault, 
+            ValuePropertyChangedCallback));
+
+    private static void ValuePropertyChangedCallback(DependencyObject d, DependencyPropertyChangedEventArgs e) {
+        HeXValueButton button = (HeXValueButton)d;
+        button.Value = (double)e.NewValue;
+    }
 
     public double Value {
         get => (double)GetValue(ValueProperty);
-        set => SetValue(ValueProperty, value);
+        set {
+            SetValue(ValueProperty, value);
+            DisplayedValue = GetDisplayedValue(value);
+        }
     }
 
     #endregion
@@ -221,8 +232,8 @@ public class HeXValueButton : ButtonBase {
         typeof(double),
         typeof(HeXValueButton),
         new FrameworkPropertyMetadata(double.NegativeInfinity,
-            FrameworkPropertyMetadataOptions.AffectsRender));
-
+            FrameworkPropertyMetadataOptions.AffectsRender | FrameworkPropertyMetadataOptions.BindsTwoWayByDefault));
+    
     public double MinValue {
         get => (double)GetValue(MinValueProperty);
         set => SetValue(MinValueProperty, value);
@@ -453,16 +464,16 @@ public class HeXValueButton : ButtonBase {
 
             if (temp < MinValue) {
                 Value = MinValue;
-            } else if (Value > MaxValue) {
+            } else if (temp > MaxValue) {
                 Value = MaxValue;
+            } else {
+                Value = temp;
             }
             
-            Value = temp;
         } catch (Exception e) {
             Value = MinValue;
         }
-
-        DisplayedValue = GetDisplayedValue(Value);
+        
         Close();
     }
 
