@@ -7,9 +7,9 @@
                     xmlns:xValueButton="clr-namespace:Helium.Controls.XValueButton">
 
     <ResourceDictionary.MergedDictionaries>
-        <ResourceDictionary Source="/Helium;component/Resources/Brushes.xaml" />
-        <ResourceDictionary Source="/Helium;component/Resources/Colors.xaml" />
-        <ResourceDictionary Source="/Helium;component/Resources/Dimensions.xaml" />
+        <ResourceDictionary Source="/Alexander.Gorbunov.Helium;component/Resources/Brushes.xaml" />
+        <ResourceDictionary Source="/Alexander.Gorbunov.Helium;component/Resources/Colors.xaml" />
+        <ResourceDictionary Source="/Alexander.Gorbunov.Helium;component/Resources/Dimensions.xaml" />
     </ResourceDictionary.MergedDictionaries>
 
     <ControlTemplate x:Key="HeXValueButtonFlatDefault" TargetType="{x:Type xValueButton:HeXValueButton}">
@@ -188,7 +188,7 @@
                             HeTheme="Black"
                             ImageHeight="16"
                             ImageWidth="16"
-                            ImageSource="/Helium;component/Resources/Icons/backspace_icon.png" />
+                            ImageSource="/Alexander.Gorbunov.Helium;component/Resources/Icons/backspace_icon.png" />
 
                         <button:HeButton
                             x:Name="ButtonExp1"

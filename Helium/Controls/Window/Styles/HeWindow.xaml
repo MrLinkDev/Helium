@@ -4,9 +4,9 @@
                     xmlns:imageButton="clr-namespace:Helium.Controls.ImageButton">
 
     <ResourceDictionary.MergedDictionaries>
-        <ResourceDictionary Source="/Helium;component/Resources/Brushes.xaml" />
-        <ResourceDictionary Source="/Helium;component/Resources/Colors.xaml" />
-        <ResourceDictionary Source="/Helium;component/Resources/Dimensions.xaml" />
+        <ResourceDictionary Source="/Alexander.Gorbunov.Helium;component/Resources/Brushes.xaml" />
+        <ResourceDictionary Source="/Alexander.Gorbunov.Helium;component/Resources/Colors.xaml" />
+        <ResourceDictionary Source="/Alexander.Gorbunov.Helium;component/Resources/Dimensions.xaml" />
     </ResourceDictionary.MergedDictionaries>
 
     <Style TargetType="{x:Type local:HeWindow}">
@@ -95,7 +95,7 @@
                                             CornerRadius="0"
                                             ImageHeight="16"
                                             ImageWidth="16"
-                                            ImageSource="/Helium;component/Resources/Icons/close_icon.png" />
+                                            ImageSource="/Alexander.Gorbunov.Helium;component/Resources/Icons/close_icon.png" />
                                         
                                         <imageButton:HeImageButton
                                             x:Name="MaximizeButton"
@@ -106,7 +106,7 @@
                                             CornerRadius="0"
                                             ImageHeight="16"
                                             ImageWidth="16"
-                                            ImageSource="/Helium;component/Resources/Icons/maximize_icon.png">
+                                            ImageSource="/Alexander.Gorbunov.Helium;component/Resources/Icons/maximize_icon.png">
                                         </imageButton:HeImageButton>
                                         
                                         <imageButton:HeImageButton
@@ -118,7 +118,7 @@
                                             CornerRadius="0"
                                             ImageHeight="16"
                                             ImageWidth="16"
-                                            ImageSource="/Helium;component/Resources/Icons/minimize_icon.png" />
+                                            ImageSource="/Alexander.Gorbunov.Helium;component/Resources/Icons/minimize_icon.png" />
                                     </DockPanel>
                                 </Grid>
 

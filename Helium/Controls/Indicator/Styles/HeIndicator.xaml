@@ -4,7 +4,7 @@
                     xmlns:indicator="clr-namespace:Helium.Controls.Indicator">
     
     <ResourceDictionary.MergedDictionaries>
-        <ResourceDictionary Source="/Helium;component/Controls/Indicator/Styles/Templates/HeConnectionIndicatorTemplates.xaml"/>
+        <ResourceDictionary Source="/Alexander.Gorbunov.Helium;component/Controls/Indicator/Styles/Templates/HeConnectionIndicatorTemplates.xaml"/>
     </ResourceDictionary.MergedDictionaries>
     
     <Style TargetType="{x:Type indicator:HeIndicator}">

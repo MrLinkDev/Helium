@@ -21,6 +21,7 @@
     </PropertyGroup>
 
     <ItemGroup>
+      <ProjectReference Include="..\Amethyst\Amethyst\Amethyst.vcxproj" />
       <ProjectReference Include="..\Helium.Plot\Helium.Plot.csproj" />
       <ProjectReference Include="..\Helium\Helium.csproj" />
     </ItemGroup>

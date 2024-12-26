@@ -28,7 +28,7 @@ public class HeWindow : System.Windows.Window {
         typeof(HeWindow),
         new FrameworkPropertyMetadata(
             new BitmapImage(
-                new Uri("pack://application:,,,/Helium;component/Resources/Icons/app_icon.png"))));
+                new Uri("pack://application:,,,/Alexander.Gorbunov.Helium;component/Resources/Icons/app_icon.png"))));
     
     public static readonly DependencyProperty WindowTitleProperty = DependencyProperty.Register(
         nameof(WindowTitle),
@@ -94,9 +94,9 @@ public class HeWindow : System.Windows.Window {
         base.OnApplyTemplate();
 
         maximizeIcon = new BitmapImage(
-            new Uri("pack://application:,,,/Helium;component/Resources/Icons/maximize_icon.png"));
+            new Uri("pack://application:,,,/Alexander.Gorbunov.Helium;component/Resources/Icons/maximize_icon.png"));
         normalizeIcon = new BitmapImage(
-            new Uri("pack://application:,,,/Helium;component/Resources/Icons/default_icon.png"));
+            new Uri("pack://application:,,,/Alexander.Gorbunov.Helium;component/Resources/Icons/default_icon.png"));
 
         DockPanel? panel = GetTemplateChild("WindowToolbar") as DockPanel;
 

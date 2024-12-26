@@ -3,9 +3,9 @@
                     xmlns:button="clr-namespace:Helium.Controls.ImageButton">
     
     <ResourceDictionary.MergedDictionaries>
-        <ResourceDictionary Source="/Helium;component/Controls/ImageButton/Styles/Templates/HeImageButtonFlatTemplates.xaml"/>
-        <ResourceDictionary Source="/Helium;component/Controls/ImageButton/Styles/Templates/HeImageButtonBezelTemplates.xaml"/>
-        <ResourceDictionary Source="/Helium;component/Controls/ImageButton/Styles/Templates/HeImageButtonTransparentTemplates.xaml"/>
+        <ResourceDictionary Source="/Alexander.Gorbunov.Helium;component/Controls/ImageButton/Styles/Templates/HeImageButtonFlatTemplates.xaml"/>
+        <ResourceDictionary Source="/Alexander.Gorbunov.Helium;component/Controls/ImageButton/Styles/Templates/HeImageButtonBezelTemplates.xaml"/>
+        <ResourceDictionary Source="/Alexander.Gorbunov.Helium;component/Controls/ImageButton/Styles/Templates/HeImageButtonTransparentTemplates.xaml"/>
     </ResourceDictionary.MergedDictionaries>
     
     <Style TargetType="{x:Type button:HeImageButton}">

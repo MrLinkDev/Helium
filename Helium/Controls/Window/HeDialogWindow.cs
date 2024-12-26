@@ -18,7 +18,7 @@ public class HeDialogWindow : System.Windows.Window {
         typeof(HeDialogWindow),
         new FrameworkPropertyMetadata(
             new BitmapImage(
-                new Uri("pack://application:,,,/Helium;component/Resources/Icons/app_icon.png"))));
+                new Uri("pack://application:,,,/Alexander.Gorbunov.Helium;component/Resources/Icons/app_icon.png"))));
 
     public static readonly DependencyProperty WindowTitleProperty = DependencyProperty.Register(
         nameof(WindowTitle),

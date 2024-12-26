@@ -1,15 +1,19 @@
-﻿using System.Runtime.InteropServices;
-using System.Windows;
+﻿using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Interop;
+using System.Windows.Input;
 using System.Windows.Threading;
-
 using Amethyst;
 
 namespace Helium.Plot;
 
-public class HePlot : Decorator {
-    
+public class HePlot : GlWindow {
+    private bool isUpdateEnabled = true;
+
+    public bool IsUpdateEnabled {
+        get => isUpdateEnabled;
+        set => isUpdateEnabled = value;
+    }
+
     private DispatcherTimer updateTimer = new DispatcherTimer();
 
     private IntPtr screenPtr;
@@ -35,43 +39,43 @@ public class HePlot : Decorator {
 
     #endregion
 
-    static HePlot() {
-        DefaultStyleKeyProperty.OverrideMetadata(typeof(HePlot),
-            new FrameworkPropertyMetadata(typeof(HePlot)));
+    public HePlot() {
+        Loaded += OnLoaded;
     }
 
     public override void BeginInit() {
-        Loaded += OnLoaded;
-        
         updateTimer.Interval = new TimeSpan(TimeSpan.TicksPerSecond / FrameRate);
         updateTimer.Tick += Tick;
-        
-        GlWindow window = new GlWindow();
-        Child = window;
 
         plotDataDict = new Dictionary<int, PlotData>();
         
         base.BeginInit();
     }
-    
-    
-    
+
     private void Tick(object? sender, EventArgs e) {
-        Child?.InvalidateVisual();
         UpdateScreen();
     }
 
-    private void OnLoaded(object sender, RoutedEventArgs e) {
+    public override void OnLoaded(object sender, RoutedEventArgs args) {
+        base.OnLoaded(sender, args);
+        
         unsafe {
-            screenPtr = (IntPtr) ((GlWindow)Child).screen;
+            screenPtr = (IntPtr)screen;
             containerPtr = AmethystApi.GetTraceContainerPtr(screenPtr);
         }
+
+        SizeChangedInfo info = new SizeChangedInfo(this, new Size(), true, true);
         
+        OnRenderSizeChanged(info);
+        
+        UpdateScreen();
         updateTimer.Start();
     }
 
     public void UpdateScreen() {
+        if (!IsUpdateEnabled) return;
         AmethystApi.SetScreenUpdated(screenPtr);
+        InvalidateVisual();
     }
 
     #region TraceRegion

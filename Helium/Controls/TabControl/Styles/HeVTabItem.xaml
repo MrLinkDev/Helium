@@ -3,9 +3,9 @@
                     xmlns:tabControl="clr-namespace:Helium.Controls.TabControl">
 
     <ResourceDictionary.MergedDictionaries>
-        <ResourceDictionary Source="/Helium;component/Resources/Brushes.xaml" />
-        <ResourceDictionary Source="/Helium;component/Resources/Colors.xaml" />
-        <ResourceDictionary Source="/Helium;component/Resources/Dimensions.xaml" />
+        <ResourceDictionary Source="/Alexander.Gorbunov.Helium;component/Resources/Brushes.xaml" />
+        <ResourceDictionary Source="/Alexander.Gorbunov.Helium;component/Resources/Colors.xaml" />
+        <ResourceDictionary Source="/Alexander.Gorbunov.Helium;component/Resources/Dimensions.xaml" />
     </ResourceDictionary.MergedDictionaries>
 
     <ControlTemplate x:Key="HeVTabItemL0" TargetType="{x:Type tabControl:HeVTabItem}">

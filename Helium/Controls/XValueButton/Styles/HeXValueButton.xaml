@@ -4,7 +4,7 @@
                     xmlns:xValueButton="clr-namespace:Helium.Controls.XValueButton">
     
     <ResourceDictionary.MergedDictionaries>
-        <ResourceDictionary Source="/Helium;component/Controls/XValueButton/Styles/Templates/HeXValueButtonFlatTemplates.xaml"/>
+        <ResourceDictionary Source="/Alexander.Gorbunov.Helium;component/Controls/XValueButton/Styles/Templates/HeXValueButtonFlatTemplates.xaml"/>
     </ResourceDictionary.MergedDictionaries>
     
     <Style TargetType="{x:Type xValueButton:HeXValueButton}">

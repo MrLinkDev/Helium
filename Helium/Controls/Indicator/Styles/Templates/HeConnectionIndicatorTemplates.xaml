@@ -4,7 +4,7 @@
                     xmlns:utilities="clr-namespace:Helium.Controls.Indicator.Utilities">
 
     <ResourceDictionary.MergedDictionaries>
-        <ResourceDictionary Source="/Helium;component/Resources/Brushes.xaml" />
+        <ResourceDictionary Source="/Alexander.Gorbunov.Helium;component/Resources/Brushes.xaml" />
     </ResourceDictionary.MergedDictionaries>
 
     <ControlTemplate x:Key="HeConnectionIndicator" TargetType="{x:Type indicator:HeIndicator}">

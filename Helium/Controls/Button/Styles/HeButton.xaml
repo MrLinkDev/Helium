@@ -3,8 +3,8 @@
                     xmlns:button="clr-namespace:Helium.Controls.Button">
     
     <ResourceDictionary.MergedDictionaries>
-        <ResourceDictionary Source="/Helium;component/Controls/Button/Styles/Templates/HeButtonFlatTemplates.xaml"/>
-        <ResourceDictionary Source="/Helium;component/Controls/Button/Styles/Templates/HeButtonBezelTemplates.xaml"/>
+        <ResourceDictionary Source="/Alexander.Gorbunov.Helium;component/Controls/Button/Styles/Templates/HeButtonFlatTemplates.xaml"/>
+        <ResourceDictionary Source="/Alexander.Gorbunov.Helium;component/Controls/Button/Styles/Templates/HeButtonBezelTemplates.xaml"/>
     </ResourceDictionary.MergedDictionaries>
     
     <Style TargetType="{x:Type button:HeButton}">

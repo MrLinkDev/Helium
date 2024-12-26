@@ -3,9 +3,9 @@
                     xmlns:local="clr-namespace:Helium.Controls.ImageButton">
 
     <ResourceDictionary.MergedDictionaries>
-        <ResourceDictionary Source="/Helium;component/Resources/Brushes.xaml" />
-        <ResourceDictionary Source="/Helium;component/Resources/Colors.xaml" />
-        <ResourceDictionary Source="/Helium;component/Resources/Dimensions.xaml" />
+        <ResourceDictionary Source="/Alexander.Gorbunov.Helium;component/Resources/Brushes.xaml" />
+        <ResourceDictionary Source="/Alexander.Gorbunov.Helium;component/Resources/Colors.xaml" />
+        <ResourceDictionary Source="/Alexander.Gorbunov.Helium;component/Resources/Dimensions.xaml" />
     </ResourceDictionary.MergedDictionaries>
 
     <ControlTemplate x:Key="HeImageButtonTransparentDefault" TargetType="{x:Type local:HeImageButton}">

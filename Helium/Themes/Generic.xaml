@@ -1,33 +1,33 @@
 ﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
     <ResourceDictionary.MergedDictionaries>
-        <ResourceDictionary Source="/Helium;component/Controls/Window/Styles/HeWindow.xaml"/>
-        <ResourceDictionary Source="/Helium;component/Controls/Window/Styles/HeDialogWindow.xaml"/>
+        <ResourceDictionary Source="/Alexander.Gorbunov.Helium;component/Controls/Window/Styles/HeWindow.xaml"/>
+        <ResourceDictionary Source="/Alexander.Gorbunov.Helium;component/Controls/Window/Styles/HeDialogWindow.xaml"/>
         
-        <ResourceDictionary Source="/Helium;component/Controls/Button/Styles/HeButton.xaml"/>
-        <ResourceDictionary Source="/Helium;component/Controls/ImageButton/Styles/HeImageButton.xaml"/>
+        <ResourceDictionary Source="/Alexander.Gorbunov.Helium;component/Controls/Button/Styles/HeButton.xaml"/>
+        <ResourceDictionary Source="/Alexander.Gorbunov.Helium;component/Controls/ImageButton/Styles/HeImageButton.xaml"/>
         
-        <ResourceDictionary Source="/Helium;component/Controls/RadioButton/Styles/HeRadioButton.xaml"/>
+        <ResourceDictionary Source="/Alexander.Gorbunov.Helium;component/Controls/RadioButton/Styles/HeRadioButton.xaml"/>
         
-        <ResourceDictionary Source="/Helium;component/Controls/CheckBox/Styles/HeCheckBox.xaml"/>
+        <ResourceDictionary Source="/Alexander.Gorbunov.Helium;component/Controls/CheckBox/Styles/HeCheckBox.xaml"/>
         
-        <ResourceDictionary Source="/Helium;component/Controls/Switch/Styles/HeSwitchToggle.xaml"/>
-        <ResourceDictionary Source="/Helium;component/Controls/Switch/Styles/HeSwitch.xaml"/>
+        <ResourceDictionary Source="/Alexander.Gorbunov.Helium;component/Controls/Switch/Styles/HeSwitchToggle.xaml"/>
+        <ResourceDictionary Source="/Alexander.Gorbunov.Helium;component/Controls/Switch/Styles/HeSwitch.xaml"/>
         
-        <ResourceDictionary Source="/Helium;component/Controls/EditText/Styles/HeEditText.xaml"/>
+        <ResourceDictionary Source="/Alexander.Gorbunov.Helium;component/Controls/EditText/Styles/HeEditText.xaml"/>
         
-        <ResourceDictionary Source="/Helium;component/Controls/Indicator/Styles/HeIndicator.xaml"/>
+        <ResourceDictionary Source="/Alexander.Gorbunov.Helium;component/Controls/Indicator/Styles/HeIndicator.xaml"/>
         
-        <ResourceDictionary Source="/Helium;component/Controls/XValueButton/Styles/HeXValueButton.xaml"/>
-        <ResourceDictionary Source="/Helium;component/Controls/XRadioButton/Styles/HeXRadioButton.xaml"/>
-        <ResourceDictionary Source="/Helium;component/Controls/XCheckButton/Styles/HeXCheckButton.xaml"/>
+        <ResourceDictionary Source="/Alexander.Gorbunov.Helium;component/Controls/XValueButton/Styles/HeXValueButton.xaml"/>
+        <ResourceDictionary Source="/Alexander.Gorbunov.Helium;component/Controls/XRadioButton/Styles/HeXRadioButton.xaml"/>
+        <ResourceDictionary Source="/Alexander.Gorbunov.Helium;component/Controls/XCheckButton/Styles/HeXCheckButton.xaml"/>
         
-        <ResourceDictionary Source="/Helium;component/Controls/TabControl/Styles/HeVTabControl.xaml"/>
-        <ResourceDictionary Source="/Helium;component/Controls/TabControl/Styles/HeVTabItem.xaml"/>
+        <ResourceDictionary Source="/Alexander.Gorbunov.Helium;component/Controls/TabControl/Styles/HeVTabControl.xaml"/>
+        <ResourceDictionary Source="/Alexander.Gorbunov.Helium;component/Controls/TabControl/Styles/HeVTabItem.xaml"/>
         
-        <ResourceDictionary Source="/Helium;component/Controls/ComboBox/Styles/HeComboBox.xaml"/>
-        <ResourceDictionary Source="/Helium;component/Controls/ComboBox/Styles/HeComboBoxItem.xaml"/>
-        <ResourceDictionary Source="/Helium;component/Controls/ComboBox/Styles/HeComboBoxTextBox.xaml"/>
-        <ResourceDictionary Source="/Helium;component/Controls/ComboBox/Styles/HeComboBoxToggleButton.xaml"/>
+        <ResourceDictionary Source="/Alexander.Gorbunov.Helium;component/Controls/ComboBox/Styles/HeComboBox.xaml"/>
+        <ResourceDictionary Source="/Alexander.Gorbunov.Helium;component/Controls/ComboBox/Styles/HeComboBoxItem.xaml"/>
+        <ResourceDictionary Source="/Alexander.Gorbunov.Helium;component/Controls/ComboBox/Styles/HeComboBoxTextBox.xaml"/>
+        <ResourceDictionary Source="/Alexander.Gorbunov.Helium;component/Controls/ComboBox/Styles/HeComboBoxToggleButton.xaml"/>
     </ResourceDictionary.MergedDictionaries>
 </ResourceDictionary>
