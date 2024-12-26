@@ -4,9 +4,8 @@
                  xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
                  xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
                  xmlns:local="clr-namespace:HeliumDemo"
-                 xmlns:plot="clr-namespace:Helium.Plot;assembly=Alexander.Gorbunov.Helium.Plot"
                  xmlns:window="clr-namespace:Helium.Controls.Window;assembly=Alexander.Gorbunov.Helium"
-                 xmlns:amethyst="clr-namespace:Amethyst;assembly=Alexander.Gorbunov.Amethyst"
+                 xmlns:plot="clr-namespace:Helium.Controls.Plot;assembly=Alexander.Gorbunov.Helium"
                  mc:Ignorable="d"
                  Title="OpenGLDemo" Height="720" Width="1280">
     <Grid>

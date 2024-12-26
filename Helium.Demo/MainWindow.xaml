@@ -11,7 +11,6 @@
                  xmlns:checkBox="clr-namespace:Helium.Controls.CheckBox;assembly=Alexander.Gorbunov.Helium"
                  xmlns:editText="clr-namespace:Helium.Controls.EditText;assembly=Alexander.Gorbunov.Helium"
                  xmlns:xButton="clr-namespace:Helium.Controls.XValueButton;assembly=Alexander.Gorbunov.Helium"
-                 xmlns:plot="clr-namespace:Helium.Plot;assembly=Alexander.Gorbunov.Helium.Plot"
                  xmlns:xValueButton="clr-namespace:Helium.Controls.XValueButton;assembly=Alexander.Gorbunov.Helium"
                  xmlns:xRadioButton="clr-namespace:Helium.Controls.XRadioButton;assembly=Alexander.Gorbunov.Helium"
                  xmlns:indicator="clr-namespace:Helium.Controls.Indicator;assembly=Alexander.Gorbunov.Helium"

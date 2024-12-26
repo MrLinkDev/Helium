@@ -3,7 +3,6 @@ using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Input;
 using Helium.Controls.Window;
-using Helium.Plot;
 
 namespace HeliumDemo;
 
