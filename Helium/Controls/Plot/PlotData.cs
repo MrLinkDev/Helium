@@ -5,16 +5,16 @@ namespace Helium.Controls.Plot;
 public class PlotData : IDisposable {
     private GCHandle gcHandle;
     
-    private uint size;
+    private int size;
 
-    public uint Size {
+    public int Size {
         get => size;
         set => size = value;
     }
     
-    private uint points;
+    private int points;
 
-    public uint Points {
+    public int Points {
         get => points;
         set => points = value;
     }
@@ -33,9 +33,9 @@ public class PlotData : IDisposable {
         set => pointer = value;
     }
 
-    public PlotData(uint size) {
-        this.size = size;
-        points = this.size / 2;
+    public PlotData(int points) {
+        this.points = points;
+        size  = points * 2;
 
         data = new float[size];
         
@@ -49,7 +49,7 @@ public class PlotData : IDisposable {
 
         this.data = data;
         
-        size = (uint)data.Length;
+        size = data.Length;
         points = size / 2;
     }
 

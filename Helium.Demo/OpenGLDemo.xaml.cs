@@ -41,7 +41,7 @@ public partial class OpenGLDemo : HeWindow {
 
     private void AddTrace_OnClick(object sender, RoutedEventArgs e) {
         int traceId = Convert.ToInt32(TraceId.Text);
-        uint size = Convert.ToUInt32(Points.Text) * 2; // ???
+        int points = Convert.ToInt32(Points.Text); 
 
         int startX = Convert.ToInt32(StartX.Text);
         int stopX = Convert.ToInt32(StopX.Text);
@@ -51,13 +51,13 @@ public partial class OpenGLDemo : HeWindow {
 
         if (traceDataStorage.ContainsKey(traceId)) return;
 
-        traceDataStorage[traceId] = Plot.AddTrace(traceId, size, startX, startY, stopX, stopY);
+        traceDataStorage[traceId] = Plot.AddTrace(traceId, points, startX, startY, stopX, stopY);
 
         float[] traceData = traceDataStorage[traceId];
-        float dx = (stopX - startX) / (((float)size / 2) - 1);
-        for (uint i = 0; i < size / 2; i += 1) {
+        float dx = (stopX - startX) / ((float)points - 1);
+        for (uint i = 0; i < points; i += 1) {
             traceData[i * 2 + 0] = startX + dx * i;
-            traceData[i * 2 + 1] = MathF.Sin(2 * MathF.PI * 1 * i * 2 / size);
+            traceData[i * 2 + 1] = MathF.Sin(2 * MathF.PI * 1 * i / points);
         }
     }
 

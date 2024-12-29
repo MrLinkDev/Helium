@@ -18,7 +18,7 @@ internal static class AmethystApi {
     public static extern IntPtr GetSelectedTracePtr(IntPtr containerPtr);
 
     [DllImport(DLL_NAME, CharSet = CharSet.Unicode, CallingConvention = CallingConvention.Cdecl)]
-    public static extern void AddTrace(IntPtr containerPtr, int traceId, IntPtr dataPtr, uint points);
+    public static extern void AddTrace(IntPtr containerPtr, int traceId, IntPtr dataPtr, int points);
 
     [DllImport(DLL_NAME, CharSet = CharSet.Unicode, CallingConvention = CallingConvention.Cdecl)]
     public static extern void SelectTrace(IntPtr containerPtr, int traceId);
@@ -27,7 +27,7 @@ internal static class AmethystApi {
     public static extern void RemoveTrace(IntPtr containerPtr, int traceId);
 
     [DllImport(DLL_NAME, CharSet = CharSet.Unicode, CallingConvention = CallingConvention.Cdecl)]
-    public static extern void SetData(IntPtr containerPtr, int traceId, IntPtr dataPtr, uint points);
+    public static extern void SetData(IntPtr containerPtr, int traceId, IntPtr dataPtr, int points);
 
     [DllImport(DLL_NAME, CharSet = CharSet.Unicode, CallingConvention = CallingConvention.Cdecl)]
     public static extern void SetStartStopX(IntPtr container, int traceId, float startX, float stopX);

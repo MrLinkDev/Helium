@@ -78,10 +78,10 @@ public class HePlot : GlWindow {
 
     #region TraceRegion
 
-    public float[] AddTrace(int traceId, uint size, float startX, float startY, float stopX, float stopY) {
+    public float[] AddTrace(int traceId, int points, float startX, float startY, float stopX, float stopY) {
         if (plotDataDict.TryGetValue(traceId, out PlotData? value)) return value.Data;
 
-        plotDataDict[traceId] = new PlotData(size);
+        plotDataDict[traceId] = new PlotData(points);
         AmethystApi.AddTrace(containerPtr, traceId, plotDataDict[traceId].Pointer, plotDataDict[traceId].Points);
         
         AmethystApi.SetStartStopX(containerPtr, traceId, startX, stopX);
