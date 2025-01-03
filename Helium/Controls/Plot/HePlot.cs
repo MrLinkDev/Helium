@@ -12,7 +12,7 @@ public class HePlot : GlWindow {
         set => isUpdateEnabled = value;
     }
 
-    private DispatcherTimer updateTimer = new DispatcherTimer();
+    private DispatcherTimer updateTimer = new DispatcherTimer(DispatcherPriority.Render);
 
     private IntPtr screenPtr;
     private IntPtr containerPtr;
