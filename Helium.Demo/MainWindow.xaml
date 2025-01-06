@@ -21,6 +21,7 @@
                  xmlns:comboBox="clr-namespace:Helium.Controls.ComboBox;assembly=Alexander.Gorbunov.Helium"
                  xmlns:xCheckButton="clr-namespace:Helium.Controls.XCheckButton;assembly=Alexander.Gorbunov.Helium"
                  xmlns:window="clr-namespace:Helium.Controls.Window;assembly=Alexander.Gorbunov.Helium"
+                 xmlns:xCheckValueButton="clr-namespace:Helium.Controls.XCheckValueButton;assembly=Alexander.Gorbunov.Helium"
 
                  mc:Ignorable="d"
                  Title="MainWindow"
@@ -627,6 +628,37 @@
                 DockPanel.Dock="Top"
                 Margin="0, 8, 0, 0"
                 Text="Disabled"
+                IsEnabled="False" />
+            
+            <xCheckValueButton:HeXCheckValueButton
+                DockPanel.Dock="Top"
+                Margin="0, 16, 0, 0"
+                Id="1"
+                ValueName="XCheckV 1"
+                MinValue="5"
+                Value="100"
+                MaxValue="500"
+                IsActiveCommand="{Binding IsOnCmd}"
+                IsCheckedCommand="{Binding IsCheckCmd}"/>
+
+            <xCheckValueButton:HeXCheckValueButton
+                DockPanel.Dock="Top"
+                Id="2"
+                Margin="0, 8, 0, 0"
+                
+                ValueName="XCheckV 2"
+                FullValueName="X CHECK VALUE 2"
+                MinValue="5"
+                Value="10"
+                MaxValue="500" />
+
+            <xCheckValueButton:HeXCheckValueButton
+                DockPanel.Dock="Top"
+                Margin="0, 8, 0, 0"
+                ValueName="Disabled"
+                MinValue="5"
+                Value="100"
+                MaxValue="500"
                 IsEnabled="False" />
         </DockPanel>
 

@@ -9,8 +9,6 @@ using Helium.Resources;
 namespace Helium.Controls.XCheckButton;
 
 public class HeXCheckButton : System.Windows.Controls.RadioButton {
-
-    private bool skipOnMouseLeftButtonUpEvent = false;
     
     #region CornerRadius
 

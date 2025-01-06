@@ -21,6 +21,7 @@
         <ResourceDictionary Source="/Alexander.Gorbunov.Helium;component/Controls/XValueButton/Styles/HeXValueButton.xaml"/>
         <ResourceDictionary Source="/Alexander.Gorbunov.Helium;component/Controls/XRadioButton/Styles/HeXRadioButton.xaml"/>
         <ResourceDictionary Source="/Alexander.Gorbunov.Helium;component/Controls/XCheckButton/Styles/HeXCheckButton.xaml"/>
+        <ResourceDictionary Source="/Alexander.Gorbunov.Helium;component/Controls/XCheckValueButton/Styles/HeXCheckValueButton.xaml"/>
         
         <ResourceDictionary Source="/Alexander.Gorbunov.Helium;component/Controls/TabControl/Styles/HeVTabControl.xaml"/>
         <ResourceDictionary Source="/Alexander.Gorbunov.Helium;component/Controls/TabControl/Styles/HeVTabItem.xaml"/>
