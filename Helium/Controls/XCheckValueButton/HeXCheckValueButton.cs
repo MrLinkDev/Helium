@@ -214,7 +214,7 @@ public class HeXCheckValueButton : System.Windows.Controls.RadioButton {
     public override void OnApplyTemplate() {
         base.OnApplyTemplate();
 
-        if (GetTemplateChild("CheckButton") is HeXValueButton button) {
+        if (GetTemplateChild("CheckButton") is HeXCheckValueButtonPart button) {
             button.Click += OnCheckButtonClick;
         };
 

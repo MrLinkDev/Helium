@@ -74,12 +74,12 @@
                             </Border.Style>
                         </Border>
 
-                        <heButton:HeButton
+                        <button:HeXCheckButtonPart
                             x:Name="CheckButton"
                             Grid.Column="1" 
                             
                             Width="Auto"
-                            Height="Auto"
+                            Height="{TemplateBinding Height}"
                             
                             Text="{TemplateBinding Text}"/>
                     </Grid>

@@ -75,7 +75,7 @@
                             </Border.Style>
                         </Border>
 
-                        <xValueButton:HeXValueButton
+                        <button:HeXCheckValueButtonPart
                             x:Name="CheckButton"
                             Grid.Column="1" 
                             

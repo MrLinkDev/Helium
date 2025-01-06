@@ -121,7 +121,7 @@ public class HeXCheckButton : System.Windows.Controls.RadioButton {
     public override void OnApplyTemplate() {
         base.OnApplyTemplate();
 
-        if (GetTemplateChild("CheckButton") is not HeButton button) return;
+        if (GetTemplateChild("CheckButton") is not HeXCheckButtonPart button) return;
         button.Click += OnCheckButtonClick;
 
         if (GetTemplateChild("Indicator") is not Border indicator) return;
