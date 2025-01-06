@@ -1,7 +1,9 @@
 ﻿using System.ComponentModel;
 using System.Windows;
+using System.Windows.Controls;
 using System.Windows.Input;
 using System.Windows.Media;
+using Helium.Controls.Button;
 using Helium.Resources;
 
 namespace Helium.Controls.XCheckButton;
@@ -42,51 +44,53 @@ public class HeXCheckButton : System.Windows.Controls.RadioButton {
 
     #endregion
     
-    #region IsOn
+    #region IsActive
 
-    public static readonly DependencyProperty IsOnProperty = DependencyProperty.Register(
-        nameof(IsOn),
+    public static readonly DependencyProperty IsActiveProperty = DependencyProperty.Register(
+        nameof(IsActive),
         typeof(bool),
         typeof(HeXCheckButton),
         new FrameworkPropertyMetadata(false,
             FrameworkPropertyMetadataOptions.AffectsRender));
 
-    public bool IsOn {
-        get => (bool)GetValue(IsOnProperty);
+    public bool IsActive {
+        get => (bool)GetValue(IsActiveProperty);
         set {
-            SetValue(IsOnProperty, value);
-            IsOnCommand?.Execute((Id, value));
+            SetValue(IsActiveProperty, value);
+            IsActiveCommand?.Execute((Id, value));
+
+            if (!value) IsChecked = false;
         }
     }
 
     #endregion
     
-    #region Content
+    #region Text
 
-    public new static readonly DependencyProperty ContentProperty = DependencyProperty.Register(
-        nameof(Content),
-        typeof(object),
+    public static readonly DependencyProperty TextProperty = DependencyProperty.Register(
+        nameof(Text),
+        typeof(string),
         typeof(HeXCheckButton),
-        new FrameworkPropertyMetadata(null));
+        new FrameworkPropertyMetadata(string.Empty));
 
-    public new object? Content {
-        get => (object?)GetValue(ContentProperty);
-        set => SetValue(ContentProperty, value);
+    public string Text {
+        get => (string)GetValue(TextProperty);
+        set => SetValue(TextProperty, value);
     }
 
     #endregion
 
-    #region IsOnCommand
+    #region IsActiveCommand
 
-    public static readonly DependencyProperty IsOnCommandProperty = DependencyProperty.Register(
-        nameof(IsOnCommand),
+    public static readonly DependencyProperty IsActiveCommandProperty = DependencyProperty.Register(
+        nameof(IsActiveCommand),
         typeof(ICommand),
         typeof(HeXCheckButton),
         new FrameworkPropertyMetadata(null));
 
-    public ICommand? IsOnCommand {
-        get => (ICommand?)GetValue(IsOnCommandProperty);
-        set => SetValue(IsOnCommandProperty, value);
+    public ICommand? IsActiveCommand {
+        get => (ICommand?)GetValue(IsActiveCommandProperty);
+        set => SetValue(IsActiveCommandProperty, value);
     }
 
     #endregion
@@ -116,29 +120,21 @@ public class HeXCheckButton : System.Windows.Controls.RadioButton {
         Unchecked += (sender, args) => IsCheckedCommand?.Execute((Id, false));
     }
 
-    protected override void OnPreviewMouseLeftButtonUp(MouseButtonEventArgs e) {
-        base.OnPreviewMouseLeftButtonUp(e);
+    public override void OnApplyTemplate() {
+        base.OnApplyTemplate();
 
-        if (!IsChecked.HasValue) return;
+        if (GetTemplateChild("CheckButton") is not HeButton button) return;
+        button.Click += OnCheckButtonClick;
 
-        if (!IsOn) {
-            IsOn = true;
-            return;
-        }
-        
-        if (IsOn && IsChecked.Value) {
-            skipOnMouseLeftButtonUpEvent = true;
-        }
+        if (GetTemplateChild("Indicator") is not Border indicator) return;
+
+        Click += (sender, args) => {
+            if (indicator.IsMouseOver) IsActive = !IsActive;
+        };
     }
 
-    protected override void OnMouseLeftButtonUp(MouseButtonEventArgs e) {
-        base.OnMouseLeftButtonUp(e);
-
-        if (skipOnMouseLeftButtonUpEvent) {
-            IsChecked = false;
-            IsOn = false;
-
-            skipOnMouseLeftButtonUpEvent = false;
-        }
+    private void OnCheckButtonClick(object sender, RoutedEventArgs routedEventArgs) {
+        if (!IsActive) IsActive = true;
+        IsChecked = true;
     }
 }

@@ -14,7 +14,6 @@
         <Setter Property="CornerRadius" Value="{StaticResource Radius4}"/>
         
         <Setter Property="FontSize" Value="{StaticResource FontSize}"/>
-        <Setter Property="FontWeight" Value="Medium"/>
         
         <Setter Property="Template" Value="{StaticResource HeButtonFlatDefault}"/>
         
