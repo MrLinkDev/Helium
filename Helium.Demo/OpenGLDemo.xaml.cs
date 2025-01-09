@@ -160,9 +160,7 @@ public partial class OpenGLDemo : HeWindow {
         int traceId = Convert.ToInt32(TraceId.Text);
         int markerId = Convert.ToInt32(MarkerId.Text);
         
-        float markerX = Convert.ToSingle(MarkerX.Text);
-        
-        Plot.AddMarker(traceId, markerId, markerX);
+        MarkerX.Text = Plot.AddMarker(traceId, markerId).ToString();
     }
 
     private void SelectMarker_OnClick(object sender, RoutedEventArgs e) {

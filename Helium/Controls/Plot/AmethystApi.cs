@@ -42,7 +42,7 @@ internal static class AmethystApi {
     public static extern void GetSelectedMarkerPtr(IntPtr containerPtr, int traceId);
 
     [DllImport(DLL_NAME, CharSet = CharSet.Unicode, CallingConvention = CallingConvention.Cdecl)]
-    public static extern void AddMarker(IntPtr containerPtr, int traceId, int markerId, float x);
+    public static extern float AddMarker(IntPtr containerPtr, int traceId, int markerId);
 
     [DllImport(DLL_NAME, CharSet = CharSet.Unicode, CallingConvention = CallingConvention.Cdecl)]
     public static extern void SelectMarker(IntPtr containerPtr, int traceId, int markerId);
