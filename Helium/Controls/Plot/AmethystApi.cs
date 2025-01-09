@@ -42,19 +42,19 @@ internal static class AmethystApi {
     public static extern void GetSelectedMarkerPtr(IntPtr containerPtr, int traceId);
 
     [DllImport(DLL_NAME, CharSet = CharSet.Unicode, CallingConvention = CallingConvention.Cdecl)]
-    public static extern float AddMarker(IntPtr containerPtr, int traceId, int markerId);
+    public static extern float AddMarker(IntPtr containerPtr, int markerId);
 
     [DllImport(DLL_NAME, CharSet = CharSet.Unicode, CallingConvention = CallingConvention.Cdecl)]
-    public static extern void SelectMarker(IntPtr containerPtr, int traceId, int markerId);
+    public static extern void SelectMarker(IntPtr containerPtr, int markerId);
 
     [DllImport(DLL_NAME, CharSet = CharSet.Unicode, CallingConvention = CallingConvention.Cdecl)]
-    public static extern void RemoveMarker(IntPtr containerPtr, int traceId, int markerId);
+    public static extern void RemoveMarker(IntPtr containerPtr, int markerId);
 
     [DllImport(DLL_NAME, CharSet = CharSet.Unicode, CallingConvention = CallingConvention.Cdecl)]
     public static extern void PlaceMarker(IntPtr containerPtr, int traceId, int markerId, float x, float y);
 
     [DllImport(DLL_NAME, CharSet = CharSet.Unicode, CallingConvention = CallingConvention.Cdecl)]
-    public static extern void SetMarkerX(IntPtr containerPtr, int traceId, int markerId, float x);
+    public static extern void SetMarkerX(IntPtr containerPtr, int markerId, float x);
 
     [DllImport(DLL_NAME, CharSet = CharSet.Unicode, CallingConvention = CallingConvention.Cdecl)]
     public static extern void SetMarkerY(IntPtr containerPtr, int traceId, int markerId, float y);

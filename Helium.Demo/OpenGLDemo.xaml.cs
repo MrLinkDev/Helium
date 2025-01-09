@@ -160,21 +160,21 @@ public partial class OpenGLDemo : HeWindow {
         int traceId = Convert.ToInt32(TraceId.Text);
         int markerId = Convert.ToInt32(MarkerId.Text);
         
-        MarkerX.Text = Plot.AddMarker(traceId, markerId).ToString();
+        MarkerX.Text = Plot.AddMarker(markerId).ToString();
     }
 
     private void SelectMarker_OnClick(object sender, RoutedEventArgs e) {
         int traceId = Convert.ToInt32(TraceId.Text);
         int markerId = Convert.ToInt32(MarkerId.Text);
         
-        Plot.SelectMarker(traceId, markerId);
+        Plot.SelectMarker(markerId);
     }
     
     private void RemoveMarker_OnClick(object sender, RoutedEventArgs e) {
         int traceId = Convert.ToInt32(TraceId.Text);
         int markerId = Convert.ToInt32(MarkerId.Text);
         
-        Plot.RemoveMarker(traceId, markerId);
+        Plot.RemoveMarker(markerId);
     }
 
     private void SetMarkerX_OnClick(object sender, RoutedEventArgs e) {
@@ -183,6 +183,6 @@ public partial class OpenGLDemo : HeWindow {
         
         float markerX = Convert.ToSingle(MarkerX.Text);
         
-        Plot.SetMarkerX(traceId, markerId, markerX);
+        Plot.SetMarkerX(markerId, markerX);
     }
 }

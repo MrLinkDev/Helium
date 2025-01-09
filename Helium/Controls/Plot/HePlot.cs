@@ -160,25 +160,25 @@ public class HePlot : GlWindow {
 
     #region MarkerRegion
 
-    public float AddMarker(int traceId, int markerId) {
-        float x = AmethystApi.AddMarker(containerPtr, traceId, markerId);
+    public float AddMarker(int markerId) {
+        float x = AmethystApi.AddMarker(containerPtr, markerId);
         UpdateScreen();
 
         return x;
     }
 
-    public void SelectMarker(int traceId, int markerId) {
-        AmethystApi.SelectMarker(containerPtr, traceId, markerId);
+    public void SelectMarker(int markerId) {
+        AmethystApi.SelectMarker(containerPtr, markerId);
         UpdateScreen();
     }
     
-    public void RemoveMarker(int traceId, int markerId) {
-        AmethystApi.RemoveMarker(containerPtr, traceId, markerId);
+    public void RemoveMarker(int markerId) {
+        AmethystApi.RemoveMarker(containerPtr, markerId);
         UpdateScreen();
     }
 
-    public void SetMarkerX(int traceId, int markerId, float x) {
-        AmethystApi.SetMarkerX(containerPtr, traceId, markerId, x);
+    public void SetMarkerX(int markerId, float x) {
+        AmethystApi.SetMarkerX(containerPtr, markerId, x);
         UpdateScreen();
     }
     
