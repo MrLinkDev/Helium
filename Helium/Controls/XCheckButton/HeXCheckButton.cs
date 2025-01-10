@@ -49,7 +49,7 @@ public class HeXCheckButton : System.Windows.Controls.RadioButton {
         typeof(bool),
         typeof(HeXCheckButton),
         new FrameworkPropertyMetadata(false,
-            FrameworkPropertyMetadataOptions.AffectsRender));
+            FrameworkPropertyMetadataOptions.AffectsRender | FrameworkPropertyMetadataOptions.BindsTwoWayByDefault));
 
     public bool IsActive {
         get => (bool)GetValue(IsActiveProperty);

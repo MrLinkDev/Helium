@@ -8,6 +8,7 @@ using Helium.Controls.XValueButton.Utilities;
 namespace Helium.Controls.XCheckValueButton;
 
 public class HeXCheckValueButton : System.Windows.Controls.RadioButton {
+    
     #region CornerRadius
 
     public static readonly DependencyProperty CornerRadiusProperty = DependencyProperty.Register(
@@ -47,7 +48,7 @@ public class HeXCheckValueButton : System.Windows.Controls.RadioButton {
         typeof(bool),
         typeof(HeXCheckValueButton),
         new FrameworkPropertyMetadata(false,
-            FrameworkPropertyMetadataOptions.AffectsRender));
+            FrameworkPropertyMetadataOptions.AffectsRender | FrameworkPropertyMetadataOptions.BindsTwoWayByDefault));
 
     public bool IsActive {
         get => (bool)GetValue(IsActiveProperty);
