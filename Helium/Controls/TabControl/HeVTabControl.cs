@@ -7,6 +7,9 @@ using System.Windows.Media;
 namespace Helium.Controls.TabControl;
 
 public class HeVTabControl : System.Windows.Controls.TabControl {
+
+    private Border? contentBorder;
+    private bool initSelectionChangedEvent = true;
     
     #region HeVTabPanelPosition
 
@@ -49,5 +52,25 @@ public class HeVTabControl : System.Windows.Controls.TabControl {
     static HeVTabControl() {
         DefaultStyleKeyProperty.OverrideMetadata(typeof(HeVTabControl),
             new FrameworkPropertyMetadata(typeof(HeVTabControl)));
+    }
+
+    public override void OnApplyTemplate() {
+        base.OnApplyTemplate();
+
+        contentBorder = (Border)GetTemplateChild("Border");
+    }
+
+    protected override void OnSelectionChanged(SelectionChangedEventArgs e) {
+        base.OnSelectionChanged(e);
+
+        if (Level == 0) {
+            if (initSelectionChangedEvent) {
+                initSelectionChangedEvent = false;
+                SelectedIndex = -1;
+            }
+            
+            contentBorder!.Visibility = SelectedIndex == -1 ? Visibility.Collapsed : Visibility.Visible;
+        }
+        
     }
 }

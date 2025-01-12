@@ -25,6 +25,7 @@
         
         <ResourceDictionary Source="/Alexander.Gorbunov.Helium;component/Controls/TabControl/Styles/HeVTabControl.xaml"/>
         <ResourceDictionary Source="/Alexander.Gorbunov.Helium;component/Controls/TabControl/Styles/HeVTabItem.xaml"/>
+        <ResourceDictionary Source="/Alexander.Gorbunov.Helium;component/Controls/TabControl/Styles/HeVTabLabel.xaml"/>
         
         <ResourceDictionary Source="/Alexander.Gorbunov.Helium;component/Controls/ComboBox/Styles/HeComboBox.xaml"/>
         <ResourceDictionary Source="/Alexander.Gorbunov.Helium;component/Controls/ComboBox/Styles/HeComboBoxItem.xaml"/>

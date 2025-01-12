@@ -161,6 +161,7 @@
             </Trigger>
         </ControlTemplate.Triggers>
     </ControlTemplate>
+    
 
     <Style TargetType="{x:Type tabControl:HeVTabItem}">
         <Setter Property="SnapsToDevicePixels" Value="True"/>

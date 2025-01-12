@@ -45,9 +45,21 @@ public class HeVTabItem : System.Windows.Controls.TabItem {
 
         Grid grid = (Grid)GetTemplateChild("Root");
         
-        grid.PreviewMouseLeftButtonDown += (sender, args) => IsPressed = true;
-        grid.PreviewMouseLeftButtonUp += (sender, args) => IsPressed = false;
+        grid.PreviewMouseLeftButtonDown += (sender, args) => {
+            IsPressed = true;
+            
+            if (Level == 0 && IsSelected) {
+                IsSelected = !IsSelected;
+                args.Handled = true;
+            }
+
+        };
+        grid.PreviewMouseLeftButtonUp += (sender, args) => {
+            IsPressed = false;
+        };
         
         grid.MouseLeave += (sender, args) => IsPressed = false;
     }
+    
+    
 }

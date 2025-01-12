@@ -490,35 +490,35 @@
                 </checkBox:HeCheckBox.Content>
             </checkBox:HeCheckBox>
 
-            <switch:HeSwitch
-                DockPanel.Dock="Top"
-                Height="40"
-                Margin="0, 16, 0, 0">
-                <switch:HeSwitch.Values>
-                    <x:Array Type="{x:Type system:String}">
-                        <system:String>0</system:String>
-                        <system:String>1</system:String>
-                        <system:String>2</system:String>
-                        <system:String>3</system:String>
-                        <system:String>4</system:String>
-                    </x:Array>
-                </switch:HeSwitch.Values>
-            </switch:HeSwitch>
-
-            <switch:HeSwitch
-                DockPanel.Dock="Top"
-                Height="40"
-                Margin="0, 16, 0, 0">
-                <switch:HeSwitch.Values>
-                    <x:Array Type="{x:Type system:String}">
-                        <system:String>5</system:String>
-                        <system:String>6</system:String>
-                        <system:String>7</system:String>
-                        <system:String>8</system:String>
-                        <system:String>9</system:String>
-                    </x:Array>
-                </switch:HeSwitch.Values>
-            </switch:HeSwitch>
+            <!-- <switch:HeSwitch -->
+            <!--     DockPanel.Dock="Top" -->
+            <!--     Height="40" -->
+            <!--     Margin="0, 16, 0, 0"> -->
+            <!--     <switch:HeSwitch.Values> -->
+            <!--         <x:Array Type="{x:Type system:String}"> -->
+            <!--             <system:String>0</system:String> -->
+            <!--             <system:String>1</system:String> -->
+            <!--             <system:String>2</system:String> -->
+            <!--             <system:String>3</system:String> -->
+            <!--             <system:String>4</system:String> -->
+            <!--         </x:Array> -->
+            <!--     </switch:HeSwitch.Values> -->
+            <!-- </switch:HeSwitch> -->
+            <!-- -->
+            <!-- <switch:HeSwitch -->
+            <!--     DockPanel.Dock="Top" -->
+            <!--     Height="40" -->
+            <!--     Margin="0, 16, 0, 0"> -->
+            <!--     <switch:HeSwitch.Values> -->
+            <!--         <x:Array Type="{x:Type system:String}"> -->
+            <!--             <system:String>5</system:String> -->
+            <!--             <system:String>6</system:String> -->
+            <!--             <system:String>7</system:String> -->
+            <!--             <system:String>8</system:String> -->
+            <!--             <system:String>9</system:String> -->
+            <!--         </x:Array> -->
+            <!--     </switch:HeSwitch.Values> -->
+            <!-- </switch:HeSwitch> -->
         </DockPanel>
 
         <DockPanel
@@ -694,6 +694,7 @@
                     <tabControl:HeVTabItem Header="TabItem 1">
                         <button:HeButton Text="1" />
                     </tabControl:HeVTabItem>
+                    <tabControl:HeVTabLabel Header="Label"/>
                     <tabControl:HeVTabItem IsEnabled="False" Header="TabItem 2">
                         <button:HeButton Text="2" />
                     </tabControl:HeVTabItem>

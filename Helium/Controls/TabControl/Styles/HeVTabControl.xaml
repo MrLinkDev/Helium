@@ -68,7 +68,7 @@
                 KeyboardNavigation.DirectionalNavigation="Contained"
                 KeyboardNavigation.TabIndex="2"
 
-                Margin="4"
+                Margin="4, 4, 0, 4"
 
                 Background="{StaticResource BlackBrush500}"
 
@@ -199,7 +199,7 @@
 
         <Setter Property="VerticalAlignment" Value="Stretch" />
         <Setter Property="VerticalContentAlignment" Value="Stretch" />
-
+        
         <Style.Triggers>
             <Trigger Property="Level" Value="1">
                 <Setter Property="Template" Value="{StaticResource HeVTabControlL1}" />
