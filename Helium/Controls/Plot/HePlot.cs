@@ -127,6 +127,10 @@ public class HePlot : GlWindow {
         UpdateScreen();
     }
 
+    public float[] GetTrace(int traceId) {
+        return plotDataDict[traceId].Data;
+    }
+
     public void RemoveTrace(int traceId) {
         AmethystApi.RemoveTrace(containerPtr, traceId);
         UpdateScreen();
