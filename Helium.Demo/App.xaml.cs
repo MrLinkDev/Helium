@@ -7,4 +7,11 @@ namespace HeliumDemo;
 /// <summary>
 /// Interaction logic for App.xaml
 /// </summary>
-public partial class App : Application { }
+public partial class App : Application {
+    private void App_OnStartup(object sender, StartupEventArgs e) {
+        Window window = new OpenGLDemo();
+
+        MainWindow = window;
+        MainWindow.Show();
+    }
+}

@@ -1,0 +1,15 @@
+<window:HeDialogWindow x:Class="HeliumDemo.Dialog"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:local="clr-namespace:HeliumDemo"
+        xmlns:window="clr-namespace:Helium.Controls.Window;assembly=Alexander.Gorbunov.Helium"
+        mc:Ignorable="d"
+        Title="Dialog" Height="450" Width="800">
+    <Grid>
+        <Label VerticalAlignment="Center" HorizontalAlignment="Center" Content="TEST LABEL" FontSize="48" Foreground="Magenta">
+            
+        </Label>
+    </Grid>
+</window:HeDialogWindow>

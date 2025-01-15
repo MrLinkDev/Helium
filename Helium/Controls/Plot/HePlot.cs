@@ -1,4 +1,5 @@
-﻿using System.Windows;
+﻿using System.Runtime.InteropServices;
+using System.Windows;
 using System.Windows.Threading;
 using Amethyst;
 
@@ -39,6 +40,11 @@ public class HePlot : GlWindow {
 
     public HePlot() {
         Loaded += OnLoaded;
+        
+        unsafe {
+            screenPtr = (IntPtr)screen;
+            containerPtr = AmethystApi.GetTraceContainerPtr(screenPtr);
+        }
     }
 
     public override void BeginInit() {
@@ -56,11 +62,6 @@ public class HePlot : GlWindow {
 
     public override void OnLoaded(object sender, RoutedEventArgs args) {
         base.OnLoaded(sender, args);
-        
-        unsafe {
-            screenPtr = (IntPtr)screen;
-            containerPtr = AmethystApi.GetTraceContainerPtr(screenPtr);
-        }
 
         SizeChangedInfo info = new SizeChangedInfo(this, new Size(), true, true);
         

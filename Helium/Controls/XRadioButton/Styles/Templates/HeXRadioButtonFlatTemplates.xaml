@@ -47,8 +47,8 @@
                 <ContentPresenter
                     Grid.Column="1"
                     VerticalAlignment="Center"
-                    HorizontalAlignment="Left"
-                    Margin="0, 0, 0, 2"
+                    HorizontalAlignment="Center"
+                    Margin="-16, 0, 0, 2"
                     Content="{TemplateBinding Content}" />
             </Grid>
         </Border>

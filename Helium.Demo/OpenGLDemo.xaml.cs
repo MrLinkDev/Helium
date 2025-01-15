@@ -11,6 +11,26 @@ public partial class OpenGLDemo : HeWindow {
 
     public OpenGLDemo() {
         InitializeComponent();
+        
+        int traceId = Convert.ToInt32(TraceId.Text);
+        int points = Convert.ToInt32(Points.Text); 
+
+        int startX = Convert.ToInt32(StartX.Text);
+        int stopX = Convert.ToInt32(StopX.Text);
+
+        int startY = Convert.ToInt32(StartY.Text);
+        int stopY = Convert.ToInt32(StopY.Text);
+
+        if (traceDataStorage.ContainsKey(traceId)) return;
+
+        traceDataStorage[traceId] = Plot.AddTrace(traceId, points, startX, startY, stopX, stopY);
+
+        float[] traceData = traceDataStorage[traceId];
+        float dx = (stopX - startX) / ((float)points - 1);
+        for (uint i = 0; i < points; i += 1) {
+            traceData[i * 2 + 0] = startX + dx * i;
+            traceData[i * 2 + 1] = MathF.Sin(2 * MathF.PI * 1 * i / points);
+        }
 
         Task.Run(() => {
             while (true) {

@@ -27,6 +27,8 @@
             <Setter.Value>
                 <ControlTemplate TargetType="local:HeDialogWindow">
                     <Border
+                        Width="{TemplateBinding Width}"
+                        Height="{TemplateBinding Height}"
                         BorderThickness="{TemplateBinding BorderThickness}">
                         <DockPanel LastChildFill="True">
                             <Border
