@@ -5,7 +5,7 @@ using Amethyst;
 
 namespace Helium.Controls.Plot;
 
-public class HePlot : GlWindow {
+public class HePlot : AmethystPlot2D {
     private bool isUpdateEnabled = true;
 
     public bool IsUpdateEnabled {
@@ -43,7 +43,7 @@ public class HePlot : GlWindow {
         
         unsafe {
             screenPtr = (IntPtr)screen;
-            containerPtr = AmethystApi.GetTraceContainerPtr(screenPtr);
+            //containerPtr = AmethystApi.GetTraceContainerPtr(screenPtr);
         }
     }
 
@@ -73,7 +73,7 @@ public class HePlot : GlWindow {
 
     public void UpdateScreen() {
         if (!IsUpdateEnabled) return;
-        AmethystApi.SetScreenUpdated(screenPtr);
+        //AmethystApi.SetScreenUpdated(screenPtr);
         InvalidateVisual();
     }
 
