@@ -32,23 +32,23 @@ public partial class OpenGLDemo : HeWindow {
         //     traceData[i * 2 + 1] = MathF.Sin(2 * MathF.PI * 1 * i / points);
         // }
 
-        Task.Run(() => {
-            while (true) {
-                foreach (var traceStoragePair in traceDataStorage) {
-                    var traceData = traceStoragePair.Value;
-
-                    float temp = traceData[1];
-
-                    for (int i = 0; i < traceData.Length - 2; i += 2) {
-                        traceData[i + 1] = traceData[i + 3];
-                    }
-
-                    traceData[^1] = temp;
-                }
-
-                Thread.Sleep(1000 / 30);
-            }
-        });
+        // Task.Run(() => {
+        //     while (true) {
+        //         foreach (var traceStoragePair in traceDataStorage) {
+        //             var traceData = traceStoragePair.Value;
+        //
+        //             float temp = traceData[1];
+        //
+        //             for (int i = 0; i < traceData.Length - 2; i += 2) {
+        //                 traceData[i + 1] = traceData[i + 3];
+        //             }
+        //
+        //             traceData[^1] = temp;
+        //         }
+        //
+        //         Thread.Sleep(1000 / 30);
+        //     }
+        // });
     }
 
     private void IncreaseTraceId_OnClick(object sender, RoutedEventArgs e) {

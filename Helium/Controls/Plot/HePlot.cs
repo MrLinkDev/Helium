@@ -64,10 +64,9 @@ public class HePlot : AmethystPlot2D {
         base.OnLoaded(sender, args);
 
         SizeChangedInfo info = new SizeChangedInfo(this, new Size(), true, true);
-        
         OnRenderSizeChanged(info);
         
-        UpdateScreen();
+        //UpdateScreen();
         updateTimer.Start();
     }
 
