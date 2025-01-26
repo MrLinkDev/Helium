@@ -4,58 +4,48 @@ namespace Helium.Controls.Plot;
 
 internal static class AmethystApi {
     private const string DLL_NAME = "Alexander.Gorbunov.Amethyst.dll";
-    
-    [DllImport(DLL_NAME, CharSet = CharSet.Unicode, CallingConvention = CallingConvention.Cdecl)]
-    public static extern IntPtr GetTraceContainerPtr(IntPtr screenPtr);
-    
-    [DllImport(DLL_NAME, CharSet = CharSet.Unicode, CallingConvention = CallingConvention.Cdecl)]
-    public static extern IntPtr SetScreenUpdated(IntPtr screenPtr);
+
+    #region TraceRegion
 
     [DllImport(DLL_NAME, CharSet = CharSet.Unicode, CallingConvention = CallingConvention.Cdecl)]
-    public static extern IntPtr GetTracePtr(IntPtr containerPtr, int traceId);
+    public static extern void AddTrace(IntPtr screenPtr, int traceId, IntPtr dataPtr, int points);
 
     [DllImport(DLL_NAME, CharSet = CharSet.Unicode, CallingConvention = CallingConvention.Cdecl)]
-    public static extern IntPtr GetSelectedTracePtr(IntPtr containerPtr);
+    public static extern void SelectTrace(IntPtr screenPtr, int traceId);
 
     [DllImport(DLL_NAME, CharSet = CharSet.Unicode, CallingConvention = CallingConvention.Cdecl)]
-    public static extern void AddTrace(IntPtr containerPtr, int traceId, IntPtr dataPtr, int points);
+    public static extern void RemoveTrace(IntPtr screenPtr, int traceId);
 
     [DllImport(DLL_NAME, CharSet = CharSet.Unicode, CallingConvention = CallingConvention.Cdecl)]
-    public static extern void SelectTrace(IntPtr containerPtr, int traceId);
+    public static extern void SetData(IntPtr screenPtr, int traceId, IntPtr dataPtr, int points);
 
     [DllImport(DLL_NAME, CharSet = CharSet.Unicode, CallingConvention = CallingConvention.Cdecl)]
-    public static extern void RemoveTrace(IntPtr containerPtr, int traceId);
+    public static extern void SetStartStopX(IntPtr screenPtr, int traceId, float startX, float stopX);
 
     [DllImport(DLL_NAME, CharSet = CharSet.Unicode, CallingConvention = CallingConvention.Cdecl)]
-    public static extern void SetData(IntPtr containerPtr, int traceId, IntPtr dataPtr, int points);
+    public static extern void SetStartStopY(IntPtr screenPtr, int traceId, float startY, float stopY);
+
+    #endregion
+
+    #region MarkerRegion
 
     [DllImport(DLL_NAME, CharSet = CharSet.Unicode, CallingConvention = CallingConvention.Cdecl)]
-    public static extern void SetStartStopX(IntPtr container, int traceId, float startX, float stopX);
+    public static extern float AddMarker(IntPtr screenPtr, int markerId);
 
     [DllImport(DLL_NAME, CharSet = CharSet.Unicode, CallingConvention = CallingConvention.Cdecl)]
-    public static extern void SetStartStopY(IntPtr container, int traceId, float startY, float stopY);
+    public static extern void SelectMarker(IntPtr screenPtr, int markerId);
 
     [DllImport(DLL_NAME, CharSet = CharSet.Unicode, CallingConvention = CallingConvention.Cdecl)]
-    public static extern void GetMarkerPtr(IntPtr containerPtr, int traceId, int markerId);
+    public static extern void RemoveMarker(IntPtr screenPtr, int markerId);
 
     [DllImport(DLL_NAME, CharSet = CharSet.Unicode, CallingConvention = CallingConvention.Cdecl)]
-    public static extern void GetSelectedMarkerPtr(IntPtr containerPtr, int traceId);
+    public static extern void PlaceMarker(IntPtr screenPtr, int traceId, int markerId, float x, float y);
 
     [DllImport(DLL_NAME, CharSet = CharSet.Unicode, CallingConvention = CallingConvention.Cdecl)]
-    public static extern float AddMarker(IntPtr containerPtr, int markerId);
+    public static extern void SetMarkerX(IntPtr screenPtr, int markerId, float x);
 
     [DllImport(DLL_NAME, CharSet = CharSet.Unicode, CallingConvention = CallingConvention.Cdecl)]
-    public static extern void SelectMarker(IntPtr containerPtr, int markerId);
+    public static extern void SetMarkerY(IntPtr screenPtr, int traceId, int markerId, float y);
 
-    [DllImport(DLL_NAME, CharSet = CharSet.Unicode, CallingConvention = CallingConvention.Cdecl)]
-    public static extern void RemoveMarker(IntPtr containerPtr, int markerId);
-
-    [DllImport(DLL_NAME, CharSet = CharSet.Unicode, CallingConvention = CallingConvention.Cdecl)]
-    public static extern void PlaceMarker(IntPtr containerPtr, int traceId, int markerId, float x, float y);
-
-    [DllImport(DLL_NAME, CharSet = CharSet.Unicode, CallingConvention = CallingConvention.Cdecl)]
-    public static extern void SetMarkerX(IntPtr containerPtr, int markerId, float x);
-
-    [DllImport(DLL_NAME, CharSet = CharSet.Unicode, CallingConvention = CallingConvention.Cdecl)]
-    public static extern void SetMarkerY(IntPtr containerPtr, int traceId, int markerId, float y);
+    #endregion
 }

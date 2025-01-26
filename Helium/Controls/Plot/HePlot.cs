@@ -16,7 +16,6 @@ public class HePlot : AmethystPlot2D {
     private DispatcherTimer updateTimer = new DispatcherTimer(DispatcherPriority.Render);
 
     private IntPtr screenPtr;
-    private IntPtr containerPtr;
 
     private Dictionary<int, PlotData> plotDataDict;
     
@@ -43,7 +42,6 @@ public class HePlot : AmethystPlot2D {
         
         unsafe {
             screenPtr = (IntPtr)screen;
-            //containerPtr = AmethystApi.GetTraceContainerPtr(screenPtr);
         }
     }
 
@@ -82,10 +80,10 @@ public class HePlot : AmethystPlot2D {
         if (plotDataDict.TryGetValue(traceId, out PlotData? value)) return value.Data;
 
         plotDataDict[traceId] = new PlotData(points);
-        AmethystApi.AddTrace(containerPtr, traceId, plotDataDict[traceId].Pointer, plotDataDict[traceId].Points);
+        AmethystApi.AddTrace(screenPtr, traceId, plotDataDict[traceId].Pointer, plotDataDict[traceId].Points);
         
-        AmethystApi.SetStartStopX(containerPtr, traceId, startX, stopX);
-        AmethystApi.SetStartStopY(containerPtr, traceId, startY, stopY);
+        AmethystApi.SetStartStopX(screenPtr, traceId, startX, stopX);
+        AmethystApi.SetStartStopY(screenPtr, traceId, startY, stopY);
         
         UpdateScreen();
         
@@ -94,7 +92,7 @@ public class HePlot : AmethystPlot2D {
     
     public void AddTrace(int traceId, float[] data) {
         plotDataDict[traceId] = new PlotData(data);
-        AmethystApi.AddTrace(containerPtr, traceId, plotDataDict[traceId].Pointer, plotDataDict[traceId].Points);
+        AmethystApi.AddTrace(screenPtr, traceId, plotDataDict[traceId].Pointer, plotDataDict[traceId].Points);
 
         float[] x = new float[data.Length / 2];
         float[] y = new float[data.Length / 2];
@@ -116,14 +114,14 @@ public class HePlot : AmethystPlot2D {
         startY -= dY;
         stopY += dY;
         
-        AmethystApi.SetStartStopX(containerPtr, traceId, startX, stopX);
-        AmethystApi.SetStartStopY(containerPtr, traceId, startY, stopY);
+        AmethystApi.SetStartStopX(screenPtr, traceId, startX, stopX);
+        AmethystApi.SetStartStopY(screenPtr, traceId, startY, stopY);
         
         UpdateScreen();
     }
 
     public void SelectTrace(int traceId) {
-        AmethystApi.SelectTrace(containerPtr, traceId);
+        AmethystApi.SelectTrace(screenPtr, traceId);
         UpdateScreen();
     }
 
@@ -132,9 +130,10 @@ public class HePlot : AmethystPlot2D {
     }
 
     public void RemoveTrace(int traceId) {
-        AmethystApi.RemoveTrace(containerPtr, traceId);
+        AmethystApi.RemoveTrace(screenPtr, traceId);
         UpdateScreen();
         
+        if (!plotDataDict.ContainsKey(traceId)) return;
         plotDataDict[traceId].Dispose();
         plotDataDict.Remove(traceId);
     }
@@ -143,7 +142,7 @@ public class HePlot : AmethystPlot2D {
         PlotData oldData = plotDataDict[traceId];
         
         plotDataDict[traceId] = new PlotData(data);
-        AmethystApi.SetData(containerPtr, traceId, plotDataDict[traceId].Pointer, plotDataDict[traceId].Points);
+        AmethystApi.SetData(screenPtr, traceId, plotDataDict[traceId].Pointer, plotDataDict[traceId].Points);
         
         UpdateScreen();
         
@@ -151,12 +150,12 @@ public class HePlot : AmethystPlot2D {
     }
 
     public void SetStartStopX(int traceId, float startX, float stopX) {
-        AmethystApi.SetStartStopX(containerPtr, traceId, startX, stopX);
+        AmethystApi.SetStartStopX(screenPtr, traceId, startX, stopX);
         UpdateScreen();
     }
     
     public void SetStartStopY(int traceId, float startY, float stopY) {
-        AmethystApi.SetStartStopY(containerPtr, traceId, startY, stopY);
+        AmethystApi.SetStartStopY(screenPtr, traceId, startY, stopY);
         UpdateScreen();
     }
 
@@ -165,24 +164,24 @@ public class HePlot : AmethystPlot2D {
     #region MarkerRegion
 
     public float AddMarker(int markerId) {
-        float x = AmethystApi.AddMarker(containerPtr, markerId);
+        float x = AmethystApi.AddMarker(screenPtr, markerId);
         UpdateScreen();
 
         return x;
     }
 
     public void SelectMarker(int markerId) {
-        AmethystApi.SelectMarker(containerPtr, markerId);
+        AmethystApi.SelectMarker(screenPtr, markerId);
         UpdateScreen();
     }
     
     public void RemoveMarker(int markerId) {
-        AmethystApi.RemoveMarker(containerPtr, markerId);
+        AmethystApi.RemoveMarker(screenPtr, markerId);
         UpdateScreen();
     }
 
     public void SetMarkerX(int markerId, float x) {
-        AmethystApi.SetMarkerX(containerPtr, markerId, x);
+        AmethystApi.SetMarkerX(screenPtr, markerId, x);
         UpdateScreen();
     }
     
