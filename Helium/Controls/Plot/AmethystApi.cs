@@ -39,13 +39,16 @@ internal static class AmethystApi {
     public static extern void RemoveMarker(IntPtr screenPtr, int markerId);
 
     [DllImport(DLL_NAME, CharSet = CharSet.Unicode, CallingConvention = CallingConvention.Cdecl)]
-    public static extern void PlaceMarker(IntPtr screenPtr, int traceId, int markerId, float x, float y);
-
-    [DllImport(DLL_NAME, CharSet = CharSet.Unicode, CallingConvention = CallingConvention.Cdecl)]
     public static extern void SetMarkerX(IntPtr screenPtr, int markerId, float x);
 
     [DllImport(DLL_NAME, CharSet = CharSet.Unicode, CallingConvention = CallingConvention.Cdecl)]
+    public static extern float GetMarkerX(IntPtr screenPtr, int markerId);
+
+    [DllImport(DLL_NAME, CharSet = CharSet.Unicode, CallingConvention = CallingConvention.Cdecl)]
     public static extern void SetMarkerY(IntPtr screenPtr, int traceId, int markerId, float y);
+
+    [DllImport(DLL_NAME, CharSet = CharSet.Unicode, CallingConvention = CallingConvention.Cdecl)]
+    public static extern float GetMarkerY(IntPtr screenPtr, int markerId);
 
     #endregion
 }

@@ -184,6 +184,11 @@ public class HePlot : AmethystPlot2D {
         AmethystApi.SetMarkerX(screenPtr, markerId, x);
         UpdateScreen();
     }
+
+    public float GetMarkerX(int markerId) {
+        return AmethystApi.GetMarkerX(screenPtr, markerId);
+        UpdateScreen();
+    }
     
     #endregion
 }

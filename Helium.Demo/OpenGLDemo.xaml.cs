@@ -180,7 +180,9 @@ public partial class OpenGLDemo : HeWindow {
         int traceId = Convert.ToInt32(TraceId.Text);
         int markerId = Convert.ToInt32(MarkerId.Text);
         
-        MarkerX.Text = Plot.AddMarker(markerId).ToString();
+        Plot.AddMarker(markerId);
+        
+        MarkerX.Text = Plot.GetMarkerX(markerId).ToString();
     }
 
     private void SelectMarker_OnClick(object sender, RoutedEventArgs e) {
