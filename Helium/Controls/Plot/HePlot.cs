@@ -159,15 +159,25 @@ public class HePlot : AmethystPlot2D {
         UpdateScreen();
     }
 
+    public void SetUnits(int traceId, int unitsX, int unitsY) {
+        AmethystApi.SetUnits(screenPtr, traceId, unitsX, unitsY);
+    }
+
+    public void SetUnitsX(int traceId, int units) {
+        AmethystApi.SetUnitsX(screenPtr, traceId, units);
+    }
+
+    public void SetUnitsY(int traceId, int units) {
+        AmethystApi.SetUnitsY(screenPtr, traceId, units);
+    }
+
     #endregion
 
     #region MarkerRegion
 
-    public float AddMarker(int markerId) {
-        float x = AmethystApi.AddMarker(screenPtr, markerId);
+    public void AddMarker(int markerId) {
+        AmethystApi.AddMarker(screenPtr, markerId);
         UpdateScreen();
-
-        return x;
     }
 
     public void SelectMarker(int markerId) {

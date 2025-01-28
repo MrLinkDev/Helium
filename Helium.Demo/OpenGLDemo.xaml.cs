@@ -6,12 +6,20 @@ using Helium.Controls.Window;
 
 namespace HeliumDemo;
 
+public enum Units {
+    None,
+    Frequency,
+    Amplitude,
+    Time
+}
+
 public partial class OpenGLDemo : HeWindow {
     private Dictionary<int, float[]> traceDataStorage = new Dictionary<int, float[]>();
 
     public OpenGLDemo() {
         InitializeComponent();
-        
+
+        UnitsBox.ItemsSource = Enum.GetNames(typeof(Units));
         // int traceId = Convert.ToInt32(TraceId.Text);
         // int points = Convert.ToInt32(Points.Text); 
         //
@@ -93,6 +101,13 @@ public partial class OpenGLDemo : HeWindow {
         Plot.RemoveTrace(traceId);
         traceDataStorage.Remove(traceId);
     }
+    
+    private void SetUnits_OnClick(object sender, RoutedEventArgs e) {
+        int traceId = Convert.ToInt32(TraceId.Text);
+        int unitsId = UnitsBox.SelectedIndex;
+
+        Plot.SetUnitsX(traceId, unitsId);
+    }
 
     private void IncreasePoints_OnClick(object sender, RoutedEventArgs e) {
         Points.Text = Convert.ToString(Convert.ToInt32(Points.Text) + 1);
@@ -138,11 +153,11 @@ public partial class OpenGLDemo : HeWindow {
         int traceId = Convert.ToInt32(TraceId.Text);
         uint size = Convert.ToUInt32(Points.Text) * 2; // ???
 
-        int startX = Convert.ToInt32(StartX.Text);
-        int stopX = Convert.ToInt32(StopX.Text);
+        float startX = Convert.ToSingle(StartX.Text);
+        float stopX = Convert.ToSingle(StopX.Text);
 
-        int startY = Convert.ToInt32(StartY.Text);
-        int stopY = Convert.ToInt32(StopY.Text);
+        float startY = Convert.ToSingle(StartY.Text);
+        float stopY = Convert.ToSingle(StopY.Text);
 
         if (!traceDataStorage.ContainsKey(traceId)) return;
 

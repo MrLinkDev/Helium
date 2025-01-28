@@ -7,7 +7,10 @@
                  xmlns:window="clr-namespace:Helium.Controls.Window;assembly=Alexander.Gorbunov.Helium"
                  xmlns:plot="clr-namespace:Helium.Controls.Plot;assembly=Alexander.Gorbunov.Helium"
                  mc:Ignorable="d"
-                 Title="OpenGLDemo" Height="720" Width="1280">
+                 Title="OpenGLDemo" 
+                 Height="720" 
+                 Width="1280"
+                 Background="#212121">
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition />
@@ -84,6 +87,18 @@
                 Margin="4"
                 Content="Select Trace" 
                 Click="SelectTrace_OnClick"/>
+            
+            <DockPanel DockPanel.Dock="Top">
+                <Button
+                    x:Name="SetUnits"
+                    DockPanel.Dock="Right"
+                    Margin="4"
+                    Content="Set" 
+                    Click="SetUnits_OnClick"/>
+                <ComboBox 
+                    x:Name="UnitsBox"
+                    DockPanel.Dock="Left"/>
+            </DockPanel>
 
             <Button
                 x:Name="RemoveTrace"
