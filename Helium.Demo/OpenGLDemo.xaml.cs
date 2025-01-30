@@ -19,7 +19,8 @@ public partial class OpenGLDemo : HeWindow {
     public OpenGLDemo() {
         InitializeComponent();
 
-        UnitsBox.ItemsSource = Enum.GetNames(typeof(Units));
+        UnitsBoxX.ItemsSource = Enum.GetNames(typeof(Units));
+        UnitsBoxY.ItemsSource = Enum.GetNames(typeof(Units));
         // int traceId = Convert.ToInt32(TraceId.Text);
         // int points = Convert.ToInt32(Points.Text); 
         //
@@ -102,11 +103,18 @@ public partial class OpenGLDemo : HeWindow {
         traceDataStorage.Remove(traceId);
     }
     
-    private void SetUnits_OnClick(object sender, RoutedEventArgs e) {
+    private void SetUnitsX_OnClick(object sender, RoutedEventArgs e) {
         int traceId = Convert.ToInt32(TraceId.Text);
-        int unitsId = UnitsBox.SelectedIndex;
+        int unitsId = UnitsBoxX.SelectedIndex;
 
         Plot.SetUnitsX(traceId, unitsId);
+    }
+    
+    private void SetUnitsY_OnClick(object sender, RoutedEventArgs e) {
+        int traceId = Convert.ToInt32(TraceId.Text);
+        int unitsId = UnitsBoxY.SelectedIndex;
+
+        Plot.SetUnitsY(traceId, unitsId);
     }
 
     private void IncreasePoints_OnClick(object sender, RoutedEventArgs e) {

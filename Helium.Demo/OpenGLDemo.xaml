@@ -8,7 +8,7 @@
                  xmlns:plot="clr-namespace:Helium.Controls.Plot;assembly=Alexander.Gorbunov.Helium"
                  mc:Ignorable="d"
                  Title="OpenGLDemo" 
-                 Height="720" 
+                 Height="820" 
                  Width="1280"
                  Background="#212121">
     <Grid>
@@ -88,15 +88,37 @@
                 Content="Select Trace" 
                 Click="SelectTrace_OnClick"/>
             
-            <DockPanel DockPanel.Dock="Top">
+            <DockPanel DockPanel.Dock="Top" Margin="4">
+                <Label
+                    DockPanel.Dock="Left"
+                    Content="X_U:"
+                    Padding="0"
+                    Margin="0, 0, 4, 0" />
                 <Button
-                    x:Name="SetUnits"
+                    x:Name="SetUnitsX"
                     DockPanel.Dock="Right"
-                    Margin="4"
+                    Margin="4, 0, 0, 0"
                     Content="Set" 
-                    Click="SetUnits_OnClick"/>
+                    Click="SetUnitsX_OnClick"/>
                 <ComboBox 
-                    x:Name="UnitsBox"
+                    x:Name="UnitsBoxX"
+                    DockPanel.Dock="Left"/>
+            </DockPanel>
+            
+            <DockPanel DockPanel.Dock="Top" Margin="4">
+                <Label
+                    DockPanel.Dock="Left"
+                    Content="Y_U:"
+                    Padding="0"
+                    Margin="0, 0, 4, 0" />
+                <Button
+                    x:Name="SetUnitsY"
+                    DockPanel.Dock="Right"
+                    Margin="4, 0, 0, 0"
+                    Content="Set" 
+                    Click="SetUnitsY_OnClick"/>
+                <ComboBox 
+                    x:Name="UnitsBoxY"
                     DockPanel.Dock="Left"/>
             </DockPanel>
 
