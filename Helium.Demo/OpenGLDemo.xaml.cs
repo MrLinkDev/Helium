@@ -13,6 +13,12 @@ public enum Units {
     Time
 }
 
+public enum MarkerFunctions {
+    Default,
+    Max,
+    Min
+}
+
 public partial class OpenGLDemo : HeWindow {
     private Dictionary<int, float[]> traceDataStorage = new Dictionary<int, float[]>();
 
@@ -21,6 +27,7 @@ public partial class OpenGLDemo : HeWindow {
 
         UnitsBoxX.ItemsSource = Enum.GetNames(typeof(Units));
         UnitsBoxY.ItemsSource = Enum.GetNames(typeof(Units));
+        MarkerFunc.ItemsSource = Enum.GetNames(typeof(MarkerFunctions));
         // int traceId = Convert.ToInt32(TraceId.Text);
         // int points = Convert.ToInt32(Points.Text); 
         //
@@ -229,5 +236,12 @@ public partial class OpenGLDemo : HeWindow {
         float markerX = Convert.ToSingle(MarkerX.Text);
         
         Plot.SetMarkerX(markerId, markerX);
+    }
+
+    private void SetMarkerFunc_OnClick(object sender, RoutedEventArgs e) {
+        int markerId = Convert.ToInt32(MarkerId.Text);
+        int markerFunc = Convert.ToInt32(MarkerFunc.SelectedIndex);
+        
+        Plot.SetMarkerFunction(markerId, markerFunc);
     }
 }

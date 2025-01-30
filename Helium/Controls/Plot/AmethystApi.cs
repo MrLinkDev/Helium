@@ -54,10 +54,16 @@ internal static class AmethystApi {
     public static extern float GetMarkerX(IntPtr screenPtr, int markerId);
 
     [DllImport(DLL_NAME, CharSet = CharSet.Unicode, CallingConvention = CallingConvention.Cdecl)]
-    public static extern void SetMarkerY(IntPtr screenPtr, int traceId, int markerId, float y);
+    public static extern void SetMarkerY(IntPtr screenPtr, int markerId, float y);
 
     [DllImport(DLL_NAME, CharSet = CharSet.Unicode, CallingConvention = CallingConvention.Cdecl)]
     public static extern float GetMarkerY(IntPtr screenPtr, int markerId);
+
+    [DllImport(DLL_NAME, CharSet = CharSet.Unicode, CallingConvention = CallingConvention.Cdecl)]
+    public static extern float SetMarkerFunction(IntPtr screenPtr, int markerId, int type);
+
+    [DllImport(DLL_NAME, CharSet = CharSet.Unicode, CallingConvention = CallingConvention.Cdecl)]
+    public static extern float RemoveMarkerFunction(IntPtr screenPtr, int markerId);
 
     #endregion
 }

@@ -386,6 +386,19 @@
                 Margin="4"
                 Content="Set Marker X" 
                 Click="SetMarkerX_OnClick"/>
+            
+            <DockPanel DockPanel.Dock="Top" Margin="4">
+                <Button
+                    x:Name="SetMarkerFunc"
+                    DockPanel.Dock="Right"
+                    Margin="4, 0, 0, 0"
+                    Content="Set" 
+                    Click="SetMarkerFunc_OnClick"/>
+                <ComboBox 
+                    x:Name="MarkerFunc"
+                    DockPanel.Dock="Left"
+                    Margin="0, 0, 4, 0" />
+            </DockPanel>
 
         </DockPanel>
     </Grid>
