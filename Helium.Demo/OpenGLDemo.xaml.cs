@@ -28,6 +28,36 @@ public partial class OpenGLDemo : HeWindow {
         UnitsBoxX.ItemsSource = Enum.GetNames(typeof(Units));
         UnitsBoxY.ItemsSource = Enum.GetNames(typeof(Units));
         MarkerFunc.ItemsSource = Enum.GetNames(typeof(MarkerFunctions));
+        
+        int points = Convert.ToInt32(Points.Text); 
+        
+        int startX = Convert.ToInt32(StartX.Text);
+        int stopX = Convert.ToInt32(StopX.Text);
+        
+        int startY = Convert.ToInt32(StartY.Text);
+        int stopY = Convert.ToInt32(StopY.Text);
+
+        for (int traceId = 1; traceId < 9; traceId++) {
+            traceDataStorage[traceId] = Plot.AddTrace(traceId, points, startX, startY, stopX, stopY);
+            
+            float[] traceData = traceDataStorage[traceId];
+            float dx = (stopX - startX) / ((float)points - 1);
+            for (uint i = 0; i < points; i += 1) {
+                traceData[i * 2 + 0] = startX + dx * i;
+                traceData[i * 2 + 1] = MathF.Sin(2 * MathF.PI * 1 * (i + traceId * 5) / points);
+            }
+            
+            Plot.SelectTrace(traceId);
+            Plot.SetUnitsX(traceId, (int)Units.Frequency);
+            Plot.SetUnitsY(traceId, (int)Units.Amplitude);
+
+            for (int markerId = 1; markerId < 4; markerId++) {
+                Plot.AddMarker(markerId);
+                Plot.SelectMarker(markerId);
+                Plot.SetMarkerFunction(markerId, markerId - 1);
+            }
+        }
+        
         // int traceId = Convert.ToInt32(TraceId.Text);
         // int points = Convert.ToInt32(Points.Text); 
         //
