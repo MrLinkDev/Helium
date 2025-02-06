@@ -1,4 +1,4 @@
-namespace Helium.Controls.Plot;
+namespace Helium.Controls.Plot.Enums;
 
 public enum MarkerFunction {
     Default,

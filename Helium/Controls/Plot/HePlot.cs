@@ -2,6 +2,7 @@
 using System.Windows;
 using System.Windows.Threading;
 using Amethyst;
+using Helium.Controls.Plot.Api;
 
 namespace Helium.Controls.Plot;
 

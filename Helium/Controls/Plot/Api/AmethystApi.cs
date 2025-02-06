@@ -1,6 +1,6 @@
 using System.Runtime.InteropServices;
 
-namespace Helium.Controls.Plot;
+namespace Helium.Controls.Plot.Api;
 
 internal static class AmethystApi {
     private const string DLL_NAME = "Alexander.Gorbunov.Amethyst.dll";

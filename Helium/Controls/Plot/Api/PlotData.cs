@@ -1,6 +1,6 @@
 using System.Runtime.InteropServices;
 
-namespace Helium.Controls.Plot;
+namespace Helium.Controls.Plot.Api;
 
 public class PlotData : IDisposable {
     private GCHandle gcHandle;
