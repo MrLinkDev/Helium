@@ -87,6 +87,13 @@
                 Margin="4"
                 Content="Select Trace" 
                 Click="SelectTrace_OnClick"/>
+
+            <Button
+                x:Name="AutoScaleTrace"
+                DockPanel.Dock="Top"
+                Margin="4"
+                Content="Auto Scale Trace" 
+                Click="AutoScaleTrace_OnClick"/>
             
             <DockPanel DockPanel.Dock="Top" Margin="4">
                 <Label

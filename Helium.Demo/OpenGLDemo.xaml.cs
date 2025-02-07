@@ -274,4 +274,10 @@ public partial class OpenGLDemo : HeWindow {
         
         Plot.SetMarkerFunction(markerId, markerFunc);
     }
+
+    private void AutoScaleTrace_OnClick(object sender, RoutedEventArgs e) {
+        int traceId = Convert.ToInt32(TraceId.Text);
+        
+        Plot.AutoScale(traceId);
+    }
 }

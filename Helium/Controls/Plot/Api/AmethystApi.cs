@@ -20,6 +20,9 @@ internal static class AmethystApi {
     public static extern void SetData(IntPtr screenPtr, int traceId, IntPtr dataPtr, int points);
 
     [DllImport(DLL_NAME, CharSet = CharSet.Unicode, CallingConvention = CallingConvention.Cdecl)]
+    public static extern void AutoScale(IntPtr screenPtr, int traceId);
+
+    [DllImport(DLL_NAME, CharSet = CharSet.Unicode, CallingConvention = CallingConvention.Cdecl)]
     public static extern void SetStartStopX(IntPtr screenPtr, int traceId, float startX, float stopX);
 
     [DllImport(DLL_NAME, CharSet = CharSet.Unicode, CallingConvention = CallingConvention.Cdecl)]

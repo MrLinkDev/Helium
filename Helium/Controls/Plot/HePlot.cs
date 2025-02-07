@@ -68,7 +68,7 @@ public class HePlot : AmethystPlot2D {
         updateTimer.Start();
     }
 
-    public void UpdateScreen() {
+    private void UpdateScreen() {
         if (!IsUpdateEnabled) return;
         InvalidateVisual();
     }
@@ -115,13 +115,10 @@ public class HePlot : AmethystPlot2D {
         
         AmethystApi.SetStartStopX(screenPtr, traceId, startX, stopX);
         AmethystApi.SetStartStopY(screenPtr, traceId, startY, stopY);
-        
-        UpdateScreen();
     }
 
     public void SelectTrace(int traceId) {
         AmethystApi.SelectTrace(screenPtr, traceId);
-        UpdateScreen();
     }
 
     public float[] GetTrace(int traceId) {
@@ -130,7 +127,6 @@ public class HePlot : AmethystPlot2D {
 
     public void RemoveTrace(int traceId) {
         AmethystApi.RemoveTrace(screenPtr, traceId);
-        UpdateScreen();
         
         if (!plotDataDict.ContainsKey(traceId)) return;
         plotDataDict[traceId].Dispose();
@@ -143,19 +139,19 @@ public class HePlot : AmethystPlot2D {
         plotDataDict[traceId] = new PlotData(data);
         AmethystApi.SetData(screenPtr, traceId, plotDataDict[traceId].Pointer, plotDataDict[traceId].Points);
         
-        UpdateScreen();
-        
         oldData.Dispose();
+    }
+
+    public void AutoScale(int traceId) {
+        AmethystApi.AutoScale(screenPtr, traceId);
     }
 
     public void SetStartStopX(int traceId, float startX, float stopX) {
         AmethystApi.SetStartStopX(screenPtr, traceId, startX, stopX);
-        UpdateScreen();
     }
     
     public void SetStartStopY(int traceId, float startY, float stopY) {
         AmethystApi.SetStartStopY(screenPtr, traceId, startY, stopY);
-        UpdateScreen();
     }
 
     public (float, float) GetStartStopX(int traceId) {
@@ -184,22 +180,18 @@ public class HePlot : AmethystPlot2D {
 
     public void AddMarker(int markerId) {
         AmethystApi.AddMarker(screenPtr, markerId);
-        UpdateScreen();
     }
 
     public void SelectMarker(int markerId) {
         AmethystApi.SelectMarker(screenPtr, markerId);
-        UpdateScreen();
     }
     
     public void RemoveMarker(int markerId) {
         AmethystApi.RemoveMarker(screenPtr, markerId);
-        UpdateScreen();
     }
 
     public void SetMarkerX(int markerId, float x) {
         AmethystApi.SetMarkerX(screenPtr, markerId, x);
-        UpdateScreen();
     }
 
     public float GetMarkerX(int markerId) {
@@ -208,7 +200,6 @@ public class HePlot : AmethystPlot2D {
 
     public void SetMarkerY(int markerId, float y) {
         AmethystApi.SetMarkerY(screenPtr, markerId, y);
-        UpdateScreen();
     }
 
     public float GetMarkerY(int markerId) {
