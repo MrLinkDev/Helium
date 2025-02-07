@@ -65,13 +65,11 @@ public class HePlot : AmethystPlot2D {
         SizeChangedInfo info = new SizeChangedInfo(this, new Size(), true, true);
         OnRenderSizeChanged(info);
         
-        //UpdateScreen();
         updateTimer.Start();
     }
 
     public void UpdateScreen() {
         if (!IsUpdateEnabled) return;
-        //AmethystApi.SetScreenUpdated(screenPtr);
         InvalidateVisual();
     }
 
@@ -158,6 +156,14 @@ public class HePlot : AmethystPlot2D {
     public void SetStartStopY(int traceId, float startY, float stopY) {
         AmethystApi.SetStartStopY(screenPtr, traceId, startY, stopY);
         UpdateScreen();
+    }
+
+    public (float, float) GetStartStopX(int traceId) {
+        return (AmethystApi.GetStartX(screenPtr, traceId), AmethystApi.GetStopX(screenPtr, traceId));
+    }
+
+    public (float, float) GetStartStopY(int traceId) {
+        return (AmethystApi.GetStartY(screenPtr, traceId), AmethystApi.GetStopY(screenPtr, traceId));
     }
 
     public void SetUnits(int traceId, int unitsX, int unitsY) {

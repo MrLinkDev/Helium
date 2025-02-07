@@ -1,6 +1,7 @@
 ﻿using System.Configuration;
 using System.Data;
 using System.Windows;
+using System.Windows.Input;
 
 namespace HeliumDemo;
 
@@ -9,7 +10,7 @@ namespace HeliumDemo;
 /// </summary>
 public partial class App : Application {
     private void App_OnStartup(object sender, StartupEventArgs e) {
-        Window window = new OpenGLDemo();
+        Window window = Keyboard.Modifiers == ModifierKeys.Control ? new MainWindow() : new OpenGLDemo();
 
         MainWindow = window;
         MainWindow.Show();

@@ -615,6 +615,7 @@
                 Margin="0, 16, 0, 0"
                 Id="1"
                 Text="XCheck 1" 
+                IsActive="{Binding IsActiveBinding, Mode=TwoWay}"
                 IsActiveCommand="{Binding IsOnCmd}"
                 IsCheckedCommand="{Binding IsCheckCmd}"/>
 

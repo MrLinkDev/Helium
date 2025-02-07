@@ -22,7 +22,17 @@ namespace HeliumDemo;
 
 public class RelayCommand : ICommand {
     private Action<object?>? execute;
-    
+
+    private bool isActiveBinding = true;
+    public bool IsActiveBinding {
+        get => isActiveBinding;
+        set {
+            isActiveBinding = value;
+            Console.WriteLine($"Binding = {IsActiveBinding}");
+        }
+    }
+
+
     public RelayCommand(Action<object?> execute) {
         this.execute = execute;
     }

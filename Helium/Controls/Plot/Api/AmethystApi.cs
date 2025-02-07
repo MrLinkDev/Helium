@@ -26,6 +26,18 @@ internal static class AmethystApi {
     public static extern void SetStartStopY(IntPtr screenPtr, int traceId, float startY, float stopY);
 
     [DllImport(DLL_NAME, CharSet = CharSet.Unicode, CallingConvention = CallingConvention.Cdecl)]
+    public static extern float GetStartX(IntPtr screenPtr, int traceId);
+
+    [DllImport(DLL_NAME, CharSet = CharSet.Unicode, CallingConvention = CallingConvention.Cdecl)]
+    public static extern float GetStopX(IntPtr screenPtr, int traceId);
+
+    [DllImport(DLL_NAME, CharSet = CharSet.Unicode, CallingConvention = CallingConvention.Cdecl)]
+    public static extern float GetStartY(IntPtr screenPtr, int traceId);
+
+    [DllImport(DLL_NAME, CharSet = CharSet.Unicode, CallingConvention = CallingConvention.Cdecl)]
+    public static extern float GetStopY(IntPtr screenPtr, int traceId);
+
+    [DllImport(DLL_NAME, CharSet = CharSet.Unicode, CallingConvention = CallingConvention.Cdecl)]
     public static extern void SetUnits(IntPtr screenPtr, int traceId, int unitsX, int unitsY);
 
     [DllImport(DLL_NAME, CharSet = CharSet.Unicode, CallingConvention = CallingConvention.Cdecl)]
