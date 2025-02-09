@@ -61,6 +61,7 @@ public partial class MainWindow : HeWindow, INotifyPropertyChanged {
 
     public RelayCommand IsOnCmd { get; set; }
     public RelayCommand IsCheckCmd { get; set; }
+    public RelayCommand SetValueCmd { get; set; }
 
     private double xValueButtonTestVal = 5;
 
@@ -86,6 +87,10 @@ public partial class MainWindow : HeWindow, INotifyPropertyChanged {
         IsCheckCmd = new RelayCommand(value => {
             (int, bool) v = ((int, bool))value;
             Console.WriteLine($"[{v.Item1}] IsChecked = {v.Item2}");
+        });
+        SetValueCmd = new RelayCommand(value => {
+            double v = (double)value;
+            Console.WriteLine($"Value by cmd = {value}");
         });
     }
     

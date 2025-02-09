@@ -92,6 +92,21 @@ public class HeXCheckValueButton : System.Windows.Controls.RadioButton {
 
     #endregion
     
+    #region SetValueCommand
+
+    public static readonly DependencyProperty SetValueCommandProperty = DependencyProperty.Register(
+        nameof(SetValueCommand),
+        typeof(ICommand),
+        typeof(HeXCheckValueButton),
+        new FrameworkPropertyMetadata(null));
+
+    public ICommand? SetValueCommand {
+        get => (ICommand?)GetValue(SetValueCommandProperty);
+        set => SetValue(SetValueCommandProperty, value);
+    }
+
+    #endregion
+    
     #region XValueType
 
     public static readonly DependencyProperty XValueTypeProperty = DependencyProperty.Register(
@@ -168,6 +183,8 @@ public class HeXCheckValueButton : System.Windows.Controls.RadioButton {
         set {
             SetValue(ValueProperty, value);
             SetXButtonValue(value);
+        
+            SetValueCommand?.Execute(value);
         }
     }
 
@@ -221,7 +238,7 @@ public class HeXCheckValueButton : System.Windows.Controls.RadioButton {
         if (GetTemplateChild("CheckButton") is HeXCheckValueButtonPart button) {
             button.Click += OnCheckButtonClick;
             button.ValueUpdated += value => SetValue(ValueProperty, value);
-        };
+        }
 
         if (GetTemplateChild("Indicator") is Border indicator) {
             Click += (sender, args) => {
