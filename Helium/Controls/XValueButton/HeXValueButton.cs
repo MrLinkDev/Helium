@@ -19,6 +19,9 @@ public class HeXValueButton : ButtonBase {
 
     private HeEditText editText;
     
+    public delegate void OnValueUpdated(double value);
+    public event OnValueUpdated? ValueUpdated;
+    
     #region XValueType
 
     public static readonly DependencyProperty XValueTypeProperty = DependencyProperty.Register(
@@ -220,6 +223,8 @@ public class HeXValueButton : ButtonBase {
         set {
             SetValue(ValueProperty, value);
             DisplayedValue = GetDisplayedValue(value);
+            
+            ValueUpdated?.Invoke(value);
         }
     }
 

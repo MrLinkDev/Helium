@@ -165,7 +165,10 @@ public class HeXCheckValueButton : System.Windows.Controls.RadioButton {
 
     public double Value {
         get => (double)GetValue(ValueProperty);
-        set => SetValue(ValueProperty, value);
+        set {
+            SetValue(ValueProperty, value);
+            SetXButtonValue(value);
+        }
     }
 
     #endregion
@@ -217,6 +220,7 @@ public class HeXCheckValueButton : System.Windows.Controls.RadioButton {
 
         if (GetTemplateChild("CheckButton") is HeXCheckValueButtonPart button) {
             button.Click += OnCheckButtonClick;
+            button.ValueUpdated += value => SetValue(ValueProperty, value);
         };
 
         if (GetTemplateChild("Indicator") is Border indicator) {
@@ -225,6 +229,12 @@ public class HeXCheckValueButton : System.Windows.Controls.RadioButton {
             };
         }
 
+    }
+
+    private void SetXButtonValue(double value) {
+        if (GetTemplateChild("CheckButton") is HeXCheckValueButtonPart button) {
+            button.Value = value;
+        }
     }
 
     private void OnCheckButtonClick(object sender, RoutedEventArgs routedEventArgs) {

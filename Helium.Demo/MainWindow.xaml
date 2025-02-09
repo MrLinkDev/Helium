@@ -637,7 +637,8 @@
                 Id="1"
                 ValueName="XCheckV 1"
                 MinValue="5"
-                Value="100"
+                XValueType="FREQUENCY"
+                Value="{Binding XValueButtonTestVal}"
                 MaxValue="500"
                 IsActiveCommand="{Binding IsOnCmd}"
                 IsCheckedCommand="{Binding IsCheckCmd}"/>

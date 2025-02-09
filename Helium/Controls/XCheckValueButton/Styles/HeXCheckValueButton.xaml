@@ -82,6 +82,8 @@
                             Width="Auto"
                             Height="Auto"
                             
+                            XValueType="{TemplateBinding XValueType}"
+                            
                             MinValue="{TemplateBinding MinValue}"
                             MaxValue="{TemplateBinding MaxValue}"
                             Value="{TemplateBinding Value}"
