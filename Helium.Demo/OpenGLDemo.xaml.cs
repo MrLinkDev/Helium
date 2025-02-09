@@ -37,7 +37,7 @@ public partial class OpenGLDemo : HeWindow {
         int startY = Convert.ToInt32(StartY.Text);
         int stopY = Convert.ToInt32(StopY.Text);
 
-        for (int traceId = 1; traceId < 9; traceId++) {
+        for (int traceId = 0; traceId < 8; traceId++) {
             traceDataStorage[traceId] = Plot.AddTrace(traceId, points, startX, startY, stopX, stopY);
             
             float[] traceData = traceDataStorage[traceId];
@@ -51,10 +51,10 @@ public partial class OpenGLDemo : HeWindow {
             Plot.SetUnitsX(traceId, (int)Units.Frequency);
             Plot.SetUnitsY(traceId, (int)Units.Amplitude);
 
-            for (int markerId = 1; markerId < 4; markerId++) {
+            for (int markerId = 0; markerId < 3; markerId++) {
                 Plot.AddMarker(markerId);
                 Plot.SelectMarker(markerId);
-                Plot.SetMarkerFunction(markerId, markerId - 1);
+                Plot.SetMarkerFunction(markerId, markerId);
             }
         }
         
