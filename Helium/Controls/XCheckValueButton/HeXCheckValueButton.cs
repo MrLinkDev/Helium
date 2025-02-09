@@ -184,7 +184,7 @@ public class HeXCheckValueButton : System.Windows.Controls.RadioButton {
             SetValue(ValueProperty, value);
             SetXButtonValue(value);
         
-            SetValueCommand?.Execute(value);
+            SetValueCommand?.Execute((Id, value));
         }
     }
 
