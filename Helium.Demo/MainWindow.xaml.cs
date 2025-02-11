@@ -89,8 +89,8 @@ public partial class MainWindow : HeWindow, INotifyPropertyChanged {
             Console.WriteLine($"[{v.Item1}] IsChecked = {v.Item2}");
         });
         SetValueCmd = new RelayCommand(value => {
-            double v = (double)value;
-            Console.WriteLine($"Value by cmd = {value}");
+            (int, double) v = ((int, double))value;
+            Console.WriteLine($"Value by cmd = {v.Item1}");
         });
     }
     

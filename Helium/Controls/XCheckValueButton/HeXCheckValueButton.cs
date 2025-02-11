@@ -181,7 +181,7 @@ public class HeXCheckValueButton : System.Windows.Controls.RadioButton {
     public double Value {
         get => (double)GetValue(ValueProperty);
         set {
-            SetValue(ValueProperty, value);
+            //SetValue(ValueProperty, value);
             SetXButtonValue(value);
         
             SetValueCommand?.Execute((Id, value));
@@ -250,7 +250,7 @@ public class HeXCheckValueButton : System.Windows.Controls.RadioButton {
 
     private void SetXButtonValue(double value) {
         if (GetTemplateChild("CheckButton") is HeXCheckValueButtonPart button) {
-            button.Value = value;
+            button.SetValueProperty(value);
         }
     }
 

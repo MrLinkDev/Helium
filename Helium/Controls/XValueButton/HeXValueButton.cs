@@ -221,11 +221,15 @@ public class HeXValueButton : ButtonBase {
     public double Value {
         get => (double)GetValue(ValueProperty);
         set {
-            SetValue(ValueProperty, value);
+            //SetValue(ValueProperty, value);
             DisplayedValue = GetDisplayedValue(value);
             
             ValueUpdated?.Invoke(value);
         }
+    }
+
+    public void SetValueProperty(double value) {
+        SetValue(ValueProperty, value);
     }
 
     #endregion
@@ -464,19 +468,19 @@ public class HeXValueButton : ButtonBase {
 
     private void EnterValue(double exp = 1) {
         try {
-            double temp = double.Parse(TempValue);
+            double temp = double.Parse(TempValue, CultureInfo.InvariantCulture);
             temp *= exp;
 
             if (temp < MinValue) {
-                Value = MinValue;
+                SetValue(ValueProperty, MinValue);
             } else if (temp > MaxValue) {
-                Value = MaxValue;
+                SetValue(ValueProperty, MaxValue);
             } else {
-                Value = temp;
+                SetValue(ValueProperty, temp);
             }
             
         } catch (Exception e) {
-            Value = MinValue;
+            SetValue(ValueProperty, MinValue);
         }
         
         Close();
