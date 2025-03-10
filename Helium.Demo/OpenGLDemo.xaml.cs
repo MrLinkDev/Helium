@@ -50,6 +50,7 @@ public partial class OpenGLDemo : HeWindow {
             Plot.SelectTrace(traceId);
             Plot.SetUnitsX(traceId, (int)Units.Frequency);
             Plot.SetUnitsY(traceId, (int)Units.Amplitude);
+            Plot.SetStartStopX(traceId, -2, 2);
 
             for (int markerId = 0; markerId < 3; markerId++) {
                 Plot.AddMarker(markerId);
