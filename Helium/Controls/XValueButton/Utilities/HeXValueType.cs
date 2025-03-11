@@ -10,5 +10,17 @@ public enum HeXValueType {
     FREQUENCY,
     
     [Exp(0.05, 0.1, 0.2, 0.5)]
-    DBM
+    DB,
+    
+    [Exp(0.05, 0.1, 0.2, 0.5)]
+    DBM,
+    
+    [DefaultUnit("с")]
+    [Units("мс", "мкс", "нс")]
+    [Exp(1e-3, 1e-6, 1e-9)]
+    TIME,
+    
+    [DefaultUnit("град.")]
+    [Exp]
+    ANGLE
 }

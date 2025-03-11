@@ -582,9 +582,9 @@
             <xValueButton:HeXValueButton
                 DockPanel.Dock="Top"
                 Margin="0, 8, 0, 0"
-                XValueType="DBM"
-                ValueName="Power"
-                FullValueName="Power" />
+                XValueType="ANGLE"
+                ValueName="Angle"
+                FullValueName="Angle" />
 
             <xValueButton:HeXValueButton
                 DockPanel.Dock="Top"

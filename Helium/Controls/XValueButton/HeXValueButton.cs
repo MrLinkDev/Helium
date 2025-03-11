@@ -221,7 +221,6 @@ public class HeXValueButton : ButtonBase {
     public double Value {
         get => (double)GetValue(ValueProperty);
         set {
-            //SetValue(ValueProperty, value);
             DisplayedValue = GetDisplayedValue(value);
             
             ValueUpdated?.Invoke(value);
@@ -491,18 +490,23 @@ public class HeXValueButton : ButtonBase {
         var units = XValueType.GetUnits();
         var exp = XValueType.GetExp();
 
+        if (units.Length == 0 && exp.Length == 0) {
+            string unit = XValueType.GetDefaultUnit();
+            
+            return string.IsNullOrEmpty(unit) ? $"{value:0.###}" : $"{value:0.###} {unit}";
+        }
+
         int pos = exp.Length;
         
-        for (; pos >= 0; pos--) {
+        for (; pos > 0; pos--) {
             if (value >= 1000 || value <= -1000) {
                 value /= 1000;
                 continue;
             }
             break;
         }
-        
-        if (units.Length == 0) return $"{value:0.###}";
-        if (units.Length == 1 || pos == exp.Length) return $"{value:0.###} {XValueType.GetDefaultUnit()}";
+
+        if (pos == exp.Length) return $"{value:0.###} {XValueType.GetDefaultUnit()}";
 
         try {
             double.Parse(units[pos]);
@@ -510,7 +514,6 @@ public class HeXValueButton : ButtonBase {
         } catch (FormatException e) {
             return $"{value:0.###} {units[pos]}";
         }
-
     }
 
     #endregion

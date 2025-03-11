@@ -2,16 +2,10 @@
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Input;
+using Helium.Controls.Plot.Enums;
 using Helium.Controls.Window;
 
 namespace HeliumDemo;
-
-public enum Units {
-    None,
-    Frequency,
-    Amplitude,
-    Time
-}
 
 public enum MarkerFunctions {
     Default,
@@ -49,7 +43,7 @@ public partial class OpenGLDemo : HeWindow {
             
             Plot.SelectTrace(traceId);
             Plot.SetUnitsX(traceId, (int)Units.Frequency);
-            Plot.SetUnitsY(traceId, (int)Units.Amplitude);
+            Plot.SetUnitsY(traceId, (int)Units.PowerdB);
             Plot.SetStartStopX(traceId, -2, 2);
 
             for (int markerId = 0; markerId < 3; markerId++) {
