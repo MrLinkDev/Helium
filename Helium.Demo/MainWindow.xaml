@@ -597,7 +597,7 @@
             <xRadioButton:HeXRadioButton
                 DockPanel.Dock="Top"
                 Margin="0, 16, 0, 0"
-                Content="АЧХ" />
+                Content="АЧХ&#10;гетеродин" />
 
             <xRadioButton:HeXRadioButton
                 DockPanel.Dock="Top"

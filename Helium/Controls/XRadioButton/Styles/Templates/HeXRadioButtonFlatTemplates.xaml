@@ -44,12 +44,13 @@
                     </Ellipse>
                 </Grid>
 
-                <ContentPresenter
+                <TextBlock
                     Grid.Column="1"
                     VerticalAlignment="Center"
                     HorizontalAlignment="Center"
                     Margin="-16, 0, 0, 2"
-                    Content="{TemplateBinding Content}" />
+                    TextAlignment="Center"
+                    Text="{TemplateBinding Content}" />
             </Grid>
         </Border>
 

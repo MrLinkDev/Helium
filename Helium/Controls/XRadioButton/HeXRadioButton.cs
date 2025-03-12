@@ -103,12 +103,12 @@ public class HeXRadioButton : System.Windows.Controls.RadioButton {
 
     public new static readonly DependencyProperty ContentProperty = DependencyProperty.Register(
         nameof(Content),
-        typeof(object),
+        typeof(string),
         typeof(HeXRadioButton),
-        new FrameworkPropertyMetadata(null));
+        new FrameworkPropertyMetadata(string.Empty));
     
-    public new object? Content {
-        get => (object?)GetValue(ContentProperty);
+    public new string Content {
+        get => (string)GetValue(ContentProperty);
         set => SetValue(ContentProperty, value);
     }
 
