@@ -275,4 +275,9 @@ public partial class OpenGLDemo : HeWindow {
         
         Plot.AutoScale(traceId);
     }
+
+    private void OpenExternalWindow_OnClick(object sender, RoutedEventArgs e) {
+        GlExternalWindow window = new GlExternalWindow();
+        window.Show();
+    }
 }

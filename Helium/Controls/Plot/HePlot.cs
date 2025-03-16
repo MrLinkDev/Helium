@@ -40,6 +40,7 @@ public class HePlot : AmethystPlot2D {
 
     public HePlot() {
         Loaded += OnLoaded;
+        Unloaded += (sender, args) => { Dispose(); };
         
         unsafe {
             screenPtr = (IntPtr)screen;

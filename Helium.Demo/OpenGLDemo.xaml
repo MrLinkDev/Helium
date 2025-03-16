@@ -8,7 +8,7 @@
                  xmlns:plot="clr-namespace:Helium.Controls.Plot;assembly=Alexander.Gorbunov.Helium"
                  mc:Ignorable="d"
                  Title="OpenGLDemo" 
-                 Height="820" 
+                 Height="920" 
                  Width="1280"
                  Background="#212121">
     <Grid>
@@ -406,6 +406,13 @@
                     DockPanel.Dock="Left"
                     Margin="0, 0, 4, 0" />
             </DockPanel>
+
+            <Button
+                x:Name="OpenExternalWindow"
+                DockPanel.Dock="Top"
+                Margin="4, 16, 4, 4"
+                Content="Open Ext WND" 
+                Click="OpenExternalWindow_OnClick"/>
 
         </DockPanel>
     </Grid>

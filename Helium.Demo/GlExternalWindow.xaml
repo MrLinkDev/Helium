@@ -1,0 +1,13 @@
+﻿<Window x:Class="HeliumDemo.GlExternalWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:local="clr-namespace:HeliumDemo"
+        xmlns:plot="clr-namespace:Helium.Controls.Plot;assembly=Alexander.Gorbunov.Helium"
+        mc:Ignorable="d"
+        Title="GlExternalWindow" Height="450" Width="800">
+    <Grid>
+        <plot:HePlot/>
+    </Grid>
+</Window>
