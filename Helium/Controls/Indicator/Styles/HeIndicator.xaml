@@ -5,6 +5,7 @@
     
     <ResourceDictionary.MergedDictionaries>
         <ResourceDictionary Source="/Alexander.Gorbunov.Helium;component/Controls/Indicator/Styles/Templates/HeConnectionIndicatorTemplates.xaml"/>
+        <ResourceDictionary Source="/Alexander.Gorbunov.Helium;component/Controls/Indicator/Styles/Templates/HeControllerIndicatorTemplates.xaml"/>
     </ResourceDictionary.MergedDictionaries>
     
     <Style TargetType="{x:Type indicator:HeIndicator}">
@@ -25,7 +26,16 @@
                 </MultiTrigger.Setters>
             </MultiTrigger>
             
-            
+            <MultiTrigger>
+                <MultiTrigger.Conditions>
+                    <Condition Property="HeTheme" Value="Default"/>
+                    <Condition Property="HeIndicatorType" Value="Controller"/>
+                </MultiTrigger.Conditions>
+                
+                <MultiTrigger.Setters>
+                    <Setter Property="Template" Value="{StaticResource HeControllerIndicator}"/>
+                </MultiTrigger.Setters>
+            </MultiTrigger>
         </Style.Triggers>
     </Style>
     
