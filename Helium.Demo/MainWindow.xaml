@@ -22,6 +22,7 @@
                  xmlns:xCheckButton="clr-namespace:Helium.Controls.XCheckButton;assembly=Alexander.Gorbunov.Helium"
                  xmlns:window="clr-namespace:Helium.Controls.Window;assembly=Alexander.Gorbunov.Helium"
                  xmlns:xCheckValueButton="clr-namespace:Helium.Controls.XCheckValueButton;assembly=Alexander.Gorbunov.Helium"
+                 xmlns:xPushButton="clr-namespace:Helium.Controls.XPushButton;assembly=Alexander.Gorbunov.Helium"
 
                  mc:Ignorable="d"
                  Title="MainWindow"
@@ -685,6 +686,16 @@
                     HeType="Flat"
                     Click="ChangeIndicatorState" />
             </DockPanel>
+            
+            <xPushButton:HeXPushButton
+                DockPanel.Dock="Top"
+                Margin="0, 8, 0, 0"
+                Content="Enabled"/>
+            
+            <xPushButton:HeXPushButton
+                DockPanel.Dock="Top"
+                Margin="0, 8, 0, 0"
+                Content="Disabled"/>
         </DockPanel>
 
         <DockPanel

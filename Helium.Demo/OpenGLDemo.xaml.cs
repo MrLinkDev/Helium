@@ -38,13 +38,14 @@ public partial class OpenGLDemo : HeWindow {
             float dx = (stopX - startX) / ((float)points - 1);
             for (uint i = 0; i < points; i += 1) {
                 traceData[i * 2 + 0] = startX + dx * i;
-                traceData[i * 2 + 1] = MathF.Sin(2 * MathF.PI * 1 * (i + traceId * 5) / points);
+                traceData[i * 2 + 1] = MathF.Sin(2 * MathF.PI * 1 * (i + traceId * 5) / points) - 35;
             }
             
             Plot.SelectTrace(traceId);
             Plot.SetUnitsX(traceId, (int)Units.Frequency);
             Plot.SetUnitsY(traceId, (int)Units.PowerdB);
-            Plot.SetStartStopX(traceId, -2, 2);
+            Plot.SetStartStopX(traceId, -1, 3);
+            Plot.SetStartStopY(traceId, -36, -33);
 
             for (int markerId = 0; markerId < 3; markerId++) {
                 Plot.AddMarker(markerId);
@@ -279,5 +280,43 @@ public partial class OpenGLDemo : HeWindow {
     private void OpenExternalWindow_OnClick(object sender, RoutedEventArgs e) {
         GlExternalWindow window = new GlExternalWindow();
         window.Show();
+    }
+
+    private Timer stressTestTimer;
+    private int counter;
+
+    private void LeakStressTest_OnClick(object sender, RoutedEventArgs e) {
+        counter = 20;
+        stressTestTimer = new Timer(CreateWindow, null, 0, 200);
+    }
+
+    private void CreateWindow(object? obj) {
+        Application.Current.Dispatcher.Invoke(() => {
+            GlExternalWindow window = new GlExternalWindow(true);
+            window.Show();
+        });
+
+        counter--;
+
+        if (counter == 0) stressTestTimer.Dispose();
+    }
+
+    private void SetPowerLevel_OnClick(object sender, RoutedEventArgs e) {
+        float power = Convert.ToSingle(PowerLevel.Text);
+        Plot.SetPowerLevel(power);
+    }
+
+    private void SetEmbState_OnClick(object sender, RoutedEventArgs e) {
+        bool state = false;
+        if (SetEmbState.IsChecked is not null) {
+            state = SetEmbState.IsChecked.Value;
+        }
+        
+        Plot.SetEmbeddedLoState(state);
+    }
+
+    private void SetEmbOffset_OnClick(object sender, RoutedEventArgs e) {
+        float offset = Convert.ToSingle(EmbOffset.Text);
+        Plot.SetEmbeddedLoOffset(offset);
     }
 }

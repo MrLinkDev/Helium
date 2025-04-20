@@ -216,4 +216,20 @@ public class HePlot : AmethystPlot2D {
     }
     
     #endregion
+
+    #region ScreenRegion
+
+    public void SetPowerLevel(float power) {
+        AmethystApi.SetPowerLevel(screenPtr, power);
+    }
+
+    public void SetEmbeddedLoState(bool state) {
+        AmethystApi.SetEmbeddedLoState(screenPtr, state);
+    }
+
+    public void SetEmbeddedLoOffset(float offset) {
+        AmethystApi.SetEmbeddedLoOffset(screenPtr, offset);
+    }
+
+    #endregion
 }

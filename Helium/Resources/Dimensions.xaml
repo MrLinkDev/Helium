@@ -17,18 +17,18 @@
              Radius8 = 8
     -->
     
-    <!-- Height -->
-    <system:Double x:Key="Height07X">20</system:Double>
-    <system:Double x:Key="Height">28</system:Double>
-    <system:Double x:Key="Height15X">42</system:Double>
-    <system:Double x:Key="Height20X">56</system:Double>
-    
-    <!-- Width -->
-    <system:Double x:Key="Width">70</system:Double>
-    <system:Double x:Key="Width07X">49</system:Double>
-    <system:Double x:Key="Width12X">84</system:Double>
-    <system:Double x:Key="Width15X">105</system:Double>
-    <system:Double x:Key="Width20X">140</system:Double>
+    <!-- Height -->                                         <!-- OLD -->   <!-- NEW (x1.8)  --> <!-- NEW (x1.4)  -->
+    <system:Double x:Key="Height07X">27</system:Double>     <!-- 20  -->   <!-- 35          --> <!-- 27          -->
+    <system:Double x:Key="Height">39</system:Double>        <!-- 28  -->   <!-- 50          --> <!-- 39          -->
+    <system:Double x:Key="Height15X">59</system:Double>     <!-- 42  -->   <!-- 75          --> <!-- 59          -->
+    <system:Double x:Key="Height20X">78</system:Double>     <!-- 56  -->   <!-- 100         --> <!-- 78          -->
+            
+    <!-- Width -->      
+    <system:Double x:Key="Width">98</system:Double>         <!-- 70  -->   <!-- 126         --> <!-- 98          -->
+    <system:Double x:Key="Width07X">69</system:Double>      <!-- 49  -->   <!-- 88          --> <!-- 69          -->
+    <system:Double x:Key="Width12X">118</system:Double>     <!-- 84  -->   <!-- 151         --> <!-- 118         -->
+    <system:Double x:Key="Width15X">147</system:Double>     <!-- 105 -->   <!-- 189         --> <!-- 147         -->
+    <system:Double x:Key="Width20X">196</system:Double>     <!-- 140 -->   <!-- 252         --> <!-- 196         -->
     
     <!-- Corner Radius -->
     <CornerRadius x:Key="Radius2">2</CornerRadius>
@@ -40,6 +40,7 @@
     <Thickness x:Key="Thickness0">0</Thickness>
     <Thickness x:Key="Thickness1">1</Thickness>
     <Thickness x:Key="Thickness2">2</Thickness>
+    <Thickness x:Key="Thickness4">4</Thickness>
     
     <!-- Padding -->
     <Thickness x:Key="Padding4">4</Thickness>
