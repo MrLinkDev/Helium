@@ -8,7 +8,7 @@
                  xmlns:plot="clr-namespace:Helium.Controls.Plot;assembly=Alexander.Gorbunov.Helium"
                  mc:Ignorable="d"
                  Title="OpenGLDemo" 
-                 Height="980" 
+                 Height="1080" 
                  Width="1280"
                  Background="#212121">
     <Grid>
@@ -476,6 +476,14 @@
                     Margin="4"
                     Text="200"/>
             </DockPanel>
+            
+            <CheckBox
+                DockPanel.Dock="Top"
+                x:Name="ReverseCheckBox"
+                Content="Reverse Draw"
+                Margin="4, 8, 4, 0"
+                Foreground="Azure"
+                Click="ReverseCheckBox_OnClick"/>
 
         </DockPanel>
     </Grid>

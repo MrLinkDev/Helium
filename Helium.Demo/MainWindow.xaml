@@ -698,12 +698,14 @@
                 Content="Disabled"/>
         </DockPanel>
 
-        <DockPanel
-            Grid.Column="5"
-            LastChildFill="True">
+        <Grid
+            Grid.Column="5">
+            
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
 
-            <tabControl:HeVTabControl
-                DockPanel.Dock="Right">
+            <tabControl:HeVTabControl Grid.Row="0">
                 <tabControl:HeVTabControl.Items>
                     <tabControl:HeVTabItem Header="TabItem 1">
                         <button:HeButton Text="1" />
@@ -730,6 +732,6 @@
                 </tabControl:HeVTabControl.Items>
             </tabControl:HeVTabControl>
 
-        </DockPanel>
+        </Grid>
     </Grid>
 </window:HeWindow>

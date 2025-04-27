@@ -16,6 +16,8 @@ public enum MarkerFunctions {
 public partial class OpenGLDemo : HeWindow {
     private Dictionary<int, float[]> traceDataStorage = new Dictionary<int, float[]>();
 
+    private bool isReversedState = false;
+
     public OpenGLDemo() {
         InitializeComponent();
 
@@ -52,6 +54,10 @@ public partial class OpenGLDemo : HeWindow {
                 Plot.SelectMarker(markerId);
                 Plot.SetMarkerFunction(markerId, markerId);
             }
+            
+            Plot.SetPowerLevel(-20.0f);
+            Plot.SetEmbeddedLoState(true);
+            Plot.SetEmbeddedLoOffset(800);
         }
         
         // int traceId = Convert.ToInt32(TraceId.Text);
@@ -318,5 +324,9 @@ public partial class OpenGLDemo : HeWindow {
     private void SetEmbOffset_OnClick(object sender, RoutedEventArgs e) {
         float offset = Convert.ToSingle(EmbOffset.Text);
         Plot.SetEmbeddedLoOffset(offset);
+    }
+
+    private void ReverseCheckBox_OnClick(object sender, RoutedEventArgs e) {
+        Plot.ReverseDraw(ReverseCheckBox.IsChecked.Value);
     }
 }

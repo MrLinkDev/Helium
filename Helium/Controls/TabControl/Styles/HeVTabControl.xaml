@@ -11,6 +11,8 @@
     <ControlTemplate x:Key="HeVTabControlL0" TargetType="{x:Type tabControl:HeVTabControl}">
         <Grid
             KeyboardNavigation.TabNavigation="Local"
+            
+            Height="Auto"
 
             VerticalAlignment="Stretch"
             HorizontalAlignment="Stretch">
@@ -19,6 +21,10 @@
                 <ColumnDefinition x:Name="Column0" Width="Auto" />
                 <ColumnDefinition x:Name="Column1" Width="*" />
             </Grid.ColumnDefinitions>
+            
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
 
             <VisualStateManager.VisualStateGroups>
                 <VisualStateGroup x:Name="CommonStates">
@@ -52,13 +58,15 @@
 
                 Panel.ZIndex="1"
                 KeyboardNavigation.TabIndex="1"
+                
+                Height="Auto"
 
                 IsItemsHost="True"
 
                 Margin="4"
 
                 HorizontalAlignment="Right"
-                VerticalAlignment="Stretch" />
+                VerticalAlignment="Stretch"/>
 
             <Border
                 x:Name="Border"

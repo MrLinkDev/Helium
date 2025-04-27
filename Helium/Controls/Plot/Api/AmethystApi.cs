@@ -49,6 +49,9 @@ internal static class AmethystApi {
     [DllImport(DLL_NAME, CharSet = CharSet.Unicode, CallingConvention = CallingConvention.Cdecl)]
     public static extern void SetUnitsY(IntPtr screenPtr, int traceId, int units);
 
+    [DllImport(DLL_NAME, CharSet = CharSet.Unicode, CallingConvention = CallingConvention.Cdecl)]
+    public static extern void SetIsDrawReversed(IntPtr screenPtr, bool isDrawReversed);
+
     #endregion
 
     #region MarkerRegion
@@ -79,6 +82,9 @@ internal static class AmethystApi {
 
     [DllImport(DLL_NAME, CharSet = CharSet.Unicode, CallingConvention = CallingConvention.Cdecl)]
     public static extern float RemoveMarkerFunction(IntPtr screenPtr, int markerId);
+    
+    [DllImport(DLL_NAME, CharSet = CharSet.Unicode, CallingConvention = CallingConvention.Cdecl)]
+    public static extern float SetUpdateMarkerInfoFunction(IntPtr screenPtr, IntPtr func);
 
     #endregion
 

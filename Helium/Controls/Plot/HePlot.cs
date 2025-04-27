@@ -19,6 +19,8 @@ public class HePlot : AmethystPlot2D {
     private IntPtr screenPtr;
 
     private Dictionary<int, PlotData> plotDataDict;
+
+     private Action<int, float, float> updateMarkerInfoAction;
     
     #region FrameRate
 
@@ -39,8 +41,15 @@ public class HePlot : AmethystPlot2D {
     #endregion
 
     public HePlot() {
+        updateMarkerInfoAction = UpdateMarkerInfo;
+        
         Loaded += OnLoaded;
         Unloaded += (sender, args) => { Dispose(); };
+
+        // MouseMove += (sender, args) => {
+        //     Point point = args.GetPosition(this);
+        //     Console.WriteLine($"x = {point.X}; y = {point.Y}");
+        // };
         
         unsafe {
             screenPtr = (IntPtr)screen;
@@ -65,6 +74,8 @@ public class HePlot : AmethystPlot2D {
 
         SizeChangedInfo info = new SizeChangedInfo(this, new Size(), true, true);
         OnRenderSizeChanged(info);
+
+        AmethystApi.SetUpdateMarkerInfoFunction(screenPtr, updateMarkerInfoAction.Method.MethodHandle.GetFunctionPointer());
         
         updateTimer.Start();
     }
@@ -175,6 +186,10 @@ public class HePlot : AmethystPlot2D {
         AmethystApi.SetUnitsY(screenPtr, traceId, units);
     }
 
+    public void ReverseDraw(bool reverse) {
+        AmethystApi.SetIsDrawReversed(screenPtr, reverse);
+    }
+
     #endregion
 
     #region MarkerRegion
@@ -213,6 +228,10 @@ public class HePlot : AmethystPlot2D {
 
     public void RemoveMarkerFunction(int markerId) {
         AmethystApi.RemoveMarkerFunction(screenPtr, markerId);
+    }
+
+    private static void UpdateMarkerInfo(int markerId, float x, float y) {
+        //Console.WriteLine($"{markerId}: x = {x}; y = {y}");
     }
     
     #endregion
