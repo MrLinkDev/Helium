@@ -421,62 +421,6 @@
                 Content="Stress test WND" 
                 Click="LeakStressTest_OnClick"/>
             
-            <Label
-                DockPanel.Dock="Top"
-                Content="Power:"
-                Padding="0"
-                Margin="4, 4, 4, 0"/>
-            
-            <DockPanel
-                DockPanel.Dock="Top">
-                
-                <Button
-                    x:Name="SetPowerLevel"
-                    DockPanel.Dock="Right"
-                    Margin="4"
-                    Width="28"
-                    Content="Set"
-                    Click="SetPowerLevel_OnClick"/>
-                
-                <TextBox
-                    x:Name="PowerLevel"
-                    DockPanel.Dock="Left"
-                    Margin="4"
-                    Text="-10"/>
-            </DockPanel>
-            
-            <Label
-                DockPanel.Dock="Top"
-                Content="Embedded LO:"
-                Padding="0"
-                Margin="4, 4, 4, 0"/>
-            
-            <CheckBox
-                DockPanel.Dock="Top"
-                x:Name="SetEmbState"
-                Content="State"
-                Margin="4, 4, 4, 0"
-                Foreground="Azure"
-                Click="SetEmbState_OnClick"/>
-            
-            <DockPanel
-                DockPanel.Dock="Top">
-                
-                <Button
-                    x:Name="SetEmbOffset"
-                    DockPanel.Dock="Right"
-                    Margin="4"
-                    Width="28"
-                    Content="Set"
-                    Click="SetEmbOffset_OnClick"/>
-                
-                <TextBox
-                    x:Name="EmbOffset"
-                    DockPanel.Dock="Left"
-                    Margin="4"
-                    Text="200"/>
-            </DockPanel>
-            
             <CheckBox
                 DockPanel.Dock="Top"
                 x:Name="ReverseCheckBox"

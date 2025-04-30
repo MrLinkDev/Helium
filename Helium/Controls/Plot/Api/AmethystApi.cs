@@ -87,17 +87,4 @@ internal static class AmethystApi {
     public static extern float SetUpdateMarkerInfoFunction(IntPtr screenPtr, IntPtr func);
 
     #endregion
-
-    #region ScreenRegion
-    
-    [DllImport(DLL_NAME, CharSet = CharSet.Unicode, CallingConvention = CallingConvention.Cdecl)]
-    public static extern void SetPowerLevel(IntPtr screenPtr, float power);
-    
-    [DllImport(DLL_NAME, CharSet = CharSet.Unicode, CallingConvention = CallingConvention.Cdecl)]
-    public static extern void SetEmbeddedLoState(IntPtr screenPtr, bool state);
-    
-    [DllImport(DLL_NAME, CharSet = CharSet.Unicode, CallingConvention = CallingConvention.Cdecl)]
-    public static extern void SetEmbeddedLoOffset(IntPtr screenPtr, float offset);
-
-    #endregion
 }

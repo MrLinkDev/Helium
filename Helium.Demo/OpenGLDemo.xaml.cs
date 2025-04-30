@@ -54,10 +54,6 @@ public partial class OpenGLDemo : HeWindow {
                 Plot.SelectMarker(markerId);
                 Plot.SetMarkerFunction(markerId, markerId);
             }
-            
-            Plot.SetPowerLevel(-20.0f);
-            Plot.SetEmbeddedLoState(true);
-            Plot.SetEmbeddedLoOffset(800);
         }
         
         // int traceId = Convert.ToInt32(TraceId.Text);
@@ -305,25 +301,6 @@ public partial class OpenGLDemo : HeWindow {
         counter--;
 
         if (counter == 0) stressTestTimer.Dispose();
-    }
-
-    private void SetPowerLevel_OnClick(object sender, RoutedEventArgs e) {
-        float power = Convert.ToSingle(PowerLevel.Text);
-        Plot.SetPowerLevel(power);
-    }
-
-    private void SetEmbState_OnClick(object sender, RoutedEventArgs e) {
-        bool state = false;
-        if (SetEmbState.IsChecked is not null) {
-            state = SetEmbState.IsChecked.Value;
-        }
-        
-        Plot.SetEmbeddedLoState(state);
-    }
-
-    private void SetEmbOffset_OnClick(object sender, RoutedEventArgs e) {
-        float offset = Convert.ToSingle(EmbOffset.Text);
-        Plot.SetEmbeddedLoOffset(offset);
     }
 
     private void ReverseCheckBox_OnClick(object sender, RoutedEventArgs e) {
