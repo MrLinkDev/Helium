@@ -217,6 +217,19 @@ public partial class OpenGLDemo : HeWindow {
         Plot.SetStartStopX(traceId, startX, stopX);
         Plot.SetStartStopY(traceId, startY, stopY);
     }
+    
+    private void UpdateCamera_OnClick(object sender, RoutedEventArgs e) {
+        int traceId = Convert.ToInt32(TraceId.Text);
+
+        float startX = Convert.ToSingle(StartX.Text);
+        float stopX = Convert.ToSingle(StopX.Text);
+
+        float startY = Convert.ToSingle(StartY.Text);
+        float stopY = Convert.ToSingle(StopY.Text);
+        
+        Plot.SetStartStopX(traceId, startX, stopX);
+        Plot.SetStartStopY(traceId, startY, stopY);
+    }
 
     private void IncreaseMarkerId_OnClick(object sender, RoutedEventArgs e) {
         MarkerId.Text = Convert.ToString(Convert.ToInt32(MarkerId.Text) + 1);
@@ -237,24 +250,34 @@ public partial class OpenGLDemo : HeWindow {
     private void AddMarker_OnClick(object sender, RoutedEventArgs e) {
         int traceId = Convert.ToInt32(TraceId.Text);
         int markerId = Convert.ToInt32(MarkerId.Text);
-        
-        Plot.AddMarker(markerId);
-        
-        MarkerX.Text = Plot.GetMarkerX(markerId).ToString();
+
+        if (ApplyForTraceId.IsChecked.GetValueOrDefault()) {
+            Plot.AddMarker(traceId, markerId);
+        } else {
+            Plot.AddMarker(markerId);
+        }
     }
 
     private void SelectMarker_OnClick(object sender, RoutedEventArgs e) {
         int traceId = Convert.ToInt32(TraceId.Text);
         int markerId = Convert.ToInt32(MarkerId.Text);
         
-        Plot.SelectMarker(markerId);
+        if (ApplyForTraceId.IsChecked.GetValueOrDefault()) {
+            Plot.SelectMarker(traceId, markerId);
+        } else {
+            Plot.SelectMarker(markerId);
+        }
     }
     
     private void RemoveMarker_OnClick(object sender, RoutedEventArgs e) {
         int traceId = Convert.ToInt32(TraceId.Text);
         int markerId = Convert.ToInt32(MarkerId.Text);
         
-        Plot.RemoveMarker(markerId);
+        if (ApplyForTraceId.IsChecked.GetValueOrDefault()) {
+            Plot.RemoveMarker(traceId, markerId);
+        } else {
+            Plot.RemoveMarker(markerId);
+        }
     }
 
     private void SetMarkerX_OnClick(object sender, RoutedEventArgs e) {
@@ -263,14 +286,24 @@ public partial class OpenGLDemo : HeWindow {
         
         float markerX = Convert.ToSingle(MarkerX.Text);
         
-        Plot.SetMarkerX(markerId, markerX);
+        if (ApplyForTraceId.IsChecked.GetValueOrDefault()) {
+            Plot.SetMarkerX(traceId, markerId, markerX);
+        } else {
+            Plot.SetMarkerX(markerId, markerX);
+        }
     }
 
     private void SetMarkerFunc_OnClick(object sender, RoutedEventArgs e) {
+        int traceId = Convert.ToInt32(TraceId.Text);
         int markerId = Convert.ToInt32(MarkerId.Text);
+        
         int markerFunc = Convert.ToInt32(MarkerFunc.SelectedIndex);
         
-        Plot.SetMarkerFunction(markerId, markerFunc);
+        if (ApplyForTraceId.IsChecked.GetValueOrDefault()) {
+            Plot.SetMarkerFunction(traceId, markerId, markerFunc);
+        } else {
+            Plot.SetMarkerFunction(markerId, markerFunc);
+        }
     }
 
     private void AutoScaleTrace_OnClick(object sender, RoutedEventArgs e) {

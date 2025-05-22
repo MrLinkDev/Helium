@@ -301,6 +301,13 @@
                 Margin="4"
                 Content="Update Data" 
                 Click="UpdateData_OnClick"/>
+
+            <Button
+                x:Name="UpdateCamera"
+                DockPanel.Dock="Top"
+                Margin="4"
+                Content="Update Camera" 
+                Click="UpdateCamera_OnClick"/>
             
             <Label
                 DockPanel.Dock="Top"
@@ -365,6 +372,13 @@
                     Margin="4"
                     Text="0" />
             </DockPanel>
+            
+            <CheckBox
+                x:Name="ApplyForTraceId"
+                DockPanel.Dock="Top"
+                Margin="4, 16, 4, 4"
+                Content="Apply for traceId"
+                Foreground="AliceBlue"/>
 
             <Button
                 x:Name="AddMarker"

@@ -194,36 +194,72 @@ public class HePlot : AmethystPlot2D {
 
     #region MarkerRegion
 
+    public void AddMarker(int traceId, int markerId) {
+        AmethystApi.AddMarkerWTrace(screenPtr, traceId, markerId);
+    }
+
     public void AddMarker(int markerId) {
         AmethystApi.AddMarker(screenPtr, markerId);
+    }
+
+    public void SelectMarker(int traceId, int markerId) {
+        AmethystApi.SelectMarkerWTrace(screenPtr, traceId, markerId);
     }
 
     public void SelectMarker(int markerId) {
         AmethystApi.SelectMarker(screenPtr, markerId);
     }
     
+    public void RemoveMarker(int traceId, int markerId) {
+        AmethystApi.RemoveMarkerWTrace(screenPtr, traceId, markerId);
+    }
+    
     public void RemoveMarker(int markerId) {
         AmethystApi.RemoveMarker(screenPtr, markerId);
+    }
+
+    public void SetMarkerX(int traceId, int markerId, float x) {
+        AmethystApi.SetMarkerXWTrace(screenPtr, traceId, markerId, x);
     }
 
     public void SetMarkerX(int markerId, float x) {
         AmethystApi.SetMarkerX(screenPtr, markerId, x);
     }
 
+    public float GetMarkerX(int traceId, int markerId) {
+        return AmethystApi.GetMarkerXWTrace(screenPtr, traceId, markerId);
+    }
+
     public float GetMarkerX(int markerId) {
         return AmethystApi.GetMarkerX(screenPtr, markerId);
+    }
+
+    public void SetMarkerY(int traceId, int markerId, float y) {
+        AmethystApi.SetMarkerYWTrace(screenPtr, traceId, markerId, y);
     }
 
     public void SetMarkerY(int markerId, float y) {
         AmethystApi.SetMarkerY(screenPtr, markerId, y);
     }
 
+    public float GetMarkerY(int traceId, int markerId) {
+        return AmethystApi.GetMarkerYWTrace(screenPtr, traceId, markerId);
+    }
+
     public float GetMarkerY(int markerId) {
         return AmethystApi.GetMarkerY(screenPtr, markerId);
     }
 
+    public void SetMarkerFunction(int traceId, int markerId, int type) {
+        AmethystApi.SetMarkerFunctionWTrace(screenPtr, traceId, markerId, type);
+    }
+
     public void SetMarkerFunction(int markerId, int type) {
         AmethystApi.SetMarkerFunction(screenPtr, markerId, type);
+    }
+
+    public void RemoveMarkerFunction(int traceId, int markerId) {
+        AmethystApi.RemoveMarkerFunctionWTrace(screenPtr, traceId, markerId);
     }
 
     public void RemoveMarkerFunction(int markerId) {

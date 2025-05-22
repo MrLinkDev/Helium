@@ -57,28 +57,55 @@ internal static class AmethystApi {
     #region MarkerRegion
 
     [DllImport(DLL_NAME, CharSet = CharSet.Unicode, CallingConvention = CallingConvention.Cdecl)]
+    public static extern void AddMarkerWTrace(IntPtr screenPtr, int traceId, int markerId);
+    
+    [DllImport(DLL_NAME, CharSet = CharSet.Unicode, CallingConvention = CallingConvention.Cdecl)]
     public static extern void AddMarker(IntPtr screenPtr, int markerId);
+
+    [DllImport(DLL_NAME, CharSet = CharSet.Unicode, CallingConvention = CallingConvention.Cdecl)]
+    public static extern void SelectMarkerWTrace(IntPtr screenPtr, int traceId, int markerId);
 
     [DllImport(DLL_NAME, CharSet = CharSet.Unicode, CallingConvention = CallingConvention.Cdecl)]
     public static extern void SelectMarker(IntPtr screenPtr, int markerId);
 
     [DllImport(DLL_NAME, CharSet = CharSet.Unicode, CallingConvention = CallingConvention.Cdecl)]
+    public static extern void RemoveMarkerWTrace(IntPtr screenPtr, int traceId, int markerId);
+
+    [DllImport(DLL_NAME, CharSet = CharSet.Unicode, CallingConvention = CallingConvention.Cdecl)]
     public static extern void RemoveMarker(IntPtr screenPtr, int markerId);
+
+    [DllImport(DLL_NAME, CharSet = CharSet.Unicode, CallingConvention = CallingConvention.Cdecl)]
+    public static extern void SetMarkerXWTrace(IntPtr screenPtr, int traceId, int markerId, float x);
 
     [DllImport(DLL_NAME, CharSet = CharSet.Unicode, CallingConvention = CallingConvention.Cdecl)]
     public static extern void SetMarkerX(IntPtr screenPtr, int markerId, float x);
 
     [DllImport(DLL_NAME, CharSet = CharSet.Unicode, CallingConvention = CallingConvention.Cdecl)]
+    public static extern float GetMarkerXWTrace(IntPtr screenPtr, int traceId, int markerId);
+
+    [DllImport(DLL_NAME, CharSet = CharSet.Unicode, CallingConvention = CallingConvention.Cdecl)]
     public static extern float GetMarkerX(IntPtr screenPtr, int markerId);
+
+    [DllImport(DLL_NAME, CharSet = CharSet.Unicode, CallingConvention = CallingConvention.Cdecl)]
+    public static extern void SetMarkerYWTrace(IntPtr screenPtr, int traceId, int markerId, float y);
 
     [DllImport(DLL_NAME, CharSet = CharSet.Unicode, CallingConvention = CallingConvention.Cdecl)]
     public static extern void SetMarkerY(IntPtr screenPtr, int markerId, float y);
 
     [DllImport(DLL_NAME, CharSet = CharSet.Unicode, CallingConvention = CallingConvention.Cdecl)]
+    public static extern float GetMarkerYWTrace(IntPtr screenPtr, int traceId, int markerId);
+
+    [DllImport(DLL_NAME, CharSet = CharSet.Unicode, CallingConvention = CallingConvention.Cdecl)]
     public static extern float GetMarkerY(IntPtr screenPtr, int markerId);
 
     [DllImport(DLL_NAME, CharSet = CharSet.Unicode, CallingConvention = CallingConvention.Cdecl)]
+    public static extern float SetMarkerFunctionWTrace(IntPtr screenPtr, int traceId, int markerId, int type);
+
+    [DllImport(DLL_NAME, CharSet = CharSet.Unicode, CallingConvention = CallingConvention.Cdecl)]
     public static extern float SetMarkerFunction(IntPtr screenPtr, int markerId, int type);
+
+    [DllImport(DLL_NAME, CharSet = CharSet.Unicode, CallingConvention = CallingConvention.Cdecl)]
+    public static extern float RemoveMarkerFunctionWTrace(IntPtr screenPtr, int traceId, int markerId);
 
     [DllImport(DLL_NAME, CharSet = CharSet.Unicode, CallingConvention = CallingConvention.Cdecl)]
     public static extern float RemoveMarkerFunction(IntPtr screenPtr, int markerId);
