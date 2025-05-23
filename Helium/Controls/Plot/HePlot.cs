@@ -7,7 +7,7 @@ using Helium.Controls.Plot.Api;
 namespace Helium.Controls.Plot;
 
 public class HePlot : AmethystPlot2D {
-    public int Id { get; }
+    public int Id { get; set; }
     
     public delegate void OnMarkerCoordsUpdated(int traceId, int markerId, float value);
     
@@ -48,9 +48,7 @@ public class HePlot : AmethystPlot2D {
 
     #endregion
 
-    public HePlot(int id) {
-        Id = id;
-        
+    public HePlot() {
         markerXUpdatedDelegate = InvokeMarkerXUpdatedEvent;
         markerYUpdatedDelegate = InvokeMarkerYUpdatedEvent;
         
