@@ -2,6 +2,7 @@
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Input;
+using Helium.Controls.Plot;
 using Helium.Controls.Plot.Enums;
 using Helium.Controls.Window;
 
@@ -18,6 +19,9 @@ public partial class OpenGLDemo : HeWindow {
 
     private bool isReversedState = false;
 
+    private Task drawStressTestTask;
+    private CancellationTokenSource drawStressTestTokenSource;
+
     public OpenGLDemo() {
         InitializeComponent();
 
@@ -25,74 +29,7 @@ public partial class OpenGLDemo : HeWindow {
         UnitsBoxY.ItemsSource = Enum.GetNames(typeof(Units));
         MarkerFunc.ItemsSource = Enum.GetNames(typeof(MarkerFunctions));
         
-        int points = Convert.ToInt32(Points.Text); 
-        
-        int startX = Convert.ToInt32(StartX.Text);
-        int stopX = Convert.ToInt32(StopX.Text);
-        
-        int startY = Convert.ToInt32(StartY.Text);
-        int stopY = Convert.ToInt32(StopY.Text);
-
-        for (int traceId = 0; traceId < 8; traceId++) {
-            traceDataStorage[traceId] = Plot.AddTrace(traceId, points, startX, startY, stopX, stopY);
-            
-            float[] traceData = traceDataStorage[traceId];
-            float dx = (stopX - startX) / ((float)points - 1);
-            for (uint i = 0; i < points; i += 1) {
-                traceData[i * 2 + 0] = startX + dx * i;
-                traceData[i * 2 + 1] = MathF.Sin(2 * MathF.PI * 1 * (i + traceId * 5) / points) - 35;
-            }
-            
-            Plot.SelectTrace(traceId);
-            Plot.SetUnitsX(traceId, (int)Units.Frequency);
-            Plot.SetUnitsY(traceId, (int)Units.PowerdB);
-            Plot.SetStartStopX(traceId, -1, 3);
-            Plot.SetStartStopY(traceId, -36, -33);
-
-            for (int markerId = 0; markerId < 3; markerId++) {
-                Plot.AddMarker(markerId);
-                Plot.SelectMarker(markerId);
-                Plot.SetMarkerFunction(markerId, markerId);
-            }
-        }
-        
-        // int traceId = Convert.ToInt32(TraceId.Text);
-        // int points = Convert.ToInt32(Points.Text); 
-        //
-        // int startX = Convert.ToInt32(StartX.Text);
-        // int stopX = Convert.ToInt32(StopX.Text);
-        //
-        // int startY = Convert.ToInt32(StartY.Text);
-        // int stopY = Convert.ToInt32(StopY.Text);
-        //
-        // if (traceDataStorage.ContainsKey(traceId)) return;
-        //
-        // traceDataStorage[traceId] = Plot.AddTrace(traceId, points, startX, startY, stopX, stopY);
-        //
-        // float[] traceData = traceDataStorage[traceId];
-        // float dx = (stopX - startX) / ((float)points - 1);
-        // for (uint i = 0; i < points; i += 1) {
-        //     traceData[i * 2 + 0] = startX + dx * i;
-        //     traceData[i * 2 + 1] = MathF.Sin(2 * MathF.PI * 1 * i / points);
-        // }
-
-        Task.Run(() => {
-            while (true) {
-                foreach (var traceStoragePair in traceDataStorage) {
-                    var traceData = traceStoragePair.Value;
-        
-                    float temp = traceData[1];
-        
-                    for (int i = 0; i < traceData.Length - 2; i += 2) {
-                        traceData[i + 1] = traceData[i + 3];
-                    }
-        
-                    traceData[^1] = temp;
-                }
-        
-                Thread.Sleep(1000 / 30);
-            }
-        });
+        Plot.MarkerCoordsUpdated += (traceId, markerId, x, y) => Console.WriteLine($"TraceID = {traceId}; MarkerID = {markerId}; X = {x}; Y = {y}");
     }
 
     private void IncreaseTraceId_OnClick(object sender, RoutedEventArgs e) {
@@ -338,5 +275,72 @@ public partial class OpenGLDemo : HeWindow {
 
     private void ReverseCheckBox_OnClick(object sender, RoutedEventArgs e) {
         Plot.ReverseDraw(ReverseCheckBox.IsChecked.Value);
+    }
+
+    private void DrawStressTest_OnClick(object sender, RoutedEventArgs e) {
+        int points = Convert.ToInt32(Points.Text); 
+        
+        int startX = Convert.ToInt32(StartX.Text);
+        int stopX = Convert.ToInt32(StopX.Text);
+        
+        int startY = Convert.ToInt32(StartY.Text);
+        int stopY = Convert.ToInt32(StopY.Text);
+
+        for (int traceId = 0; traceId < 8; traceId++) {
+            traceDataStorage[traceId] = Plot.AddTrace(traceId, points, startX, startY, stopX, stopY);
+            
+            float[] traceData = traceDataStorage[traceId];
+            float dx = (stopX - startX) / ((float)points - 1);
+            for (uint i = 0; i < points; i += 1) {
+                traceData[i * 2 + 0] = startX + dx * i;
+                traceData[i * 2 + 1] = MathF.Sin(2 * MathF.PI * 1 * (i + traceId * 5) / points) - 35;
+            }
+            
+            Plot.SelectTrace(traceId);
+            Plot.SetUnitsX(traceId, (int)Units.Frequency);
+            Plot.SetUnitsY(traceId, (int)Units.PowerdB);
+            Plot.SetStartStopX(traceId, -1, 3);
+            Plot.SetStartStopY(traceId, -36, -33);
+
+            for (int markerId = 0; markerId < 3; markerId++) {
+                Plot.AddMarker(markerId);
+                Plot.SelectMarker(markerId);
+                Plot.SetMarkerFunction(markerId, markerId);
+            }
+        }
+
+        drawStressTestTokenSource = new CancellationTokenSource();
+        drawStressTestTask = Task.Run(() => {
+            while (!drawStressTestTokenSource.Token.IsCancellationRequested) {
+                foreach (var traceStoragePair in traceDataStorage) {
+                    var traceData = traceStoragePair.Value;
+        
+                    float temp = traceData[1];
+        
+                    for (int i = 0; i < traceData.Length - 2; i += 2) {
+                        traceData[i + 1] = traceData[i + 3];
+                    }
+        
+                    traceData[^1] = temp;
+                }
+        
+                Thread.Sleep(1000 / 30);
+            }
+        });
+    }
+
+    private void ResetDraw_OnClick(object sender, RoutedEventArgs e) {
+        drawStressTestTokenSource.Cancel();
+        drawStressTestTask.Wait();
+        
+        for (int traceId = 0; traceId < 8; traceId++) {
+            traceDataStorage.Clear();
+            
+            Plot.RemoveTrace(traceId);
+        }
+    }
+
+    private void TrackCurrentMarker_OnClick(object sender, RoutedEventArgs e) {
+        
     }
 }

@@ -7,6 +7,11 @@ using Helium.Controls.Plot.Api;
 namespace Helium.Controls.Plot;
 
 public class HePlot : AmethystPlot2D {
+    public delegate void OnMarkerCoordsUpdated(int traceId, int markerId, float x, float y);
+    private OnMarkerCoordsUpdated markerCoordsUpdatedDelegate;
+    
+    public event OnMarkerCoordsUpdated? MarkerCoordsUpdated;
+    
     private bool isUpdateEnabled = true;
 
     public bool IsUpdateEnabled {
@@ -19,8 +24,6 @@ public class HePlot : AmethystPlot2D {
     private IntPtr screenPtr;
 
     private Dictionary<int, PlotData> plotDataDict;
-
-     private Action<int, float, float> updateMarkerInfoAction;
     
     #region FrameRate
 
@@ -41,15 +44,10 @@ public class HePlot : AmethystPlot2D {
     #endregion
 
     public HePlot() {
-        updateMarkerInfoAction = UpdateMarkerInfo;
+        markerCoordsUpdatedDelegate = InvokeMarkerCoordsUpdatedEvent;
         
         Loaded += OnLoaded;
         Unloaded += (sender, args) => { Dispose(); };
-
-        // MouseMove += (sender, args) => {
-        //     Point point = args.GetPosition(this);
-        //     Console.WriteLine($"x = {point.X}; y = {point.Y}");
-        // };
         
         unsafe {
             screenPtr = (IntPtr)screen;
@@ -75,7 +73,7 @@ public class HePlot : AmethystPlot2D {
         SizeChangedInfo info = new SizeChangedInfo(this, new Size(), true, true);
         OnRenderSizeChanged(info);
 
-        AmethystApi.SetUpdateMarkerInfoFunction(screenPtr, updateMarkerInfoAction.Method.MethodHandle.GetFunctionPointer());
+        AmethystApi.SetMarkerCoordsUpdatedDelegate(screenPtr, Marshal.GetFunctionPointerForDelegate(markerCoordsUpdatedDelegate));
         
         updateTimer.Start();
     }
@@ -266,8 +264,8 @@ public class HePlot : AmethystPlot2D {
         AmethystApi.RemoveMarkerFunction(screenPtr, markerId);
     }
 
-    private static void UpdateMarkerInfo(int markerId, float x, float y) {
-        //Console.WriteLine($"{markerId}: x = {x}; y = {y}");
+    private void InvokeMarkerCoordsUpdatedEvent(int traceId, int markerId, float x, float y) {
+        MarkerCoordsUpdated?.Invoke(traceId, markerId, x, y);
     }
     
     #endregion
