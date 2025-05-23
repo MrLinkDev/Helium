@@ -7,8 +7,8 @@
         <ImplicitUsings>enable</ImplicitUsings>
         <LangVersion>12</LangVersion>
         <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-        <AssemblyVersion>1.0.9</AssemblyVersion>
-        <FileVersion>1.0.9</FileVersion>
+        <AssemblyVersion>1.0.9.1</AssemblyVersion>
+        <FileVersion>1.0.9.1</FileVersion>
         <AssemblyName>Alexander.Gorbunov.Helium</AssemblyName>
         <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
     </PropertyGroup>
@@ -17,7 +17,7 @@
         <PackageId>Alexander.Gorbunov.Helium</PackageId>
         <Title>Themed controls for .NET</Title>
         <Authors>Alexander Gorbunov</Authors>
-        <Version>1.0.9</Version>
+        <Version>1.0.9.1</Version>
         <RepositoryUrl>https://github.com/MrLinkDev/Helium</RepositoryUrl>
         <PackageReadmeFile>README.md</PackageReadmeFile>
         <PackageLicenseFile>LICENSE.txt</PackageLicenseFile>

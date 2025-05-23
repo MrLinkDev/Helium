@@ -111,7 +111,7 @@ internal static class AmethystApi {
     public static extern float RemoveMarkerFunction(IntPtr screenPtr, int markerId);
     
     [DllImport(DLL_NAME, CharSet = CharSet.Unicode, CallingConvention = CallingConvention.Cdecl)]
-    public static extern float SetMarkerCoordsUpdatedDelegate(IntPtr screenPtr, IntPtr func);
+    public static extern float SetMarkerCoordsUpdatedDelegate(IntPtr screenPtr, IntPtr xDelegate, IntPtr yDelegate);
 
     #endregion
 }
