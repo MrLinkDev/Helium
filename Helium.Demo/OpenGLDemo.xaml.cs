@@ -29,8 +29,8 @@ public partial class OpenGLDemo : HeWindow {
         UnitsBoxY.ItemsSource = Enum.GetNames(typeof(Units));
         MarkerFunc.ItemsSource = Enum.GetNames(typeof(MarkerFunctions));
         
-        Plot.MarkerXUpdated += (traceId, markerId, value) => Console.WriteLine($"TraceID = {traceId}; MarkerID = {markerId}; X = {value}");
-        Plot.MarkerYUpdated += (traceId, markerId, value) => Console.WriteLine($"TraceID = {traceId}; MarkerID = {markerId}; Y = {value}");
+        //Plot.MarkerXUpdated += (traceId, markerId, value) => Console.WriteLine($"TraceID = {traceId}; MarkerID = {markerId}; X = {value}");
+        //Plot.MarkerYUpdated += (traceId, markerId, value) => Console.WriteLine($"TraceID = {traceId}; MarkerID = {markerId}; Y = {value}");
     }
 
     private void IncreaseTraceId_OnClick(object sender, RoutedEventArgs e) {
