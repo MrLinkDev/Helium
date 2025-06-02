@@ -29,11 +29,11 @@ public partial class OpenGLDemo : HeWindow {
         UnitsBoxY.ItemsSource = Enum.GetNames(typeof(Units));
         MarkerFunc.ItemsSource = Enum.GetNames(typeof(MarkerFunctions));
         
-        //Plot.MarkerXUpdated += (traceId, markerId, value) => Console.WriteLine($"TraceID = {traceId}; MarkerID = {markerId}; X = {value}");
-        //Plot.MarkerYUpdated += (traceId, markerId, value) => Console.WriteLine($"TraceID = {traceId}; MarkerID = {markerId}; Y = {value}");
+        Plot.MarkerXUpdated += (windowId, traceId, markerId, value) => Console.WriteLine($"TraceID = {traceId}; MarkerID = {markerId}; X = {value}");
+        Plot.MarkerYUpdated += (windowId, traceId, markerId, value) => Console.WriteLine($"TraceID = {traceId}; MarkerID = {markerId}; Y = {value}");
 
-        Plot.SelectedTraceUpdated += id => Console.WriteLine($"Selected trace id = {id}");
-        Plot.SelectedMarkerUpdated += (traceId, markerId) => Console.WriteLine($"Selected marker id = {markerId} on trace = {traceId}");
+        Plot.SelectedTraceUpdated += (windowId, traceId) => Console.WriteLine($"Selected trace id = {traceId} on window = {windowId}");
+        Plot.SelectedMarkerUpdated += (windowId, traceId, markerId) => Console.WriteLine($"Selected marker id = {markerId} on trace = {traceId} on window = {windowId}");
         
         DrawStressTest_OnClick(null, null);
     }

@@ -7,22 +7,27 @@ using Helium.Controls.Plot.Api;
 namespace Helium.Controls.Plot;
 
 public class HePlot : AmethystPlot2D {
-    public int Id { get; set; }
+    public int Id { get; set; } = 0;
     
     public delegate void OnMarkerCoordsUpdated(int traceId, int markerId, float value);
+    public delegate void OnMarkerCoordsUpdatedW(int windowId, int traceId, int markerId, float value);
     
-    public event OnMarkerCoordsUpdated? MarkerXUpdated;
-    public event OnMarkerCoordsUpdated? MarkerYUpdated;
+    public event OnMarkerCoordsUpdatedW MarkerXUpdated;
+    public event OnMarkerCoordsUpdatedW MarkerYUpdated;
     
     private OnMarkerCoordsUpdated markerXUpdatedDelegate;
     private OnMarkerCoordsUpdated markerYUpdatedDelegate;
     
     public delegate void OnSelectedTraceUpdated(int traceId);
-    public event OnSelectedTraceUpdated? SelectedTraceUpdated;
+    public delegate void OnSelectedTraceUpdatedW(int windowId, int traceId);
+    
+    public event OnSelectedTraceUpdatedW? SelectedTraceUpdated;
     private OnSelectedTraceUpdated traceDelegate;
     
     public delegate void OnSelectedMarkerUpdated(int traceId, int markerId);
-    public event OnSelectedMarkerUpdated? SelectedMarkerUpdated;
+    public delegate void OnSelectedMarkerUpdatedW(int windowId, int traceId, int markerId);
+    
+    public event OnSelectedMarkerUpdatedW? SelectedMarkerUpdated;
     private OnSelectedMarkerUpdated markerDelegate;
     
     private bool isUpdateEnabled = true;
@@ -55,7 +60,7 @@ public class HePlot : AmethystPlot2D {
     }
 
     #endregion
-
+    
     public HePlot() {
         markerXUpdatedDelegate = InvokeMarkerXUpdatedEvent;
         markerYUpdatedDelegate = InvokeMarkerYUpdatedEvent;
@@ -288,19 +293,19 @@ public class HePlot : AmethystPlot2D {
     }
 
     private void InvokeMarkerXUpdatedEvent(int traceId, int markerId, float value) {
-        MarkerXUpdated?.Invoke(traceId, markerId, value);
+        MarkerXUpdated?.Invoke(Id, traceId, markerId, value);
     }
 
     private void InvokeMarkerYUpdatedEvent(int traceId, int markerId, float value) {
-        MarkerYUpdated?.Invoke(traceId, markerId, value);
+        MarkerYUpdated?.Invoke(Id, traceId, markerId, value);
     }
 
     private void InvokeSelectedTraceUpdatedEvent(int traceId) {
-        SelectedTraceUpdated?.Invoke(traceId);
+        SelectedTraceUpdated?.Invoke(Id, traceId);
     }
 
     private void InvokeSelectedMarkerUpdatedEvent(int traceId, int markerId) {
-        SelectedMarkerUpdated?.Invoke(traceId, markerId);
+        SelectedMarkerUpdated?.Invoke(Id, traceId, markerId);
     }
     
     #endregion
