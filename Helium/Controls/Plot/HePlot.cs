@@ -30,6 +30,14 @@ public class HePlot : AmethystPlot2D {
     public event OnSelectedMarkerUpdatedW? SelectedMarkerUpdated;
     private OnSelectedMarkerUpdated markerDelegate;
     
+    public delegate void OnAutoScaleInvoked();
+    public delegate void OnAutoScaleInvokedW(int windowId);
+    
+    public event OnAutoScaleInvokedW? AutoScaleInvoked;
+    private OnAutoScaleInvoked autoScaleDelegate;
+
+
+    
     private bool isUpdateEnabled = true;
 
     public bool IsUpdateEnabled {
@@ -67,6 +75,8 @@ public class HePlot : AmethystPlot2D {
 
         traceDelegate = InvokeSelectedTraceUpdatedEvent;
         markerDelegate = InvokeSelectedMarkerUpdatedEvent;
+
+        autoScaleDelegate = InvokeAutoScaleInvokedEvent;
         
         Loaded += OnLoaded;
         Unloaded += (sender, args) => { Dispose(); };
@@ -102,6 +112,8 @@ public class HePlot : AmethystPlot2D {
 
         AmethystApi.SetSelectedTraceUpdatedDelegate(screenPtr, Marshal.GetFunctionPointerForDelegate(traceDelegate));
         AmethystApi.SetSelectedMarkerUpdatedDelegate(screenPtr, Marshal.GetFunctionPointerForDelegate(markerDelegate));
+
+        AmethystApi.SetAutoScaleInvokedDelegate(screenPtr, Marshal.GetFunctionPointerForDelegate(autoScaleDelegate));
         
         updateTimer.Start();
     }
@@ -306,6 +318,10 @@ public class HePlot : AmethystPlot2D {
 
     private void InvokeSelectedMarkerUpdatedEvent(int traceId, int markerId) {
         SelectedMarkerUpdated?.Invoke(Id, traceId, markerId);
+    }
+
+    private void InvokeAutoScaleInvokedEvent() {
+        AutoScaleInvoked?.Invoke(Id);
     }
     
     #endregion

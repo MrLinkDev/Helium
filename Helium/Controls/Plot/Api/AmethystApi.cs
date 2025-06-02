@@ -118,6 +118,9 @@ internal static class AmethystApi {
     
     [DllImport(DLL_NAME, CharSet = CharSet.Unicode, CallingConvention = CallingConvention.Cdecl)]
     public static extern float SetSelectedMarkerUpdatedDelegate(IntPtr screenPtr, IntPtr markerDelegate);
+    
+    [DllImport(DLL_NAME, CharSet = CharSet.Unicode, CallingConvention = CallingConvention.Cdecl)]
+    public static extern float SetAutoScaleInvokedDelegate(IntPtr screenPtr, IntPtr autoScaleDelegate);
 
     #endregion
 }
