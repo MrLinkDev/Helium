@@ -30,8 +30,8 @@ public class HePlot : AmethystPlot2D {
     public event OnSelectedMarkerUpdatedW? SelectedMarkerUpdated;
     private OnSelectedMarkerUpdated markerDelegate;
     
-    public delegate void OnAutoScaleInvoked();
-    public delegate void OnAutoScaleInvokedW(int windowId);
+    public delegate void OnAutoScaleInvoked(int traceId);
+    public delegate void OnAutoScaleInvokedW(int windowId, int traceId);
     
     public event OnAutoScaleInvokedW? AutoScaleInvoked;
     private OnAutoScaleInvoked autoScaleDelegate;
@@ -320,8 +320,8 @@ public class HePlot : AmethystPlot2D {
         SelectedMarkerUpdated?.Invoke(Id, traceId, markerId);
     }
 
-    private void InvokeAutoScaleInvokedEvent() {
-        AutoScaleInvoked?.Invoke(Id);
+    private void InvokeAutoScaleInvokedEvent(int traceId) {
+        AutoScaleInvoked?.Invoke(Id, traceId);
     }
     
     #endregion
