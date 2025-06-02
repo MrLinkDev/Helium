@@ -31,6 +31,11 @@ public partial class OpenGLDemo : HeWindow {
         
         //Plot.MarkerXUpdated += (traceId, markerId, value) => Console.WriteLine($"TraceID = {traceId}; MarkerID = {markerId}; X = {value}");
         //Plot.MarkerYUpdated += (traceId, markerId, value) => Console.WriteLine($"TraceID = {traceId}; MarkerID = {markerId}; Y = {value}");
+
+        Plot.SelectedTraceUpdated += id => Console.WriteLine($"Selected trace id = {id}");
+        Plot.SelectedMarkerUpdated += (traceId, markerId) => Console.WriteLine($"Selected marker id = {markerId} on trace = {traceId}");
+        
+        DrawStressTest_OnClick(null, null);
     }
 
     private void IncreaseTraceId_OnClick(object sender, RoutedEventArgs e) {
@@ -294,7 +299,7 @@ public partial class OpenGLDemo : HeWindow {
             float dx = (stopX - startX) / ((float)points - 1);
             for (uint i = 0; i < points; i += 1) {
                 traceData[i * 2 + 0] = startX + dx * i;
-                traceData[i * 2 + 1] = MathF.Sin(2 * MathF.PI * 1 * (i + traceId * 5) / points) - 35;
+                traceData[i * 2 + 1] = MathF.Sin(2 * MathF.PI * 1 * (i + traceId * points * 0.05f) / points) - 35;
             }
             
             Plot.SelectTrace(traceId);

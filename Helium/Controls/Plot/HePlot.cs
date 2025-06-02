@@ -17,6 +17,14 @@ public class HePlot : AmethystPlot2D {
     private OnMarkerCoordsUpdated markerXUpdatedDelegate;
     private OnMarkerCoordsUpdated markerYUpdatedDelegate;
     
+    public delegate void OnSelectedTraceUpdated(int traceId);
+    public event OnSelectedTraceUpdated? SelectedTraceUpdated;
+    private OnSelectedTraceUpdated traceDelegate;
+    
+    public delegate void OnSelectedMarkerUpdated(int traceId, int markerId);
+    public event OnSelectedMarkerUpdated? SelectedMarkerUpdated;
+    private OnSelectedMarkerUpdated markerDelegate;
+    
     private bool isUpdateEnabled = true;
 
     public bool IsUpdateEnabled {
@@ -51,6 +59,9 @@ public class HePlot : AmethystPlot2D {
     public HePlot() {
         markerXUpdatedDelegate = InvokeMarkerXUpdatedEvent;
         markerYUpdatedDelegate = InvokeMarkerYUpdatedEvent;
+
+        traceDelegate = InvokeSelectedTraceUpdatedEvent;
+        markerDelegate = InvokeSelectedMarkerUpdatedEvent;
         
         Loaded += OnLoaded;
         Unloaded += (sender, args) => { Dispose(); };
@@ -83,6 +94,9 @@ public class HePlot : AmethystPlot2D {
             screenPtr, 
             Marshal.GetFunctionPointerForDelegate(markerXUpdatedDelegate),
             Marshal.GetFunctionPointerForDelegate(markerYUpdatedDelegate));
+
+        AmethystApi.SetSelectedTraceUpdatedDelegate(screenPtr, Marshal.GetFunctionPointerForDelegate(traceDelegate));
+        AmethystApi.SetSelectedMarkerUpdatedDelegate(screenPtr, Marshal.GetFunctionPointerForDelegate(markerDelegate));
         
         updateTimer.Start();
     }
@@ -279,6 +293,14 @@ public class HePlot : AmethystPlot2D {
 
     private void InvokeMarkerYUpdatedEvent(int traceId, int markerId, float value) {
         MarkerYUpdated?.Invoke(traceId, markerId, value);
+    }
+
+    private void InvokeSelectedTraceUpdatedEvent(int traceId) {
+        SelectedTraceUpdated?.Invoke(traceId);
+    }
+
+    private void InvokeSelectedMarkerUpdatedEvent(int traceId, int markerId) {
+        SelectedMarkerUpdated?.Invoke(traceId, markerId);
     }
     
     #endregion

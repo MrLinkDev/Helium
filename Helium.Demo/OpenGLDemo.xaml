@@ -169,7 +169,7 @@
                         x:Name="Points"
                         DockPanel.Dock="Left"
                         Margin="4"
-                        Text="101" />
+                        Text="10001" />
                 </DockPanel>
 
                 <Label

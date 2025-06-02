@@ -112,6 +112,12 @@ internal static class AmethystApi {
     
     [DllImport(DLL_NAME, CharSet = CharSet.Unicode, CallingConvention = CallingConvention.Cdecl)]
     public static extern float SetMarkerCoordsUpdatedDelegate(IntPtr screenPtr, IntPtr xDelegate, IntPtr yDelegate);
+    
+    [DllImport(DLL_NAME, CharSet = CharSet.Unicode, CallingConvention = CallingConvention.Cdecl)]
+    public static extern float SetSelectedTraceUpdatedDelegate(IntPtr screenPtr, IntPtr traceDelegate);
+    
+    [DllImport(DLL_NAME, CharSet = CharSet.Unicode, CallingConvention = CallingConvention.Cdecl)]
+    public static extern float SetSelectedMarkerUpdatedDelegate(IntPtr screenPtr, IntPtr markerDelegate);
 
     #endregion
 }
