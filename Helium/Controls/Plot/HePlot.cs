@@ -12,8 +12,8 @@ public class HePlot : AmethystPlot2D {
     public delegate void OnMarkerCoordsUpdated(int traceId, int markerId, float value);
     public delegate void OnMarkerCoordsUpdatedW(int windowId, int traceId, int markerId, float value);
     
-    public event OnMarkerCoordsUpdatedW MarkerXUpdated;
-    public event OnMarkerCoordsUpdatedW MarkerYUpdated;
+    public event OnMarkerCoordsUpdatedW? MarkerXUpdated;
+    public event OnMarkerCoordsUpdatedW? MarkerYUpdated;
     
     private OnMarkerCoordsUpdated markerXUpdatedDelegate;
     private OnMarkerCoordsUpdated markerYUpdatedDelegate;

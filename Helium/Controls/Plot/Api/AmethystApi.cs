@@ -99,28 +99,28 @@ internal static class AmethystApi {
     public static extern float GetMarkerY(IntPtr screenPtr, int markerId);
 
     [DllImport(DLL_NAME, CharSet = CharSet.Unicode, CallingConvention = CallingConvention.Cdecl)]
-    public static extern float SetMarkerFunctionWTrace(IntPtr screenPtr, int traceId, int markerId, int type);
+    public static extern void SetMarkerFunctionWTrace(IntPtr screenPtr, int traceId, int markerId, int type);
 
     [DllImport(DLL_NAME, CharSet = CharSet.Unicode, CallingConvention = CallingConvention.Cdecl)]
-    public static extern float SetMarkerFunction(IntPtr screenPtr, int markerId, int type);
+    public static extern void SetMarkerFunction(IntPtr screenPtr, int markerId, int type);
 
     [DllImport(DLL_NAME, CharSet = CharSet.Unicode, CallingConvention = CallingConvention.Cdecl)]
-    public static extern float RemoveMarkerFunctionWTrace(IntPtr screenPtr, int traceId, int markerId);
+    public static extern void RemoveMarkerFunctionWTrace(IntPtr screenPtr, int traceId, int markerId);
 
     [DllImport(DLL_NAME, CharSet = CharSet.Unicode, CallingConvention = CallingConvention.Cdecl)]
-    public static extern float RemoveMarkerFunction(IntPtr screenPtr, int markerId);
+    public static extern void RemoveMarkerFunction(IntPtr screenPtr, int markerId);
     
     [DllImport(DLL_NAME, CharSet = CharSet.Unicode, CallingConvention = CallingConvention.Cdecl)]
-    public static extern float SetMarkerCoordsUpdatedDelegate(IntPtr screenPtr, IntPtr xDelegate, IntPtr yDelegate);
+    public static extern void SetMarkerCoordsUpdatedDelegate(IntPtr screenPtr, IntPtr xDelegate, IntPtr yDelegate);
     
     [DllImport(DLL_NAME, CharSet = CharSet.Unicode, CallingConvention = CallingConvention.Cdecl)]
-    public static extern float SetSelectedTraceUpdatedDelegate(IntPtr screenPtr, IntPtr traceDelegate);
+    public static extern void SetSelectedTraceUpdatedDelegate(IntPtr screenPtr, IntPtr traceDelegate);
     
     [DllImport(DLL_NAME, CharSet = CharSet.Unicode, CallingConvention = CallingConvention.Cdecl)]
-    public static extern float SetSelectedMarkerUpdatedDelegate(IntPtr screenPtr, IntPtr markerDelegate);
+    public static extern void SetSelectedMarkerUpdatedDelegate(IntPtr screenPtr, IntPtr markerDelegate);
     
     [DllImport(DLL_NAME, CharSet = CharSet.Unicode, CallingConvention = CallingConvention.Cdecl)]
-    public static extern float SetAutoScaleInvokedDelegate(IntPtr screenPtr, IntPtr autoScaleDelegate);
+    public static extern void SetAutoScaleInvokedDelegate(IntPtr screenPtr, IntPtr autoScaleDelegate);
 
     #endregion
 }
