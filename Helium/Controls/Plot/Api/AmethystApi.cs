@@ -109,6 +109,9 @@ internal static class AmethystApi {
 
     [DllImport(DLL_NAME, CharSet = CharSet.Unicode, CallingConvention = CallingConvention.Cdecl)]
     public static extern void RemoveMarkerFunction(IntPtr screenPtr, int markerId);
+
+    [DllImport(DLL_NAME, CharSet = CharSet.Unicode, CallingConvention = CallingConvention.Cdecl)]
+    public static extern int GetSelectedMarkerId(IntPtr screenPtr);
     
     [DllImport(DLL_NAME, CharSet = CharSet.Unicode, CallingConvention = CallingConvention.Cdecl)]
     public static extern void SetMarkerCoordsUpdatedDelegate(IntPtr screenPtr, IntPtr xDelegate, IntPtr yDelegate);

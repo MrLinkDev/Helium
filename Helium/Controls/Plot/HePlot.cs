@@ -304,6 +304,10 @@ public class HePlot : AmethystPlot2D {
         AmethystApi.RemoveMarkerFunction(screenPtr, markerId);
     }
 
+    public int GetSelectedMarkerId() {
+        return AmethystApi.GetSelectedMarkerId(screenPtr);
+    }
+
     private void InvokeMarkerXUpdatedEvent(int traceId, int markerId, float value) {
         MarkerXUpdated?.Invoke(Id, traceId, markerId, value);
     }

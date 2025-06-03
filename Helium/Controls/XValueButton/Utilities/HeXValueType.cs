@@ -12,7 +12,7 @@ public enum HeXValueType {
     [Exp(0.05, 0.1, 0.2, 0.5)]
     DB,
     
-    [Exp(0.05, 0.1, 0.2, 0.5)]
+    [DefaultUnit("дБм"), Exp(0.05, 0.1, 0.2, 0.5)]
     DBM,
     
     [DefaultUnit("с")]
