@@ -10,6 +10,7 @@ using Helium.Controls.ImageButton;
 namespace Helium.Controls.Window;
 
 public class HeDialogWindow : System.Windows.Window {
+    
     #region DependencyProperties
 
     public static readonly DependencyProperty AppIconProperty = DependencyProperty.Register(
@@ -31,6 +32,12 @@ public class HeDialogWindow : System.Windows.Window {
         typeof(Color),
         typeof(HeDialogWindow),
         new FrameworkPropertyMetadata(ColorConverter.ConvertFromString("#41528c")));
+
+    public static readonly DependencyProperty ToolbarMainProperty = DependencyProperty.Register(
+        nameof(ToolbarMain),
+        typeof(Color),
+        typeof(HeDialogWindow),
+        new FrameworkPropertyMetadata(ColorConverter.ConvertFromString("#454545")));
 
     public static readonly DependencyProperty BodyBackgroundProperty = DependencyProperty.Register(
         nameof(BodyBackground),
@@ -61,6 +68,11 @@ public class HeDialogWindow : System.Windows.Window {
     public Color ToolbarAccent {
         get => (Color)GetValue(ToolbarAccentProperty);
         set => SetValue(ToolbarAccentProperty, value);
+    }
+
+    public Color ToolbarMain {
+        get => (Color)GetValue(ToolbarMainProperty);
+        set => SetValue(ToolbarMainProperty, value);
     }
 
     public Brush BodyBackground {

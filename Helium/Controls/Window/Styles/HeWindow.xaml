@@ -39,7 +39,7 @@
                                         EndPoint="540,0"
                                         MappingMode="Absolute">
                                         <GradientStop Offset="0.1" Color="{Binding Path=ToolbarAccent, RelativeSource={RelativeSource TemplatedParent}}" />
-                                        <GradientStop Offset="0.6" Color="{StaticResource BlackColor800}" />
+                                        <GradientStop Offset="0.6" Color="{Binding Path=ToolbarMain, RelativeSource={RelativeSource TemplatedParent}}" />
                                     </LinearGradientBrush>
                                 </Border.Background>
 

@@ -30,6 +30,8 @@
                  Width="1280"
                  Background="#212121"
                  WindowStartupLocation="CenterScreen"
+                 BodyBackground="#ffffff"
+                 ToolbarMain="#41528c"
                  WindowTitle="Helium Demo">
 
     <window:HeWindow.Resources>
@@ -416,7 +418,8 @@
 
             <radioButton:HeRadioButton
                 DockPanel.Dock="Top"
-                Margin="0, 16, 0, 0">
+                Margin="0, 16, 0, 0"
+                >
                 <radioButton:HeRadioButton.Content>
                     <Label
                         VerticalAlignment="Center"
@@ -454,7 +457,9 @@
             <checkBox:HeCheckBox
                 DockPanel.Dock="Top"
                 IsEnabled="False"
-                Content="Embedded Content Disabled" />
+                Content="Embedded Content Disabled" 
+                CheckBoxFill="White"
+                CheckBoxFigureFill="Magenta"/>
 
             <checkBox:HeCheckBox
                 DockPanel.Dock="Top"
@@ -491,35 +496,33 @@
                 </checkBox:HeCheckBox.Content>
             </checkBox:HeCheckBox>
 
-            <!-- <switch:HeSwitch -->
-            <!--     DockPanel.Dock="Top" -->
-            <!--     Height="40" -->
-            <!--     Margin="0, 16, 0, 0"> -->
-            <!--     <switch:HeSwitch.Values> -->
-            <!--         <x:Array Type="{x:Type system:String}"> -->
-            <!--             <system:String>0</system:String> -->
-            <!--             <system:String>1</system:String> -->
-            <!--             <system:String>2</system:String> -->
-            <!--             <system:String>3</system:String> -->
-            <!--             <system:String>4</system:String> -->
-            <!--         </x:Array> -->
-            <!--     </switch:HeSwitch.Values> -->
-            <!-- </switch:HeSwitch> -->
-            <!-- -->
-            <!-- <switch:HeSwitch -->
-            <!--     DockPanel.Dock="Top" -->
-            <!--     Height="40" -->
-            <!--     Margin="0, 16, 0, 0"> -->
-            <!--     <switch:HeSwitch.Values> -->
-            <!--         <x:Array Type="{x:Type system:String}"> -->
-            <!--             <system:String>5</system:String> -->
-            <!--             <system:String>6</system:String> -->
-            <!--             <system:String>7</system:String> -->
-            <!--             <system:String>8</system:String> -->
-            <!--             <system:String>9</system:String> -->
-            <!--         </x:Array> -->
-            <!--     </switch:HeSwitch.Values> -->
-            <!-- </switch:HeSwitch> -->
+            <switch:HeSwitch
+                DockPanel.Dock="Top"
+                Height="40"
+                Margin="0, 16, 0, 0"
+                Position="{Binding SwitchPos, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}">
+                <switch:HeSwitch.Values>
+                    <x:Array Type="{x:Type system:String}">
+                        <system:String>0</system:String>
+                        <system:String>1</system:String>
+                        <system:String>2</system:String>
+                        <system:String>3</system:String>
+                        <system:String>4</system:String>
+                    </x:Array>
+                </switch:HeSwitch.Values>
+            </switch:HeSwitch>
+            
+            <switch:HeSwitch
+                DockPanel.Dock="Top"
+                Height="40"
+                Margin="0, 16, 0, 0">
+                <switch:HeSwitch.Values>
+                    <x:Array Type="{x:Type system:String}">
+                        <system:String>5</system:String>
+                        <system:String>6</system:String>
+                    </x:Array>
+                </switch:HeSwitch.Values>
+            </switch:HeSwitch>
         </DockPanel>
 
         <DockPanel

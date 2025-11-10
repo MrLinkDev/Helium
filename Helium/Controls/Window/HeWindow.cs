@@ -42,6 +42,12 @@ public class HeWindow : System.Windows.Window {
         typeof(HeWindow),
         new FrameworkPropertyMetadata(ColorConverter.ConvertFromString("#41528c")));
 
+    public static readonly DependencyProperty ToolbarMainProperty = DependencyProperty.Register(
+        nameof(ToolbarMain),
+        typeof(Color),
+        typeof(HeWindow),
+        new FrameworkPropertyMetadata(ColorConverter.ConvertFromString("#454545")));
+
     public static readonly DependencyProperty BodyBackgroundProperty = DependencyProperty.Register(
         nameof(BodyBackground),
         typeof(Brush),
@@ -71,6 +77,11 @@ public class HeWindow : System.Windows.Window {
     public Color ToolbarAccent {
         get => (Color)GetValue(ToolbarAccentProperty);
         set => SetValue(ToolbarAccentProperty, value);
+    }
+
+    public Color ToolbarMain {
+        get => (Color)GetValue(ToolbarMainProperty);
+        set => SetValue(ToolbarMainProperty, value);
     }
 
     public Brush BodyBackground {

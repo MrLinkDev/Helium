@@ -6,7 +6,9 @@
         xmlns:local="clr-namespace:HeliumDemo"
         xmlns:window="clr-namespace:Helium.Controls.Window;assembly=Alexander.Gorbunov.Helium"
         mc:Ignorable="d"
-        Title="Dialog" Height="450" Width="800">
+        Title="Dialog" Height="450" Width="800"
+        ToolbarAccent="Magenta"
+        ToolbarMain="Magenta">
     <Grid>
         <Label VerticalAlignment="Center" HorizontalAlignment="Center" Content="TEST LABEL" FontSize="48" Foreground="Magenta">
             

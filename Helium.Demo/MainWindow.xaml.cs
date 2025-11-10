@@ -52,6 +52,15 @@ public class RelayCommand : ICommand {
 public partial class MainWindow : HeWindow, INotifyPropertyChanged {
     public bool IsPressed { get; set; } = true;
 
+    private int switchPos = 0;
+    public int SwitchPos {
+        get => switchPos;
+        set {
+            switchPos = value;
+            Console.WriteLine($"Switch Pos = {switchPos}");
+        }
+    }
+
     private double doubleData;
 
     public double DoubleData {
@@ -113,8 +122,6 @@ public partial class MainWindow : HeWindow, INotifyPropertyChanged {
         HeDialogWindow dialogWindow = new Dialog();
         dialogWindow.WindowTitle = "Dialog window";
         dialogWindow.ToolbarAccent = (Color)ColorConverter.ConvertFromString("#5c418c");
-        //dialogWindow.Width = 400;
-        //dialogWindow.Height = 200;
 
         dialogWindow.ShowDialog();
     }
