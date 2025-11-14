@@ -63,7 +63,7 @@ public class HeVerticalTabControl : System.Windows.Controls.TabControl {
         if (Level == 0) {
             if (initSelectionChangedEvent) {
                 initSelectionChangedEvent = false;
-                SelectedIndex = -1;
+                SelectedIndex = 0;
             }
             
             contentBorder!.Visibility = SelectedIndex == -1 ? Visibility.Collapsed : Visibility.Visible;

@@ -57,7 +57,7 @@
                     <Condition Property="IsSelected" Value="True" />
                 </MultiTrigger.Conditions>
                 <Setter Property="Panel.ZIndex" Value="100" />
-                <Setter Property="Background" Value="{StaticResource PrimaryBrush600}" />
+                <Setter Property="Background" Value="{StaticResource PrimaryBrush500}" />
             </MultiTrigger>
 
             <MultiTrigger>
