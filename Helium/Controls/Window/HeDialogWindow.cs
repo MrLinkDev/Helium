@@ -20,6 +20,12 @@ public class HeDialogWindow : System.Windows.Window {
         new FrameworkPropertyMetadata(
             new BitmapImage(
                 new Uri("pack://application:,,,/Alexander.Gorbunov.Helium;component/Resources/Icons/app_icon.png"))));
+    
+    public static readonly DependencyProperty AppIconVisibilityProperty = DependencyProperty.Register(
+        nameof(AppIconVisibility),
+        typeof(Visibility),
+        typeof(HeDialogWindow),
+        new FrameworkPropertyMetadata(Visibility.Visible));
 
     public static readonly DependencyProperty WindowTitleProperty = DependencyProperty.Register(
         nameof(WindowTitle),
@@ -58,6 +64,11 @@ public class HeDialogWindow : System.Windows.Window {
     public ImageSource AppIcon {
         get => (ImageSource)GetValue(AppIconProperty);
         set => SetValue(AppIconProperty, value);
+    }
+    
+    public Visibility AppIconVisibility {
+        get => (Visibility)GetValue(AppIconVisibilityProperty);
+        set => SetValue(AppIconVisibilityProperty, value);
     }
 
     public string WindowTitle {

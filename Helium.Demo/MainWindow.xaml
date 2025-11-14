@@ -33,7 +33,8 @@
                  WindowStartupLocation="CenterScreen"
                  BodyBackground="#ffffff"
                  ToolbarMain="#41528c"
-                 WindowTitle="Helium Demo">
+                 WindowTitle="Helium Demo"
+                 AppIconVisibility="Collapsed">
 
     <window:HeWindow.Resources>
         <ResourceDictionary>
