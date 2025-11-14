@@ -28,6 +28,10 @@
         <ResourceDictionary Source="/Alexander.Gorbunov.Helium;component/Controls/TabControl/Styles/HeVTabItem.xaml"/>
         <ResourceDictionary Source="/Alexander.Gorbunov.Helium;component/Controls/TabControl/Styles/HeVTabLabel.xaml"/>
         
+        <ResourceDictionary Source="/Alexander.Gorbunov.Helium;component/Controls/VerticalTabControl/Styles/HeVerticalTabControl.xaml"/>
+        <ResourceDictionary Source="/Alexander.Gorbunov.Helium;component/Controls/VerticalTabControl/Styles/HeVerticalTabItem.xaml"/>
+        <ResourceDictionary Source="/Alexander.Gorbunov.Helium;component/Controls/VerticalTabControl/Styles/HeVerticalTabLabel.xaml"/>
+        
         <ResourceDictionary Source="/Alexander.Gorbunov.Helium;component/Controls/ComboBox/Styles/HeComboBox.xaml"/>
         <ResourceDictionary Source="/Alexander.Gorbunov.Helium;component/Controls/ComboBox/Styles/HeComboBoxItem.xaml"/>
         <ResourceDictionary Source="/Alexander.Gorbunov.Helium;component/Controls/ComboBox/Styles/HeComboBoxTextBox.xaml"/>

@@ -20,6 +20,7 @@
     <!-- Height -->                                         <!-- OLD -->   <!-- NEW (x1.8)  --> <!-- NEW (x1.4)  -->
     <system:Double x:Key="Height07X">27</system:Double>     <!-- 20  -->   <!-- 35          --> <!-- 27          -->
     <system:Double x:Key="Height">39</system:Double>        <!-- 28  -->   <!-- 50          --> <!-- 39          -->
+    <system:Double x:Key="Height12X">47</system:Double>     
     <system:Double x:Key="Height15X">59</system:Double>     <!-- 42  -->   <!-- 75          --> <!-- 59          -->
     <system:Double x:Key="Height20X">78</system:Double>     <!-- 56  -->   <!-- 100         --> <!-- 78          -->
             

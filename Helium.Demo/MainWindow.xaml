@@ -23,6 +23,7 @@
                  xmlns:window="clr-namespace:Helium.Controls.Window;assembly=Alexander.Gorbunov.Helium"
                  xmlns:xCheckValueButton="clr-namespace:Helium.Controls.XCheckValueButton;assembly=Alexander.Gorbunov.Helium"
                  xmlns:xPushButton="clr-namespace:Helium.Controls.XPushButton;assembly=Alexander.Gorbunov.Helium"
+                 xmlns:verticalTabControl="clr-namespace:Helium.Controls.VerticalTabControl;assembly=Alexander.Gorbunov.Helium"
 
                  mc:Ignorable="d"
                  Title="MainWindow"
@@ -706,6 +707,7 @@
             
             <Grid.RowDefinitions>
                 <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
             </Grid.RowDefinitions>
 
             <tabControl:HeVTabControl Grid.Row="0">
@@ -734,7 +736,23 @@
                     </tabControl:HeVTabItem>
                 </tabControl:HeVTabControl.Items>
             </tabControl:HeVTabControl>
-
+            
+            <verticalTabControl:HeVerticalTabControl
+                Grid.Row="1"
+                HorizontalAlignment="Stretch"
+                HorizontalContentAlignment="Stretch">
+                <verticalTabControl:HeVerticalTabItem Header="Item 1">
+                    <DockPanel Background="Magenta" HorizontalAlignment="Stretch">
+                        <Label Content="Hello" HorizontalContentAlignment="Stretch"></Label>
+                    </DockPanel>
+                </verticalTabControl:HeVerticalTabItem>
+                <verticalTabControl:HeVerticalTabItem Header="Item 2">
+                    <StackPanel Background="Aqua"></StackPanel>
+                </verticalTabControl:HeVerticalTabItem>
+                <verticalTabControl:HeVerticalTabItem Header="Item 3">
+                    <StackPanel Background="Green"></StackPanel>
+                </verticalTabControl:HeVerticalTabItem>
+            </verticalTabControl:HeVerticalTabControl>
         </Grid>
     </Grid>
 </window:HeWindow>
