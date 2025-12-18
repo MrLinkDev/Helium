@@ -11,6 +11,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using Helium.Controls.Indicator.Utilities;
+using Helium.Controls.MessageBox;
 using Helium.Controls.Window;
 
 namespace HeliumDemo;
@@ -140,5 +141,9 @@ public partial class MainWindow : HeWindow, INotifyPropertyChanged {
     private void IncreaseXButtonTestVal(object sender, RoutedEventArgs e) {
         XValueButtonTestVal = xValueButtonTestVal + 1;
         Console.WriteLine(XValueButtonTestVal);
+    }
+
+    private void ShowMessageBox(object sender, RoutedEventArgs e) {
+        HeMessageBox.Show("title", "message", this);
     }
 }

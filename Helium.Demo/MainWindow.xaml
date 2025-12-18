@@ -94,8 +94,8 @@
                         DockPanel.Dock="Top"
                         Margin="0, 8,0, 0"
                         Text="Disabled"
-                        IsEnabled="False"
-                        HeType="Bezel" />
+                        HeType="Bezel" 
+                        Click="ShowMessageBox"/>
 
                     <button:HeButton
                         DockPanel.Dock="Top"

@@ -1,0 +1,40 @@
+<window:HeDialogWindow x:Class="Helium.Controls.MessageBox.HeMessageBox"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:local="clr-namespace:Helium.Controls.MessageBox"
+        xmlns:window="clr-namespace:Helium.Controls.Window"
+        xmlns:button="clr-namespace:Helium.Controls.Button"
+        mc:Ignorable="d"
+        Title="{Binding MessageBoxTitle}" 
+        WindowTitle="{Binding MessageBoxTitle}" 
+        AppIconVisibility="Collapsed"
+        ToolbarAccent="#454545"
+        MinHeight="240" 
+        Width="420"
+        WindowStartupLocation="CenterOwner">
+    <Grid Margin="16">
+        <Grid.RowDefinitions>
+            <RowDefinition />
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        
+        <TextBlock
+            Grid.Row="0"
+            VerticalAlignment="Center"
+            Foreground="White"
+            TextAlignment="Left"
+            TextWrapping="WrapWithOverflow"
+            Text="{Binding MessageBoxMessage}"/>
+        
+        <button:HeButton
+            Grid.Row="1"
+            Height="32"
+            Width="120"
+            HorizontalAlignment="Right"
+            Margin="0, 16, 0, 0"
+            Text="Закрыть"
+            Click="CloseWindow"/>
+    </Grid>
+</window:HeDialogWindow>
