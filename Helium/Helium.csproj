@@ -201,10 +201,6 @@
     </ItemGroup>
 
     <ItemGroup>
-        <ProjectReference Include="..\Amethyst\Amethyst\Amethyst.vcxproj"/>
-    </ItemGroup>
-
-    <ItemGroup>
       <Folder Include="Controls\VerticalTabControl\" />
     </ItemGroup>
 
