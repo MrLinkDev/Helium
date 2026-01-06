@@ -1,0 +1,84 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+    <ResourceDictionary.MergedDictionaries>
+        <ResourceDictionary Source="HeColors.xaml"/>
+    </ResourceDictionary.MergedDictionaries>
+
+    <SolidColorBrush x:Key="PrimaryWhiteBrush" Color="{StaticResource PrimaryWhite}"/>
+    <SolidColorBrush x:Key="PrimaryBlackBrush" Color="{StaticResource PrimaryBlack}"/>
+
+    <!-- Primary brushes -->
+    <SolidColorBrush x:Key="PrimaryBrush050" Color="{StaticResource Primary050}"/>
+    <SolidColorBrush x:Key="PrimaryBrush100" Color="{StaticResource Primary100}"/>
+    <SolidColorBrush x:Key="PrimaryBrush200" Color="{StaticResource Primary200}"/>
+    <SolidColorBrush x:Key="PrimaryBrush300" Color="{StaticResource Primary300}"/>
+    <SolidColorBrush x:Key="PrimaryBrush400" Color="{StaticResource Primary400}"/>
+    <SolidColorBrush x:Key="PrimaryBrush500" Color="{StaticResource Primary500}"/>
+    <SolidColorBrush x:Key="PrimaryBrush600" Color="{StaticResource Primary600}"/>          <!-- lock -->
+    <SolidColorBrush x:Key="PrimaryBrush700" Color="{StaticResource Primary700}"/>
+    <SolidColorBrush x:Key="PrimaryBrush800" Color="{StaticResource Primary800}"/>
+    <SolidColorBrush x:Key="PrimaryBrush900" Color="{StaticResource Primary900}"/>
+    <SolidColorBrush x:Key="PrimaryBrush950" Color="{StaticResource Primary950}"/>
+
+    <!-- Red Palette -->
+    <SolidColorBrush x:Key="RedBrush050" Color="{StaticResource Red050}"/>
+    <SolidColorBrush x:Key="RedBrush100" Color="{StaticResource Red100}"/>
+    <SolidColorBrush x:Key="RedBrush200" Color="{StaticResource Red200}"/>
+    <SolidColorBrush x:Key="RedBrush300" Color="{StaticResource Red300}"/>
+    <SolidColorBrush x:Key="RedBrush400" Color="{StaticResource Red400}"/>
+    <SolidColorBrush x:Key="RedBrush500" Color="{StaticResource Red500}"/>
+    <SolidColorBrush x:Key="RedBrush600" Color="{StaticResource Red600}"/>
+    <SolidColorBrush x:Key="RedBrush700" Color="{StaticResource Red700}"/>
+    <SolidColorBrush x:Key="RedBrush800" Color="{StaticResource Red800}"/>        <!-- lock -->
+    <SolidColorBrush x:Key="RedBrush900" Color="{StaticResource Red900}"/>
+    <SolidColorBrush x:Key="RedBrush950" Color="{StaticResource Red950}"/>
+
+    <!-- Black Palette -->
+    <SolidColorBrush x:Key="GrayBrush050" Color="{StaticResource Gray050}"/>
+    <SolidColorBrush x:Key="GrayBrush100" Color="{StaticResource Gray100}"/>
+    <SolidColorBrush x:Key="GrayBrush200" Color="{StaticResource Gray200}"/>
+    <SolidColorBrush x:Key="GrayBrush300" Color="{StaticResource Gray300}"/>
+    <SolidColorBrush x:Key="GrayBrush400" Color="{StaticResource Gray400}"/>
+    <SolidColorBrush x:Key="GrayBrush500" Color="{StaticResource Gray500}"/>
+    <SolidColorBrush x:Key="GrayBrush600" Color="{StaticResource Gray600}"/>
+    <SolidColorBrush x:Key="GrayBrush700" Color="{StaticResource Gray700}"/>
+    <SolidColorBrush x:Key="GrayBrush800" Color="{StaticResource Gray800}"/>
+    <SolidColorBrush x:Key="GrayBrush900" Color="{StaticResource Gray900}"/>
+    <SolidColorBrush x:Key="GrayBrush950" Color="{StaticResource Gray950}"/>            <!-- lock -->
+
+    <!-- Green Palette -->
+    <SolidColorBrush x:Key="GreenBrush050" Color="{StaticResource Green050}"/>
+    <SolidColorBrush x:Key="GreenBrush100" Color="{StaticResource Green100}"/>            <!-- lock -->
+    <SolidColorBrush x:Key="GreenBrush200" Color="{StaticResource Green200}"/>
+    <SolidColorBrush x:Key="GreenBrush300" Color="{StaticResource Green300}"/>
+    <SolidColorBrush x:Key="GreenBrush400" Color="{StaticResource Green400}"/>
+    <SolidColorBrush x:Key="GreenBrush500" Color="{StaticResource Green500}"/>
+    <SolidColorBrush x:Key="GreenBrush600" Color="{StaticResource Green600}"/>
+    <SolidColorBrush x:Key="GreenBrush700" Color="{StaticResource Green700}"/>
+    <SolidColorBrush x:Key="GreenBrush800" Color="{StaticResource Green800}"/>
+    <SolidColorBrush x:Key="GreenBrush900" Color="{StaticResource Green900}"/>
+    <SolidColorBrush x:Key="GreenBrush950" Color="{StaticResource Green950}"/>
+
+    <!-- Orange Palette -->
+    <SolidColorBrush x:Key="OrangeBrush050" Color="{StaticResource Orange050}"/>
+    <SolidColorBrush x:Key="OrangeBrush100" Color="{StaticResource Orange100}"/>
+    <SolidColorBrush x:Key="OrangeBrush200" Color="{StaticResource Orange200}"/>
+    <SolidColorBrush x:Key="OrangeBrush300" Color="{StaticResource Orange300}"/>            <!-- lock -->
+    <SolidColorBrush x:Key="OrangeBrush400" Color="{StaticResource Orange400}"/>
+    <SolidColorBrush x:Key="OrangeBrush500" Color="{StaticResource Orange500}"/>
+    <SolidColorBrush x:Key="OrangeBrush600" Color="{StaticResource Orange600}"/>
+    <SolidColorBrush x:Key="OrangeBrush700" Color="{StaticResource Orange700}"/>
+    <SolidColorBrush x:Key="OrangeBrush800" Color="{StaticResource Orange800}"/>
+    <SolidColorBrush x:Key="OrangeBrush900" Color="{StaticResource Orange900}"/>
+    <SolidColorBrush x:Key="OrangeBrush950" Color="{StaticResource Orange950}"/>
+
+    <!-- Text brushes -->
+    <SolidColorBrush x:Key="LightTextBrush" Color="{StaticResource PrimaryWhite}"/>
+    <SolidColorBrush x:Key="DarkTextBrush" Color="{StaticResource PrimaryBlack}"/>
+
+    <!-- Background brushes -->
+    <SolidColorBrush x:Key="LightBackgroundBrush" Color="{StaticResource PrimaryWhite}"/>
+    <SolidColorBrush x:Key="DarkBackgroundBrush" Color="{StaticResource PrimaryBlack}"/>
+
+</ResourceDictionary>

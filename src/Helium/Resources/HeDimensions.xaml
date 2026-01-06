@@ -1,0 +1,116 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:system="clr-namespace:System;assembly=System.Runtime">
+
+    <!--
+    Dimensions documentation
+
+    {param_name}        - default value (1x)
+    {param_name}{A}{B}X - value with scale A.Bx.
+
+    Example: Height15X = Height * 1.5
+             Height20X = Height * 2.0
+
+    {param_name}{A}     - value = {A}
+
+    Example: Radius4 = 4
+             Radius8 = 8
+    -->
+
+    <!-- Height -->
+    <system:Double x:Key="Height07X">23</system:Double>
+    <system:Double x:Key="Height10X">32</system:Double>
+    <system:Double x:Key="Height12X">39</system:Double>
+    <system:Double x:Key="Height15X">48</system:Double>
+    <system:Double x:Key="Height20X">64</system:Double>
+
+    <!-- Width -->
+    <system:Double x:Key="Width07X">69</system:Double>
+    <system:Double x:Key="Width10X">98</system:Double>
+    <system:Double x:Key="Width12X">118</system:Double>
+    <system:Double x:Key="Width15X">147</system:Double>
+    <system:Double x:Key="Width20X">196</system:Double>
+
+    <!-- Corner Radius -->
+    <CornerRadius x:Key="Radius2">2</CornerRadius>
+    <CornerRadius x:Key="Radius4">4</CornerRadius>
+    <CornerRadius x:Key="Radius8">8</CornerRadius>
+    <CornerRadius x:Key="Radius16">16</CornerRadius>
+
+    <!-- Thickness -->
+    <Thickness x:Key="Thickness0">0</Thickness>
+    <Thickness x:Key="Thickness1">1</Thickness>
+    <Thickness x:Key="Thickness2">2</Thickness>
+    <Thickness x:Key="Thickness4">4</Thickness>
+
+    <!-- Padding -->
+    <Thickness x:Key="Padding2">2</Thickness>
+    <Thickness x:Key="Padding4">4</Thickness>
+    <Thickness x:Key="Padding8">8</Thickness>
+
+    <!-- Margin -->
+    <Thickness x:Key="Margin2">2</Thickness>
+    <Thickness x:Key="Margin4">4</Thickness>
+    <Thickness x:Key="Margin8">8</Thickness>
+
+    <!-- Font size -->
+    <system:Double x:Key="FontSize10X">14</system:Double>
+    <system:Double x:Key="FontSize15X">21</system:Double>
+    <system:Double x:Key="FontSize20X">28</system:Double>
+
+    <FontFamily x:Key="FontFamily"></FontFamily>
+
+    <!-- Window -->
+    <system:Double x:Key="ToolbarHeight">40</system:Double>
+
+    <GridLength x:Key="ToolbarTitleSectionWidth">300</GridLength>
+    <GridLength x:Key="ToolbarButtonsSectionWidth">200</GridLength>
+
+    <system:Double x:Key="MinWindowWidth">800</system:Double>
+    <system:Double x:Key="MinWindowHeight">600</system:Double>
+
+    <system:Double x:Key="WindowWidth">800</system:Double>
+    <system:Double x:Key="WindowHeight">600</system:Double>
+
+    <system:Double x:Key="ToolbarButtonWidth">40</system:Double>
+    <system:Double x:Key="ToolbarButtonHeight">40</system:Double>
+
+    <!-- Dialog Window -->
+    <system:Double x:Key="DialogToolbarHeight">32</system:Double>
+
+    <GridLength x:Key="DialogToolbarTitleSectionWidth">200</GridLength>
+    <GridLength x:Key="DialogToolbarButtonsSectionWidth">100</GridLength>
+
+    <system:Double x:Key="DialogWindowWidth">300</system:Double>
+    <system:Double x:Key="DialogWindowHeight">200</system:Double>
+
+    <system:Double x:Key="DialogToolbarButtonWidth">32</system:Double>
+    <system:Double x:Key="DialogToolbarButtonHeight">32</system:Double>
+
+    <!-- RadioButton -->
+    <system:Double x:Key="EllipseSize">16</system:Double>
+    <system:Double x:Key="EllipseInnerSize">8</system:Double>
+
+    <system:Double x:Key="EllipseStrokeSize">2</system:Double>
+
+    <!-- CheckBox -->
+    <system:Double x:Key="CheckBoxSize">16</system:Double>
+
+    <Thickness x:Key="CheckBoxStrokeSize">2</Thickness>
+    <CornerRadius x:Key="CheckBoxCornerRadius">2</CornerRadius>
+
+
+
+    <!-- XWindow Height -->
+    <system:Double x:Key="XWindowHeight">240</system:Double>
+
+    <!-- XWindow Width -->
+    <system:Double x:Key="XWindowWidth">300</system:Double>
+
+    <!-- XRadioButton -->
+    <system:Double x:Key="XEllipseSize">14</system:Double>
+    <system:Double x:Key="XEllipseInnerSize">8</system:Double>
+
+    <system:Double x:Key="XEllipseStrokeSize">2</system:Double>
+
+</ResourceDictionary>
