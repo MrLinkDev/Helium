@@ -13,7 +13,8 @@
             CornerRadius="{TemplateBinding CornerRadius}"
             BorderThickness="0"
             Background="{StaticResource RedBrush500}"
-            TextBlock.Foreground="{StaticResource LightTextBrush}">
+            TextBlock.Foreground="{StaticResource LightTextBrush}"
+            TextBlock.FontSize="{StaticResource FontSize10X}">
 
             <VisualStateManager.VisualStateGroups>
                 <VisualStateGroup x:Name="CommonStates">
