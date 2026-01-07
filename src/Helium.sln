@@ -4,8 +4,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Helium.Demo", "Helium.Demo\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Helium", "Helium\Helium.csproj", "{52AA0D4E-14B8-4B91-BB30-5BE7A8733FFF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Helium2", "Helium2\Helium2.csproj", "{63955073-7DAD-4AF5-BAFE-448926BC11FE}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -20,10 +18,6 @@ Global
 		{52AA0D4E-14B8-4B91-BB30-5BE7A8733FFF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{52AA0D4E-14B8-4B91-BB30-5BE7A8733FFF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{52AA0D4E-14B8-4B91-BB30-5BE7A8733FFF}.Release|Any CPU.Build.0 = Release|Any CPU
-		{63955073-7DAD-4AF5-BAFE-448926BC11FE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{63955073-7DAD-4AF5-BAFE-448926BC11FE}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{63955073-7DAD-4AF5-BAFE-448926BC11FE}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{63955073-7DAD-4AF5-BAFE-448926BC11FE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 	EndGlobalSection

@@ -1,51 +1,7 @@
 <ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-                    xmlns:controls="clr-namespace:Helium.Controls">
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
     <ResourceDictionary.MergedDictionaries>
-        <ResourceDictionary Source="/Alexander.Gorbunov.Helium;component/Resources/HeBrushes.xaml" />
-        <ResourceDictionary Source="/Alexander.Gorbunov.Helium;component/Resources/HeDimensions.xaml" />
-
-        <ResourceDictionary Source="/Alexander.Gorbunov.Helium;component/Controls/HeButton/Styles/Templates/HeButtonNormalTemplate.xaml" />
-        <ResourceDictionary Source="/Alexander.Gorbunov.Helium;component/Controls/HeButton/Styles/Templates/HeButtonAttentionTemplate.xaml" />
-        <ResourceDictionary Source="/Alexander.Gorbunov.Helium;component/Controls/HeButton/Styles/Templates/HeButtonNeutralTemplate.xaml" />
+        <ResourceDictionary Source="/Alexander.Gorbunov.Helium;component/Controls/HeButton/Styles/HeButtonDark.xaml"/>
     </ResourceDictionary.MergedDictionaries>
-
-    <!-- FocusVisual -->
-    <Style x:Key="HeButtonFocusVisual">
-        <Setter Property="Control.Template">
-            <Setter.Value>
-                <ControlTemplate>
-                    <Rectangle
-                        Margin="{StaticResource Margin2}"
-                        StrokeThickness="1"
-                        Stroke="{StaticResource PrimaryWhiteBrush}"
-                        StrokeDashArray="2 1"/>
-                </ControlTemplate>
-            </Setter.Value>
-        </Setter>
-    </Style>
-
-    <!-- Button -->
-    <Style TargetType="controls:HeButton">
-        <Setter Property="SnapsToDevicePixels" Value="true" />
-        <Setter Property="FocusVisualStyle" Value="{StaticResource HeButtonFocusVisual}" />
-        <Setter Property="MinHeight" Value="{StaticResource Height10X}" />
-        <Setter Property="MinWidth" Value="{StaticResource Width10X}" />
-        <Setter Property="Template" Value="{StaticResource HeButtonNormalTemplate}"/>
-
-        <Style.Triggers>
-            <Trigger Property="HeType" Value="Normal">
-                <Setter Property="Template" Value="{StaticResource HeButtonAttentionTemplate}"/>
-            </Trigger>
-
-            <Trigger Property="HeType" Value="Attention">
-                <Setter Property="Template" Value="{StaticResource HeButtonAttentionTemplate}"/>
-            </Trigger>
-
-            <Trigger Property="HeType" Value="Neutral">
-                <Setter Property="Template" Value="{StaticResource HeButtonAttentionTemplate}"/>
-            </Trigger>
-        </Style.Triggers>
-    </Style>
 </ResourceDictionary>
 
