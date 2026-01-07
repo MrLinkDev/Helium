@@ -21,20 +21,18 @@
         </ResourceDictionary>
     </Window.Resources>
 
-    <Grid>
-        <Grid.RowDefinitions>
-            <RowDefinition/>
-            <RowDefinition/>
-        </Grid.RowDefinitions>
+    <StackPanel>
+        <controls:HeButton
+            Content="Test"
+            Click="ButtonBase_OnClick"/>
 
         <controls:HeButton
+            HeType="Attention"
             Content="Test"/>
 
-        <controls2:HeButton
-            Grid.Row="1"
-            Width="120"
-            Height="32"
-            Content="Test2"/>
-    </Grid>
+        <controls:HeButton
+            HeType="Neutral"
+            Content="Test"/>
+    </StackPanel>
 
 </Window>

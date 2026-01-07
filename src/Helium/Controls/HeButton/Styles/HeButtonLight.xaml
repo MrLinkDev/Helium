@@ -1,7 +1,6 @@
 <ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
                     xmlns:controls="clr-namespace:Helium.Controls">
-
     <ResourceDictionary.MergedDictionaries>
         <ResourceDictionary Source="/Alexander.Gorbunov.Helium;component/Resources/HeBrushes.xaml" />
         <ResourceDictionary Source="/Alexander.Gorbunov.Helium;component/Resources/HeDimensions.xaml" />
@@ -36,7 +35,7 @@
 
         <Style.Triggers>
             <Trigger Property="HeType" Value="Normal">
-                <Setter Property="Template" Value="{StaticResource HeButtonNormalTemplate}"/>
+                <Setter Property="Template" Value="{StaticResource HeButtonAttentionTemplate}"/>
             </Trigger>
 
             <Trigger Property="HeType" Value="Attention">
@@ -44,8 +43,9 @@
             </Trigger>
 
             <Trigger Property="HeType" Value="Neutral">
-                <Setter Property="Template" Value="{StaticResource HeButtonNeutralTemplate}"/>
+                <Setter Property="Template" Value="{StaticResource HeButtonAttentionTemplate}"/>
             </Trigger>
         </Style.Triggers>
     </Style>
 </ResourceDictionary>
+

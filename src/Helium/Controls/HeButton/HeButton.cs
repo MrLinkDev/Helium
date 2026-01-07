@@ -1,9 +1,11 @@
 using System.Windows;
 using System.Windows.Controls;
+using Helium.Utilities;
 
 namespace Helium.Controls;
 
 public class HeButton : Button {
+
     #region CornerRadius
 
     public static readonly DependencyProperty CornerRadiusProperty = DependencyProperty.Register(
@@ -16,6 +18,22 @@ public class HeButton : Button {
     public CornerRadius CornerRadius {
         get => (CornerRadius)GetValue(CornerRadiusProperty);
         set => SetValue(CornerRadiusProperty, value);
+    }
+
+    #endregion
+
+    #region HeType
+
+    public static readonly DependencyProperty HeTypeProperty = DependencyProperty.Register(
+        nameof(HeType),
+        typeof(HeType),
+        typeof(HeButton),
+        new FrameworkPropertyMetadata(HeType.Normal,
+            FrameworkPropertyMetadataOptions.AffectsRender));
+
+    public HeType HeType {
+        get => (HeType)GetValue(HeTypeProperty);
+        set => SetValue(HeTypeProperty, value);
     }
 
     #endregion
